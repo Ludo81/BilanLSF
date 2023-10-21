@@ -128,8 +128,9 @@
 
                     <ImageView
                         android:id="@+id/corps"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="700dp"
+                        android:layout_height="700dp"
+                        android:layout_gravity="center"
                         android:contentDescription="@string/corps"
                         android:src="@drawable/corps" />
 

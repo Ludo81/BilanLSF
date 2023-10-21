@@ -18,9 +18,19 @@ public class VideoActivity extends ComponentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.video);
 
+        this.lireVideo();
+    }
+
+@Override
+    protected void onResume() {
+        super.onResume();
+        this.lireVideo();
+    }
+
+    private void lireVideo(){
         String name = getIntent().getStringExtra("VIDEO_NAME");
 
-        if("bilan_primaire_montrez_moi_ou_vous_avez_mal".equals(name)){
+        if ("bilan_primaire_montrez_moi_ou_vous_avez_mal".equals(name)) {
             Button boutonCorps = new Button(this);
             boutonCorps.setText(R.string.corps);
             FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
