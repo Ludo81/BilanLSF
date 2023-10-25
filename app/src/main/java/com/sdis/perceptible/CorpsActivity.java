@@ -1,6 +1,7 @@
 package com.sdis.perceptible;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
@@ -18,7 +19,7 @@ import java.util.List;
 
 public class CorpsActivity extends ComponentActivity {
 
-    private final List<Integer> buttonsId = Arrays.asList(R.id.plaie, R.id.traumatisme, R.id.deformation, R.id.brulure, R.id.hemorragie, R.id.fracture_ouverte, R.id.douleur, R.id.section);
+    //private final List<Integer> buttonsId = Arrays.asList(R.id.plaie, R.id.traumatisme, R.id.deformation, R.id.brulure, R.id.hemorragie, R.id.fracture_ouverte, R.id.douleur, R.id.section);
 
     private Integer couleurSelectionnee = null;
     private String typeSelectionnee = null;
@@ -31,7 +32,7 @@ public class CorpsActivity extends ComponentActivity {
         ImageView imageView = findViewById(R.id.corps);
         imageView.setOnTouchListener((v, event) -> {
             int action = event.getAction();
-            if (action == MotionEvent.ACTION_UP && couleurSelectionnee != null) {
+            if (action == MotionEvent.ACTION_UP /*&& couleurSelectionnee != null*/) {
                 addPastille(event.getX(), event.getY());
             }
             return true;
@@ -46,31 +47,42 @@ public class CorpsActivity extends ComponentActivity {
 
         View pastille = new View(context);
         pastille.setLayoutParams(new FrameLayout.LayoutParams(60, 60));
-        pastille.setBackgroundColor(couleurSelectionnee);
+        //pastille.setBackgroundColor(couleurSelectionnee);
+        pastille.setBackgroundColor(Color.parseColor("#61DC2A"));
 
         GradientDrawable shape = new GradientDrawable();
         shape.setShape(GradientDrawable.OVAL);
-        shape.setColor(couleurSelectionnee);
+        //shape.setColor(couleurSelectionnee);
+        shape.setColor(Color.parseColor("#61DC2A"));
         pastille.setBackground(shape);
 
         pastille.setX(x - 30);
         pastille.setY(y - 30);
 
+        /*
         TextView textView = new TextView(context);
         textView.setLayoutParams(new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT));
         textView.setText(typeSelectionnee);
         textView.setTextColor(Color.WHITE);
         textView.setX(x - 10);
         textView.setY(y - 13);
+        */
 
         frame.addView(pastille);
-        frame.addView(textView);
+        //frame.addView(textView);
+    }
+
+    public void onClickVideo(View view) {
+        Intent intent = new Intent(CorpsActivity.this, VideoActivity.class);
+        intent.putExtra("VIDEO_NAME", "bilan_primaire_montrez_moi_ou_vous_avez_mal");
+        startActivity(intent);
     }
 
     public void retour(View view) {
         finish();
     }
 
+    /*
     public void onClickPlaie(View view) {
         toutDeselectionner();
         Button button = findViewById(R.id.plaie);
@@ -163,4 +175,6 @@ public class CorpsActivity extends ComponentActivity {
         TextView texte = findViewById(R.id.texte_saisir);
         texte.setText(String.format("SAISIR %s", suite));
     }
+
+     */
 }

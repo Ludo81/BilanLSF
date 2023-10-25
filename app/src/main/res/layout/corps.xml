@@ -12,6 +12,15 @@
         android:onClick="retour"
         android:text="@string/retour" />
 
+    <Button
+        android:id="@+id/video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickVideo"
+        android:layout_gravity="end"
+        android:text="@string/video" />
+
+    <!--
     <TextView
         android:id="@+id/texte_saisir"
         android:layout_width="match_parent"
@@ -21,11 +30,13 @@
         android:textColor="#000000"
         android:textAlignment="center"
         android:text="@string/saisir"/>
+        -->
 
     <ScrollView
         android:id="@+id/scrollView"
-        android:layout_width="match_parent"
+        android:layout_width="700dp"
         android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="100dp">
 
         <RelativeLayout
@@ -36,7 +47,7 @@
                 android:id="@+id/table"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
+                <!--
                 <TableRow>
 
                     <Button
@@ -119,7 +130,7 @@
                         android:onClick="onClickSection"
                         android:text="@string/S" />
                 </TableRow>
-
+-->
 
                 <FrameLayout
                     android:id="@+id/frame"
