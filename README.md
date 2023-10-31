@@ -36,4 +36,4 @@ L'application permet plusieurs actions :
 ## Licence
 -------
 
-Cette application est publiée sous CC BY-NC-ND 4.0 DEED. Voir ci-joint à la racine du projet [LICENSE](LICENSE)
+Cette application est publiée sous CC BY-NC-ND 4.0 DEED. Voir ci-joint à la racine du projet ([LICENSE](LICENSE.md))
