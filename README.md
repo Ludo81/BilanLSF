@@ -1,8 +1,7 @@
 ## Bilan LSF
 ------------
 
-Bilan LSF est une application Android qui permet d'offrir la possibilité aux services de secours de communiquer avec des personnes atteintes de surdité et de mutité lors d'interventions au travers de videos et d'images.
-L'utilisation de cette application est destinée principalement aux secours (pompiers, SAMU etc...)
+L'application Android Bilan LSF a pour principal objectif de faciliter la communication entre les services de secours, tels que les pompiers et le SAMU, et les personnes atteintes de surdité et de mutité lors de leurs interventions en utilisant des vidéos et des images. Elle vise principalement à servir les professionnels de secours.
 
 ## Fonctionnalités
 ------------
@@ -36,4 +35,4 @@ L'application permet plusieurs actions :
 ## Licence
 -------
 
-Cette application est publiée sous CC BY-NC-ND 4.0 DEED. Voir ci-joint à la racine du projet ([LICENSE](LICENSE.md))
+Cette application est publiée sous CC BY-NC-ND 4.0 DEED. Voir ci-joint à la racine du projet [LICENSE](LICENSE.md)
