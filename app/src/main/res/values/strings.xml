@@ -68,4 +68,5 @@
     <string name="S">S</string>
     <string name="saisir">SAISIR</string>
     <string name="video">Vidéo</string>
+    <string name="rechercher_video">Rechercher une vidéo</string>
 </resources>

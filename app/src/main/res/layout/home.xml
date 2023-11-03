@@ -16,6 +16,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:text="@string/rechercher_video" />
+
+            <AutoCompleteTextView
+                android:id="@+id/recherche"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="500dp"
+                android:ems="10"
+                android:text="">
+            </AutoCompleteTextView>
+
             <TableRow>
 
                 <Button
@@ -143,7 +161,6 @@
                 android:padding="10dp"
                 android:text="@string/clavier_lsf" />
 
-
         </TableLayout>
 
     </ScrollView>
@@ -154,7 +171,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:text=""
         android:textColor="@android:color/black"
