@@ -1,4 +1,4 @@
-package com.sdis.perceptible;
+package com.sdis.bilan.lsf;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -29,8 +29,9 @@ public class VideoActivity extends ComponentActivity {
 
     private void lireVideo(){
         String name = getIntent().getStringExtra("VIDEO_NAME");
+        boolean createButton = getIntent().getBooleanExtra("CREATE_BUTTON", true);
 
-        if ("bilan_primaire_montrez_moi_ou_vous_avez_mal".equals(name)) {
+        if ("bilan_primaire_montrez_moi_ou_vous_avez_mal".equals(name) && createButton) {
             Button boutonCorps = new Button(this);
             boutonCorps.setText(R.string.corps);
             FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);

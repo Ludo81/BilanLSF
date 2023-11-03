@@ -1,4 +1,4 @@
-package com.sdis.perceptible;
+package com.sdis.bilan.lsf;
 
 import android.app.Dialog;
 import android.content.Intent;

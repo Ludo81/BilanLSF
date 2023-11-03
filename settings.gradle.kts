@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Perceptible"
+rootProject.name = "BilanLSF"
 include(":app")

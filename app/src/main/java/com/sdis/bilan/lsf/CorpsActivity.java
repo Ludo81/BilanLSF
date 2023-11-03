@@ -1,4 +1,4 @@
-package com.sdis.perceptible;
+package com.sdis.bilan.lsf;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,15 +7,10 @@ import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.activity.ComponentActivity;
-
-import java.util.Arrays;
-import java.util.List;
 
 public class CorpsActivity extends ComponentActivity {
 
@@ -46,7 +41,7 @@ public class CorpsActivity extends ComponentActivity {
         FrameLayout frame = findViewById(R.id.frame);
 
         View pastille = new View(context);
-        pastille.setLayoutParams(new FrameLayout.LayoutParams(60, 60));
+        pastille.setLayoutParams(new FrameLayout.LayoutParams(50, 50));
         //pastille.setBackgroundColor(couleurSelectionnee);
         pastille.setBackgroundColor(Color.parseColor("#61DC2A"));
 
@@ -56,7 +51,7 @@ public class CorpsActivity extends ComponentActivity {
         shape.setColor(Color.parseColor("#61DC2A"));
         pastille.setBackground(shape);
 
-        pastille.setX(x - 30);
+        pastille.setX(x - 10);
         pastille.setY(y - 30);
 
         /*
@@ -75,6 +70,7 @@ public class CorpsActivity extends ComponentActivity {
     public void onClickVideo(View view) {
         Intent intent = new Intent(CorpsActivity.this, VideoActivity.class);
         intent.putExtra("VIDEO_NAME", "bilan_primaire_montrez_moi_ou_vous_avez_mal");
+        intent.putExtra("CREATE_BUTTON", false);
         startActivity(intent);
     }
 

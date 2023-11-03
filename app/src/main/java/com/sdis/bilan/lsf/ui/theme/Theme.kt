@@ -1,4 +1,4 @@
-package com.sdis.perceptible.ui.theme
+package com.sdis.test.ui.theme
 
 import android.app.Activity
 import android.os.Build

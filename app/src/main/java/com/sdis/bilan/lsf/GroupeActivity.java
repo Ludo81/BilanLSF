@@ -1,4 +1,4 @@
-package com.sdis.perceptible;
+package com.sdis.bilan.lsf;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -38,10 +38,7 @@ public class GroupeActivity extends ComponentActivity {
                 button.setText(name.replace(groupe, "").replace("_", " "));
                 button.setBackgroundColor(couleur);
                 button.setTextColor(Color.WHITE);
-                TableRow.LayoutParams buttonParams = new TableRow.LayoutParams(
-                        TableRow.LayoutParams.WRAP_CONTENT,
-                        350
-                );
+                TableRow.LayoutParams buttonParams = new TableRow.LayoutParams(0, 350);
                 buttonParams.weight = 1;
                 buttonParams.setMargins(20, 20, 20, 20);
                 button.setLayoutParams(buttonParams);
@@ -61,10 +58,7 @@ public class GroupeActivity extends ComponentActivity {
         if(ligne != null && ligne.getChildCount() == 1){
             Button button = new Button(this);
             button.setVisibility(View.INVISIBLE);
-            TableRow.LayoutParams buttonParams = new TableRow.LayoutParams(
-                    TableRow.LayoutParams.WRAP_CONTENT,
-                    350
-            );
+            TableRow.LayoutParams buttonParams = new TableRow.LayoutParams(0, 350);
             buttonParams.weight = 1;
             buttonParams.setMargins(20, 20, 20, 20);
             button.setLayoutParams(buttonParams);

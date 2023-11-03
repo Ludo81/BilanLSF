@@ -4,15 +4,15 @@ plugins {
 }
 
 android {
-    namespace = "com.sdis.perceptible"
+    namespace = "com.sdis.bilan.lsf"
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.sdis.perceptible"
+        applicationId = "com.sdis.bilan.lsf"
         minSdk = 24
         targetSdk = 33
         versionCode = 1
-        versionName = "1.4"
+        versionName = "1.5"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {

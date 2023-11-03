@@ -10,13 +10,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/logo_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Perceptible"
+        android:theme="@style/Theme.BilanLSF"
         tools:targetApi="31">
 
         <activity
             android:name=".HomeActivity"
             android:exported="true"
-            android:theme="@style/Theme.Perceptible"
+            android:theme="@style/Theme.BilanLSF"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,25 +28,25 @@
             android:name=".GroupeActivity"
             android:exported="false"
             android:label="@string/title_activity_groupe"
-            android:theme="@style/Theme.Perceptible"
+            android:theme="@style/Theme.BilanLSF"
             android:screenOrientation="landscape" />
         <activity
             android:name=".VideoActivity"
             android:exported="false"
             android:label="@string/title_activity_video"
-            android:theme="@style/Theme.Perceptible"
+            android:theme="@style/Theme.BilanLSF"
             android:screenOrientation="landscape" />
         <activity
             android:name=".ClavierActivity"
             android:exported="false"
             android:label="@string/title_activity_clavier"
-            android:theme="@style/Theme.Perceptible"
+            android:theme="@style/Theme.BilanLSF"
             android:screenOrientation="landscape" />
         <activity
             android:name=".CorpsActivity"
             android:exported="false"
             android:label="@string/title_activity_corps"
-            android:theme="@style/Theme.Perceptible"
+            android:theme="@style/Theme.BilanLSF"
             android:screenOrientation="landscape" />
     </application>
 

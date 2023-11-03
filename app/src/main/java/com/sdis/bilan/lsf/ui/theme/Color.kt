@@ -1,4 +1,4 @@
-package com.sdis.perceptible.ui.theme
+package com.sdis.test.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
