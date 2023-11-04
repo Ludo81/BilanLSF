@@ -1,12 +1,14 @@
 package com.sdis.bilan.lsf;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -35,14 +37,14 @@ public class HomeActivity extends ComponentActivity {
         }
 
         List<RechercheItem> items = new ArrayList<>();
-        for(String video : Arrays.stream(R.raw.class.getFields()).map(Field::getName).collect(Collectors.toList())){
+        for (String video : Arrays.stream(R.raw.class.getFields()).map(Field::getName).collect(Collectors.toList())) {
             RechercheItem item = new RechercheItem();
             item.setNomOrigine(video);
             item.setNomAffiche(video.replace("_", " "));
             items.add(item);
         }
 
-        ArrayAdapter<RechercheItem> adapter = new ArrayAdapter<>(this, android.R.layout.select_dialog_item, items);
+        CustomArrayAdapter adapter = new CustomArrayAdapter(this, android.R.layout.simple_list_item_1, items);
         AutoCompleteTextView actv = findViewById(R.id.recherche);
         actv.setOnItemClickListener((parent, view, position, id) -> {
             Intent intent = new Intent(HomeActivity.this, VideoActivity.class);
@@ -131,8 +133,48 @@ public class HomeActivity extends ComponentActivity {
         }
 
         @Override
-        public String toString(){
+        public String toString() {
             return nomAffiche;
+        }
+    }
+
+    public class CustomArrayAdapter extends ArrayAdapter<RechercheItem> {
+
+        public CustomArrayAdapter(Context context, int resource, List<RechercheItem> objects) {
+            super(context, resource, objects);
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            View view = super.getView(position, convertView, parent);
+
+            if (view instanceof TextView) {
+                TextView textView = (TextView) view;
+                textView.setTextColor(Color.WHITE);
+                textView.setBackgroundColor(getColorByNomVideo(textView.getText().toString()));
+            }
+
+            return view;
+        }
+
+        private int getColorByNomVideo(String video) {
+            if (video.startsWith("abecedaire")) {
+                return Color.parseColor("#1D90DC");
+            } else if (video.startsWith("abordage victime")) {
+                return Color.parseColor("#00B52A");
+            } else if (video.startsWith("bilan circonstanciel")) {
+                return Color.parseColor("#153849");
+            } else if (video.startsWith("bilan primaire")) {
+                return Color.parseColor("#8B0041");
+            } else if (video.startsWith("bilan secondaire")) {
+                return Color.parseColor("#D83D1D");
+            } else if (video.startsWith("renseignements")) {
+                return Color.parseColor("#153849");
+            } else if (video.startsWith("secours routier")) {
+                return Color.parseColor("#da1a29");
+            } else {
+                return Color.BLACK;
+            }
         }
     }
 }

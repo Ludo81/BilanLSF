@@ -26,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/retour"
         android:textColor="@color/black"
+        android:layout_marginStart="20dp"
         android:textSize="40sp" />
 
     <TableLayout
@@ -466,6 +467,7 @@
             <Button
                 android:id="@+id/espace"
                 android:layout_width="match_parent"
+                android:height="70dp"
                 android:layout_weight="0.8"
                 android:onClick="espace" />
 
@@ -481,10 +483,10 @@
 
     <ImageButton
         android:id="@+id/oui"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
         android:layout_marginBottom="5dp"
-        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:background="@null"
@@ -495,10 +497,10 @@
 
     <ImageButton
         android:id="@+id/non"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
         android:layout_marginBottom="5dp"
-        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:background="@null"
