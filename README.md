@@ -12,11 +12,13 @@ L'application permet plusieurs actions :
 * Le placement de repères sur une silhouette pour indiquer précisément la zone du corps humain où une douleur ou une plaie est présente.
 
 
-## Spécificités
+## Prérequis
 ------------
 
 - Version SDK recommandée : 33
+* ![Android13]
 - Version SDK minimum : 24
+* ![Android7]
 
 
 ## Technologies
@@ -41,3 +43,5 @@ Cette application est publiée sous CC BY-NC-ND 4.0 DEED. Voir ci-joint à la ra
 
 [Kotlin]: https://img.shields.io/badge/Kotlin-6A43C4?link=https%3A%2F%2Fkotlinlang.org%2F
 [Java]: https://img.shields.io/badge/Java-F29111?link=https%3A%2F%2Fdev.java%2F
+[Android7]: https://img.shields.io/badge/Android7-4FC3F7?link=https%3A%2F%2Fdeveloper.android.com%2Fabout%2Fversions%2Fnougat%2Fandroid-7.0
+[Android13]: https://img.shields.io/badge/Android13-3DDC84?link=https%3A%2F%2Fdeveloper.android.com%2Fabout%2Fversions%2F13
