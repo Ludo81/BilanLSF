@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AProposActivity">
+
+    <Button
+        android:id="@+id/retour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:onClick="retour"
+        android:text="@string/retour" />
+
+    <Button
+        android:id="@+id/cgu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:drawableEnd="@drawable/fleche_droite"
+        android:drawablePadding="30dp"
+        android:background="@android:color/transparent"
+        android:layout_below="@id/retour"
+        android:onClick="onClickCgu"
+        android:text="@string/cgu" />
+
+    <View
+        android:id="@+id/separation"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@id/cgu"
+        android:background="@android:color/black"/>
+
+    <Button
+        android:id="@+id/pdc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:drawableEnd="@drawable/fleche_droite"
+        android:drawablePadding="30dp"
+        android:background="@android:color/transparent"
+        android:layout_below="@id/separation"
+        android:onClick="onClickPdc"
+        android:text="@string/pdc" />
+
+    <View
+        android:id="@+id/separation2"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@id/pdc"
+        android:background="@android:color/black"/>
+
+    <Button
+        android:id="@+id/version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:drawableEnd="@drawable/fleche_droite"
+        android:drawablePadding="30dp"
+        android:background="@android:color/transparent"
+        android:layout_below="@id/separation2"
+        android:onClick="onClickVersion"
+        android:text="" />
+
+</RelativeLayout>

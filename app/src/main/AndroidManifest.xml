@@ -48,6 +48,30 @@
             android:label="@string/title_activity_corps"
             android:theme="@style/Theme.BilanLSF"
             android:screenOrientation="landscape" />
+        <activity
+            android:name=".AProposActivity"
+            android:exported="false"
+            android:label="AProposActivity"
+            android:theme="@style/Theme.BilanLSF"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".CguActivity"
+            android:exported="false"
+            android:label="CguActivity"
+            android:theme="@style/Theme.BilanLSF"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".PdcActivity"
+            android:exported="false"
+            android:label="PdcActivity"
+            android:theme="@style/Theme.BilanLSF"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".VersionActivity"
+            android:exported="false"
+            android:label="VersionActivity"
+            android:theme="@style/Theme.BilanLSF"
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>

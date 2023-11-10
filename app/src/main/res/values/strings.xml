@@ -69,4 +69,7 @@
     <string name="saisir">SAISIR</string>
     <string name="video">Vidéo</string>
     <string name="rechercher_video">Rechercher une vidéo</string>
+    <string name="a_propos">A propos</string>
+    <string name="cgu">Conditions générales d\'utilisation</string>
+    <string name="pdc">Politiques de confidentialité</string>
 </resources>

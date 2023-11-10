@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.ComponentActivity;
+import androidx.annotation.NonNull;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -28,13 +29,6 @@ public class HomeActivity extends ComponentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
-        TextView versionTextView = findViewById(R.id.versionTextView);
-        try {
-            String appVersion = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
-            versionTextView.setText(String.format("%s%s", getString(R.string.version), appVersion));
-        } catch (PackageManager.NameNotFoundException e) {
-            throw new RuntimeException(e);
-        }
 
         List<RechercheItem> items = new ArrayList<>();
         for (String video : Arrays.stream(R.raw.class.getFields()).map(Field::getName).collect(Collectors.toList())) {
@@ -110,6 +104,11 @@ public class HomeActivity extends ComponentActivity {
         startActivity(intent);
     }
 
+    public void onClickAPropos(View view) {
+        Intent intent = new Intent(HomeActivity.this, AProposActivity.class);
+        startActivity(intent);
+    }
+
     public static class RechercheItem {
 
         private String nomOrigine;
@@ -132,6 +131,7 @@ public class HomeActivity extends ComponentActivity {
             this.nomAffiche = nomAffiche;
         }
 
+        @NonNull
         @Override
         public String toString() {
             return nomAffiche;
@@ -144,8 +144,9 @@ public class HomeActivity extends ComponentActivity {
             super(context, resource, objects);
         }
 
+        @NonNull
         @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
+        public View getView(int position, View convertView, @NonNull ViewGroup parent) {
             View view = super.getView(position, convertView, parent);
 
             if (view instanceof TextView) {
