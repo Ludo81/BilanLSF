@@ -13,54 +13,136 @@
         android:onClick="retour"
         android:text="@string/retour" />
 
-    <Button
-        android:id="@+id/cgu"
-        android:layout_width="wrap_content"
+    <TableLayout
+        android:id="@+id/tableAPropos"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:drawableEnd="@drawable/fleche_droite"
-        android:drawablePadding="30dp"
-        android:background="@android:color/transparent"
         android:layout_below="@id/retour"
-        android:onClick="onClickCgu"
-        android:text="@string/cgu" />
+        android:layout_margin="20dp">
 
-    <View
-        android:id="@+id/separation"
-        android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:layout_below="@id/cgu"
-        android:background="@android:color/black"/>
+        <TableRow android:layout_margin="10dp">
 
-    <Button
-        android:id="@+id/pdc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:drawableEnd="@drawable/fleche_droite"
-        android:drawablePadding="30dp"
-        android:background="@android:color/transparent"
-        android:layout_below="@id/separation"
-        android:onClick="onClickPdc"
-        android:text="@string/pdc" />
+            <ImageButton
+                android:id="@+id/logosdis"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:contentDescription="@string/logosdis"
+                android:onClick="onClickSdis"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sdis" />
 
-    <View
-        android:id="@+id/separation2"
-        android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:layout_below="@id/pdc"
-        android:background="@android:color/black"/>
+            <ImageButton
+                android:id="@+id/logobs"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:contentDescription="@string/logobs"
+                android:onClick="onClickBs"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bs" />
 
-    <Button
-        android:id="@+id/version"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:drawableEnd="@drawable/fleche_droite"
-        android:drawablePadding="30dp"
-        android:background="@android:color/transparent"
-        android:layout_below="@id/separation2"
-        android:onClick="onClickVersion"
-        android:text="" />
+        </TableRow>
+
+        <TableRow
+            android:layout_margin="10dp"
+            android:onClick="onClickCgu">
+
+            <Button
+                android:id="@+id/cgu"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:gravity="start"
+                android:onClick="onClickCgu"
+                android:padding="10dp"
+                android:text="@string/cgu" />
+
+            <ImageView
+                android:id="@+id/fleche1"
+                android:layout_weight="1"
+                android:src="@drawable/fleche_droite" />
+        </TableRow>
+
+        <TableRow>
+
+            <View
+                android:id="@+id/separation"
+                android:layout_width="0dp"
+                android:layout_height="5dp"
+                android:layout_weight="3"
+                android:layout_marginHorizontal="10dp"
+                android:background="@android:color/black" />
+
+            <ImageButton
+                android:id="@+id/vide1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:contentDescription="@string/vide"
+                android:scaleType="fitXY" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_margin="10dp"
+            android:onClick="onClickPdc">
+
+            <Button
+                android:id="@+id/pdc"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:gravity="start"
+                android:onClick="onClickPdc"
+                android:padding="10dp"
+                android:text="@string/pdc" />
+
+            <ImageView
+                android:id="@+id/fleche2"
+                android:layout_weight="1"
+                android:src="@drawable/fleche_droite" />
+
+        </TableRow>
+
+        <TableRow>
+            <View
+                android:id="@+id/separation2"
+                android:layout_width="0dp"
+                android:layout_height="5dp"
+                android:layout_weight="3"
+                android:layout_marginHorizontal="10dp"
+                android:background="@android:color/black" />
+
+            <ImageButton
+                android:id="@+id/vide2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:contentDescription="@string/vide"
+                android:scaleType="fitXY" />
+        </TableRow>
+
+        <TableRow
+            android:layout_margin="10dp"
+            android:onClick="onClickVersion">
+
+            <Button
+                android:id="@+id/version"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:gravity="start"
+                android:onClick="onClickVersion"
+                android:padding="10dp"
+                android:text="" />
+
+            <ImageView
+                android:id="@+id/fleche3"
+                android:layout_weight="1"
+                android:src="@drawable/fleche_droite" />
+        </TableRow>
+
+    </TableLayout>
 
 </RelativeLayout>

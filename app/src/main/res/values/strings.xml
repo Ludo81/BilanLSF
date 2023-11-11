@@ -72,4 +72,6 @@
     <string name="a_propos">A propos</string>
     <string name="cgu">Conditions générales d\'utilisation</string>
     <string name="pdc">Politiques de confidentialité</string>
+    <string name="logosdis">logosdis</string>
+    <string name="logobs">logobs</string>
 </resources>

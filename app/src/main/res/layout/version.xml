@@ -13,4 +13,21 @@
         android:onClick="retour"
         android:text="@string/retour" />
 
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/retour"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="50dp">
+
+        <TextView
+            android:id="@+id/releasetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="" />
+
+    </ScrollView>
+
 </RelativeLayout>

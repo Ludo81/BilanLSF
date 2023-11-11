@@ -2,6 +2,7 @@ package com.sdis.bilan.lsf;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,8 +26,16 @@ public class AProposActivity extends ComponentActivity {
         }
     }
 
-    public void retour(View view) {
-        finish();
+    public void onClickSdis(View view){
+        Uri uri = Uri.parse("https://www.sdis81.fr/");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+
+    public void onClickBs(View view){
+        Uri uri = Uri.parse("https://www.bonsauveuralby.fr/");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
     }
 
     public void onClickCgu(View view) {
@@ -42,5 +51,9 @@ public class AProposActivity extends ComponentActivity {
     public void onClickVersion(View view) {
         Intent intent = new Intent(AProposActivity.this, VersionActivity.class);
         startActivity(intent);
+    }
+
+    public void retour(View view) {
+        finish();
     }
 }

@@ -166,7 +166,9 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginTop="35dp"
+                android:layout_marginEnd="30dp"
                 android:layout_below="@id/container"
+                android:background="@android:color/transparent"
                 android:onClick="onClickAPropos"
                 android:text="@string/a_propos" />
 

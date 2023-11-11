@@ -2,6 +2,7 @@ package com.sdis.bilan.lsf;
 
 import android.os.Bundle;
 import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.TextView;
 
@@ -27,6 +28,7 @@ public class PdcActivity extends ComponentActivity {
             is.close();
 
             TextView textView = findViewById(R.id.pdctext);
+            textView.setMovementMethod(LinkMovementMethod.getInstance());
             textView.setText(Html.fromHtml(content, HtmlCompat.FROM_HTML_MODE_LEGACY));
         } catch (IOException e) {
             throw new RuntimeException(e);
