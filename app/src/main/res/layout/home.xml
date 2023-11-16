@@ -120,7 +120,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:layout_weight="1"
-                        android:background="#153849"
+                        android:background="#8153FF"
                         android:drawableTop="@drawable/logo_renseignements"
                         android:drawablePadding="10dp"
                         android:onClick="onClickRenseignements"
@@ -165,10 +165,12 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginTop="35dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginEnd="30dp"
                 android:layout_below="@id/container"
                 android:background="@android:color/transparent"
+                android:drawableStart="@drawable/a_propos"
+                android:drawablePadding="10dp"
                 android:onClick="onClickAPropos"
                 android:text="@string/a_propos" />
 

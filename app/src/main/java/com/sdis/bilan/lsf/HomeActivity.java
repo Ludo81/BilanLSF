@@ -34,7 +34,7 @@ public class HomeActivity extends ComponentActivity {
         for (String video : Arrays.stream(R.raw.class.getFields()).map(Field::getName).collect(Collectors.toList())) {
             RechercheItem item = new RechercheItem();
             item.setNomOrigine(video);
-            item.setNomAffiche(video.replace("_", " "));
+            item.setNomAffiche(video.replace("_", " ").toUpperCase());
             items.add(item);
         }
 
@@ -159,19 +159,19 @@ public class HomeActivity extends ComponentActivity {
         }
 
         private int getColorByNomVideo(String video) {
-            if (video.startsWith("abecedaire")) {
+            if (video.startsWith("ABECEDAIRE")) {
                 return Color.parseColor("#1D90DC");
-            } else if (video.startsWith("abordage victime")) {
+            } else if (video.startsWith("ABORDAGE VICTIME")) {
                 return Color.parseColor("#00B52A");
-            } else if (video.startsWith("bilan circonstanciel")) {
+            } else if (video.startsWith("BILAN CIRCONSTANCIEL")) {
                 return Color.parseColor("#153849");
-            } else if (video.startsWith("bilan primaire")) {
+            } else if (video.startsWith("BILAN PRIMAIRE")) {
                 return Color.parseColor("#8B0041");
-            } else if (video.startsWith("bilan secondaire")) {
+            } else if (video.startsWith("BILAN SECONDAIRE")) {
                 return Color.parseColor("#D83D1D");
-            } else if (video.startsWith("renseignements")) {
-                return Color.parseColor("#153849");
-            } else if (video.startsWith("secours routier")) {
+            } else if (video.startsWith("RENSEIGNEMENTS")) {
+                return Color.parseColor("#8153FF");
+            } else if (video.startsWith("SECOURS ROUTIER")) {
                 return Color.parseColor("#da1a29");
             } else {
                 return Color.BLACK;
