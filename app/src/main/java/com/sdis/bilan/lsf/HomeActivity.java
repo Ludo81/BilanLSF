@@ -50,6 +50,12 @@ public class HomeActivity extends ComponentActivity {
         actv.setAdapter(adapter);
     }
 
+    public void onClickAccouchement(View view) {
+        Button button = (Button) findViewById(view.getId());
+        Drawable buttonBackground = button.getBackground();
+        this.goToGroupe("accouchement", ((ColorDrawable) buttonBackground).getColor());
+    }
+
     public void onClickAbecedaire(View view) {
         Button button = (Button) findViewById(view.getId());
         Drawable buttonBackground = button.getBackground();
@@ -159,7 +165,9 @@ public class HomeActivity extends ComponentActivity {
         }
 
         private int getColorByNomVideo(String video) {
-            if (video.startsWith("ABECEDAIRE")) {
+            if (video.startsWith("ACCOUCHEMENT")) {
+                return Color.parseColor("#FBBC05");
+            } else if (video.startsWith("ABECEDAIRE")) {
                 return Color.parseColor("#1D90DC");
             } else if (video.startsWith("ABORDAGE VICTIME")) {
                 return Color.parseColor("#00B52A");

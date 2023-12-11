@@ -33,6 +33,20 @@
                 <TableRow>
 
                     <Button
+                        android:id="@+id/accouchement"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="#FBBC05"
+                        android:drawableTop="@drawable/logo_accouchement"
+                        android:drawablePadding="10dp"
+                        android:onClick="onClickAccouchement"
+                        android:padding="10dp"
+                        android:text="@string/accouchement"
+                        android:textColor="@color/white" />
+
+                    <Button
                         android:id="@+id/abecedaire"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
