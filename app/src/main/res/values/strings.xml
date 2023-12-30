@@ -75,4 +75,6 @@
     <string name="logosdis">logosdis</string>
     <string name="logobs">logobs</string>
     <string name="accouchement">accouchement</string>
+    <string name="horloge">Horloge</string>
+    <string name="calendrier">Calendrier</string>
 </resources>

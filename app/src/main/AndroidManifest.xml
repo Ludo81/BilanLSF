@@ -48,6 +48,20 @@
             android:label="@string/title_activity_corps"
             android:theme="@style/Theme.BilanLSF"
             android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".HorlogeActivity"
+            android:exported="false"
+            android:label="HorlogeActivity"
+            android:theme="@style/Theme.BilanLSF"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".CalendrierActivity"
+            android:exported="false"
+            android:label="CalendrierActivity"
+            android:theme="@style/Theme.BilanLSF"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".AProposActivity"
             android:exported="false"

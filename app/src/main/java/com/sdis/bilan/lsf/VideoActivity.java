@@ -46,6 +46,37 @@ public class VideoActivity extends ComponentActivity {
             frame.addView(boutonCorps, params);
         }
 
+        if ("bilan_secondaire_depuis_quelle_heure_avez_vous_mal".equals(name) || "accouchement_a_quelle_heure_ont_debute_les_contractions".equals(name) ||
+        "accouchement_est_ce_que_vous_avez_perdu_les_eaux_si_oui".equals(name)) {
+            Button boutonHorloge = new Button(this);
+            boutonHorloge.setText(R.string.horloge);
+            FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
+            params.gravity = Gravity.TOP | Gravity.CENTER_HORIZONTAL;
+
+            boutonHorloge.setOnClickListener(v -> {
+                Intent intent = new Intent(VideoActivity.this, HorlogeActivity.class);
+                startActivity(intent);
+            });
+
+            FrameLayout frame = findViewById(R.id.frame);
+            frame.addView(boutonHorloge, params);
+        }
+
+        if ("accouchement_quelle_est_la_date_des_dernieres_regles".equals(name) || "accouchement_quelle_est_la_date_prevue_du_terme".equals(name)) {
+            Button boutonCalendrier = new Button(this);
+            boutonCalendrier.setText(R.string.calendrier);
+            FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
+            params.gravity = Gravity.TOP | Gravity.CENTER_HORIZONTAL;
+
+            boutonCalendrier.setOnClickListener(v -> {
+                Intent intent = new Intent(VideoActivity.this, CalendrierActivity.class);
+                startActivity(intent);
+            });
+
+            FrameLayout frame = findViewById(R.id.frame);
+            frame.addView(boutonCalendrier, params);
+        }
+
         int videoResourceId = getResources().getIdentifier(name, "raw", getPackageName());
         VideoView videoView = findViewById(R.id.videoView);
         String videoPath = "android.resource://" + getPackageName() + "/" + videoResourceId;
