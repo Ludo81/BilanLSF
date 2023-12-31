@@ -77,4 +77,8 @@
     <string name="accouchement">accouchement</string>
     <string name="horloge">Horloge</string>
     <string name="calendrier">Calendrier</string>
+    <string name="mois_suivant">moisSuivant</string>
+    <string name="mois_precedent">moisPrecedent</string>
+    <string name="annee_suivante">anneeSuivante</string>
+    <string name="annee_precedente">anneePrecedente</string>
 </resources>

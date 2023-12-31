@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,4 +12,111 @@
         android:onClick="retour"
         android:text="@string/retour" />
 
-</FrameLayout>
+    <LinearLayout
+        android:id="@+id/selectionAnnee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/retour">
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:onClick="anneePrecedente"
+            android:src="@drawable/precedent"
+            android:contentDescription="@string/annee_precedente" />
+
+        <TextView
+            android:id="@+id/annee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:textColor="@color/black"
+            android:text="">
+
+        </TextView>
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:onClick="anneeSuivante"
+            android:src="@drawable/suivant"
+            android:contentDescription="@string/annee_suivante" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginHorizontal="50dp"
+        android:layout_below="@id/selectionAnnee"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="30dp"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:onClick="moisPrecedent"
+            android:src="@drawable/precedent"
+            android:contentDescription="@string/mois_precedent" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:orientation="horizontal">
+
+                <TableLayout
+                    android:id="@+id/mois1"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center"
+                    android:paddingBottom="20dp">
+
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/mois2"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center"
+                    android:paddingBottom="20dp">
+
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/mois3"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center"
+                    android:paddingBottom="20dp">
+
+                </TableLayout>
+
+            </GridLayout>
+
+        </ScrollView>
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="30dp"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:onClick="moisSuivant"
+            android:src="@drawable/suivant"
+            android:contentDescription="@string/mois_suivant" />
+
+    </LinearLayout>
+
+</RelativeLayout>
