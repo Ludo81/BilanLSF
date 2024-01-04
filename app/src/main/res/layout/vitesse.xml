@@ -12,6 +12,17 @@
         android:onClick="retour"
         android:text="@string/retour" />
 
+    <TextView
+        android:id="@+id/vitesse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/retour"
+        android:text="0"
+        android:textSize="50dp"
+        android:textColor="@color/black">
+    </TextView>
+
     <RelativeLayout
         android:id="@+id/compteur"
         android:layout_width="wrap_content"

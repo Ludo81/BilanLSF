@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.SeekBar;
+import android.widget.TextView;
 
 import androidx.activity.ComponentActivity;
 
@@ -16,10 +17,12 @@ public class VitesseActivity extends ComponentActivity {
 
         SeekBar regle = findViewById(R.id.regle);
         ImageView aiguille = findViewById(R.id.aiguille);
+        TextView vitesse = findViewById(R.id.vitesse);
         regle.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 aiguille.setRotation(-135 + progress);
+                vitesse.setText(String.valueOf(Math.round(0.000116836*progress*progress + 0.877994*progress + 6.12798)));
             }
 
             @Override
