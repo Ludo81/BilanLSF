@@ -81,4 +81,5 @@
     <string name="mois_precedent">moisPrecedent</string>
     <string name="annee_suivante">anneeSuivante</string>
     <string name="annee_precedente">anneePrecedente</string>
+    <string name="vitesse">Vitesse</string>
 </resources>

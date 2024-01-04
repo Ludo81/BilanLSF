@@ -1,15 +1,13 @@
 package com.sdis.bilan.lsf;
 
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.GridView;
 import android.widget.TableLayout;
 import android.widget.TextView;
 
 import androidx.activity.ComponentActivity;
-
-import org.w3c.dom.Text;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -19,6 +17,9 @@ import java.util.Locale;
 public class CalendrierActivity extends ComponentActivity {
 
     Calendar calendrier;
+
+    private View selectionPrecendente;
+    private Drawable fondPrecendent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +40,10 @@ public class CalendrierActivity extends ComponentActivity {
         calendrier.add(Calendar.MONTH, 1);
         this.creerMois(R.id.mois3);
 
-        calendrier = Calendar.getInstance();
-        calendrier.setTime(new Date());
+        if(calendrier.get(Calendar.MONTH) == Calendar.NOVEMBER || calendrier.get(Calendar.MONTH) == Calendar.DECEMBER){
+            calendrier = Calendar.getInstance();
+            calendrier.setTime(new Date());
+        }
     }
 
     private void creerMois(int moisView) {
@@ -61,18 +64,29 @@ public class CalendrierActivity extends ComponentActivity {
             if(jour <= joursDansLeMois){ // pour mettre au même niveau le calendrier
                 calendrier.set(Calendar.DAY_OF_MONTH, jour);
                 String jourDeLaSemaine = new SimpleDateFormat("EEEE", Locale.FRENCH).format(calendrier.getTime());
-
+                int semaine = calendrier.get(Calendar.WEEK_OF_YEAR);
+                if(semaine%2 == 0){
+                    texte.setBackgroundResource(R.drawable.bordure_gris);
+                } else {
+                    texte.setBackgroundResource(R.drawable.bordure_blanc);
+                }
                 if("dimanche".equalsIgnoreCase(jourDeLaSemaine)){
                     texte.setTextColor(Color.RED);
                 }
                 if("jeudi".equalsIgnoreCase(jourDeLaSemaine)) {
-                    texte.setText(jour + " " + jourDeLaSemaine.toUpperCase() + "      " + "Semaine " + calendrier.get(Calendar.WEEK_OF_YEAR));
+                    texte.setText(jour + " " + jourDeLaSemaine.toUpperCase() + "      " + "Semaine " + semaine);
                 } else {
                     texte.setText(jour + " " + jourDeLaSemaine.toUpperCase());
                 }
-
             }
-            texte.setBackgroundResource(R.drawable.bordure);
+            texte.setOnClickListener(v -> {
+                if(this.selectionPrecendente != null){
+                    this.selectionPrecendente.setBackground(this.fondPrecendent);
+                }
+                this.selectionPrecendente = v;
+                this.fondPrecendent = v.getBackground();
+                v.setBackgroundResource(R.drawable.bordure_selection);
+            });
             tableMois.addView(texte);
         }
     }

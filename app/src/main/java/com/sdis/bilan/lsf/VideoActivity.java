@@ -47,7 +47,7 @@ public class VideoActivity extends ComponentActivity {
         }
 
         if ("bilan_secondaire_depuis_quelle_heure_avez_vous_mal".equals(name) || "accouchement_a_quelle_heure_ont_debute_les_contractions".equals(name) ||
-        "accouchement_est_ce_que_vous_avez_perdu_les_eaux_si_oui".equals(name)) {
+        "accouchement_est_ce_que_vous_avez_perdu_les_eaux_si_oui_a_quelle_heure".equals(name)) {
             Button boutonHorloge = new Button(this);
             boutonHorloge.setText(R.string.horloge);
             FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
@@ -75,6 +75,21 @@ public class VideoActivity extends ComponentActivity {
 
             FrameLayout frame = findViewById(R.id.frame);
             frame.addView(boutonCalendrier, params);
+        }
+
+        if ("secours_routier_montrez_moi_la_vitesse".equals(name)) {
+            Button boutonVitesse = new Button(this);
+            boutonVitesse.setText(R.string.vitesse);
+            FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
+            params.gravity = Gravity.TOP | Gravity.CENTER_HORIZONTAL;
+
+            boutonVitesse.setOnClickListener(v -> {
+                Intent intent = new Intent(VideoActivity.this, VitesseActivity.class);
+                startActivity(intent);
+            });
+
+            FrameLayout frame = findViewById(R.id.frame);
+            frame.addView(boutonVitesse, params);
         }
 
         int videoResourceId = getResources().getIdentifier(name, "raw", getPackageName());

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VitesseActivity">
+
+    <Button
+        android:id="@+id/retour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="retour"
+        android:text="@string/retour" />
+
+    <RelativeLayout
+        android:id="@+id/compteur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/retour"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:layout_width="650dp"
+            android:layout_height="650dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/compteur_vitesse" />
+
+        <ImageView
+            android:id="@+id/aiguille"
+            android:layout_width="330dp"
+            android:layout_height="330dp"
+            android:layout_centerInParent="true"
+            android:rotation="-135"
+            android:scaleType="fitCenter"
+            android:src="@drawable/aiguille" />
+
+    </RelativeLayout>
+
+    <SeekBar
+        android:id="@+id/regle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/compteur"
+        android:thumb="@drawable/point_regle"
+        android:max="240" />
+
+</RelativeLayout>
