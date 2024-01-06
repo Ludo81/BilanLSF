@@ -62,6 +62,22 @@ public class VideoActivity extends ComponentActivity {
             frame.addView(boutonHorloge, params);
         }
 
+        if ("accouchement_quelle_est_l_intervalle_entre_les_2_contractions".equals(name) || "bilan_secondaire_respirez_normalement_sur_1_minute".equals(name)
+                || "bilan_secondaire_respirez_normalement_sur_1_minute_2".equals(name) || "bilan_secondaire_je_controle_votre_pouls_sur_1_minute".equals(name)) {
+            Button boutonMinuteur = new Button(this);
+            boutonMinuteur.setText(R.string.minuteur);
+            FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
+            params.gravity = Gravity.TOP | Gravity.CENTER_HORIZONTAL;
+
+            boutonMinuteur.setOnClickListener(v -> {
+                Intent intent = new Intent(VideoActivity.this, MinuteurActivity.class);
+                startActivity(intent);
+            });
+
+            FrameLayout frame = findViewById(R.id.frame);
+            frame.addView(boutonMinuteur, params);
+        }
+
         if ("accouchement_quelle_est_la_date_des_dernieres_regles".equals(name) || "accouchement_quelle_est_la_date_prevue_du_terme".equals(name)) {
             Button boutonCalendrier = new Button(this);
             boutonCalendrier.setText(R.string.calendrier);

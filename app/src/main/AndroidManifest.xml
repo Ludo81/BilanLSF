@@ -30,18 +30,21 @@
             android:label="@string/title_activity_groupe"
             android:theme="@style/Theme.BilanLSF"
             android:screenOrientation="landscape" />
+
         <activity
             android:name=".VideoActivity"
             android:exported="false"
             android:label="@string/title_activity_video"
             android:theme="@style/Theme.BilanLSF"
             android:screenOrientation="landscape" />
+
         <activity
             android:name=".ClavierActivity"
             android:exported="false"
             android:label="@string/title_activity_clavier"
             android:theme="@style/Theme.BilanLSF"
             android:screenOrientation="landscape" />
+
         <activity
             android:name=".CorpsActivity"
             android:exported="false"
@@ -57,35 +60,47 @@
             android:screenOrientation="landscape" />
 
         <activity
+            android:name=".MinuteurActivity"
+            android:exported="false"
+            android:label="MinuteurActivity"
+            android:theme="@style/Theme.BilanLSF"
+            android:screenOrientation="landscape" />
+
+        <activity
             android:name=".CalendrierActivity"
             android:exported="false"
             android:label="CalendrierActivity"
             android:theme="@style/Theme.BilanLSF"
             android:screenOrientation="landscape" />
+
         <activity
             android:name=".VitesseActivity"
             android:exported="false"
             android:label="VitesseActivity"
             android:theme="@style/Theme.BilanLSF"
             android:screenOrientation="landscape" />
+
         <activity
             android:name=".AProposActivity"
             android:exported="false"
             android:label="AProposActivity"
             android:theme="@style/Theme.BilanLSF"
             android:screenOrientation="landscape" />
+
         <activity
             android:name=".CguActivity"
             android:exported="false"
             android:label="CguActivity"
             android:theme="@style/Theme.BilanLSF"
             android:screenOrientation="landscape" />
+
         <activity
             android:name=".PdcActivity"
             android:exported="false"
             android:label="PdcActivity"
             android:theme="@style/Theme.BilanLSF"
             android:screenOrientation="landscape" />
+
         <activity
             android:name=".VersionActivity"
             android:exported="false"

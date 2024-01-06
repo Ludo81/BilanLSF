@@ -16,25 +16,25 @@
         android:id="@+id/selectionAnnee"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_below="@id/retour">
+        android:layout_below="@id/retour"
+        android:gravity="center">
 
         <ImageButton
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:background="@null"
-            android:scaleType="fitCenter"
+            android:contentDescription="@string/annee_precedente"
             android:onClick="anneePrecedente"
-            android:src="@drawable/precedent"
-            android:contentDescription="@string/annee_precedente" />
+            android:scaleType="fitCenter"
+            android:src="@drawable/precedent" />
 
         <TextView
             android:id="@+id/annee"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="40sp"
+            android:text=""
             android:textColor="@color/black"
-            android:text="">
+            android:textSize="40sp">
 
         </TextView>
 
@@ -42,19 +42,19 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:background="@null"
-            android:scaleType="fitCenter"
+            android:contentDescription="@string/annee_suivante"
             android:onClick="anneeSuivante"
-            android:src="@drawable/suivant"
-            android:contentDescription="@string/annee_suivante" />
+            android:scaleType="fitCenter"
+            android:src="@drawable/suivant" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginHorizontal="50dp"
         android:layout_below="@id/selectionAnnee"
+        android:layout_marginHorizontal="50dp"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <ImageButton
@@ -62,10 +62,10 @@
             android:layout_height="60dp"
             android:layout_marginStart="30dp"
             android:background="@null"
-            android:scaleType="fitCenter"
+            android:contentDescription="@string/mois_precedent"
             android:onClick="moisPrecedent"
-            android:src="@drawable/precedent"
-            android:contentDescription="@string/mois_precedent" />
+            android:scaleType="fitCenter"
+            android:src="@drawable/precedent" />
 
         <ScrollView
             android:id="@+id/scrollView"
@@ -112,10 +112,10 @@
             android:layout_height="60dp"
             android:layout_marginEnd="30dp"
             android:background="@null"
-            android:scaleType="fitCenter"
+            android:contentDescription="@string/mois_suivant"
             android:onClick="moisSuivant"
-            android:src="@drawable/suivant"
-            android:contentDescription="@string/mois_suivant" />
+            android:scaleType="fitCenter"
+            android:src="@drawable/suivant" />
 
     </LinearLayout>
 

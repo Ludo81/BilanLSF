@@ -82,4 +82,6 @@
     <string name="annee_suivante">anneeSuivante</string>
     <string name="annee_precedente">anneePrecedente</string>
     <string name="vitesse">Vitesse</string>
+    <string name="minuteur">Minuteur</string>
+    <string name="activer">Activer</string>
 </resources>
