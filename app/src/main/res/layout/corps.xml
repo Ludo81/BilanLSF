@@ -16,8 +16,8 @@
         android:id="@+id/video"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onClickVideo"
         android:layout_gravity="end"
+        android:onClick="onClickVideo"
         android:text="@string/video" />
 
     <!--

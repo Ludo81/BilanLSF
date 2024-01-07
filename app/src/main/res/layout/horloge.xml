@@ -23,8 +23,8 @@
         <GridLayout
             android:layout_width="900dp"
             android:layout_height="wrap_content"
-            android:columnCount="3"
             android:layout_marginBottom="20dp"
+            android:columnCount="3"
             android:orientation="horizontal">
 
             <ImageView
@@ -63,30 +63,30 @@
         <GridLayout
             android:layout_width="900dp"
             android:layout_height="wrap_content"
-            android:columnCount="3"
             android:layout_marginTop="5dp"
+            android:columnCount="3"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_columnWeight="1"
                 android:layout_gravity="start"
+                android:text="0"
                 android:textColor="@color/black"
-                android:textSize="20sp"
-                android:text="0" />
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_columnWeight="1"
                 android:layout_gravity="center"
+                android:text="12"
                 android:textColor="@color/black"
-                android:textSize="20sp"
-                android:text="12" />
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_columnWeight="1"
                 android:layout_gravity="end"
+                android:text="24"
                 android:textColor="@color/black"
-                android:textSize="20sp"
-                android:text="24" />
+                android:textSize="20sp" />
 
         </GridLayout>
 
@@ -128,11 +128,11 @@
             android:id="@+id/afficheur"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:textColor="@color/black"
-            android:textSize="50sp"
             android:layout_below="@id/aiguille_heures"
-            android:text="0:00"/>
+            android:layout_centerHorizontal="true"
+            android:text="0:00"
+            android:textColor="@color/black"
+            android:textSize="50sp" />
 
     </RelativeLayout>
 

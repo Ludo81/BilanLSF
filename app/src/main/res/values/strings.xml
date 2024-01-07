@@ -84,4 +84,6 @@
     <string name="vitesse">Vitesse</string>
     <string name="minuteur">Minuteur</string>
     <string name="activer">Activer</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
 </resources>

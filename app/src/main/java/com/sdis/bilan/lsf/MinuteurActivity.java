@@ -1,7 +1,5 @@
 package com.sdis.bilan.lsf;
 
-import static java.util.concurrent.TimeUnit.SECONDS;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -12,12 +10,8 @@ import androidx.activity.ComponentActivity;
 
 import java.util.Timer;
 import java.util.TimerTask;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
 
 public class MinuteurActivity extends ComponentActivity {
-
-    final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
 
     private int minutes;
 
@@ -82,32 +76,57 @@ public class MinuteurActivity extends ComponentActivity {
         });
     }
 
-    public void activer(View view) {
+    private int decompte;
 
-        final Runnable runnable = new Runnable() {
-            int countdownStarter = secondes + minutes * 60;
+    private Timer minuterie;
 
+    public void start(View view) {
+
+        decompte = secondes + minutes * 60;
+
+        minuterie = new Timer();
+
+        findViewById(R.id.stop).setVisibility(View.VISIBLE);
+        findViewById(R.id.start).setVisibility(View.INVISIBLE);
+
+        minuterie.scheduleAtFixedRate(new TimerTask() {
+
+            @Override
             public void run() {
-                countdownStarter--;
+                runOnUiThread(() -> {
 
-                TextView afficheurSecondes = findViewById(R.id.afficheur_secondes);
-                afficheurSecondes.setText(countdownStarter % 60 < 10 ? "0" + countdownStarter % 60 : String.valueOf(countdownStarter % 60));
+                    if (decompte >= 0) {
 
-                ImageView aiguille_secondes = findViewById(R.id.aiguille_secondes);
-                aiguille_secondes.setRotation(165 + countdownStarter * 6);
+                        TextView afficheurSecondes = findViewById(R.id.afficheur_secondes);
+                        afficheurSecondes.setText(decompte % 60 < 10 ? "0" + decompte % 60 : String.valueOf(decompte % 60));
 
-                ImageView aiguille_minutes = findViewById(R.id.aiguille_minutes);
-                aiguille_minutes.setRotation(-55 + countdownStarter / 60 * 6);
+                        ImageView aiguille_secondes = findViewById(R.id.aiguille_secondes);
+                        aiguille_secondes.setRotation(165 + decompte * 6);
 
-                TextView afficheurMinutes = findViewById(R.id.afficheur_minutes);
-                afficheurMinutes.setText(String.valueOf(countdownStarter / 60));
+                        ImageView aiguille_minutes = findViewById(R.id.aiguille_minutes);
+                        aiguille_minutes.setRotation(-55 + decompte / 60 * 6);
 
-                if (countdownStarter == 0) {
-                    scheduler.shutdown();
-                }
+                        TextView afficheurMinutes = findViewById(R.id.afficheur_minutes);
+                        afficheurMinutes.setText(String.valueOf(decompte / 60));
+
+                        decompte -= 1;
+                    } else {
+                        minuterie.cancel();
+
+                        findViewById(R.id.stop).setVisibility(View.INVISIBLE);
+                        findViewById(R.id.start).setVisibility(View.VISIBLE);
+                    }
+                });
             }
-        };
-        scheduler.scheduleAtFixedRate(runnable, 0, 1, SECONDS);
+        }, 0, 1000);
+
+    }
+
+    public void stop(View view) {
+        minuterie.cancel();
+
+        findViewById(R.id.stop).setVisibility(View.INVISIBLE);
+        findViewById(R.id.start).setVisibility(View.VISIBLE);
     }
 
     public void retour(View view) {

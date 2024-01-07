@@ -13,26 +13,36 @@
         android:text="@string/retour" />
 
     <Button
-        android:id="@+id/activer"
+        android:id="@+id/start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="activer"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:text="@string/activer" />
+        android:onClick="start"
+        android:text="@string/start" />
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="stop"
+        android:text="@string/stop"
+        android:visibility="invisible" />
 
     <LinearLayout
         android:id="@+id/regle_m"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_below="@id/retour">
+        android:layout_below="@id/retour"
+        android:gravity="center">
 
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:scaleType="fitCenter"
             android:layout_marginEnd="20dp"
+            android:scaleType="fitCenter"
             android:src="@drawable/icone_minutes" />
 
         <LinearLayout
@@ -52,9 +62,9 @@
                     android:id="@+id/reglage_minutes"
                     android:layout_columnWeight="1"
                     android:layout_gravity="center"
+                    android:text="Minutes : 0'"
                     android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:text="Minutes : 0'" />
+                    android:textSize="20sp" />
 
             </GridLayout>
 
@@ -68,30 +78,30 @@
             <GridLayout
                 android:layout_width="900dp"
                 android:layout_height="wrap_content"
-                android:columnCount="3"
                 android:layout_marginTop="5dp"
+                android:columnCount="3"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_columnWeight="1"
                     android:layout_gravity="start"
+                    android:text="0"
                     android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:text="0" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:layout_columnWeight="1"
                     android:layout_gravity="center"
+                    android:text="30"
                     android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:text="30" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:layout_columnWeight="1"
                     android:layout_gravity="end"
+                    android:text="60"
                     android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:text="60" />
+                    android:textSize="20sp" />
 
             </GridLayout>
 
@@ -103,8 +113,8 @@
         android:id="@+id/regle_s"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_below="@id/regle_m">
+        android:layout_below="@id/regle_m"
+        android:gravity="center">
 
         <ImageView
             android:layout_width="60dp"
@@ -129,9 +139,9 @@
                     android:id="@+id/reglage_secondes"
                     android:layout_columnWeight="1"
                     android:layout_gravity="center"
+                    android:text="Secondes : 0''"
                     android:textColor="#d32f2e"
-                    android:textSize="20sp"
-                    android:text="Secondes : 0''" />
+                    android:textSize="20sp" />
 
             </GridLayout>
 
@@ -145,30 +155,30 @@
             <GridLayout
                 android:layout_width="900dp"
                 android:layout_height="wrap_content"
-                android:columnCount="3"
                 android:layout_marginTop="5dp"
+                android:columnCount="3"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_columnWeight="1"
                     android:layout_gravity="start"
+                    android:text="0"
                     android:textColor="#d32f2e"
-                    android:textSize="20sp"
-                    android:text="0" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:layout_columnWeight="1"
                     android:layout_gravity="center"
+                    android:text="30"
                     android:textColor="#d32f2e"
-                    android:textSize="20sp"
-                    android:text="30" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:layout_columnWeight="1"
                     android:layout_gravity="end"
+                    android:text="60"
                     android:textColor="#d32f2e"
-                    android:textSize="20sp"
-                    android:text="60" />
+                    android:textSize="20sp" />
 
             </GridLayout>
 
@@ -212,10 +222,10 @@
             android:id="@+id/aiguille_heures"
             android:layout_width="350dp"
             android:layout_height="350dp"
-            android:visibility="invisible"
             android:layout_centerInParent="true"
             android:scaleType="fitCenter"
-            android:src="@drawable/minutes" />
+            android:src="@drawable/minutes"
+            android:visibility="invisible" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -227,25 +237,25 @@
                 android:id="@+id/afficheur_minutes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="0"
                 android:textColor="@color/black"
-                android:textSize="50sp"
-                android:text="0"/>
+                android:textSize="50sp" />
 
             <TextView
                 android:id="@+id/afficheur_deux_points"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text=":"
                 android:textColor="@color/black"
-                android:textSize="50sp"
-                android:text=":"/>
+                android:textSize="50sp" />
 
             <TextView
                 android:id="@+id/afficheur_secondes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="00"
                 android:textColor="#d32f2e"
-                android:textSize="50sp"
-                android:text="00"/>
+                android:textSize="50sp" />
 
         </LinearLayout>
 

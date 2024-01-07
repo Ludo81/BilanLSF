@@ -20,7 +20,7 @@
         android:layout_centerHorizontal="true"
         android:text="0 km/h"
         android:textColor="@color/black"
-        android:textSize="50sp"></TextView>
+        android:textSize="50sp" />
 
     <RelativeLayout
         android:id="@+id/compteur"

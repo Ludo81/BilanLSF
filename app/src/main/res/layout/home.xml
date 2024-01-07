@@ -28,7 +28,7 @@
                     android:layout_marginVertical="10dp"
                     android:ems="10"
                     android:hint="@string/rechercher_video"
-                    android:text=""/>
+                    android:text="" />
 
                 <TableRow>
 
@@ -177,11 +177,11 @@
                 android:id="@+id/apropos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/container"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginTop="30dp"
                 android:layout_marginEnd="30dp"
-                android:layout_below="@id/container"
                 android:background="@android:color/transparent"
                 android:drawableStart="@drawable/a_propos"
                 android:drawablePadding="10dp"

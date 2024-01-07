@@ -15,9 +15,9 @@
         android:id="@+id/corps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onClickCorps"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
+        android:onClick="onClickCorps"
         android:text="@string/corps" />
 
     <TextView
@@ -25,8 +25,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/retour"
-        android:textColor="@color/black"
         android:layout_marginStart="20dp"
+        android:textColor="@color/black"
         android:textSize="40sp" />
 
     <TableLayout
@@ -467,8 +467,8 @@
             <Button
                 android:id="@+id/espace"
                 android:layout_width="match_parent"
-                android:height="70dp"
                 android:layout_weight="0.8"
+                android:height="70dp"
                 android:onClick="espace" />
 
             <ImageButton
@@ -485,10 +485,10 @@
         android:id="@+id/oui"
         android:layout_width="170dp"
         android:layout_height="170dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginStart="5dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
         android:background="@null"
         android:contentDescription="@string/oui"
         android:onClick="oui"
@@ -499,10 +499,10 @@
         android:id="@+id/non"
         android:layout_width="170dp"
         android:layout_height="170dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginEnd="5dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
         android:background="@null"
         android:contentDescription="@string/non"
         android:onClick="non"
