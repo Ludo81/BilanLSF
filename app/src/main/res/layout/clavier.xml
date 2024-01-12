@@ -20,6 +20,38 @@
         android:onClick="onClickCorps"
         android:text="@string/corps" />
 
+    <Button
+        android:id="@+id/calendrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/horloge"
+        android:onClick="onClickCalendrier"
+        android:text="@string/calendrier" />
+
+    <Button
+        android:id="@+id/horloge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/minuteur"
+        android:onClick="onClickHorloge"
+        android:text="@string/horloge" />
+
+    <Button
+        android:id="@+id/minuteur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/vitesse"
+        android:onClick="onClickMinuteur"
+        android:text="@string/minuteur" />
+
+    <Button
+        android:id="@+id/vitesse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/corps"
+        android:onClick="onClickVitesse"
+        android:text="@string/vitesse" />
+
     <TextView
         android:id="@+id/texte"
         android:layout_width="match_parent"

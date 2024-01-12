@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
+import android.widget.TextView;
 
 import androidx.activity.ComponentActivity;
 
@@ -24,6 +25,9 @@ public class GroupeActivity extends ComponentActivity {
 
         TableLayout tableContainer = findViewById(R.id.table);
 
+        TextView nomGroupeTextView = findViewById(R.id.nom_groupe);
+        nomGroupeTextView.setText(groupe.replace("_", " ").toUpperCase());
+
         Field[] fields = R.raw.class.getFields();
         TableRow ligne = null;
         for (Field field : fields) {
@@ -35,7 +39,7 @@ public class GroupeActivity extends ComponentActivity {
                 }
 
                 Button button = new Button(this);
-                button.setText(name.replace(groupe, "").replace("_", " "));
+                button.setText(name.replace(groupe, "").replace("_", " ").replace("39", "'").replace("63", "?"));
                 button.setBackgroundColor(couleur);
                 button.setTextColor(Color.WHITE);
                 TableRow.LayoutParams buttonParams = new TableRow.LayoutParams(0, 350);

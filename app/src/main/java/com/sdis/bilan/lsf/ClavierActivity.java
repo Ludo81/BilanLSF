@@ -24,6 +24,26 @@ public class ClavierActivity extends ComponentActivity {
         startActivity(intent);
     }
 
+    public void onClickCalendrier(View view){
+        Intent intent = new Intent(ClavierActivity.this, CalendrierActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickHorloge(View view){
+        Intent intent = new Intent(ClavierActivity.this, HorlogeActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickMinuteur(View view){
+        Intent intent = new Intent(ClavierActivity.this, MinuteurActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickVitesse(View view){
+        Intent intent = new Intent(ClavierActivity.this, VitesseActivity.class);
+        startActivity(intent);
+    }
+
     public void effacer(View view) {
         TextView textView = findViewById(R.id.texte);
         if (textView.getText().length() > 0)

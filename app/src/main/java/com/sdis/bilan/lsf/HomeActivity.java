@@ -33,7 +33,7 @@ public class HomeActivity extends ComponentActivity {
         for (String video : Arrays.stream(R.raw.class.getFields()).map(Field::getName).collect(Collectors.toList())) {
             RechercheItem item = new RechercheItem();
             item.setNomOrigine(video);
-            item.setNomAffiche(video.replace("_", " ").toUpperCase());
+            item.setNomAffiche(video.replace("_", " ").replace("39", "'").replace("63", "?").toUpperCase());
             items.add(item);
         }
 

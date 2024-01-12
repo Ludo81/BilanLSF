@@ -46,8 +46,8 @@ public class VideoActivity extends ComponentActivity {
             frame.addView(boutonCorps, params);
         }
 
-        if ("bilan_secondaire_depuis_quelle_heure_avez_vous_mal".equals(name) || "accouchement_a_quelle_heure_ont_debute_les_contractions".equals(name) ||
-        "accouchement_est_ce_que_vous_avez_perdu_les_eaux_si_oui_a_quelle_heure".equals(name)) {
+        if ("bilan_secondaire_depuis_quelle_heure_avez_vous_mal_63".equals(name) || "accouchement_a_quelle_heure_ont_debute_les_contractions_63".equals(name) ||
+        "accouchement_est_ce_que_vous_avez_perdu_les_eaux_si_oui_a_quelle_heure_63".equals(name)) {
             Button boutonHorloge = new Button(this);
             boutonHorloge.setText(R.string.horloge);
             FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
@@ -62,7 +62,7 @@ public class VideoActivity extends ComponentActivity {
             frame.addView(boutonHorloge, params);
         }
 
-        if ("accouchement_quelle_est_l_intervalle_entre_les_2_contractions".equals(name) || "bilan_secondaire_respirez_normalement_sur_1_minute".equals(name)
+        if ("accouchement_quelle_est_l39intervalle_entre_les_2_contractions_63".equals(name) || "bilan_secondaire_respirez_normalement_sur_1_minute".equals(name)
                 || "bilan_secondaire_respirez_normalement_sur_1_minute_2".equals(name) || "bilan_secondaire_je_controle_votre_pouls_sur_1_minute".equals(name)) {
             Button boutonMinuteur = new Button(this);
             boutonMinuteur.setText(R.string.minuteur);
@@ -78,7 +78,7 @@ public class VideoActivity extends ComponentActivity {
             frame.addView(boutonMinuteur, params);
         }
 
-        if ("accouchement_quelle_est_la_date_des_dernieres_regles".equals(name) || "accouchement_quelle_est_la_date_prevue_du_terme".equals(name)) {
+        if ("accouchement_quelle_est_la_date_des_dernieres_regles_63".equals(name) || "accouchement_quelle_est_la_date_prevue_du_terme_63".equals(name)) {
             Button boutonCalendrier = new Button(this);
             boutonCalendrier.setText(R.string.calendrier);
             FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
