@@ -11,46 +11,54 @@
         android:onClick="retour"
         android:text="@string/retour" />
 
-    <Button
-        android:id="@+id/corps"
+    <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:onClick="onClickCorps"
-        android:text="@string/corps" />
+        android:layout_centerHorizontal="true">
 
-    <Button
-        android:id="@+id/calendrier"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toStartOf="@id/horloge"
-        android:onClick="onClickCalendrier"
-        android:text="@string/calendrier" />
+        <Button
+            android:id="@+id/corps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickCorps"
+            android:text="@string/corps" />
 
-    <Button
-        android:id="@+id/horloge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toStartOf="@id/minuteur"
-        android:onClick="onClickHorloge"
-        android:text="@string/horloge" />
+        <Button
+            android:id="@+id/dessin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickDessin"
+            android:text="@string/dessin" />
 
-    <Button
-        android:id="@+id/minuteur"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toStartOf="@id/vitesse"
-        android:onClick="onClickMinuteur"
-        android:text="@string/minuteur" />
+        <Button
+            android:id="@+id/calendrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickCalendrier"
+            android:text="@string/calendrier" />
 
-    <Button
-        android:id="@+id/vitesse"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toStartOf="@id/corps"
-        android:onClick="onClickVitesse"
-        android:text="@string/vitesse" />
+        <Button
+            android:id="@+id/horloge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickHorloge"
+            android:text="@string/horloge" />
+
+        <Button
+            android:id="@+id/minuteur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickMinuteur"
+            android:text="@string/minuteur" />
+
+        <Button
+            android:id="@+id/vitesse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickVitesse"
+            android:text="@string/vitesse" />
+
+    </GridLayout>
 
     <TextView
         android:id="@+id/texte"
@@ -168,6 +176,16 @@
                 android:onClick="neuf"
                 android:scaleType="fitCenter"
                 android:src="@drawable/neuf" />
+
+            <ImageButton
+                android:id="@+id/dix"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:background="@null"
+                android:contentDescription="@string/dix"
+                android:onClick="dix"
+                android:scaleType="fitCenter"
+                android:src="@drawable/dix" />
 
             <ImageButton
                 android:id="@+id/vide"
@@ -290,7 +308,7 @@
                 android:scaleType="fitCenter"
                 android:src="@drawable/i" />
 
-            <ImageButton
+            <pl.droidsonroids.gif.GifImageButton
                 android:id="@+id/j"
                 android:layout_width="0dp"
                 android:layout_weight="0.1"
@@ -466,7 +484,7 @@
                 android:scaleType="fitCenter"
                 android:src="@drawable/y" />
 
-            <ImageButton
+            <pl.droidsonroids.gif.GifImageButton
                 android:id="@+id/z"
                 android:layout_width="0dp"
                 android:layout_weight="0.1"

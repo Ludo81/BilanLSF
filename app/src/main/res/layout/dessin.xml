@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CorpsActivity">
+
+    <Button
+        android:id="@+id/retour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="retour"
+        android:text="@string/retour" />
+
+    <ImageButton
+        android:id="@+id/effacer"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:background="@null"
+        android:contentDescription="@string/tout_effacer"
+        android:scaleType="fitCenter"
+        android:src="@drawable/croix" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:id="@+id/jaune"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="#FFFF00" />
+
+        <Button
+            android:id="@+id/bleu"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="#0000FF" />
+
+        <Button
+            android:id="@+id/vert"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="#00FF00" />
+
+        <Button
+            android:id="@+id/rouge"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="#FF0000" />
+
+        <Button
+            android:id="@+id/noir"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="#000000" />
+
+    </GridLayout>
+
+
+
+    <com.sdis.bilan.lsf.DessinView
+        android:id="@+id/dessinView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/effacer"
+        android:background="#FFFFFF"/>
+
+</RelativeLayout>

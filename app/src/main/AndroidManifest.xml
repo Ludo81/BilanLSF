@@ -81,6 +81,13 @@
             android:screenOrientation="landscape" />
 
         <activity
+            android:name=".DessinActivity"
+            android:exported="false"
+            android:label="DessinActivity"
+            android:theme="@style/Theme.BilanLSF"
+            android:screenOrientation="landscape" />
+
+        <activity
             android:name=".AProposActivity"
             android:exported="false"
             android:label="AProposActivity"

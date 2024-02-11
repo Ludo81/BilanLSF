@@ -86,4 +86,6 @@
     <string name="activer">Activer</string>
     <string name="start">Start</string>
     <string name="stop">Stop</string>
+    <string name="dessin">Dessin</string>
+    <string name="dix">dix</string>
 </resources>

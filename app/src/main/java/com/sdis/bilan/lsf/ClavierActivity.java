@@ -24,6 +24,11 @@ public class ClavierActivity extends ComponentActivity {
         startActivity(intent);
     }
 
+    public void onClickDessin(View view){
+        Intent intent = new Intent(ClavierActivity.this, DessinActivity.class);
+        startActivity(intent);
+    }
+
     public void onClickCalendrier(View view){
         Intent intent = new Intent(ClavierActivity.this, CalendrierActivity.class);
         startActivity(intent);
@@ -132,6 +137,11 @@ public class ClavierActivity extends ComponentActivity {
     public void neuf(View view) {
         TextView textView = findViewById(R.id.texte);
         textView.setText(String.format("%s9", textView.getText()));
+    }
+
+    public void dix(View view) {
+        TextView textView = findViewById(R.id.texte);
+        textView.setText(String.format("%s10", textView.getText()));
     }
 
     public void a(View view) {

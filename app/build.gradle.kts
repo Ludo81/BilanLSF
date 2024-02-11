@@ -11,7 +11,7 @@ android {
         applicationId = "com.sdis.bilan.lsf"
         minSdk = 24
         targetSdk = 33
-        versionCode = 1
+        versionCode = 2
         versionName = "1.11"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -66,4 +66,5 @@ dependencies {
     androidTestImplementation(platform("androidx.compose:compose-bom:2023.03.00"))
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+    implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.19")
 }
