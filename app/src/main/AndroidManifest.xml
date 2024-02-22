@@ -109,6 +109,13 @@
             android:screenOrientation="landscape" />
 
         <activity
+            android:name=".CreditsActivity"
+            android:exported="false"
+            android:label="CreditsActivity"
+            android:theme="@style/Theme.BilanLSF"
+            android:screenOrientation="landscape" />
+
+        <activity
             android:name=".VersionActivity"
             android:exported="false"
             android:label="VersionActivity"

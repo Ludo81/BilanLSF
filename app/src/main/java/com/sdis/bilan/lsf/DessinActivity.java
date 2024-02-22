@@ -10,6 +10,16 @@ import androidx.activity.ComponentActivity;
 
 public class DessinActivity extends ComponentActivity {
 
+    Button noir;
+
+    Button rouge;
+
+    Button vert;
+
+    Button bleu;
+
+    Button jaune;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,20 +30,62 @@ public class DessinActivity extends ComponentActivity {
         ImageButton effacerBouton = findViewById(R.id.effacer);
         effacerBouton.setOnClickListener(v -> dessinView.clearDrawing());
 
-        Button noir = findViewById(R.id.noir);
-        noir.setOnClickListener(v -> dessinView.changeColor(Color.BLACK));
+        noir = findViewById(R.id.noir);
+        noir.setBackgroundResource(R.drawable.bouton_noire_selection);
+        noir.setOnClickListener(v -> {
+            this.resetBoutons();
+            dessinView.changeColor(Color.BLACK);
+            noir.setBackgroundResource(R.drawable.bouton_noire_selection);
+        });
 
-        Button rouge = findViewById(R.id.rouge);
-        rouge.setOnClickListener(v -> dessinView.changeColor(Color.RED));
 
-        Button vert = findViewById(R.id.vert);
-        vert.setOnClickListener(v -> dessinView.changeColor(Color.GREEN));
+        rouge = findViewById(R.id.rouge);
+        rouge.setBackgroundResource(R.drawable.bouton_rouge);
+        rouge.setOnClickListener(v -> {
+            this.resetBoutons();
+            dessinView.changeColor(Color.RED);
+            rouge.setBackgroundResource(R.drawable.bouton_rouge_selection);
+        });
 
-        Button bleu = findViewById(R.id.bleu);
-        bleu.setOnClickListener(v -> dessinView.changeColor(Color.BLUE));
 
-        Button jaune = findViewById(R.id.jaune);
-        jaune.setOnClickListener(v -> dessinView.changeColor(Color.YELLOW));
+        vert = findViewById(R.id.vert);
+        vert.setBackgroundResource(R.drawable.bouton_vert);
+        vert.setOnClickListener(v -> {
+            this.resetBoutons();
+            dessinView.changeColor(Color.GREEN);
+            vert.setBackgroundResource(R.drawable.bouton_vert_selection);
+        });
+
+
+        bleu = findViewById(R.id.bleu);
+        bleu.setBackgroundResource(R.drawable.bouton_bleu);
+        bleu.setOnClickListener(v -> {
+            this.resetBoutons();
+            dessinView.changeColor(Color.BLUE);
+            bleu.setBackgroundResource(R.drawable.bouton_bleu_selection);
+        });
+
+
+        jaune = findViewById(R.id.jaune);
+        jaune.setBackgroundResource(R.drawable.bouton_jaune);
+        jaune.setOnClickListener(v -> {
+            this.resetBoutons();
+            dessinView.changeColor(Color.YELLOW);
+            jaune.setBackgroundResource(R.drawable.bouton_jaune_selection);
+        });
+
+    }
+
+    private void resetBoutons() {
+        noir.setBackgroundResource(R.drawable.bouton_noire);
+
+        rouge.setBackgroundResource(R.drawable.bouton_rouge);
+
+        vert.setBackgroundResource(R.drawable.bouton_vert);
+
+        bleu.setBackgroundResource(R.drawable.bouton_bleu);
+
+        jaune.setBackgroundResource(R.drawable.bouton_jaune);
     }
 
     public void retour(View view) {

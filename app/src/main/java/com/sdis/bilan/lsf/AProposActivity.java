@@ -47,6 +47,11 @@ public class AProposActivity extends ComponentActivity {
         startActivity(intent);
     }
 
+    public void onClickCredits(View view) {
+        Intent intent = new Intent(AProposActivity.this, CreditsActivity.class);
+        startActivity(intent);
+    }
+
     public void onClickVersion(View view) {
         Intent intent = new Intent(AProposActivity.this, VersionActivity.class);
         startActivity(intent);
