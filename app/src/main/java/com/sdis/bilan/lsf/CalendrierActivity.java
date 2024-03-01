@@ -3,6 +3,7 @@ package com.sdis.bilan.lsf;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.TableLayout;
 import android.widget.TextView;
@@ -53,12 +54,12 @@ public class CalendrierActivity extends ComponentActivity {
         String mois = new SimpleDateFormat("MMMM", Locale.FRENCH).format(calendrier.getTime());
         TextView texte = new TextView(this);
         texte.setTextColor(Color.BLACK);
-        texte.setTextSize(30);
+        texte.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.text_size));
         texte.setText(mois.toUpperCase());
         tableMois.addView(texte);
         for (int jour = 1; jour <= 31; jour++) {
             texte = new TextView(this);
-            texte.setTextSize(20);
+            texte.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.text_size));
             texte.setTextColor(Color.BLACK);
             texte.setPadding(20, 20 ,20 ,20);
             if(jour <= joursDansLeMois){ // pour mettre au même niveau le calendrier

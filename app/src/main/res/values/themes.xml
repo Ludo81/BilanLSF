@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Theme.BilanLSF" parent="android:Theme.Material.Light.NoActionBar">
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">@dimen/text_size</item>
     </style>
 </resources>
