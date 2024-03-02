@@ -1,4 +1,4 @@
 <!-- res/values/dimens.xml -->
 <resources>
-    <dimen name="text_size">16sp</dimen>
+    <dimen name="text_size">13sp</dimen>
 </resources>

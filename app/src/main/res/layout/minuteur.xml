@@ -79,7 +79,6 @@
             <GridLayout
                 android:layout_width="600dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
                 android:columnCount="3"
                 android:orientation="horizontal">
 
@@ -115,6 +114,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/regle_m"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="70dp"
         android:gravity="center">
 
@@ -157,7 +157,6 @@
             <GridLayout
                 android:layout_width="600dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
                 android:columnCount="3"
                 android:orientation="horizontal">
 
@@ -221,7 +220,7 @@
             android:src="@drawable/secondes" />
 
         <ImageView
-            android:id="@+id/aiguille_heures"
+            android:id="@+id/aiguille_vide"
             android:layout_width="350dp"
             android:layout_height="350dp"
             android:layout_centerInParent="true"
@@ -232,7 +231,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/aiguille_heures"
+            android:layout_alignBottom="@id/aiguille_vide"
+            android:layout_marginBottom="35dp"
             android:layout_centerHorizontal="true">
 
             <TextView
@@ -241,7 +241,7 @@
                 android:layout_height="wrap_content"
                 android:text="0"
                 android:textColor="@color/black"
-                android:textSize="50sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/afficheur_deux_points"
@@ -249,7 +249,7 @@
                 android:layout_height="wrap_content"
                 android:text=":"
                 android:textColor="@color/black"
-                android:textSize="50sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/afficheur_secondes"
@@ -257,7 +257,7 @@
                 android:layout_height="wrap_content"
                 android:text="00"
                 android:textColor="#d32f2e"
-                android:textSize="50sp" />
+                android:textSize="20sp" />
 
         </LinearLayout>
 

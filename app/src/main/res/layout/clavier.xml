@@ -67,7 +67,7 @@
         android:layout_below="@id/retour"
         android:layout_marginStart="20dp"
         android:textColor="@color/black"
-        android:textSize="40sp" />
+        android:textSize="30sp" />
 
     <TableLayout
         android:id="@+id/touches"
