@@ -33,7 +33,8 @@
             android:layout_width="450dp"
             android:layout_height="450dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/compteur_vitesse" />
+            android:src="@drawable/compteur_vitesse"
+            android:contentDescription="@string/compteur" />
 
         <ImageView
             android:id="@+id/aiguille"
@@ -42,7 +43,8 @@
             android:layout_centerInParent="true"
             android:rotation="-135"
             android:scaleType="fitCenter"
-            android:src="@drawable/aiguille" />
+            android:src="@drawable/aiguille"
+            android:contentDescription="@string/aiguille" />
 
     </RelativeLayout>
 
@@ -57,7 +59,8 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/voiture_lente" />
+            android:src="@drawable/voiture_lente"
+            android:contentDescription="@string/voiture_lente" />
 
         <SeekBar
             android:id="@+id/regle"
@@ -70,7 +73,8 @@
             android:layout_width="85dp"
             android:layout_height="85dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/voiture_rapide" />
+            android:src="@drawable/voiture_rapide"
+            android:contentDescription="@string/voiture_rapide" />
 
     </LinearLayout>
 
