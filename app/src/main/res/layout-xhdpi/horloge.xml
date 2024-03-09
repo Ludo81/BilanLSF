@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HorlogeActivity">
+
+    <Button
+        android:id="@+id/retour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="retour"
+        android:text="@string/retour" />
+
+    <LinearLayout
+        android:id="@+id/regle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <GridLayout
+            android:layout_width="600dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:columnCount="3"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="start"
+                android:scaleType="fitCenter"
+                android:src="@drawable/lune"
+                android:contentDescription="@string/lune" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/soleil"
+                android:contentDescription="@string/soleil" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="end"
+                android:scaleType="fitCenter"
+                android:src="@drawable/lune"
+                android:contentDescription="@string/lune" />
+
+        </GridLayout>
+
+        <SeekBar
+            android:id="@+id/regle_horloge"
+            android:layout_width="600dp"
+            android:layout_height="wrap_content"
+            android:max="1440"
+            android:thumb="@drawable/point_regle_noir" />
+
+        <GridLayout
+            android:layout_width="600dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:columnCount="3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_columnWeight="1"
+                android:layout_gravity="start"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:text="12"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_columnWeight="1"
+                android:layout_gravity="end"
+                android:text="24"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </GridLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/horloge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/regle"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/fond"
+            android:layout_width="650dp"
+            android:layout_height="650dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/horloge_am"
+            android:contentDescription="@string/horloge_matin" />
+
+        <ImageView
+            android:id="@+id/aiguille_minutes"
+            android:layout_width="600dp"
+            android:layout_height="600dp"
+            android:layout_centerInParent="true"
+            android:rotation="-55"
+            android:scaleType="fitCenter"
+            android:src="@drawable/minutes"
+            android:contentDescription="@string/aiguille_minutes" />
+
+        <ImageView
+            android:id="@+id/aiguille_heures"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:layout_centerInParent="true"
+            android:rotation="-55"
+            android:scaleType="fitCenter"
+            android:src="@drawable/minutes"
+            android:contentDescription="@string/aiguille_heures" />
+
+        <TextView
+            android:id="@+id/afficheur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/aiguille_heures"
+            android:layout_marginBottom="45dp"
+            android:layout_centerHorizontal="true"
+            android:text="0:00"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
