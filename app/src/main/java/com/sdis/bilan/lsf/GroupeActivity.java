@@ -3,6 +3,7 @@ package com.sdis.bilan.lsf;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TableLayout;
@@ -42,9 +43,17 @@ public class GroupeActivity extends ComponentActivity {
                 button.setText(name.replace(groupe, "").replace("_", " ").replace("39", "'").replace("63", "?"));
                 button.setBackgroundColor(couleur);
                 button.setTextColor(Color.WHITE);
-                TableRow.LayoutParams buttonParams = new TableRow.LayoutParams(0, 350);
+                int hauteurBouton = 350;
+                int margin = 20;
+                DisplayMetrics displayMetrics = new DisplayMetrics();
+                getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+                if(getResources().getDisplayMetrics().density == 1.5 && displayMetrics.heightPixels < 500 && displayMetrics.widthPixels < 1000) {
+                    hauteurBouton = 150;
+                    margin = 10;
+                }
+                TableRow.LayoutParams buttonParams = new TableRow.LayoutParams(0, hauteurBouton);
                 buttonParams.weight = 1;
-                buttonParams.setMargins(20, 20, 20, 20);
+                buttonParams.setMargins(margin, margin, margin, margin);
                 button.setLayoutParams(buttonParams);
                 button.setOnClickListener(view -> {
                     Intent intent = new Intent(GroupeActivity.this, VideoActivity.class);
@@ -62,9 +71,17 @@ public class GroupeActivity extends ComponentActivity {
         if(ligne != null && ligne.getChildCount() == 1){
             Button button = new Button(this);
             button.setVisibility(View.INVISIBLE);
-            TableRow.LayoutParams buttonParams = new TableRow.LayoutParams(0, 350);
+            int hauteurBouton = 350;
+            int margin = 20;
+            DisplayMetrics displayMetrics = new DisplayMetrics();
+            getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+            if(getResources().getDisplayMetrics().density == 1.5 && displayMetrics.heightPixels < 500 && displayMetrics.widthPixels < 1000) {
+                hauteurBouton = 150;
+                margin = 10;
+            }
+            TableRow.LayoutParams buttonParams = new TableRow.LayoutParams(0, hauteurBouton);
             buttonParams.weight = 1;
-            buttonParams.setMargins(20, 20, 20, 20);
+            buttonParams.setMargins(margin, margin, margin, margin);
             button.setLayoutParams(buttonParams);
             ligne.addView(button);
         }
