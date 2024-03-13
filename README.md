@@ -10,7 +10,10 @@ L'application permet plusieurs actions :
 * La lecture de vidéos spécifiques en fonction de la nature de l'intervention.
 * La saisie de texte à l'aide d'un clavier adapté au langage des signes.
 * Le placement de repères sur une silhouette pour indiquer précisément la zone du corps humain où une douleur ou une plaie est présente.
-
+* Une zone de dessin libre pour pouvoir expliquer une situation par un dessin.
+* Un calendrier afin de répondre a des questions demandant une date.
+* Une horloge et un minuteur permettant de répondre a des questions avec une notion de temps ou de durée.
+* Un compteur de vitesse permettant de montrer la vitesse d'un véhicule.
 
 ## Prérequis
 ------------
