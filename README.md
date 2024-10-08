@@ -18,8 +18,8 @@ L'application permet plusieurs actions :
 ## Prérequis
 ------------
 
-- Version SDK recommandée : 33
-* ![Android13]
+- Version SDK recommandée : 34
+* ![Android14]
 - Version SDK minimum : 24
 * ![Android7]
 

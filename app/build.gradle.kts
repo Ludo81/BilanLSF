@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.sdis.bilan.lsf"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.sdis.bilan.lsf"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 114
         versionName = "1.14"
 
