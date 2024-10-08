@@ -11,8 +11,8 @@ android {
         applicationId = "com.sdis.bilan.lsf"
         minSdk = 24
         targetSdk = 34
-        versionCode = 114
-        versionName = "1.14"
+        versionCode = 115
+        versionName = "1.15"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -22,8 +22,13 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+
+            ndk {
+                debugSymbolLevel = "FULL"
+            }
         }
     }
     compileOptions {
