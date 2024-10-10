@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.Filter;
 import android.widget.TextView;
 
 import androidx.activity.ComponentActivity;
@@ -145,8 +146,13 @@ public class HomeActivity extends ComponentActivity {
 
     public class CustomArrayAdapter extends ArrayAdapter<RechercheItem> {
 
+        private List<RechercheItem> originalItems;
+        private List<RechercheItem> filteredItems;
+
         public CustomArrayAdapter(Context context, int resource, List<RechercheItem> objects) {
             super(context, resource, objects);
+            this.originalItems = new ArrayList<>(objects);
+            this.filteredItems = objects;
         }
 
         @NonNull
@@ -183,6 +189,56 @@ public class HomeActivity extends ComponentActivity {
             } else {
                 return Color.BLACK;
             }
+        }
+
+        @Override
+        public int getCount() {
+            return filteredItems.size();
+        }
+
+        @Override
+        public RechercheItem getItem(int position) {
+            return filteredItems.get(position);
+        }
+
+        @Override
+        public Filter getFilter() {
+            return new Filter() {
+                @Override
+                protected FilterResults performFiltering(CharSequence constraint) {
+                    FilterResults results = new FilterResults();
+                    List<RechercheItem> suggestions = new ArrayList<>();
+
+                    if (constraint != null) {
+                        String query = constraint.toString().toLowerCase().replace("'", "").replace(" ", "");
+
+                        for (RechercheItem item : originalItems) {
+                            String normalizedNomAffiche = item.getNomAffiche().toLowerCase().replace("'", "").replace(" ", "");
+
+                            if (normalizedNomAffiche.contains(query)) {
+                                suggestions.add(item);
+                            }
+                        }
+
+                        results.values = suggestions;
+                        results.count = suggestions.size();
+                    }
+
+                    return results;
+                }
+
+                @Override
+                protected void publishResults(CharSequence constraint, FilterResults results) {
+                    List<RechercheItem> values = (List<RechercheItem>) results.values;
+                    filteredItems = (values != null) ? values : new ArrayList<>();
+                    notifyDataSetChanged();
+                }
+
+                @Override
+                public CharSequence convertResultToString(Object resultValue) {
+                    return ((RechercheItem) resultValue).getNomAffiche();
+                }
+            };
         }
     }
 }
