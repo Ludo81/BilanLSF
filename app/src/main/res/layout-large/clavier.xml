@@ -58,6 +58,13 @@
             android:onClick="onClickVitesse"
             android:text="@string/vitesse" />
 
+        <Button
+            android:id="@+id/voiture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickVoiture"
+            android:text="@string/voiture" />
+
     </GridLayout>
 
     <TextView

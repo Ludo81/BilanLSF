@@ -92,4 +92,11 @@
     <string name="voiture_rapide">voiture_rapide</string>
     <string name="icone_secondes">icone_secondes</string>
     <string name="icone_minutes">icone_minutes</string>
+    <string name="voiture">voiture</string>
+    <string name="augmenter_places">augmenter places</string>
+    <string name="reduire_places">reduire places</string>
+    <string name="siege_avant">siege_avant\n</string>
+    <string name="places10">10 PLACES</string>
+    <string name="places7">7 PLACES</string>
+    <string name="places5">5 PLACES</string>
 </resources>

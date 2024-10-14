@@ -92,6 +92,13 @@
             android:screenOrientation="landscape" />
 
         <activity
+            android:name=".VoitureActivity"
+            android:exported="false"
+            android:label="VoitureActivity"
+            android:theme="@style/Theme.BilanLSF"
+            android:screenOrientation="landscape" />
+
+        <activity
             android:name=".AProposActivity"
             android:exported="false"
             android:label="AProposActivity"

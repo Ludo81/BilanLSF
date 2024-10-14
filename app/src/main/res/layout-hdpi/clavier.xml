@@ -53,10 +53,17 @@
 
         <Button
             android:id="@+id/vitesse"
-            android:layout_width="70dp"
+            android:layout_width="65dp"
             android:layout_height="wrap_content"
             android:onClick="onClickVitesse"
             android:text="@string/vitesse" />
+
+        <Button
+            android:id="@+id/voiture"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:onClick="onClickVoiture"
+            android:text="@string/voiture" />
 
     </GridLayout>
 

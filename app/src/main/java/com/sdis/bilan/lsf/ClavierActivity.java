@@ -49,6 +49,11 @@ public class ClavierActivity extends ComponentActivity {
         startActivity(intent);
     }
 
+    public void onClickVoiture(View view){
+        Intent intent = new Intent(ClavierActivity.this, VoitureActivity.class);
+        startActivity(intent);
+    }
+
     public void effacer(View view) {
         TextView textView = findViewById(R.id.texte);
         if (textView.getText().length() > 0)
