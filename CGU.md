@@ -1,7 +1,5 @@
-## Conditions Générales d'Utilisation de l'Application Bilan LSF
-*(Terms of Service)*
-
-------------
+# Conditions Générales d'Utilisation de l'Application Bilan LSF
+## *(Terms of Service)*
 
 Dernière mise à jour : 15/10/2024
 
