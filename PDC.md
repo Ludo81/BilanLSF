@@ -1,4 +1,5 @@
-## Politique de Confidentialité pour l'Application Bilan LSF
+# Politique de Confidentialité pour l'Application Bilan LSF 
+*(Privacy Policy)*
 -------
 
 Dernière mise à jour : 15/10/2024
