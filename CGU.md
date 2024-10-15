@@ -39,13 +39,18 @@ L'application Bilan LSF est distribuée sous licence Creative Commons Attributio
 
 4.2. Libertés offertes : En vertu de cette licence, vous avez le droit de :
 
-Partager : Copier et redistribuer le contenu de l'application sous n'importe quel format.
-Adapter : Remixer, transformer et construire à partir du contenu de l'application.
+-Partager : Copier et redistribuer le contenu de l'application sous n'importe quel format.
+
+-Adapter : Remixer, transformer et construire à partir du contenu de l'application.
+
 4.3. Conditions à respecter : Vous devez respecter les conditions suivantes lors de l'utilisation du contenu de l'application :
 
-Attribution : Vous devez donner les crédits appropriés en reconnaissant l'auteur ou le détenteur des droits de l'œuvre originale de manière adéquate. Cela peut inclure le nom de l'auteur, le titre de l'œuvre et, si applicable, un lien vers l'œuvre originale.
-NonCommercial : Vous ne pouvez pas utiliser le contenu de l'application à des fins commerciales.
-NoDerivatives : Si vous remixez, transformez ou construisez à partir du contenu de l'application, vous ne pouvez pas distribuer le contenu modifié.
+-Attribution : Vous devez donner les crédits appropriés en reconnaissant l'auteur ou le détenteur des droits de l'œuvre originale de manière adéquate. Cela peut inclure le nom de l'auteur, le titre de l'œuvre et, si applicable, un lien vers l'œuvre originale.
+
+-NonCommercial : Vous ne pouvez pas utiliser le contenu de l'application à des fins commerciales.
+
+-NoDerivatives : Si vous remixez, transformez ou construisez à partir du contenu de l'application, vous ne pouvez pas distribuer le contenu modifié.
+
 4.4. Détails de la licence : Pour plus de détails sur les termes de la licence Creative Commons, veuillez consulter le texte complet de la licence.
 
 ## Responsabilité
