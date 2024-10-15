@@ -25,9 +25,10 @@ Nous n'utilisons pas de cookies, de pixels espions ou de technologies similaires
 -------
 L'application Bilan LSF peut contenir des liens vers des sites web externes tels que :
 
-SDIS81 - Service Départemental d'Incendie et de Secours du Tarn
-Fondation du Bon Sauveur d'Alby
-Licence Creative Commons
+- [SDIS81 - Service Départemental d'Incendie et de Secours du Tarn](https://www.sdis81.fr/)
+- [Fondation du Bon Sauveur d'Alby](https://www.bonsauveuralby.fr/)
+- [Licence Creative Commons](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+  
 Vous reconnaissez que l'accès à ces liens externes se fait à vos propres risques. Les développeurs et propriétaires de l'application ne sont pas responsables du contenu ou des conséquences de l'utilisation de ces sites web externes.
 
 ## Vidéos Réalisées par la Fondation Bon Sauveur d'Alby
