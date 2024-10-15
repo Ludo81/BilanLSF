@@ -3,7 +3,7 @@
 
 Dernière mise à jour : 15/10/2024
 
-Bienvenue dans l'application Bilan LSF. Nous sommes déterminés à protéger votre vie privée et à offrir une expérience utilisateur transparente. Cette Politique de Confidentialité explique en détail comment nous gérons les informations dans l'application.
+Bienvenue dans l'application Bilan LSF. Nous sommes déterminés à protéger votre vie privée et à offrir une expérience utilisateur transparente. Cette Politique de Confidentialité explique en détail comment nous collections, gérons et divulgons les informations personnelles quelqu'un décide d'utiliser l'application Bilan LSF.
 
 ## Acceptation des Conditions d'Utilisation
 -------
@@ -12,6 +12,10 @@ En utilisant l'application Bilan LSF, vous acceptez la présente Politique de Co
 ## Aucune Collecte de Données
 -------
 L'application Bilan LSF ne collecte aucune donnée, que ce soit des données personnelles ou non. Cela signifie que nous ne recueillons aucune information sur votre nom, votre adresse, votre adresse e-mail, votre numéro de téléphone, votre emplacement, vos actions dans l'application, ou toute autre donnée.
+
+## Données de Journal
+-------
+Nous tenons à vous informer que chaque fois que vous utilisez Bilan LSF, en cas d'erreur dans l'application, nous collectons des données et des informations sur votre téléphone appelées Données de Journal. Ces Données de Journal peuvent inclure des informations telles que l'adresse IP de votre appareil, le nom de l'appareil, la version du système d'exploitation, la configuration de l'application lors de l'utilisation de l'application, l'heure et la date d'utilisation du Service, ainsi que d'autres statistiques.
 
 ## Pas de Cookies ni de Technologies Similaires
 -------
@@ -29,6 +33,11 @@ Vous reconnaissez que l'accès à ces liens externes se fait à vos propres risq
 ## Vidéos Réalisées par la Fondation Bon Sauveur d'Alby
 -------
 L'application Bilan LSF inclut des vidéos réalisées par la Fondation Bon Sauveur d'Alby. Ces vidéos peuvent être sujettes à leurs propres politiques de confidentialité. En utilisant l'application, vous acceptez également les termes de la Fondation Bon Sauveur d'Alby.
+
+## Confidentialité des Enfants
+-------
+
+Ce Service est accessible à tous les âges, sans aucune limite d'âge pour son utilisation. Nous tenons à préciser que nous ne collectons, n'utilisons et ne retenons aucune donnée personnelle, que ce soit d'enfants ou d'utilisateurs de tout autre groupe d'âge. Si vous êtes parent ou tuteur, nous vous encourageons à encadrer l'utilisation de l'application par vos enfants et à nous contacter si vous avez des questions ou des préoccupations concernant la confidentialité ou la sécurité de leur expérience.
 
 ## Sécurité et Confidentialité
 -------
