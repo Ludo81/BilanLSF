@@ -45,8 +45,15 @@ Langages :
 
 Cette application est publiée sous CC BY-NC-ND 4.0 DEED. Voir ci-joint à la racine du projet [LICENSE](LICENSE.md)
 
+
+## Législation
+-------
+
+* Politique de confidentialité [PDC](PDC.md)
+* Conditions générales d'utilisation [CGU](CGU.md)
+
 [Kotlin]: https://img.shields.io/badge/Kotlin-6A43C4?link=https%3A%2F%2Fkotlinlang.org%2F
 [Java]: https://img.shields.io/badge/Java-F29111?link=https%3A%2F%2Fdev.java%2F
 [HTML]: https://img.shields.io/badge/HTML-e34c26
 [Android7]: https://img.shields.io/badge/Android7-4FC3F7?link=https%3A%2F%2Fdeveloper.android.com%2Fabout%2Fversions%2Fnougat%2Fandroid-7.0
-[Android13]: https://img.shields.io/badge/Android13-3DDC84?link=https%3A%2F%2Fdeveloper.android.com%2Fabout%2Fversions%2F13
+[Android14]: https://img.shields.io/badge/Android13-3DDC84?link=https%3A%2F%2Fdeveloper.android.com%2Fabout%2Fversions%2F13
