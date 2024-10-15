@@ -1,8 +1,3 @@
----
-title: "BILAN LSF"
-description: "Description"
----
-
 ## BILAN LSF
 ------------
 
