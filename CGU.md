@@ -3,7 +3,7 @@
 
 Dernière mise à jour : 15/10/2024
 
-Bienvenue sur l'application Bilan LSF. L'application est conçue pour faciliter la communication entre les services de secours, tels que les pompiers et le SAMU, et les personnes sourdes et malentendantes lors d'interventions en utilisant des vidéos et des images. L'Application vise principalement à servir les professionnels de secours.
+Bienvenue sur l'application Bilan LSF. L'application est conçue pour faciliter la communication entre les services de secours, tels que les pompiers et le SAMU, et les personnes sourdes et malentendantes lors d'interventions en utilisant des vidéos et des images. L'application vise principalement à servir les professionnels de secours ainsi que toute personne souhaitant utiliser ces ressources.
 
 ## Acceptation des Conditions d'Utilisation
 ------------
@@ -18,6 +18,7 @@ En utilisant l'application Bilan LSF, vous acceptez les présentes Conditions G�
 2.2. Vous acceptez de ne pas utiliser l'application à des fins illégales ou nuisibles.
 
 2.3. L'application ne collecte aucune donnée d'aucun type. Aucun cookie n'est utilisé.
+(Cette clause est ajoutée pour clarifier que l'application n'enregistre ni ne suit les utilisateurs.)
 
 2.4. L'application peut inclure des liens redirigeant vers des sites web externes, tels que :
 
@@ -26,6 +27,11 @@ En utilisant l'application Bilan LSF, vous acceptez les présentes Conditions G�
 - [Licence Creative Commons](https://creativecommons.org/licenses/by-nc-nd/4.0/)
   
 Vous reconnaissez que l'accès à ces liens externes se fait à vos propres risques. Les développeurs et propriétaires de l'application ne sont pas responsables du contenu ou des conséquences de l'utilisation de ces sites web externes.
+
+## Confidentialité des Enfants
+------------
+
+Ce Service est accessible à tous les âges, sans aucune limite d'âge pour son utilisation. Nous tenons à préciser que nous ne collectons, n'utilisons et ne retenons aucune donnée personnelle, que ce soit d'enfants ou d'utilisateurs de tout autre groupe d'âge. Si vous êtes parent ou tuteur, nous vous encourageons à encadrer l'utilisation de l'application par vos enfants et à nous contacter si vous avez des questions ou des préoccupations concernant la confidentialité ou la sécurité de leur expérience.
 
 ## Propriété Intellectuelle
 ------------
@@ -56,7 +62,7 @@ L'application Bilan LSF est distribuée sous licence Creative Commons Attributio
 ## Responsabilité
 ------------
 
-L'utilisation de l'application relève de votre propre responsabilité. Les développeurs et propriétaires de l'application ne sont pas responsables des conséquences de son utilisation.
+L'utilisation de l'application relève de votre propre responsabilité. Les développeurs et propriétaires de l'application ne sont pas responsables des conséquences de son utilisation, y compris, mais sans s'y limiter, les erreurs de communication ou les problèmes liés aux services d'urgence.
 
 ## Crédits des Vidéos
 ------------
