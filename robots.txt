@@ -1,3 +1,2 @@
 User-agent: *
 Allow:
-Sitemap: https://ludo81.github.io/BilanLSF/sitemap.xml
