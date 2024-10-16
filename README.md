@@ -1,8 +1,3 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="google-site-verification" content="-9bKyiZvKBU9Xn_c7mwTDA-ODMwnzhQWvSQh5P7GDG0" />
-</head>
-
 ## BILAN LSF
 ------------
 ![Logo](Images/logo.png)
