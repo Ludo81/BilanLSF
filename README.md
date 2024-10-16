@@ -1,9 +1,3 @@
----
-layout: default
-title: "Titre de la page"
-description: "Description personnalisée de la page pour les moteurs de recherche."
----
-
 ## BILAN LSF
 ------------
 ![Logo](Images/logo.png)
