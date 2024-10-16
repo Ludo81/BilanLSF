@@ -1,3 +1,4 @@
+<meta name="google-site-verification" content="-9bKyiZvKBU9Xn_c7mwTDA-ODMwnzhQWvSQh5P7GDG0" />
 ## BILAN LSF
 ------------
 ![Logo](Images/logo.png)
