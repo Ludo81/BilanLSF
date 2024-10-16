@@ -12,8 +12,6 @@ public class VoitureActivity extends ComponentActivity {
 
     int nombreSelection;
 
-    String selection = "";
-
     int nombrePlaces = 5;
 
     @Override
@@ -69,9 +67,12 @@ public class VoitureActivity extends ComponentActivity {
         if (nombreSelection == 0) {
             selectionView.setVisibility(View.INVISIBLE);
             selectionView.setText("");
+        } else if (nombreSelection == 1) {
+            selectionView.setVisibility(View.VISIBLE);
+            selectionView.setText(nombreSelection + " PERSONNE SELECTIONNEE");
         } else {
             selectionView.setVisibility(View.VISIBLE);
-            selectionView.setText(nombreSelection + " PERSONNES SELECTIONNES");
+            selectionView.setText(nombreSelection + " PERSONNES SELECTIONNEES");
         }
     }
 
