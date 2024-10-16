@@ -1,9 +1,3 @@
----
-layout: default
-title: "Description Bilan LSF"
-description: "L'application Android Bilan LSF a pour principal objectif de faciliter la communication entre les services de secours, tels que les pompiers et le SAMU, et les personnes sourdes et mal entendantes lors de leurs interventions en utilisant des vidéos et des images. Elle vise principalement à servir les professionnels de secours."
----
-
 ## BILAN LSF
 ------------
 ![Logo](Images/logo.png)
