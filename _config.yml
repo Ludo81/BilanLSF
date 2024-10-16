@@ -2,3 +2,5 @@ theme: jekyll-theme-cayman
 title: Bilan LSF
 description: Bilan LSF
 lang: fr
+plugins:
+  - jekyll-sitemap
