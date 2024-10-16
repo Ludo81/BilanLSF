@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="google-site-verification" content="-9bKyiZvKBU9Xn_c7mwTDA-ODMwnzhQWvSQh5P7GDG0" />
