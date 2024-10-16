@@ -1,10 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="google-site-verification" content="-9bKyiZvKBU9Xn_c7mwTDA-ODMwnzhQWvSQh5P7GDG0" />
-    <link rel="stylesheet" href="/BilanLSF/assets/css/style.css?v=fbecbefe18aceb8e664a861880b3cca641e2f2f0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }} - {{ site.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}"> <!-- Si le thème a des CSS personnalisés -->
 </head>
-<main>
-    {{ content }}
-</main>
+<body>
+    <header class="site-header">
+        <h1>{{ site.title }}</h1>
+        <h2>{{ site.description }}</h2>
+        <nav>
+            <ul>
+                <li><a href="{{ '/' | absolute_url }}">Accueil</a></li>
+                <li><a href="{{ '/about/' | absolute_url }}">À propos</a></li>
+                <!-- Ajoutez d'autres liens ici -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {{ content }}
+    </main>
+    <footer>
+        <p>&copy; {{ site.year }} {{ site.title }}</p>
+    </footer>
+</body>
+</html>
