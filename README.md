@@ -1,3 +1,7 @@
+---
+title: "Page d'accueil"
+description: "Ceci est la page d'accueil de mon site GitHub Pages."
+---
 ## BILAN LSF
 ------------
 ![Logo](Images/logo.png)
