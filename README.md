@@ -31,6 +31,7 @@ L'application permet plusieurs actions :
 * Une horloge et un minuteur permettant de répondre a des questions avec une notion de temps ou de durée.
   
   ![Horloge](Images/Horloge.png)
+  [![Horloge vidéo](https://img.youtube.com/vi/f2njCmFvVkA/maxresdefault.jpg)](https://www.youtube.com/watch?v=f2njCmFvVkA)
   ![Minuteur](Images/Minuteur.png)
   
 * Un compteur de vitesse permettant de montrer la vitesse d'un véhicule.
