@@ -80,6 +80,8 @@ Lien vers le Play Store de Google permettant de télécharger l'application grat
 
 Cette application est publiée sous CC BY-NC-ND 4.0 DEED. Voir ci-joint à la racine du projet [LICENSE](LICENSE.md)
 
+[![Logo Creative Commons](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-nd.png)](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr)
+
 ## Législation
 -------
 
