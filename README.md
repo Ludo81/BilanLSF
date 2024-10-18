@@ -73,7 +73,7 @@ Lien vers les videos YouTube de l'application.
 
 Lien vers le Play Store de Google permettant de télécharger l'application gratuitement.
 
-[![Logo Play Store](https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg)](https://play.google.com/store/apps/details?id=com.sdis.bilan.lsf&pli=1)
+[![Logo Play Store](https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg)](https://play.google.com/store/apps/details?id=com.sdis.bilan.lsf)
 
 ## Licence
 -------
