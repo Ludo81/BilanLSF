@@ -66,15 +66,19 @@ Langages :
 
 Lien vers les videos YouTube de l'application.
 
-[![YouTube Logo](https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg)](https://www.youtube.com/@BilanLSF/videos)
+[![Logo YouTube](https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg)](https://www.youtube.com/@BilanLSF/videos)
 
+## Play Store
+-------
 
+Lien vers le Play Store de Google permettant de télécharger l'application gratuitement.
+
+[![Logo Play Store](https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg)](https://play.google.com/store/apps/details?id=com.sdis.bilan.lsf&pli=1)
 
 ## Licence
 -------
 
 Cette application est publiée sous CC BY-NC-ND 4.0 DEED. Voir ci-joint à la racine du projet [LICENSE](LICENSE.md)
-
 
 ## Législation
 -------
