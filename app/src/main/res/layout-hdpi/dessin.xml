@@ -12,6 +12,28 @@
         android:onClick="retour"
         android:text="@string/retour" />
 
+    <ImageView
+        android:id="@+id/undo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_toStartOf="@id/redo"
+        android:contentDescription="@string/undo"
+        android:onClick="onClickUndo"
+        android:src="@drawable/undo_disabled"
+        android:scaleType="fitXY"
+        android:background="@null" />
+
+    <ImageView
+        android:id="@+id/redo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_toStartOf="@id/effacer"
+        android:contentDescription="@string/redo"
+        android:onClick="onClickRedo"
+        android:src="@drawable/redo_disabled"
+        android:scaleType="fitXY"
+        android:background="@null"/>
+
     <ImageButton
         android:id="@+id/effacer"
         android:layout_width="40dp"
@@ -31,31 +53,31 @@
             android:id="@+id/jaune"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginHorizontal="20dp" />
+            android:layout_marginHorizontal="10dp" />
 
         <Button
             android:id="@+id/bleu"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginHorizontal="20dp" />
+            android:layout_marginHorizontal="10dp" />
 
         <Button
             android:id="@+id/vert"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginHorizontal="20dp" />
+            android:layout_marginHorizontal="10dp" />
 
         <Button
             android:id="@+id/rouge"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginHorizontal="20dp" />
+            android:layout_marginHorizontal="10dp" />
 
         <Button
             android:id="@+id/noir"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginHorizontal="20dp" />
+            android:layout_marginHorizontal="10dp" />
 
     </GridLayout>
 

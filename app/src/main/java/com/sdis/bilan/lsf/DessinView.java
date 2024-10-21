@@ -9,14 +9,38 @@ import android.graphics.Path;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ImageView;
+
+import java.util.Stack;
 
 public class DessinView extends View {
+
+    public static class DrawAction {
+        public Path path;
+        public int color;
+
+        public DrawAction(Path path, int color) {
+            this.path = path;
+            this.color = color;
+        }
+    }
+
+    public interface UndoRedoListener {
+        void onUndoRedoStateChanged(boolean canUndo, boolean canRedo);
+    }
 
     private Path drawPath;
     private Paint drawPaint;
     private Paint canvasPaint;
     private Canvas drawCanvas;
     private Bitmap canvasBitmap;
+
+    private int currentColor = Color.BLACK;
+
+    public Stack<DrawAction> undoStack = new Stack<>();
+    public Stack<DrawAction> redoStack = new Stack<>();
+
+    private UndoRedoListener listener;
 
     public DessinView(Context context) {
         super(context);
@@ -36,7 +60,7 @@ public class DessinView extends View {
     private void init() {
         drawPath = new Path();
         drawPaint = new Paint();
-        drawPaint.setColor(Color.BLACK);
+        drawPaint.setColor(currentColor);
         drawPaint.setAntiAlias(true);
         drawPaint.setStrokeWidth(5);
         drawPaint.setStyle(Paint.Style.STROKE);
@@ -44,6 +68,10 @@ public class DessinView extends View {
         drawPaint.setStrokeCap(Paint.Cap.ROUND);
 
         canvasPaint = new Paint(Paint.DITHER_FLAG);
+    }
+
+    public void setUndoRedoListener(UndoRedoListener listener) {
+        this.listener = listener;
     }
 
     @Override
@@ -72,8 +100,11 @@ public class DessinView extends View {
                 drawPath.lineTo(touchX, touchY);
                 break;
             case MotionEvent.ACTION_UP:
+                undoStack.push(new DrawAction(new Path(drawPath), currentColor));
+                redoStack.clear();
                 drawCanvas.drawPath(drawPath, drawPaint);
                 drawPath.reset();
+                notifyUndoRedoState();
                 break;
             default:
                 return false;
@@ -84,11 +115,46 @@ public class DessinView extends View {
     }
 
     public void changeColor(int color) {
-        drawPaint.setColor(color);
+        currentColor = color;
+        drawPaint.setColor(currentColor);
     }
 
     public void clearDrawing() {
         drawCanvas.drawColor(Color.WHITE);
+        undoStack.clear();
+        redoStack.clear();
+        invalidate();
+        notifyUndoRedoState();
+    }
+
+    public void undo() {
+        if (!undoStack.isEmpty()) {
+            redoStack.push(undoStack.pop());
+            redrawCanvas();
+            notifyUndoRedoState();
+        }
+    }
+
+    public void redo() {
+        if (!redoStack.isEmpty()) {
+            undoStack.push(redoStack.pop());
+            redrawCanvas();
+            notifyUndoRedoState();
+        }
+    }
+
+    private void notifyUndoRedoState() {
+        if (listener != null) {
+            listener.onUndoRedoStateChanged(!undoStack.isEmpty(), !redoStack.isEmpty());
+        }
+    }
+
+    private void redrawCanvas() {
+        drawCanvas.drawColor(Color.WHITE);
+        for (DrawAction action : undoStack) {
+            drawPaint.setColor(action.color);
+            drawCanvas.drawPath(action.path, drawPaint);
+        }
         invalidate();
     }
 }
