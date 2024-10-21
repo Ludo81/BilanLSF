@@ -61,12 +61,26 @@ Langages :
 - Ludovic Tournier (développeur)
 - Andy Tkaczyk (responsable produit)
 
+## YouTube
+-------
+
+Lien vers les videos YouTube de l'application.
+
+[![Logo YouTube](https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg)](https://www.youtube.com/@BilanLSF/videos)
+
+## Play Store
+-------
+
+Lien vers le Play Store de Google permettant de télécharger l'application gratuitement.
+
+[![Logo Play Store](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Google_Play_Store_badge_FR.svg/320px-Google_Play_Store_badge_FR.svg.png)](https://play.google.com/store/apps/details?id=com.sdis.bilan.lsf)
 
 ## Licence
 -------
 
 Cette application est publiée sous CC BY-NC-ND 4.0 DEED. Voir ci-joint à la racine du projet [LICENSE](LICENSE.md)
 
+[![Logo Creative Commons](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-nd.png)](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr)
 
 ## Législation
 -------
