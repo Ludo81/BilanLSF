@@ -521,12 +521,14 @@
                 android:contentDescription="@string/vide"
                 android:scaleType="fitCenter" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/espace"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
                 android:layout_weight="0.8"
-                android:height="70dp"
-                android:onClick="espace" />
+                android:onClick="espace"
+                android:scaleType="fitXY"
+                android:src="@drawable/space_bar" />
 
             <ImageButton
                 android:id="@+id/vide4"

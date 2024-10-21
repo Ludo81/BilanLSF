@@ -99,4 +99,6 @@
     <string name="places10">10 PLACES</string>
     <string name="places7">7 PLACES</string>
     <string name="places5">5 PLACES</string>
+    <string name="undo">undo</string>
+    <string name="redo">redo</string>
 </resources>

@@ -76,7 +76,7 @@ public class ClavierActivity extends ComponentActivity {
         dialog.setContentView(R.layout.popup_oui);
 
         final Handler handler = new Handler();
-        handler.postDelayed(dialog::dismiss, 3000);
+        handler.postDelayed(dialog::dismiss, 1500);
 
         dialog.show();
         dialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
@@ -88,7 +88,7 @@ public class ClavierActivity extends ComponentActivity {
         dialog.setContentView(R.layout.popup_non);
 
         final Handler handler = new Handler();
-        handler.postDelayed(dialog::dismiss, 3000);
+        handler.postDelayed(dialog::dismiss, 1500);
 
         dialog.show();
         dialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);

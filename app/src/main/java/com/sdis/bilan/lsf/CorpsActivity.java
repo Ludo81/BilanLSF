@@ -8,16 +8,28 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import androidx.activity.ComponentActivity;
 
+import java.util.Stack;
+
 public class CorpsActivity extends ComponentActivity {
+
+    private Stack<View> undoStack = new Stack<>();
+    private Stack<View> redoStack = new Stack<>();
+
+    ImageView undoButton;
+    ImageView redoButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.corps);
+
+        undoButton = findViewById(R.id.undo);
+        redoButton = findViewById(R.id.redo);
 
         ImageView imageView = findViewById(R.id.corps);
         imageView.setOnTouchListener((v, event) -> {
@@ -32,13 +44,10 @@ public class CorpsActivity extends ComponentActivity {
 
     private void addPastille(float x, float y) {
         Context context = getApplicationContext();
-
         FrameLayout frame = findViewById(R.id.frame);
 
         View pastille = new View(context);
         pastille.setLayoutParams(new FrameLayout.LayoutParams(50, 50));
-        pastille.setBackgroundColor(Color.parseColor("#61DC2A"));
-
         GradientDrawable shape = new GradientDrawable();
         shape.setShape(GradientDrawable.OVAL);
         shape.setColor(Color.parseColor("#61DC2A"));
@@ -48,6 +57,32 @@ public class CorpsActivity extends ComponentActivity {
         pastille.setY(y - 30);
 
         frame.addView(pastille);
+        undoStack.push(pastille);
+        redoStack.clear();
+
+        updateUndoRedo();
+    }
+
+    public void onClickUndo(View view) {
+        if (!undoStack.isEmpty()) {
+            View pastille = undoStack.pop();
+            FrameLayout frame = findViewById(R.id.frame);
+            frame.removeView(pastille);
+            redoStack.push(pastille);
+
+            updateUndoRedo();
+        }
+    }
+
+    public void onClickRedo(View view) {
+        if (!redoStack.isEmpty()) {
+            View pastille = redoStack.pop();
+            FrameLayout frame = findViewById(R.id.frame);
+            frame.addView(pastille);
+            undoStack.push(pastille);
+
+            updateUndoRedo();
+        }
     }
 
     public void onClickVideo(View view) {
@@ -55,6 +90,19 @@ public class CorpsActivity extends ComponentActivity {
         intent.putExtra("VIDEO_NAME", "bilan_primaire_montrez_moi_ou_vous_avez_mal");
         intent.putExtra("CREATE_BUTTON", false);
         startActivity(intent);
+    }
+
+    private void updateUndoRedo() {
+        if (undoStack.isEmpty()) {
+            undoButton.setImageResource(R.drawable.undo_disabled);
+        } else {
+            undoButton.setImageResource(R.drawable.undo);
+        }
+        if (redoStack.isEmpty()) {
+            redoButton.setImageResource(R.drawable.redo_disabled);
+        } else {
+            redoButton.setImageResource(R.drawable.redo);
+        }
     }
 
     public void retour(View view) {

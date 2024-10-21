@@ -12,6 +12,34 @@
         android:onClick="retour"
         android:text="@string/retour" />
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/undo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/undo"
+            android:onClick="onClickUndo"
+            android:src="@drawable/undo_disabled"
+            android:scaleType="fitXY"
+            android:background="@null" />
+
+        <ImageView
+            android:id="@+id/redo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/redo"
+            android:onClick="onClickRedo"
+            android:src="@drawable/redo_disabled"
+            android:scaleType="fitXY"
+            android:background="@null"/>
+
+    </LinearLayout>
+
     <Button
         android:id="@+id/video"
         android:layout_width="wrap_content"
