@@ -32,7 +32,7 @@
         android:onClick="onClickRedo"
         android:src="@drawable/redo_disabled"
         android:scaleType="fitXY"
-        android:background="@null"/>
+        android:background="@null" />
 
     <ImageButton
         android:id="@+id/effacer"
@@ -86,6 +86,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/effacer"
-        android:background="#FFFFFF"/>
+        android:background="#FFFFFF" />
 
 </RelativeLayout>

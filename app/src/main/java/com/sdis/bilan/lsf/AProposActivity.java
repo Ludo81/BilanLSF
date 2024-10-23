@@ -25,13 +25,13 @@ public class AProposActivity extends ComponentActivity {
         }
     }
 
-    public void onClickSdis(View view){
+    public void onClickSdis(View view) {
         Uri uri = Uri.parse("https://www.sdis81.fr/");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }
 
-    public void onClickBs(View view){
+    public void onClickBs(View view) {
         Uri uri = Uri.parse("https://www.bonsauveuralby.fr/");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);

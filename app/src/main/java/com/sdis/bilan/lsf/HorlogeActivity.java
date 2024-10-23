@@ -23,17 +23,17 @@ public class HorlogeActivity extends ComponentActivity {
         regle.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                if(progress > 720){
+                if (progress > 720) {
                     fond.setImageResource(R.drawable.horloge_pm);
                 } else {
                     fond.setImageResource(R.drawable.horloge_am);
                 }
-                int heures = progress/60;
+                int heures = progress / 60;
                 int minutes = (progress % 60);
                 aiguille_minutes.setRotation(-55 + 360 * minutes / 60);
-                aiguille_heures.setRotation(-55 + heures*30);
+                aiguille_heures.setRotation(-55 + heures * 30);
 
-                String minutes_string = minutes < 10 ? "0"+minutes : String.valueOf(minutes);
+                String minutes_string = minutes < 10 ? "0" + minutes : String.valueOf(minutes);
                 afficheur.setText(heures + ":" + minutes_string);
             }
 
@@ -49,7 +49,7 @@ public class HorlogeActivity extends ComponentActivity {
         });
     }
 
-    public void retour(View view){
+    public void retour(View view) {
         finish();
     }
 }

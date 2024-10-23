@@ -102,12 +102,12 @@ public class DessinActivity extends ComponentActivity implements DessinView.Undo
 
     @Override
     public void onUndoRedoStateChanged(boolean canUndo, boolean canRedo) {
-        if(canUndo) {
+        if (canUndo) {
             undoButton.setImageResource(R.drawable.undo);
         } else {
             undoButton.setImageResource(R.drawable.undo_disabled);
         }
-        if(canRedo) {
+        if (canRedo) {
             redoButton.setImageResource(R.drawable.redo);
         } else {
             redoButton.setImageResource(R.drawable.redo_disabled);

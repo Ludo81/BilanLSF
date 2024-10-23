@@ -47,7 +47,7 @@ public class GroupeActivity extends ComponentActivity {
                 int margin = 20;
                 DisplayMetrics displayMetrics = new DisplayMetrics();
                 getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-                if(getResources().getDisplayMetrics().density == 1.5 && displayMetrics.heightPixels < 500 && displayMetrics.widthPixels < 1000) {
+                if (getResources().getDisplayMetrics().density == 1.5 && displayMetrics.heightPixels < 500 && displayMetrics.widthPixels < 1000) {
                     hauteurBouton = 150;
                     margin = 10;
                 }
@@ -68,14 +68,14 @@ public class GroupeActivity extends ComponentActivity {
             }
         }
 
-        if(ligne != null && ligne.getChildCount() == 1){
+        if (ligne != null && ligne.getChildCount() == 1) {
             Button button = new Button(this);
             button.setVisibility(View.INVISIBLE);
             int hauteurBouton = 350;
             int margin = 20;
             DisplayMetrics displayMetrics = new DisplayMetrics();
             getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-            if(getResources().getDisplayMetrics().density == 1.5 && displayMetrics.heightPixels < 500 && displayMetrics.widthPixels < 1000) {
+            if (getResources().getDisplayMetrics().density == 1.5 && displayMetrics.heightPixels < 500 && displayMetrics.widthPixels < 1000) {
                 hauteurBouton = 150;
                 margin = 10;
             }
@@ -92,7 +92,7 @@ public class GroupeActivity extends ComponentActivity {
         startActivity(intent);
     }
 
-    public void retour(View view){
+    public void retour(View view) {
         finish();
     }
 }

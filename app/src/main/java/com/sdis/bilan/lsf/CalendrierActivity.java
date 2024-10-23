@@ -41,7 +41,7 @@ public class CalendrierActivity extends ComponentActivity {
         calendrier.add(Calendar.MONTH, 1);
         this.creerMois(R.id.mois3);
 
-        if(calendrier.get(Calendar.MONTH) == Calendar.NOVEMBER || calendrier.get(Calendar.MONTH) == Calendar.DECEMBER){
+        if (calendrier.get(Calendar.MONTH) == Calendar.NOVEMBER || calendrier.get(Calendar.MONTH) == Calendar.DECEMBER) {
             calendrier = Calendar.getInstance();
             calendrier.setTime(new Date());
         }
@@ -61,27 +61,27 @@ public class CalendrierActivity extends ComponentActivity {
             texte = new TextView(this);
             texte.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.text_size));
             texte.setTextColor(Color.BLACK);
-            texte.setPadding(20, 20 ,20 ,20);
-            if(jour <= joursDansLeMois){ // pour mettre au même niveau le calendrier
+            texte.setPadding(20, 20, 20, 20);
+            if (jour <= joursDansLeMois) { // pour mettre au même niveau le calendrier
                 calendrier.set(Calendar.DAY_OF_MONTH, jour);
                 String jourDeLaSemaine = new SimpleDateFormat("EEEE", Locale.FRENCH).format(calendrier.getTime());
                 int semaine = calendrier.get(Calendar.WEEK_OF_YEAR);
-                if(semaine%2 == 0){
+                if (semaine % 2 == 0) {
                     texte.setBackgroundResource(R.drawable.bordure_gris);
                 } else {
                     texte.setBackgroundResource(R.drawable.bordure_blanc);
                 }
-                if("dimanche".equalsIgnoreCase(jourDeLaSemaine)){
+                if ("dimanche".equalsIgnoreCase(jourDeLaSemaine)) {
                     texte.setTextColor(Color.RED);
                 }
-                if("jeudi".equalsIgnoreCase(jourDeLaSemaine)) {
+                if ("jeudi".equalsIgnoreCase(jourDeLaSemaine)) {
                     texte.setText(jour + " " + jourDeLaSemaine.toUpperCase() + "      " + "Semaine " + semaine);
                 } else {
                     texte.setText(jour + " " + jourDeLaSemaine.toUpperCase());
                 }
             }
             texte.setOnClickListener(v -> {
-                if(this.selectionPrecendente != null){
+                if (this.selectionPrecendente != null) {
                     this.selectionPrecendente.setBackground(this.fondPrecendent);
                 }
                 this.selectionPrecendente = v;
@@ -154,7 +154,7 @@ public class CalendrierActivity extends ComponentActivity {
         this.creerMois(R.id.mois3);
     }
 
-    public void retour(View view){
+    public void retour(View view) {
         finish();
     }
 

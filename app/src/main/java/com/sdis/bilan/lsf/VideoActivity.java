@@ -21,13 +21,13 @@ public class VideoActivity extends ComponentActivity {
         this.lireVideo();
     }
 
-@Override
+    @Override
     protected void onResume() {
         super.onResume();
         this.lireVideo();
     }
 
-    private void lireVideo(){
+    private void lireVideo() {
         String name = getIntent().getStringExtra("VIDEO_NAME");
         boolean createButton = getIntent().getBooleanExtra("CREATE_BUTTON", true);
 
@@ -47,7 +47,7 @@ public class VideoActivity extends ComponentActivity {
         }
 
         if ("bilan_secondaire_depuis_quelle_heure_avez_vous_mal_63".equals(name) || "accouchement_a_quelle_heure_ont_debute_les_contractions_63".equals(name) ||
-        "accouchement_est_ce_que_vous_avez_perdu_les_eaux_si_oui_a_quelle_heure_63".equals(name)) {
+                "accouchement_est_ce_que_vous_avez_perdu_les_eaux_si_oui_a_quelle_heure_63".equals(name)) {
             Button boutonHorloge = new Button(this);
             boutonHorloge.setText(R.string.horloge);
             FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);

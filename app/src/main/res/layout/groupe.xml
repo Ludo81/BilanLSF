@@ -28,7 +28,7 @@
         android:textSize="35sp"
         android:textColor="@color/black"
         android:textStyle="bold"
-        android:text=""/>
+        android:text="" />
 
     <ScrollView
         android:id="@+id/scrollView"

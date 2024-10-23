@@ -22,7 +22,7 @@ public class VitesseActivity extends ComponentActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 aiguille.setRotation(-135 + progress);
-                vitesse.setText(Math.round(0.000116836*progress*progress + 0.877994*progress + 6.12798) + " km/h");
+                vitesse.setText(Math.round(0.000116836 * progress * progress + 0.877994 * progress + 6.12798) + " km/h");
             }
 
             @Override

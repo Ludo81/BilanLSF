@@ -36,7 +36,7 @@
             android:onClick="onClickRedo"
             android:src="@drawable/redo_disabled"
             android:scaleType="fitXY"
-            android:background="@null"/>
+            android:background="@null" />
 
     </LinearLayout>
 

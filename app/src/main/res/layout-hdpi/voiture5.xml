@@ -58,7 +58,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/voiture_vide"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/selectionPlaces"/>
+        android:layout_below="@id/selectionPlaces" />
 
     <GridLayout
         android:id="@+id/voiture"
@@ -103,7 +103,7 @@
             android:layout_column="1"
             android:layout_gravity="fill"
             android:onClick="selection"
-            android:src="@drawable/petit_siege"/>
+            android:src="@drawable/petit_siege" />
 
         <ImageView
             android:layout_width="25dp"
@@ -112,7 +112,7 @@
             android:layout_column="2"
             android:layout_gravity="fill"
             android:onClick="selection"
-            android:src="@drawable/petit_siege"/>
+            android:src="@drawable/petit_siege" />
 
     </GridLayout>
 

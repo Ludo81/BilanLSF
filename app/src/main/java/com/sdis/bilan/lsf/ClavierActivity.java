@@ -19,37 +19,37 @@ public class ClavierActivity extends ComponentActivity {
         setContentView(R.layout.clavier);
     }
 
-    public void onClickCorps(View view){
+    public void onClickCorps(View view) {
         Intent intent = new Intent(ClavierActivity.this, CorpsActivity.class);
         startActivity(intent);
     }
 
-    public void onClickDessin(View view){
+    public void onClickDessin(View view) {
         Intent intent = new Intent(ClavierActivity.this, DessinActivity.class);
         startActivity(intent);
     }
 
-    public void onClickCalendrier(View view){
+    public void onClickCalendrier(View view) {
         Intent intent = new Intent(ClavierActivity.this, CalendrierActivity.class);
         startActivity(intent);
     }
 
-    public void onClickHorloge(View view){
+    public void onClickHorloge(View view) {
         Intent intent = new Intent(ClavierActivity.this, HorlogeActivity.class);
         startActivity(intent);
     }
 
-    public void onClickMinuteur(View view){
+    public void onClickMinuteur(View view) {
         Intent intent = new Intent(ClavierActivity.this, MinuteurActivity.class);
         startActivity(intent);
     }
 
-    public void onClickVitesse(View view){
+    public void onClickVitesse(View view) {
         Intent intent = new Intent(ClavierActivity.this, VitesseActivity.class);
         startActivity(intent);
     }
 
-    public void onClickVoiture(View view){
+    public void onClickVoiture(View view) {
         Intent intent = new Intent(ClavierActivity.this, VoitureActivity.class);
         startActivity(intent);
     }
@@ -70,7 +70,7 @@ public class ClavierActivity extends ComponentActivity {
         textView.setText(String.format("%s ", textView.getText()));
     }
 
-    public void oui(View view){
+    public void oui(View view) {
         final Dialog dialog = new Dialog(ClavierActivity.this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.popup_oui);
@@ -82,7 +82,7 @@ public class ClavierActivity extends ComponentActivity {
         dialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
     }
 
-    public void non(View view){
+    public void non(View view) {
         final Dialog dialog = new Dialog(ClavierActivity.this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.popup_non);
