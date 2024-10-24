@@ -25,6 +25,7 @@ En utilisant l'application Bilan LSF, vous acceptez les présentes Conditions G�
 - [SDIS81 - Service Départemental d'Incendie et de Secours du Tarn](https://www.sdis81.fr/)
 - [Fondation du Bon Sauveur d'Alby](https://www.bonsauveuralby.fr/)
 - [Licence Creative Commons](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+- [Bilan LSF](https://ludo81.github.io/BilanLSF/)
   
 Vous reconnaissez que l'accès à ces liens externes se fait à vos propres risques. Les développeurs et propriétaires de l'application ne sont pas responsables du contenu ou des conséquences de l'utilisation de ces sites web externes.
 
