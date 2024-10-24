@@ -37,6 +37,12 @@ public class AProposActivity extends ComponentActivity {
         startActivity(intent);
     }
 
+    public void onClickBilanLsf(View view) {
+        Uri uri = Uri.parse("https://ludo81.github.io/BilanLSF/");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+
     public void onClickCgu(View view) {
         Intent intent = new Intent(AProposActivity.this, CguActivity.class);
         startActivity(intent);
