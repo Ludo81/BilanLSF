@@ -47,8 +47,8 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:scaleType="fitCenter"
             android:src="@drawable/voiture_lente"
             android:contentDescription="@string/voiture_lente" />
@@ -61,8 +61,8 @@
             android:thumb="@drawable/point_regle_vert" />
 
         <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
             android:scaleType="fitCenter"
             android:src="@drawable/voiture_rapide"
             android:contentDescription="@string/voiture_rapide" />

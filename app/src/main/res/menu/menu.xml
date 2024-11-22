@@ -2,6 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/nav_home"
+        android:icon="@drawable/accueil_icon"
         android:title="Accueil" />
     <item
         android:id="@+id/nav_clavier"
@@ -33,6 +34,7 @@
         android:title="Vitesse" />
     <item
         android:id="@+id/nav_voiture"
+        android:icon="@drawable/voiture_icon"
         android:title="Voiture" />
 
     <group

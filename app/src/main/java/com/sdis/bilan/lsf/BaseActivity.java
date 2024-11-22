@@ -2,7 +2,10 @@ package com.sdis.bilan.lsf;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,6 +22,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
@@ -49,6 +53,12 @@ public abstract class BaseActivity extends AppCompatActivity implements Navigati
         ActionBarDrawerToggle toogle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, 0, 0);
         drawerLayout.addDrawerListener(toogle);
         toogle.syncState();
+
+        Drawable drawable = ContextCompat.getDrawable(this, R.drawable.menu_icon);
+        Bitmap bitmap = ((BitmapDrawable) drawable).getBitmap();
+        Bitmap resizedBitmap = Bitmap.createScaledBitmap(bitmap, 50, 50, false);
+        Drawable resizedDrawable = new BitmapDrawable(getResources(), resizedBitmap);
+        toolbar.setNavigationIcon(resizedDrawable);
 
         List<RechercheItem> items = new ArrayList<>();
         for (String video : Arrays.stream(R.raw.class.getFields()).map(Field::getName).collect(Collectors.toList())) {

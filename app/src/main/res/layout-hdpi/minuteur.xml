@@ -28,16 +28,8 @@
         android:id="@+id/regle_m"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="60dp"
         android:gravity="center">
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginEnd="20dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/icone_minutes"
-            android:contentDescription="@string/icone_minutes" />
 
         <LinearLayout
             android:id="@+id/linear_minutes"
@@ -46,21 +38,29 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <GridLayout
-                android:layout_width="400dp"
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:columnCount="3"
+                android:layout_gravity="center"
                 android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icone_minutes"
+                    android:contentDescription="@string/icone_minutes" />
 
                 <TextView
                     android:id="@+id/reglage_minutes"
-                    android:layout_columnWeight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="Minutes : 0'"
                     android:textColor="@color/black"
                     android:textSize="14sp" />
 
-            </GridLayout>
+            </LinearLayout>
 
             <SeekBar
                 android:id="@+id/regle_minutes"
@@ -108,16 +108,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/regle_m"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="70dp"
         android:gravity="center">
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginEnd="20dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/icone_secondes"
-            android:contentDescription="@string/icone_secondes" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -125,21 +117,29 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <GridLayout
-                android:layout_width="400dp"
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:columnCount="3"
+                android:layout_gravity="center"
                 android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icone_secondes"
+                    android:contentDescription="@string/icone_secondes" />
 
                 <TextView
                     android:id="@+id/reglage_secondes"
-                    android:layout_columnWeight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="Secondes : 0''"
                     android:textColor="#d32f2e"
                     android:textSize="14sp" />
 
-            </GridLayout>
+            </LinearLayout>
 
             <SeekBar
                 android:id="@+id/regle_secondes"

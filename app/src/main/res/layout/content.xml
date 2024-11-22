@@ -7,8 +7,9 @@
     <androidx.appcompat.widget.Toolbar
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_width="50dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
+        android:padding="10dp"
         android:id="@+id/toolbar"
         android:translationZ="1dp" />
 
