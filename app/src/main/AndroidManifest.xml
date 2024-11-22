@@ -36,6 +36,11 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".Home2Activity"
+            android:exported="true"
+            android:theme="@style/Theme.BilanLSF"
+            android:screenOrientation="landscape"></activity>
+        <activity
             android:name=".GroupeActivity"
             android:exported="false"
             android:label="@string/title_activity_groupe"

@@ -50,7 +50,6 @@ public abstract class BaseActivity extends AppCompatActivity implements Navigati
         drawerLayout.addDrawerListener(toogle);
         toogle.syncState();
 
-
         List<RechercheItem> items = new ArrayList<>();
         for (String video : Arrays.stream(R.raw.class.getFields()).map(Field::getName).collect(Collectors.toList())) {
             RechercheItem item = new RechercheItem();
@@ -88,6 +87,7 @@ public abstract class BaseActivity extends AppCompatActivity implements Navigati
         drawerLayout.addDrawerListener(new DrawerLayout.DrawerListener() {
             @Override
             public void onDrawerSlide(View drawerView, float slideOffset) {
+                drawerView.setAlpha(slideOffset);
             }
 
             @Override
@@ -112,58 +112,58 @@ public abstract class BaseActivity extends AppCompatActivity implements Navigati
     public boolean onNavigationItemSelected(MenuItem item) {
         Intent intent = null;
         drawerLayout.closeDrawers();
-        switch (item.toString()) {
-            case "Accueil":
+        switch (item.getItemId()) {
+            case R.id.nav_home:
                 if (!(this instanceof HomeActivity)) {
                     intent = new Intent(BaseActivity.this, HomeActivity.class);
                 }
                 break;
-            case "Clavier":
+            case R.id.nav_clavier:
                 if (!(this instanceof ClavierActivity)) {
                     intent = new Intent(BaseActivity.this, ClavierActivity.class);
                 }
                 break;
-            case "Corps":
+            case R.id.nav_corps:
                 if (!(this instanceof CorpsActivity)) {
                     intent = new Intent(BaseActivity.this, CorpsActivity.class);
                 }
                 break;
-            case "Calendrier":
+            case R.id.nav_calendrier:
                 if (!(this instanceof CalendrierActivity)) {
                     intent = new Intent(BaseActivity.this, CalendrierActivity.class);
                 }
                 break;
-            case "Dessin":
+            case R.id.nav_dessin:
                 if (!(this instanceof DessinActivity)) {
                     intent = new Intent(BaseActivity.this, DessinActivity.class);
                 }
                 break;
-            case "Minuteur":
+            case R.id.nav_minuteur:
                 if (!(this instanceof MinuteurActivity)) {
                     intent = new Intent(BaseActivity.this, MinuteurActivity.class);
                 }
                 break;
-            case "Horloge":
+            case R.id.nav_horloge:
                 if (!(this instanceof HorlogeActivity)) {
                     intent = new Intent(BaseActivity.this, HorlogeActivity.class);
                 }
                 break;
-            case "Vitesse":
+            case R.id.nav_vitesse:
                 if (!(this instanceof VitesseActivity)) {
                     intent = new Intent(BaseActivity.this, VitesseActivity.class);
                 }
                 break;
-            case "Voiture":
+            case R.id.nav_voiture:
                 if (!(this instanceof VoitureActivity)) {
                     intent = new Intent(BaseActivity.this, VoitureActivity.class);
                 }
                 break;
-            case "A propos":
+            case R.id.nav_aPropos:
                 if (!(this instanceof AProposActivity)) {
                     intent = new Intent(BaseActivity.this, AProposActivity.class);
                 }
                 break;
-            case "Paramètres":
+            case R.id.nav_parametres:
                 if (!(this instanceof ParametresActivity)) {
                     intent = new Intent(BaseActivity.this, ParametresActivity.class);
                 }

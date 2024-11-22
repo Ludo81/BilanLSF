@@ -39,11 +39,11 @@
         android:id="@+id/autre"
         android:checkableBehavior="single">
         <item
-            android:id="@+id/aPropos"
+            android:id="@+id/nav_aPropos"
             android:icon="@drawable/a_propos"
             android:title="A propos" />
         <item
-            android:id="@+id/parametres"
+            android:id="@+id/nav_parametres"
             android:icon="@drawable/parametres_icon"
             android:title="Paramètres" />
     </group>

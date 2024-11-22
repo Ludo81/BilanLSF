@@ -16,10 +16,6 @@ public class VoitureActivity extends BaseActivity {
 
     FrameLayout container;
 
-    Voiture5Binding voiture5Binding;
-    Voiture7Binding voiture7Binding;
-    Voiture10Binding voiture10Binding;
-
     int nombreSelection;
 
     int nombrePlaces = 5;
@@ -27,11 +23,8 @@ public class VoitureActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        voiture5Binding = Voiture5Binding.inflate(getLayoutInflater());
-        voiture7Binding = Voiture7Binding.inflate(getLayoutInflater());
-        voiture10Binding = Voiture10Binding.inflate(getLayoutInflater());
 
-        setContentView(voiture5Binding.getRoot());
+        setContentView(Voiture5Binding.inflate(getLayoutInflater()).getRoot());
         container = findViewById(R.id.content);
     }
 
@@ -39,10 +32,10 @@ public class VoitureActivity extends BaseActivity {
         container.removeAllViews();
         if (nombrePlaces == 7) {
             nombrePlaces = 5;
-            container.addView(voiture5Binding.getRoot());
+            container.addView(Voiture5Binding.inflate(getLayoutInflater()).getRoot());
         } else if (nombrePlaces == 10) {
             nombrePlaces = 7;
-            container.addView(voiture7Binding.getRoot());
+            container.addView(Voiture7Binding.inflate(getLayoutInflater()).getRoot());
         }
         nombreSelection = 0;
     }
@@ -51,10 +44,10 @@ public class VoitureActivity extends BaseActivity {
         container.removeAllViews();
         if (nombrePlaces == 5) {
             nombrePlaces = 7;
-            container.addView(voiture7Binding.getRoot());
+            container.addView(Voiture7Binding.inflate(getLayoutInflater()).getRoot());
         } else if (nombrePlaces == 7) {
             nombrePlaces = 10;
-            container.addView(voiture10Binding.getRoot());
+            container.addView(Voiture10Binding.inflate(getLayoutInflater()).getRoot());
         }
         nombreSelection = 0;
     }

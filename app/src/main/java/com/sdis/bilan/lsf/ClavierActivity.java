@@ -14,21 +14,16 @@ import com.sdis.bilan.lsf.databinding.ClavierAzertyBinding;
 
 public class ClavierActivity extends BaseActivity {
 
-    ClavierAbcdefBinding clavierAbcdefBinding;
-    ClavierAzertyBinding clavierAzertyBinding;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         SharedPreferences sharedPreferences = getSharedPreferences("Parametrage", MODE_PRIVATE);
 
         super.onCreate(savedInstanceState);
-        clavierAbcdefBinding = ClavierAbcdefBinding.inflate(getLayoutInflater());
-        clavierAzertyBinding = ClavierAzertyBinding.inflate(getLayoutInflater());
 
         if (sharedPreferences.getBoolean("isClavierAzerty", false)) {
-            setContentView(clavierAzertyBinding.getRoot());
+            setContentView(ClavierAzertyBinding.inflate(getLayoutInflater()).getRoot());
         } else {
-            setContentView(clavierAbcdefBinding.getRoot());
+            setContentView(ClavierAbcdefBinding.inflate(getLayoutInflater()).getRoot());
         }
     }
 
