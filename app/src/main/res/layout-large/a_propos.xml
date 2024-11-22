@@ -5,19 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".AProposActivity">
 
-    <Button
-        android:id="@+id/retour"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:onClick="retour"
-        android:text="@string/retour" />
-
     <TableLayout
         android:id="@+id/tableAPropos"
         android:layout_width="900dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/retour"
         android:layout_centerInParent="true"
         android:layout_margin="20dp">
 

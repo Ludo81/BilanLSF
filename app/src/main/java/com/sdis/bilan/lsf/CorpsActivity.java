@@ -10,11 +10,13 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
-import androidx.activity.ComponentActivity;
+import com.sdis.bilan.lsf.databinding.CorpsBinding;
 
 import java.util.Stack;
 
-public class CorpsActivity extends ComponentActivity {
+public class CorpsActivity extends BaseActivity {
+
+    CorpsBinding corpsBinding;
 
     private Stack<View> undoStack = new Stack<>();
     private Stack<View> redoStack = new Stack<>();
@@ -25,7 +27,8 @@ public class CorpsActivity extends ComponentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.corps);
+        corpsBinding = CorpsBinding.inflate(getLayoutInflater());
+        setContentView(corpsBinding.getRoot());
 
         undoButton = findViewById(R.id.undo);
         redoButton = findViewById(R.id.redo);
@@ -102,10 +105,6 @@ public class CorpsActivity extends ComponentActivity {
         } else {
             redoButton.setImageResource(R.drawable.redo);
         }
-    }
-
-    public void retour(View view) {
-        finish();
     }
 
 }

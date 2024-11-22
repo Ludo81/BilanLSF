@@ -2,14 +2,15 @@ package com.sdis.bilan.lsf;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-import androidx.activity.ComponentActivity;
+import com.sdis.bilan.lsf.databinding.DessinBinding;
 
-public class DessinActivity extends ComponentActivity implements DessinView.UndoRedoListener {
+public class DessinActivity extends BaseActivity implements DessinView.UndoRedoListener {
+
+    DessinBinding dessinBinding;
 
     Button noir;
 
@@ -27,7 +28,8 @@ public class DessinActivity extends ComponentActivity implements DessinView.Undo
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.dessin);
+        dessinBinding = DessinBinding.inflate(getLayoutInflater());
+        setContentView(dessinBinding.getRoot());
 
         DessinView dessinView = findViewById(R.id.dessinView);
 
@@ -112,9 +114,5 @@ public class DessinActivity extends ComponentActivity implements DessinView.Undo
         } else {
             redoButton.setImageResource(R.drawable.redo_disabled);
         }
-    }
-
-    public void retour(View view) {
-        finish();
     }
 }

@@ -1,19 +1,21 @@
 package com.sdis.bilan.lsf;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import androidx.activity.ComponentActivity;
+import com.sdis.bilan.lsf.databinding.HorlogeBinding;
 
-public class HorlogeActivity extends ComponentActivity {
+public class HorlogeActivity extends BaseActivity {
+
+    HorlogeBinding horlogeBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.horloge);
+        horlogeBinding = HorlogeBinding.inflate(getLayoutInflater());
+        setContentView(horlogeBinding.getRoot());
 
         SeekBar regle = findViewById(R.id.regle_horloge);
         ImageView aiguille_minutes = findViewById(R.id.aiguille_minutes);
@@ -47,9 +49,5 @@ public class HorlogeActivity extends ComponentActivity {
 
             }
         });
-    }
-
-    public void retour(View view) {
-        finish();
     }
 }

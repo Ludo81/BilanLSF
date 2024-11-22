@@ -6,13 +6,6 @@
     tools:context=".GroupeActivity">
 
     <Button
-        android:id="@+id/retour"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="retour"
-        android:text="@string/retour" />
-
-    <Button
         android:id="@+id/clavier"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

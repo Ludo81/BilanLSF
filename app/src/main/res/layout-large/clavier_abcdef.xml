@@ -3,78 +3,15 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/retour"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:onClick="retour"
-        android:text="@string/retour" />
-
-    <GridLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true">
-
-        <Button
-            android:id="@+id/corps"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:onClick="onClickCorps"
-            android:text="@string/corps" />
-
-        <Button
-            android:id="@+id/dessin"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:onClick="onClickDessin"
-            android:text="@string/dessin" />
-
-        <Button
-            android:id="@+id/calendrier"
-            android:layout_width="95dp"
-            android:layout_height="wrap_content"
-            android:onClick="onClickCalendrier"
-            android:text="@string/calendrier" />
-
-        <Button
-            android:id="@+id/horloge"
-            android:layout_width="75dp"
-            android:layout_height="wrap_content"
-            android:onClick="onClickHorloge"
-            android:text="@string/horloge" />
-
-        <Button
-            android:id="@+id/minuteur"
-            android:layout_width="85dp"
-            android:layout_height="wrap_content"
-            android:onClick="onClickMinuteur"
-            android:text="@string/minuteur" />
-
-        <Button
-            android:id="@+id/vitesse"
-            android:layout_width="65dp"
-            android:layout_height="wrap_content"
-            android:onClick="onClickVitesse"
-            android:text="@string/vitesse" />
-
-        <Button
-            android:id="@+id/voiture"
-            android:layout_width="65dp"
-            android:layout_height="wrap_content"
-            android:onClick="onClickVoiture"
-            android:text="@string/voiture" />
-
-    </GridLayout>
-
     <TextView
         android:id="@+id/texte"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/retour"
-        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="20dp"
         android:textColor="@color/black"
-        android:textSize="30sp" />
+        android:background="@drawable/border"
+        android:textSize="40sp" />
 
     <TableLayout
         android:id="@+id/touches"
@@ -524,7 +461,7 @@
             <ImageButton
                 android:id="@+id/espace"
                 android:layout_width="0dp"
-                android:layout_height="50dp"
+                android:layout_height="70dp"
                 android:layout_weight="0.8"
                 android:onClick="espace"
                 android:scaleType="fitXY"
@@ -542,8 +479,8 @@
 
     <ImageButton
         android:id="@+id/oui"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="5dp"
@@ -556,8 +493,8 @@
 
     <ImageButton
         android:id="@+id/non"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="5dp"

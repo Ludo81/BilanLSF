@@ -1,19 +1,21 @@
 package com.sdis.bilan.lsf;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import androidx.activity.ComponentActivity;
+import com.sdis.bilan.lsf.databinding.VitesseBinding;
 
-public class VitesseActivity extends ComponentActivity {
+public class VitesseActivity extends BaseActivity {
+
+    VitesseBinding vitesseBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.vitesse);
+        vitesseBinding = VitesseBinding.inflate(getLayoutInflater());
+        setContentView(vitesseBinding.getRoot());
 
         SeekBar regle = findViewById(R.id.regle);
         ImageView aiguille = findViewById(R.id.aiguille);
@@ -35,9 +37,5 @@ public class VitesseActivity extends ComponentActivity {
 
             }
         });
-    }
-
-    public void retour(View view) {
-        finish();
     }
 }

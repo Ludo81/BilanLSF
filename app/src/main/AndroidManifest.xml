@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-sdk android:minSdkVersion="24"
+    <uses-sdk
+        android:minSdkVersion="24"
         android:targetSdkVersion="34"
         android:maxSdkVersion="35" />
 
@@ -17,6 +18,12 @@
         android:theme="@style/Theme.BilanLSF"
         tools:targetApi="31">
 
+        <activity
+            android:name=".BaseActivity"
+            android:exported="false"
+            android:label="base"
+            android:theme="@style/Theme.BilanLSF"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".HomeActivity"
             android:exported="true"
@@ -102,6 +109,13 @@
             android:name=".AProposActivity"
             android:exported="false"
             android:label="AProposActivity"
+            android:theme="@style/Theme.BilanLSF"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".ParametresActivity"
+            android:exported="false"
+            android:label="ParametresActivity"
             android:theme="@style/Theme.BilanLSF"
             android:screenOrientation="landscape" />
 

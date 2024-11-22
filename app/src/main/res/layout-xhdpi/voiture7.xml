@@ -5,13 +5,6 @@
     android:layout_height="match_parent"
     tools:context=".VoitureActivity">
 
-    <Button
-        android:id="@+id/retour"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="retour"
-        android:text="@string/retour" />
-
     <TextView
         android:id="@+id/selection"
         android:layout_width="wrap_content"

@@ -1,7 +1,7 @@
 package com.sdis.bilan.lsf;
 
 import android.app.Dialog;
-import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -9,49 +9,27 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-import androidx.activity.ComponentActivity;
+import com.sdis.bilan.lsf.databinding.ClavierAbcdefBinding;
+import com.sdis.bilan.lsf.databinding.ClavierAzertyBinding;
 
-public class ClavierActivity extends ComponentActivity {
+public class ClavierActivity extends BaseActivity {
+
+    ClavierAbcdefBinding clavierAbcdefBinding;
+    ClavierAzertyBinding clavierAzertyBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        SharedPreferences sharedPreferences = getSharedPreferences("Parametrage", MODE_PRIVATE);
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.clavier);
-    }
+        clavierAbcdefBinding = ClavierAbcdefBinding.inflate(getLayoutInflater());
+        clavierAzertyBinding = ClavierAzertyBinding.inflate(getLayoutInflater());
 
-    public void onClickCorps(View view) {
-        Intent intent = new Intent(ClavierActivity.this, CorpsActivity.class);
-        startActivity(intent);
-    }
-
-    public void onClickDessin(View view) {
-        Intent intent = new Intent(ClavierActivity.this, DessinActivity.class);
-        startActivity(intent);
-    }
-
-    public void onClickCalendrier(View view) {
-        Intent intent = new Intent(ClavierActivity.this, CalendrierActivity.class);
-        startActivity(intent);
-    }
-
-    public void onClickHorloge(View view) {
-        Intent intent = new Intent(ClavierActivity.this, HorlogeActivity.class);
-        startActivity(intent);
-    }
-
-    public void onClickMinuteur(View view) {
-        Intent intent = new Intent(ClavierActivity.this, MinuteurActivity.class);
-        startActivity(intent);
-    }
-
-    public void onClickVitesse(View view) {
-        Intent intent = new Intent(ClavierActivity.this, VitesseActivity.class);
-        startActivity(intent);
-    }
-
-    public void onClickVoiture(View view) {
-        Intent intent = new Intent(ClavierActivity.this, VoitureActivity.class);
-        startActivity(intent);
+        if (sharedPreferences.getBoolean("isClavierAzerty", false)) {
+            setContentView(clavierAzertyBinding.getRoot());
+        } else {
+            setContentView(clavierAbcdefBinding.getRoot());
+        }
     }
 
     public void effacer(View view) {
@@ -277,9 +255,5 @@ public class ClavierActivity extends ComponentActivity {
     public void z(View view) {
         TextView textView = findViewById(R.id.texte);
         textView.setText(String.format("%sz", textView.getText()));
-    }
-
-    public void retour(View view) {
-        finish();
     }
 }

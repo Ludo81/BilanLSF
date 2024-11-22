@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:title="Accueil" />
+    <item
+        android:id="@+id/nav_clavier"
+        android:icon="@drawable/clavier_icon"
+        android:title="Clavier" />
+    <item
+        android:id="@+id/nav_corps"
+        android:icon="@drawable/corps_icon"
+        android:title="Corps" />
+    <item
+        android:id="@+id/nav_calendrier"
+        android:icon="@drawable/calendrier_icon"
+        android:title="Calendrier" />
+    <item
+        android:id="@+id/nav_dessin"
+        android:icon="@drawable/dessin_icon"
+        android:title="Dessin" />
+    <item
+        android:id="@+id/nav_minuteur"
+        android:icon="@drawable/minuteur_icon"
+        android:title="Minuteur" />
+    <item
+        android:id="@+id/nav_horloge"
+        android:icon="@drawable/horloge_icon"
+        android:title="Horloge" />
+    <item
+        android:id="@+id/nav_vitesse"
+        android:icon="@drawable/vitesse_icon"
+        android:title="Vitesse" />
+    <item
+        android:id="@+id/nav_voiture"
+        android:title="Voiture" />
+
+    <group
+        android:id="@+id/autre"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/aPropos"
+            android:icon="@drawable/a_propos"
+            android:title="A propos" />
+        <item
+            android:id="@+id/parametres"
+            android:icon="@drawable/parametres_icon"
+            android:title="Paramètres" />
+    </group>
+
+</menu>
+
+

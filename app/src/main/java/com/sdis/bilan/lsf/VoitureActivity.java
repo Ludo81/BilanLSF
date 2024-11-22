@@ -2,13 +2,23 @@ package com.sdis.bilan.lsf;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.activity.ComponentActivity;
 import androidx.core.content.ContextCompat;
 
-public class VoitureActivity extends ComponentActivity {
+import com.sdis.bilan.lsf.databinding.Voiture10Binding;
+import com.sdis.bilan.lsf.databinding.Voiture5Binding;
+import com.sdis.bilan.lsf.databinding.Voiture7Binding;
+
+public class VoitureActivity extends BaseActivity {
+
+    FrameLayout container;
+
+    Voiture5Binding voiture5Binding;
+    Voiture7Binding voiture7Binding;
+    Voiture10Binding voiture10Binding;
 
     int nombreSelection;
 
@@ -17,27 +27,34 @@ public class VoitureActivity extends ComponentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.voiture5);
+        voiture5Binding = Voiture5Binding.inflate(getLayoutInflater());
+        voiture7Binding = Voiture7Binding.inflate(getLayoutInflater());
+        voiture10Binding = Voiture10Binding.inflate(getLayoutInflater());
+
+        setContentView(voiture5Binding.getRoot());
+        container = findViewById(R.id.content);
     }
 
     public void reduirePlaces(View view) {
+        container.removeAllViews();
         if (nombrePlaces == 7) {
             nombrePlaces = 5;
-            setContentView(R.layout.voiture5);
+            container.addView(voiture5Binding.getRoot());
         } else if (nombrePlaces == 10) {
             nombrePlaces = 7;
-            setContentView(R.layout.voiture7);
+            container.addView(voiture7Binding.getRoot());
         }
         nombreSelection = 0;
     }
 
     public void augmenterPlaces(View view) {
+        container.removeAllViews();
         if (nombrePlaces == 5) {
             nombrePlaces = 7;
-            setContentView(R.layout.voiture7);
+            container.addView(voiture7Binding.getRoot());
         } else if (nombrePlaces == 7) {
             nombrePlaces = 10;
-            setContentView(R.layout.voiture10);
+            container.addView(voiture10Binding.getRoot());
         }
         nombreSelection = 0;
     }
@@ -74,9 +91,5 @@ public class VoitureActivity extends ComponentActivity {
             selectionView.setVisibility(View.VISIBLE);
             selectionView.setText(nombreSelection + " PERSONNES SELECTIONNEES");
         }
-    }
-
-    public void retour(View view) {
-        finish();
     }
 }

@@ -10,16 +10,19 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-import androidx.activity.ComponentActivity;
+import com.sdis.bilan.lsf.databinding.GroupeBinding;
 
 import java.lang.reflect.Field;
 
-public class GroupeActivity extends ComponentActivity {
+public class GroupeActivity extends BaseActivity {
+
+    GroupeBinding groupeBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.groupe);
+        groupeBinding = GroupeBinding.inflate(getLayoutInflater());
+        setContentView(groupeBinding.getRoot());
 
         String groupe = getIntent().getStringExtra("GROUPE");
         int couleur = getIntent().getIntExtra("COULEUR", 0);
@@ -90,9 +93,5 @@ public class GroupeActivity extends ComponentActivity {
     public void onClickClavier(View view) {
         Intent intent = new Intent(GroupeActivity.this, ClavierActivity.class);
         startActivity(intent);
-    }
-
-    public void retour(View view) {
-        finish();
     }
 }

@@ -7,14 +7,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.activity.ComponentActivity;
+import com.sdis.bilan.lsf.databinding.AProposBinding;
 
-public class AProposActivity extends ComponentActivity {
+public class AProposActivity extends BaseActivity {
+
+    AProposBinding aProposBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.a_propos);
+        aProposBinding = AProposBinding.inflate(getLayoutInflater());
+        setContentView(aProposBinding.getRoot());
 
         Button versionTextView = findViewById(R.id.version);
         try {
@@ -61,9 +64,5 @@ public class AProposActivity extends ComponentActivity {
     public void onClickVersion(View view) {
         Intent intent = new Intent(AProposActivity.this, VersionActivity.class);
         startActivity(intent);
-    }
-
-    public void retour(View view) {
-        finish();
     }
 }

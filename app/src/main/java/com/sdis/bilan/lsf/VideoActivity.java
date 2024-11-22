@@ -9,14 +9,17 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.VideoView;
 
-import androidx.activity.ComponentActivity;
+import com.sdis.bilan.lsf.databinding.VideoBinding;
 
-public class VideoActivity extends ComponentActivity {
+public class VideoActivity extends BaseActivity {
+
+    VideoBinding videoBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.video);
+        videoBinding = VideoBinding.inflate(getLayoutInflater());
+        setContentView(videoBinding.getRoot());
 
         this.lireVideo();
     }
@@ -119,9 +122,5 @@ public class VideoActivity extends ComponentActivity {
     public void onClickClavier(View view) {
         Intent intent = new Intent(VideoActivity.this, ClavierActivity.class);
         startActivity(intent);
-    }
-
-    public void retour(View view) {
-        finish();
     }
 }

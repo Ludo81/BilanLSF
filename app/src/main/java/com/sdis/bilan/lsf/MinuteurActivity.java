@@ -6,12 +6,14 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import androidx.activity.ComponentActivity;
+import com.sdis.bilan.lsf.databinding.MinuteurBinding;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class MinuteurActivity extends ComponentActivity {
+public class MinuteurActivity extends BaseActivity {
+
+    MinuteurBinding minuteurBinding;
 
     private int minutes;
 
@@ -20,7 +22,8 @@ public class MinuteurActivity extends ComponentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.minuteur);
+        minuteurBinding = MinuteurBinding.inflate(getLayoutInflater());
+        setContentView(minuteurBinding.getRoot());
 
         SeekBar regleMinutes = findViewById(R.id.regle_minutes);
         SeekBar regleSecondes = findViewById(R.id.regle_secondes);
@@ -127,9 +130,5 @@ public class MinuteurActivity extends ComponentActivity {
 
         findViewById(R.id.stop).setVisibility(View.INVISIBLE);
         findViewById(R.id.start).setVisibility(View.VISIBLE);
-    }
-
-    public void retour(View view) {
-        finish();
     }
 }

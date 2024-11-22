@@ -8,14 +8,16 @@ import android.view.View;
 import android.widget.TableLayout;
 import android.widget.TextView;
 
-import androidx.activity.ComponentActivity;
+import com.sdis.bilan.lsf.databinding.CalendrierBinding;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
-public class CalendrierActivity extends ComponentActivity {
+public class CalendrierActivity extends BaseActivity {
+
+    CalendrierBinding calendrierBinding;
 
     Calendar calendrier;
 
@@ -25,7 +27,8 @@ public class CalendrierActivity extends ComponentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.calendrier);
+        calendrierBinding = CalendrierBinding.inflate(getLayoutInflater());
+        setContentView(calendrierBinding.getRoot());
 
         calendrier = Calendar.getInstance();
         calendrier.setTime(new Date());
@@ -152,10 +155,6 @@ public class CalendrierActivity extends ComponentActivity {
 
         calendrier.add(Calendar.MONTH, 1);
         this.creerMois(R.id.mois3);
-    }
-
-    public void retour(View view) {
-        finish();
     }
 
 }
