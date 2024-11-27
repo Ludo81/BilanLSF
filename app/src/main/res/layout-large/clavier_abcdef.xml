@@ -134,10 +134,19 @@
             <ImageButton
                 android:id="@+id/vide"
                 android:layout_width="0dp"
-                android:layout_weight="0.2"
+                android:layout_weight="0.1"
                 android:background="@null"
                 android:contentDescription="@string/vide"
                 android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/inverser"
+                android:layout_width="0dp"
+                android:layout_weight="0.1"
+                android:contentDescription="@string/inverser"
+                android:onClick="inverser"
+                android:scaleType="fitCenter"
+                android:src="@drawable/inverser" />
 
             <ImageButton
                 android:id="@+id/effacer"

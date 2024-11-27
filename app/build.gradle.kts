@@ -81,4 +81,5 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
     implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.19")
+    implementation("com.google.android.flexbox:flexbox:3.0.0")
 }

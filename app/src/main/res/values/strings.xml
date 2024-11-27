@@ -101,4 +101,6 @@
     <string name="undo">undo</string>
     <string name="redo">redo</string>
     <string name="logobilanlsf">logobilanlsf</string>
+    <string name="inverser">inverser</string>
+    <string name="title_activity_clavier_inverse">ClavierInverseActivity</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.sdis.bilan.lsf;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
@@ -25,6 +26,11 @@ public class ClavierActivity extends BaseActivity {
         } else {
             setContentView(ClavierAbcdefBinding.inflate(getLayoutInflater()).getRoot());
         }
+    }
+
+    public void inverser(View view) {
+        Intent intent = new Intent(ClavierActivity.this, ClavierInverseActivity.class);
+        startActivity(intent);
     }
 
     public void effacer(View view) {

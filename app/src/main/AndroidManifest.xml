@@ -62,6 +62,13 @@
             android:screenOrientation="landscape" />
 
         <activity
+            android:name=".ClavierInverseActivity"
+            android:exported="false"
+            android:label="@string/title_activity_clavier_inverse"
+            android:theme="@style/Theme.BilanLSF"
+            android:screenOrientation="landscape" />
+
+        <activity
             android:name=".CorpsActivity"
             android:exported="false"
             android:label="@string/title_activity_corps"
