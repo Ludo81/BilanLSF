@@ -5,14 +5,6 @@
     android:layout_height="match_parent"
     tools:context=".GroupeActivity">
 
-    <Button
-        android:id="@+id/clavier"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:onClick="onClickClavier"
-        android:text="@string/clavier" />
-
     <TextView
         android:id="@+id/nom_groupe"
         android:layout_width="wrap_content"

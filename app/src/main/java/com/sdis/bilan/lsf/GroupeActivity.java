@@ -89,9 +89,4 @@ public class GroupeActivity extends BaseActivity {
             ligne.addView(button);
         }
     }
-
-    public void onClickClavier(View view) {
-        Intent intent = new Intent(GroupeActivity.this, ClavierActivity.class);
-        startActivity(intent);
-    }
 }
