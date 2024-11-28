@@ -32,9 +32,8 @@ public class VideoActivity extends BaseActivity {
 
     private void lireVideo() {
         String name = getIntent().getStringExtra("VIDEO_NAME");
-        boolean createButton = getIntent().getBooleanExtra("CREATE_BUTTON", true);
 
-        if ("bilan_primaire_montrez_moi_ou_vous_avez_mal".equals(name) && createButton) {
+        if ("bilan_primaire_montrez_moi_ou_vous_avez_mal".equals(name)) {
             Button boutonCorps = new Button(this);
             boutonCorps.setText(R.string.corps);
             FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);

@@ -90,7 +90,6 @@ public class CorpsActivity extends BaseActivity {
     public void onClickVideo(View view) {
         Intent intent = new Intent(CorpsActivity.this, VideoActivity.class);
         intent.putExtra("VIDEO_NAME", "bilan_primaire_montrez_moi_ou_vous_avez_mal");
-        intent.putExtra("CREATE_BUTTON", false);
         startActivity(intent);
     }
 
