@@ -1,6 +1,8 @@
 package com.sdis.bilan.lsf;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -41,5 +43,11 @@ public class VitesseActivity extends BaseActivity {
 
             }
         });
+    }
+
+    public void onClickVideo(View view) {
+        Intent intent = new Intent(VitesseActivity.this, VideoActivity.class);
+        intent.putExtra("VIDEO_NAME", "secours_routier_montrez_moi_la_vitesse");
+        startActivity(intent);
     }
 }

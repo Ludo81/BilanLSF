@@ -28,6 +28,7 @@
             android:name=".HomeActivity"
             android:exported="true"
             android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,6 +46,7 @@
             android:exported="false"
             android:label="@string/title_activity_groupe"
             android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
         <activity
@@ -52,6 +54,7 @@
             android:exported="false"
             android:label="@string/title_activity_video"
             android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
         <activity
@@ -59,6 +62,7 @@
             android:exported="false"
             android:label="@string/title_activity_clavier"
             android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
         <activity
@@ -66,6 +70,7 @@
             android:exported="false"
             android:label="@string/title_activity_clavier_inverse"
             android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
         <activity
@@ -73,6 +78,7 @@
             android:exported="false"
             android:label="@string/title_activity_corps"
             android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
         <activity
@@ -80,6 +86,7 @@
             android:exported="false"
             android:label="HorlogeActivity"
             android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
         <activity
@@ -87,6 +94,7 @@
             android:exported="false"
             android:label="MinuteurActivity"
             android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
         <activity
@@ -94,6 +102,7 @@
             android:exported="false"
             android:label="CalendrierActivity"
             android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
         <activity
@@ -101,6 +110,7 @@
             android:exported="false"
             android:label="VitesseActivity"
             android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
         <activity
@@ -108,6 +118,7 @@
             android:exported="false"
             android:label="DessinActivity"
             android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
         <activity
@@ -115,6 +126,7 @@
             android:exported="false"
             android:label="VoitureActivity"
             android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
         <activity
@@ -122,6 +134,7 @@
             android:exported="false"
             android:label="AProposActivity"
             android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
         <activity
@@ -129,6 +142,7 @@
             android:exported="false"
             android:label="ParametresActivity"
             android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
         <activity
@@ -136,6 +150,7 @@
             android:exported="false"
             android:label="CguActivity"
             android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
         <activity
@@ -143,6 +158,7 @@
             android:exported="false"
             android:label="PdcActivity"
             android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
         <activity
@@ -150,6 +166,7 @@
             android:exported="false"
             android:label="CreditsActivity"
             android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
         <activity
@@ -157,6 +174,7 @@
             android:exported="false"
             android:label="VersionActivity"
             android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
     </application>
 
