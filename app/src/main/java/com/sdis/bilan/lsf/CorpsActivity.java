@@ -9,6 +9,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.SeekBar;
 
 import com.sdis.bilan.lsf.databinding.CorpsBinding;
 
@@ -23,6 +24,13 @@ public class CorpsActivity extends BaseActivity {
 
     ImageView undoButton;
     ImageView redoButton;
+
+    ImageView echelle_haut_plus;
+    ImageView echelle_haut;
+    ImageView echelle_moyen_haut;
+    ImageView echelle_moyen_bas;
+    ImageView echelle_bas;
+    ImageView echelle_bas_plus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +49,59 @@ public class CorpsActivity extends BaseActivity {
             }
             return true;
         });
+
+        echelle_haut_plus = findViewById(R.id.echelle_haut_plus);
+        echelle_haut = findViewById(R.id.echelle_haut);
+        echelle_moyen_haut = findViewById(R.id.echelle_moyen_haut);
+        echelle_moyen_bas = findViewById(R.id.echelle_moyen_bas);
+        echelle_bas = findViewById(R.id.echelle_bas);
+        echelle_bas_plus = findViewById(R.id.echelle_bas_plus);
+
+        SeekBar regle = findViewById(R.id.regle_douleur);
+        regle.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                if (0 <= progress && progress <= 16) {
+                    resetEchelle();
+                    echelle_bas_plus.setImageResource(R.drawable.echelle_bas_plus_selection);
+                } else if (17 <= progress && progress <= 33) {
+                    resetEchelle();
+                    echelle_bas.setImageResource(R.drawable.echelle_bas_selection);
+                } else if (34 <= progress && progress <= 50) {
+                    resetEchelle();
+                    echelle_moyen_bas.setImageResource(R.drawable.echelle_moyen_bas_selection);
+                } else if (51 <= progress && progress <= 67) {
+                    resetEchelle();
+                    echelle_moyen_haut.setImageResource(R.drawable.echelle_moyen_haut_selection);
+                } else if (68 <= progress && progress <= 84) {
+                    resetEchelle();
+                    echelle_haut.setImageResource(R.drawable.echelle_haut_selection);
+                } else {
+                    resetEchelle();
+                    echelle_haut_plus.setImageResource(R.drawable.echelle_haut_plus_selection);
+                }
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
     }
 
+    private void resetEchelle() {
+        echelle_haut_plus.setImageResource(R.drawable.echelle_haut_plus);
+        echelle_haut.setImageResource(R.drawable.echelle_haut);
+        echelle_moyen_haut.setImageResource(R.drawable.echelle_moyen_haut);
+        echelle_moyen_bas.setImageResource(R.drawable.echelle_moyen_bas);
+        echelle_bas.setImageResource(R.drawable.echelle_bas);
+        echelle_bas_plus.setImageResource(R.drawable.echelle_bas_plus);
+    }
 
     private void addPastille(float x, float y) {
         Context context = getApplicationContext();

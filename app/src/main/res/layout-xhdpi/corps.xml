@@ -172,5 +172,212 @@
 
     </ScrollView>
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        android:layout_gravity="end">
+
+        <LinearLayout
+            android:id="@+id/echelle1"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/echelle_haut_plus"
+                android:src="@drawable/echelle_haut_plus"
+                android:layout_width="80dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/echelle_haut"
+                android:src="@drawable/echelle_haut"
+                android:layout_width="80dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/echelle_moyen_haut"
+                android:src="@drawable/echelle_moyen_haut"
+                android:layout_width="80dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/echelle_moyen_bas"
+                android:src="@drawable/echelle_moyen_bas"
+                android:layout_width="80dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/echelle_bas"
+                android:src="@drawable/echelle_bas"
+                android:layout_width="80dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/echelle_bas_plus"
+                android:src="@drawable/echelle_bas_plus_selection"
+                android:layout_width="80dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/echelle2"
+            android:layout_width="32dp"
+            android:layout_height="300dp"
+            android:layout_toEndOf="@id/echelle1">
+
+            <SeekBar
+                android:id="@+id/regle_douleur"
+                android:layout_width="300dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:max="100"
+                android:rotation="270" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/echelle3"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@id/echelle2"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="@string/_10"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:textAlignment="center"
+                android:layout_weight="1" />
+
+            <TextView
+                android:text="@string/_9"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:textAlignment="center"
+                android:layout_weight="1" />
+
+            <TextView
+                android:text="@string/_8"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:textAlignment="center"
+                android:layout_weight="1" />
+
+            <TextView
+                android:text="@string/_7"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:textAlignment="center"
+                android:layout_weight="1" />
+
+            <TextView
+                android:text="@string/_6"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:textAlignment="center"
+                android:layout_weight="1" />
+
+            <TextView
+                android:text="@string/_5"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:textAlignment="center"
+                android:layout_weight="1" />
+
+            <TextView
+                android:text="@string/_4"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:textAlignment="center"
+                android:layout_weight="1" />
+
+            <TextView
+                android:text="@string/_3"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:textAlignment="center"
+                android:layout_weight="1" />
+
+            <TextView
+                android:text="@string/_2"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:textAlignment="center"
+                android:layout_weight="1" />
+
+            <TextView
+                android:text="@string/_1"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:textAlignment="center"
+                android:layout_weight="1" />
+
+            <TextView
+                android:text="@string/_0"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:textAlignment="center"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/echelle4"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/echelle3">
+
+            <TextView
+                android:text="Le plus de douleur possible"
+                android:layout_width="80dp"
+                android:layout_height="0dp"
+                android:textAlignment="center"
+                android:layout_weight="1" />
+
+            <TextView
+                android:text="Douleur très intense"
+                android:layout_width="80dp"
+                android:layout_height="0dp"
+                android:textAlignment="center"
+                android:layout_weight="1" />
+
+            <TextView
+                android:text="Douleur intense"
+                android:layout_width="80dp"
+                android:layout_height="0dp"
+                android:textAlignment="center"
+                android:layout_weight="1" />
+
+            <TextView
+                android:text="Inconfort modéré"
+                android:layout_width="80dp"
+                android:layout_height="0dp"
+                android:textAlignment="center"
+                android:layout_weight="1" />
+
+            <TextView
+                android:text="Bénigne"
+                android:layout_width="80dp"
+                android:layout_height="0dp"
+                android:textAlignment="center"
+                android:layout_weight="1" />
+
+            <TextView
+                android:text="Très bien"
+                android:layout_width="80dp"
+                android:layout_height="0dp"
+                android:textAlignment="center"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </FrameLayout>
