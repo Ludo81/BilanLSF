@@ -32,6 +32,8 @@ public class CorpsActivity extends BaseActivity {
     ImageView echelle_bas;
     ImageView echelle_bas_plus;
 
+    String couleur = "#0dc27f";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,27 +65,33 @@ public class CorpsActivity extends BaseActivity {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 if (0 <= progress && progress <= 16) {
                     resetEchelle();
-                    changeColorPoint("#0dc27f");
+                    couleur = "#0dc27f";
+                    changeColorPoint(couleur);
                     echelle_bas_plus.setImageResource(R.drawable.echelle_bas_plus_selection);
                 } else if (17 <= progress && progress <= 33) {
                     resetEchelle();
-                    changeColorPoint("#8ddd64");
+                    couleur = "#8ddd64";
+                    changeColorPoint(couleur);
                     echelle_bas.setImageResource(R.drawable.echelle_bas_selection);
                 } else if (34 <= progress && progress <= 50) {
                     resetEchelle();
-                    changeColorPoint("#ffdd56");
+                    couleur = "#ffdd56";
+                    changeColorPoint(couleur);
                     echelle_moyen_bas.setImageResource(R.drawable.echelle_moyen_bas_selection);
                 } else if (51 <= progress && progress <= 67) {
                     resetEchelle();
-                    changeColorPoint("#ffb758");
+                    couleur = "#ffb758";
+                    changeColorPoint(couleur);
                     echelle_moyen_haut.setImageResource(R.drawable.echelle_moyen_haut_selection);
                 } else if (68 <= progress && progress <= 84) {
                     resetEchelle();
-                    changeColorPoint("#ff8e4b");
+                    couleur = "#ff8e4b";
+                    changeColorPoint(couleur);
                     echelle_haut.setImageResource(R.drawable.echelle_haut_selection);
                 } else {
                     resetEchelle();
-                    changeColorPoint("#e05858");
+                    couleur = "#e05858";
+                    changeColorPoint(couleur);
                     echelle_haut_plus.setImageResource(R.drawable.echelle_haut_plus_selection);
                 }
             }
@@ -125,7 +133,7 @@ public class CorpsActivity extends BaseActivity {
         pastille.setLayoutParams(new FrameLayout.LayoutParams(50, 50));
         GradientDrawable shape = new GradientDrawable();
         shape.setShape(GradientDrawable.OVAL);
-        shape.setColor(Color.parseColor("#0dc27f"));
+        shape.setColor(Color.parseColor(couleur));
         pastille.setBackground(shape);
 
         pastille.setX(x - 10);
