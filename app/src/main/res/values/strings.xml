@@ -114,4 +114,16 @@
     <string name="_2">2</string>
     <string name="_3">3</string>
     <string name="_4">4</string>
+    <string name="echelle_haut_plus">echelle_haut_plus</string>
+    <string name="echelle_haut">echelle_haut</string>
+    <string name="echelle_moyen_haut">echelle_moyen_haut</string>
+    <string name="echelle_moyen_bas">echelle_moyen_bas</string>
+    <string name="echelle_bas">echelle_bas</string>
+    <string name="echelle_bas_plus">echelle_bas_plus</string>
+    <string name="le_plus_de_douleur_possible">Le plus de douleur possible</string>
+    <string name="douleur_tres_intense">Douleur très intense</string>
+    <string name="douleur_intense">Douleur intense</string>
+    <string name="inconfort_modere">Inconfort modéré</string>
+    <string name="benigne">Bénigne</string>
+    <string name="tres_bien">Très bien</string>
 </resources>
