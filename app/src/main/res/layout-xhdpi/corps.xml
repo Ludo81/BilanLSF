@@ -346,42 +346,42 @@
                 android:text="@string/le_plus_de_douleur_possible"
                 android:layout_width="80dp"
                 android:layout_height="0dp"
-                android:textAlignment="center"
+                android:gravity="center"
                 android:layout_weight="1" />
 
             <TextView
                 android:text="@string/douleur_tres_intense"
                 android:layout_width="80dp"
                 android:layout_height="0dp"
-                android:textAlignment="center"
+                android:gravity="center"
                 android:layout_weight="1" />
 
             <TextView
                 android:text="@string/douleur_intense"
                 android:layout_width="80dp"
                 android:layout_height="0dp"
-                android:textAlignment="center"
+                android:gravity="center"
                 android:layout_weight="1" />
 
             <TextView
                 android:text="@string/inconfort_modere"
                 android:layout_width="80dp"
                 android:layout_height="0dp"
-                android:textAlignment="center"
+                android:gravity="center"
                 android:layout_weight="1" />
 
             <TextView
                 android:text="@string/benigne"
                 android:layout_width="80dp"
                 android:layout_height="0dp"
-                android:textAlignment="center"
+                android:gravity="center"
                 android:layout_weight="1" />
 
             <TextView
                 android:text="@string/tres_bien"
                 android:layout_width="80dp"
                 android:layout_height="0dp"
-                android:textAlignment="center"
+                android:gravity="center"
                 android:layout_weight="1" />
         </LinearLayout>
 

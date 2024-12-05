@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="100dp"
-        android:hint="Epelez un mot en LSF ..."
+        android:hint="@string/epelez_un_mot_en_lsf"
         android:inputType="text"
         android:focusable="true"
         android:focusableInTouchMode="true">

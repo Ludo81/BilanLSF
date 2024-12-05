@@ -70,7 +70,6 @@
             android:exported="false"
             android:label="@string/title_activity_clavier_inverse"
             android:theme="@style/Theme.BilanLSF"
-            android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
         <activity
