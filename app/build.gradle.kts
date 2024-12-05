@@ -11,8 +11,8 @@ android {
         applicationId = "com.sdis.bilan.lsf"
         minSdk = 24
         targetSdk = 34
-        versionCode = 118
-        versionName = "1.18"
+        versionCode = 117
+        versionName = "1.17"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
