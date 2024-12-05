@@ -127,4 +127,5 @@
     <string name="benigne">Bénigne</string>
     <string name="tres_bien">Très bien</string>
     <string name="epelez_un_mot_en_lsf">Epelez un mot en LSF ...</string>
+    <string name="espace">espace</string>
 </resources>

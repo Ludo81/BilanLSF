@@ -258,81 +258,95 @@
             android:layout_height="match_parent">
 
             <TextView
+                android:text=""
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_weight="0.5" />
+
+            <TextView
                 android:text="@string/_10"
                 android:layout_width="30dp"
                 android:layout_height="0dp"
-                android:textAlignment="center"
+                android:gravity="center"
                 android:layout_weight="1" />
 
             <TextView
                 android:text="@string/_9"
                 android:layout_width="30dp"
                 android:layout_height="0dp"
-                android:textAlignment="center"
+                android:gravity="center"
                 android:layout_weight="1" />
 
             <TextView
                 android:text="@string/_8"
                 android:layout_width="30dp"
                 android:layout_height="0dp"
-                android:textAlignment="center"
+                android:gravity="center"
                 android:layout_weight="1" />
 
             <TextView
                 android:text="@string/_7"
                 android:layout_width="30dp"
                 android:layout_height="0dp"
-                android:textAlignment="center"
+                android:gravity="center"
                 android:layout_weight="1" />
 
             <TextView
                 android:text="@string/_6"
                 android:layout_width="30dp"
                 android:layout_height="0dp"
-                android:textAlignment="center"
+                android:gravity="center"
                 android:layout_weight="1" />
 
             <TextView
                 android:text="@string/_5"
                 android:layout_width="30dp"
                 android:layout_height="0dp"
-                android:textAlignment="center"
+                android:gravity="center"
                 android:layout_weight="1" />
 
             <TextView
                 android:text="@string/_4"
                 android:layout_width="30dp"
                 android:layout_height="0dp"
-                android:textAlignment="center"
+                android:gravity="center"
                 android:layout_weight="1" />
 
             <TextView
                 android:text="@string/_3"
                 android:layout_width="30dp"
                 android:layout_height="0dp"
-                android:textAlignment="center"
+                android:gravity="center"
                 android:layout_weight="1" />
 
             <TextView
                 android:text="@string/_2"
                 android:layout_width="30dp"
                 android:layout_height="0dp"
-                android:textAlignment="center"
+                android:gravity="center"
                 android:layout_weight="1" />
 
             <TextView
                 android:text="@string/_1"
                 android:layout_width="30dp"
                 android:layout_height="0dp"
-                android:textAlignment="center"
+                android:gravity="center"
                 android:layout_weight="1" />
 
             <TextView
                 android:text="@string/_0"
                 android:layout_width="30dp"
                 android:layout_height="0dp"
-                android:textAlignment="center"
+                android:gravity="center"
                 android:layout_weight="1" />
+
+            <TextView
+                android:text=""
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_weight="0.5" />
         </LinearLayout>
 
         <LinearLayout
