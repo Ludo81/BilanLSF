@@ -40,18 +40,6 @@
 
     </LinearLayout>
 
-    <!--
-    <TextView
-        android:id="@+id/texte_saisir"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:textStyle="bold"
-        android:textColor="#000000"
-        android:textAlignment="center"
-        android:text="@string/saisir"/>
-        -->
-
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="300dp"
@@ -66,90 +54,6 @@
                 android:id="@+id/table"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <!--
-                <TableRow>
-
-                    <Button
-                        android:id="@+id/plaie"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_margin="5dp"
-                        android:background="#FFD5D6D6"
-                        android:onClick="onClickPlaie"
-                        android:text="@string/P" />
-
-                    <Button
-                        android:id="@+id/traumatisme"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_margin="5dp"
-                        android:background="#FFD5D6D6"
-                        android:onClick="onClickTraumatisme"
-                        android:text="@string/T" />
-
-                    <Button
-                        android:id="@+id/deformation"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_margin="5dp"
-                        android:background="#FFD5D6D6"
-                        android:onClick="onClickDeformation"
-                        android:text="@string/D" />
-
-                    <Button
-                        android:id="@+id/brulure"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_margin="5dp"
-                        android:background="#FFD5D6D6"
-                        android:onClick="onClickBrulure"
-                        android:text="@string/B" />
-
-                    <Button
-                        android:id="@+id/hemorragie"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_margin="5dp"
-                        android:background="#FFD5D6D6"
-                        android:onClick="onClickHemorragie"
-                        android:text="@string/H" />
-
-                    <Button
-                        android:id="@+id/fracture_ouverte"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_margin="5dp"
-                        android:background="#FFD5D6D6"
-                        android:onClick="onClickFractureOuverte"
-                        android:text="@string/FO" />
-
-                    <Button
-                        android:id="@+id/douleur"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_margin="5dp"
-                        android:background="#FFD5D6D6"
-                        android:onClick="onClickDouleur"
-                        android:text="@string/DL" />
-
-                    <Button
-                        android:id="@+id/section"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_margin="5dp"
-                        android:background="#FFD5D6D6"
-                        android:onClick="onClickSection"
-                        android:text="@string/S" />
-                </TableRow>
--->
 
                 <FrameLayout
                     android:id="@+id/frame"
