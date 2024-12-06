@@ -3,51 +3,50 @@
     <item
         android:id="@+id/nav_home"
         android:icon="@drawable/accueil_icon"
-        android:title="Accueil" />
+        android:title="@string/accueil" />
     <item
         android:id="@+id/nav_clavier"
         android:icon="@drawable/clavier_icon"
-        android:title="Clavier" />
+        android:title="@string/clavier" />
     <item
         android:id="@+id/nav_corps"
         android:icon="@drawable/corps_icon"
-        android:title="Corps" />
+        android:title="@string/corps" />
     <item
         android:id="@+id/nav_calendrier"
         android:icon="@drawable/calendrier_icon"
-        android:title="Calendrier" />
+        android:title="@string/calendrier" />
     <item
         android:id="@+id/nav_dessin"
         android:icon="@drawable/dessin_icon"
-        android:title="Dessin" />
+        android:title="@string/dessin" />
     <item
         android:id="@+id/nav_minuteur"
         android:icon="@drawable/minuteur_icon"
-        android:title="Minuteur" />
+        android:title="@string/minuteur" />
     <item
         android:id="@+id/nav_horloge"
         android:icon="@drawable/horloge_icon"
-        android:title="Horloge" />
+        android:title="@string/horloge" />
     <item
         android:id="@+id/nav_vitesse"
         android:icon="@drawable/vitesse_icon"
-        android:title="Vitesse" />
+        android:title="@string/vitesse" />
     <item
         android:id="@+id/nav_voiture"
         android:icon="@drawable/voiture_icon"
-        android:title="Voiture" />
+        android:title="@string/voiture" />
 
     <group
-        android:id="@+id/autre"
-        android:checkableBehavior="single">
+        android:id="@+id/autre">
         <item
             android:id="@+id/nav_aPropos"
             android:icon="@drawable/a_propos"
-            android:title="A propos" />
+            android:title="@string/a_propos" />
         <item
             android:id="@+id/nav_parametres"
             android:icon="@drawable/parametres_icon"
-            android:title="Paramètres" />
+            android:title="@string/parametres" />
     </group>
 
 </menu>

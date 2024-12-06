@@ -91,7 +91,7 @@
     <string name="voiture_rapide">voiture_rapide</string>
     <string name="icone_secondes">icone_secondes</string>
     <string name="icone_minutes">icone_minutes</string>
-    <string name="voiture">voiture</string>
+    <string name="voiture">Voiture</string>
     <string name="augmenter_places">augmenter places</string>
     <string name="reduire_places">reduire places</string>
     <string name="siege_avant">siege_avant\n</string>
@@ -128,4 +128,6 @@
     <string name="tres_bien">Très bien</string>
     <string name="epelez_un_mot_en_lsf">Epelez un mot en LSF ...</string>
     <string name="espace">espace</string>
+    <string name="accueil">Accueil</string>
+    <string name="parametres">Paramètres</string>
 </resources>
