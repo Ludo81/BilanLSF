@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AProposActivity">
+    tools:context=".pompier.AProposPompierActivity">
 
     <TableLayout
         android:id="@+id/tableAPropos"
@@ -17,7 +17,7 @@
             <ImageButton
                 android:id="@+id/logosdis"
                 android:layout_height="100dp"
-                android:layout_weight="7"
+                android:layout_weight="3"
                 android:background="@null"
                 android:contentDescription="@string/logosdis"
                 android:onClick="onClickSdis"
@@ -25,9 +25,19 @@
                 android:src="@drawable/sdis" />
 
             <ImageButton
+                android:id="@+id/logopolice"
+                android:layout_height="100dp"
+                android:layout_weight="7"
+                android:background="@null"
+                android:contentDescription="@string/logopolice"
+                android:onClick="onClickPolice"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo_police_municipale" />
+
+            <ImageButton
                 android:id="@+id/logobs"
                 android:layout_height="100dp"
-                android:layout_weight="6"
+                android:layout_weight="3"
                 android:background="@null"
                 android:contentDescription="@string/logobs"
                 android:onClick="onClickBs"
@@ -37,7 +47,7 @@
             <ImageButton
                 android:id="@+id/logobilanlsf"
                 android:layout_height="100dp"
-                android:layout_weight="1"
+                android:layout_weight="0.5"
                 android:background="@null"
                 android:contentDescription="@string/logobilanlsf"
                 android:onClick="onClickBilanLsf"

@@ -11,18 +11,30 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/logo"
+        android:icon="@mipmap/logo3"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/logo_round"
+        android:roundIcon="@mipmap/logo3_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BilanLSF"
         tools:targetApi="31">
 
         <activity
-            android:name=".BaseActivity"
+            android:name=".pompier.BasePompierActivity"
             android:exported="false"
             android:label="base"
             android:theme="@style/Theme.BilanLSF"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".pompier.AccueilPompierActivity"
+            android:exported="true"
+            android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".police.AccueilPoliceActivity"
+            android:exported="true"
+            android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
         <activity
             android:name=".HomeActivity"
@@ -37,43 +49,65 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Home2Activity"
-            android:exported="true"
-            android:theme="@style/Theme.BilanLSF"
-            android:screenOrientation="landscape"></activity>
-        <activity
-            android:name=".GroupeActivity"
+            android:name=".pompier.GroupePompierActivity"
             android:exported="false"
-            android:label="@string/title_activity_groupe"
+            android:label="@string/title_activity_groupe_pompier"
+            android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".police.GroupePoliceActivity"
+            android:exported="false"
+            android:label="@string/title_activity_groupe_police"
+            android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".pompier.VideoPompierActivity"
+            android:exported="false"
+            android:label="@string/title_activity_video_pompier"
+            android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".police.VideoPoliceActivity"
+            android:exported="false"
+            android:label="@string/title_activity_video_police"
+            android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".pompier.ClavierPompierActivity"
+            android:exported="false"
+            android:label="@string/title_activity_clavier_pompier"
             android:theme="@style/Theme.BilanLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
         <activity
-            android:name=".VideoActivity"
+            android:name=".pompier.ClavierInversePompierActivity"
             android:exported="false"
-            android:label="@string/title_activity_video"
+            android:label="@string/title_activity_clavier_inverse_pompier"
+            android:theme="@style/Theme.BilanLSF"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".police.ClavierPoliceActivity"
+            android:exported="false"
+            android:label="@string/title_activity_clavier_police"
             android:theme="@style/Theme.BilanLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
         <activity
-            android:name=".ClavierActivity"
+            android:name=".police.ClavierInversePoliceActivity"
             android:exported="false"
-            android:label="@string/title_activity_clavier"
-            android:theme="@style/Theme.BilanLSF"
-            android:windowSoftInputMode="adjustPan"
-            android:screenOrientation="landscape" />
-
-        <activity
-            android:name=".ClavierInverseActivity"
-            android:exported="false"
-            android:label="@string/title_activity_clavier_inverse"
+            android:label="@string/title_activity_clavier_inverse_police"
             android:theme="@style/Theme.BilanLSF"
             android:screenOrientation="landscape" />
 
         <activity
-            android:name=".CorpsActivity"
+            android:name=".pompier.CorpsActivity"
             android:exported="false"
             android:label="@string/title_activity_corps"
             android:theme="@style/Theme.BilanLSF"
@@ -81,7 +115,7 @@
             android:screenOrientation="landscape" />
 
         <activity
-            android:name=".HorlogeActivity"
+            android:name=".pompier.HorlogeActivity"
             android:exported="false"
             android:label="HorlogeActivity"
             android:theme="@style/Theme.BilanLSF"
@@ -89,7 +123,7 @@
             android:screenOrientation="landscape" />
 
         <activity
-            android:name=".MinuteurActivity"
+            android:name=".pompier.MinuteurActivity"
             android:exported="false"
             android:label="MinuteurActivity"
             android:theme="@style/Theme.BilanLSF"
@@ -97,7 +131,7 @@
             android:screenOrientation="landscape" />
 
         <activity
-            android:name=".CalendrierActivity"
+            android:name=".pompier.CalendrierActivity"
             android:exported="false"
             android:label="CalendrierActivity"
             android:theme="@style/Theme.BilanLSF"
@@ -105,47 +139,87 @@
             android:screenOrientation="landscape" />
 
         <activity
-            android:name=".VitesseActivity"
+            android:name=".pompier.VitessePompierActivity"
             android:exported="false"
-            android:label="VitesseActivity"
+            android:label="VitessePompierActivity"
             android:theme="@style/Theme.BilanLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
         <activity
-            android:name=".DessinActivity"
+            android:name=".police.VitessePoliceActivity"
             android:exported="false"
-            android:label="DessinActivity"
+            android:label="VitessePoliceActivity"
             android:theme="@style/Theme.BilanLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
         <activity
-            android:name=".VoitureActivity"
+            android:name=".pompier.DessinPompierActivity"
             android:exported="false"
-            android:label="VoitureActivity"
+            android:label="DessinPompierActivity"
             android:theme="@style/Theme.BilanLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
         <activity
-            android:name=".AProposActivity"
+            android:name=".police.DessinPoliceActivity"
             android:exported="false"
-            android:label="AProposActivity"
+            android:label="DessinPoliceActivity"
             android:theme="@style/Theme.BilanLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
         <activity
-            android:name=".ParametresActivity"
+            android:name=".pompier.VoiturePompierActivity"
             android:exported="false"
-            android:label="ParametresActivity"
+            android:label="VoiturePompierActivity"
             android:theme="@style/Theme.BilanLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
         <activity
-            android:name=".CguActivity"
+            android:name=".police.VoiturePoliceActivity"
+            android:exported="false"
+            android:label="VoiturePoliceActivity"
+            android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".pompier.AProposPompierActivity"
+            android:exported="false"
+            android:label="AProposPompierActivity"
+            android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".police.AProposPoliceActivity"
+            android:exported="false"
+            android:label="AProposPoliceActivity"
+            android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".pompier.ParametresPompierActivity"
+            android:exported="false"
+            android:label="ParametresPompierActivity"
+            android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".police.ParametresPoliceActivity"
+            android:exported="false"
+            android:label="ParametresPoliceActivity"
+            android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".pompier.CguActivity"
             android:exported="false"
             android:label="CguActivity"
             android:theme="@style/Theme.BilanLSF"
@@ -153,7 +227,7 @@
             android:screenOrientation="landscape" />
 
         <activity
-            android:name=".PdcActivity"
+            android:name=".pompier.PdcActivity"
             android:exported="false"
             android:label="PdcActivity"
             android:theme="@style/Theme.BilanLSF"
@@ -161,7 +235,7 @@
             android:screenOrientation="landscape" />
 
         <activity
-            android:name=".CreditsActivity"
+            android:name=".pompier.CreditsActivity"
             android:exported="false"
             android:label="CreditsActivity"
             android:theme="@style/Theme.BilanLSF"
@@ -169,9 +243,17 @@
             android:screenOrientation="landscape" />
 
         <activity
-            android:name=".VersionActivity"
+            android:name=".pompier.VersionActivity"
             android:exported="false"
             android:label="VersionActivity"
+            android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".police.PointsPermisPoliceActivity"
+            android:exported="false"
+            android:label="PointsPermisPoliceActivity"
             android:theme="@style/Theme.BilanLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/accueil_icon"
+        android:title="@string/accueil" />
+    <item
+        android:id="@+id/nav_clavier"
+        android:icon="@drawable/clavier_icon"
+        android:title="@string/clavier" />
+    <item
+        android:id="@+id/nav_dessin"
+        android:icon="@drawable/dessin_icon"
+        android:title="@string/dessin" />
+    <item
+        android:id="@+id/nav_pointsPermis"
+        android:icon="@drawable/dessin_icon"
+        android:title="@string/points_permis" />
+    <item
+        android:id="@+id/nav_vitesse"
+        android:icon="@drawable/vitesse_icon"
+        android:title="@string/vitesse" />
+    <item
+        android:id="@+id/nav_voiture"
+        android:icon="@drawable/voiture_icon"
+        android:title="@string/voiture" />
+
+    <group android:id="@+id/autre">
+        <item
+            android:id="@+id/nav_aPropos"
+            android:icon="@drawable/a_propos"
+            android:title="@string/a_propos" />
+        <item
+            android:id="@+id/nav_parametres"
+            android:icon="@drawable/parametres_icon"
+            android:title="@string/parametres" />
+    </group>
+
+</menu>
+
+

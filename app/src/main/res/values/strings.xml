@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Bilan LSF</string>
-    <string name="title_activity_video">VideoActivity</string>
+    <string name="title_activity_video_pompier">VideoPompierActivity</string>
+    <string name="title_activity_video_police">VideoPoliceActivity</string>
     <string name="abecedaire">Abécédaire</string>
     <string name="abordage_victime">Abordage victime</string>
     <string name="bilan_circonstanciel">Bilan circonstanciel</string>
@@ -11,8 +12,12 @@
     <string name="clavier_lsf">Clavier LSF</string>
     <string name="clavier">Clavier</string>
     <string name="texte">Texte</string>
-    <string name="title_activity_groupe">GroupeActivity</string>
-    <string name="title_activity_clavier">ClavierActivity</string>
+    <string name="title_activity_groupe_pompier">GroupePompierActivity</string>
+    <string name="title_activity_groupe_police">GroupePoliceActivity</string>
+    <string name="title_activity_clavier_pompier">ClavierPompierActivity</string>
+    <string name="title_activity_clavier_inverse_pompier">ClavierInversePompierActivity</string>
+    <string name="title_activity_clavier_police">ClavierPoliceActivity</string>
+    <string name="title_activity_clavier_inverse_police">ClavierInversePoliceActivity</string>
     <string name="title_activity_corps">CorpsActivity</string>
     <string name="zero">zero</string>
     <string name="un">un</string>
@@ -102,7 +107,6 @@
     <string name="redo">redo</string>
     <string name="logobilanlsf">logobilanlsf</string>
     <string name="inverser">inverser</string>
-    <string name="title_activity_clavier_inverse">ClavierInverseActivity</string>
     <string name="_10">10</string>
     <string name="_9">9</string>
     <string name="_8">8</string>
@@ -130,4 +134,11 @@
     <string name="espace">espace</string>
     <string name="accueil">Accueil</string>
     <string name="parametres">Paramètres</string>
+    <string name="pompier">pompier</string>
+    <string name="police">police</string>
+    <string name="logopolice">logopolice</string>
+    <string name="monter">monter</string>
+    <string name="points_permis">Points permis</string>
+    <string name="descendre">descendre</string>
+    <string name="retrait_permis">Retrait permis</string>
 </resources>
