@@ -39,7 +39,7 @@ public class VideoPoliceActivity extends BasePoliceActivity {
     private void lireVideo() {
         String name = getIntent().getStringExtra("VIDEO_NAME").replace(".mp4", "");
 
-        if ("secours_routier_montrez_moi_la_vitesse".equals(name)) {
+        if ("securite_routiere_montrez_moi_la_vitesse".equals(name)) {
             Button boutonVitesse = new Button(this);
             boutonVitesse.setText(R.string.vitesse);
             FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
