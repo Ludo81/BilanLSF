@@ -48,7 +48,7 @@ public class VitessePoliceActivity extends BasePoliceActivity {
 
     public void onClickVideo(View view) {
         Intent intent = new Intent(VitessePoliceActivity.this, VideoPoliceActivity.class);
-        intent.putExtra("VIDEO_NAME", "secours_routier_montrez_moi_la_vitesse");
+        intent.putExtra("VIDEO_NAME", "securite_routiere_montrez_moi_la_vitesse");
         startActivity(intent);
     }
 }
