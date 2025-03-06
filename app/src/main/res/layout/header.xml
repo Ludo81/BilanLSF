@@ -11,6 +11,8 @@
         android:layout_width="1200dp"
         android:layout_height="wrap_content"
         android:hint="@string/rechercher_video"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
         android:text="" />
 
 </LinearLayout>
