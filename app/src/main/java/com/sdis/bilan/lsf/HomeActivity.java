@@ -17,7 +17,7 @@ public class HomeActivity extends ComponentActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("Parametrage", MODE_PRIVATE);
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.home2);
+        setContentView(R.layout.home);
 
         if (sharedPreferences.getBoolean("isPompierDefault", true)) {
             pompier();
