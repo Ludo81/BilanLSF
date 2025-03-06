@@ -18,7 +18,7 @@
             android:layout_columnWeight="1"
             android:layout_gravity="center"
             android:paddingBottom="20dp"
-            android:layout_width="250dp"
+            android:layout_width="300dp"
             android:src="@drawable/permis_conduire" />
 
         <LinearLayout
@@ -30,8 +30,8 @@
 
             <ImageButton
                 android:id="@+id/monter"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:background="@null"
                 android:contentDescription="@string/monter"
@@ -50,8 +50,8 @@
 
             <ImageButton
                 android:id="@+id/descendre"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:background="@null"
                 android:contentDescription="@string/descendre"

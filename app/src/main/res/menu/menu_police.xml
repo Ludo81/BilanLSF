@@ -14,7 +14,7 @@
         android:title="@string/dessin" />
     <item
         android:id="@+id/nav_pointsPermis"
-        android:icon="@drawable/dessin_icon"
+        android:icon="@drawable/permis_icon"
         android:title="@string/points_permis" />
     <item
         android:id="@+id/nav_vitesse"

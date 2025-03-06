@@ -18,7 +18,7 @@
             android:layout_height="60dp"
             android:padding="10dp"
             android:layout_marginHorizontal="100dp"
-            android:background="@android:color/darker_gray"
+            android:background="@drawable/rounded_gray_background"
             android:contentDescription="@string/pompier"
             android:onClick="goToPompier"
             android:scaleType="fitCenter"

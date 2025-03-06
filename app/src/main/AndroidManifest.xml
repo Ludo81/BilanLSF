@@ -82,6 +82,7 @@
             android:label="@string/title_activity_clavier_pompier"
             android:theme="@style/Theme.BilanLSF"
             android:windowSoftInputMode="adjustPan"
+            android:hardwareAccelerated="false"
             android:screenOrientation="landscape" />
 
         <activity
@@ -97,6 +98,7 @@
             android:label="@string/title_activity_clavier_police"
             android:theme="@style/Theme.BilanLSF"
             android:windowSoftInputMode="adjustPan"
+            android:hardwareAccelerated="false"
             android:screenOrientation="landscape" />
 
         <activity
