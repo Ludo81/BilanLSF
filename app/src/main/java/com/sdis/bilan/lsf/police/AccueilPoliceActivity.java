@@ -31,52 +31,28 @@ public class AccueilPoliceActivity extends BasePoliceActivity {
 
     }
 
-    public void onClickAccouchement(View view) {
-        Button button = (Button) findViewById(view.getId());
-        Drawable buttonBackground = button.getBackground();
-        this.goToGroupe("accouchement", ((ColorDrawable) buttonBackground).getColor());
-    }
-
     public void onClickAbecedaire(View view) {
         Button button = (Button) findViewById(view.getId());
         Drawable buttonBackground = button.getBackground();
         this.goToGroupe("abecedaire", ((ColorDrawable) buttonBackground).getColor());
     }
 
-    public void onClickAbordageVictime(View view) {
+    public void onClickAbordage(View view) {
         Button button = (Button) findViewById(view.getId());
         Drawable buttonBackground = button.getBackground();
-        this.goToGroupe("abordage_victime", ((ColorDrawable) buttonBackground).getColor());
+        this.goToGroupe("abordage", ((ColorDrawable) buttonBackground).getColor());
     }
 
-    public void onClickBilanCirconstanciel(View view) {
+    public void onClickDocuments(View view) {
         Button button = (Button) findViewById(view.getId());
         Drawable buttonBackground = button.getBackground();
-        this.goToGroupe("bilan_circonstanciel", ((ColorDrawable) buttonBackground).getColor());
+        this.goToGroupe("documents", ((ColorDrawable) buttonBackground).getColor());
     }
 
-    public void onClickBilanPrimaire(View view) {
+    public void onClickSecuriteRoutiere(View view) {
         Button button = (Button) findViewById(view.getId());
         Drawable buttonBackground = button.getBackground();
-        this.goToGroupe("bilan_primaire", ((ColorDrawable) buttonBackground).getColor());
-    }
-
-    public void onClickBilanSecondaire(View view) {
-        Button button = (Button) findViewById(view.getId());
-        Drawable buttonBackground = button.getBackground();
-        this.goToGroupe("bilan_secondaire", ((ColorDrawable) buttonBackground).getColor());
-    }
-
-    public void onClickRenseignements(View view) {
-        Button button = (Button) findViewById(view.getId());
-        Drawable buttonBackground = button.getBackground();
-        this.goToGroupe("renseignements", ((ColorDrawable) buttonBackground).getColor());
-    }
-
-    public void onClickSecoursRoutier(View view) {
-        Button button = (Button) findViewById(view.getId());
-        Drawable buttonBackground = button.getBackground();
-        this.goToGroupe("secours_routier", ((ColorDrawable) buttonBackground).getColor());
+        this.goToGroupe("securite_routiere", ((ColorDrawable) buttonBackground).getColor());
     }
 
     public void onClickClavier(View view) {

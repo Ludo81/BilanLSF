@@ -141,4 +141,7 @@
     <string name="points_permis">Points permis</string>
     <string name="descendre">descendre</string>
     <string name="retrait_permis">Retrait permis</string>
+    <string name="abordage">Abordage</string>
+    <string name="documents">Documents</string>
+    <string name="securite_routiere">Sécurité routière</string>
 </resources>

@@ -70,7 +70,7 @@
                         android:textColor="@color/white" />
 
                     <Button
-                        android:id="@+id/abordage_victime"
+                        android:id="@+id/abordage"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
@@ -78,9 +78,9 @@
                         android:background="#00B52A"
                         android:drawableTop="@drawable/logo_abordage"
                         android:drawablePadding="10dp"
-                        android:onClick="onClickAbordageVictime"
+                        android:onClick="onClickAbordage"
                         android:padding="10dp"
-                        android:text="@string/abordage_victime"
+                        android:text="@string/abordage"
                         android:textColor="@color/white" />
 
                 </TableRow>
@@ -88,7 +88,7 @@
                 <TableRow>
 
                     <Button
-                        android:id="@+id/renseignements"
+                        android:id="@+id/documents"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
@@ -96,13 +96,13 @@
                         android:background="#8153FF"
                         android:drawableTop="@drawable/logo_renseignements"
                         android:drawablePadding="10dp"
-                        android:onClick="onClickRenseignements"
+                        android:onClick="onClickDocuments"
                         android:padding="10dp"
-                        android:text="@string/renseignements"
+                        android:text="@string/documents"
                         android:textColor="@color/white" />
 
                     <Button
-                        android:id="@+id/secours_routier"
+                        android:id="@+id/securite_routiere"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
@@ -110,9 +110,9 @@
                         android:background="#da1a29"
                         android:drawableTop="@drawable/logo_secours_routier"
                         android:drawablePadding="10dp"
-                        android:onClick="onClickSecoursRoutier"
+                        android:onClick="onClickSecuriteRoutiere"
                         android:padding="10dp"
-                        android:text="@string/secours_routier"
+                        android:text="@string/securite_routiere"
                         android:textColor="@color/white" />
 
                 </TableRow>

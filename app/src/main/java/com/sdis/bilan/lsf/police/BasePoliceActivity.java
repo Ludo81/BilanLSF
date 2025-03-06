@@ -235,21 +235,13 @@ public abstract class BasePoliceActivity extends AppCompatActivity implements Na
         }
 
         private int getColorByNomVideo(String video) {
-            if (video.startsWith("ACCOUCHEMENT")) {
-                return Color.parseColor("#FBBC05");
-            } else if (video.startsWith("ABECEDAIRE")) {
+            if (video.startsWith("ABECEDAIRE")) {
                 return Color.parseColor("#1D90DC");
-            } else if (video.startsWith("ABORDAGE VICTIME")) {
+            } else if (video.startsWith("ABORDAGE")) {
                 return Color.parseColor("#00B52A");
-            } else if (video.startsWith("BILAN CIRCONSTANCIEL")) {
-                return Color.parseColor("#153849");
-            } else if (video.startsWith("BILAN PRIMAIRE")) {
-                return Color.parseColor("#8B0041");
-            } else if (video.startsWith("BILAN SECONDAIRE")) {
-                return Color.parseColor("#D83D1D");
-            } else if (video.startsWith("RENSEIGNEMENTS")) {
+            } else if (video.startsWith("DOCUMENTS")) {
                 return Color.parseColor("#8153FF");
-            } else if (video.startsWith("SECOURS ROUTIER")) {
+            } else if (video.startsWith("SECURITE ROUTIERE")) {
                 return Color.parseColor("#da1a29");
             } else {
                 return Color.BLACK;

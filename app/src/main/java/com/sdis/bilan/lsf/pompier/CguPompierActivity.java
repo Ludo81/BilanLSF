@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Scanner;
 
-public class CguActivity extends BasePompierActivity {
+public class CguPompierActivity extends BasePompierActivity {
 
     CguBinding cguBinding;
 

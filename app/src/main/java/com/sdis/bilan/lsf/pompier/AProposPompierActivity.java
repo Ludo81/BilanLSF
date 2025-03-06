@@ -54,22 +54,22 @@ public class AProposPompierActivity extends BasePompierActivity {
     }
 
     public void onClickCgu(View view) {
-        Intent intent = new Intent(AProposPompierActivity.this, CguActivity.class);
+        Intent intent = new Intent(AProposPompierActivity.this, CguPompierActivity.class);
         startActivity(intent);
     }
 
     public void onClickPdc(View view) {
-        Intent intent = new Intent(AProposPompierActivity.this, PdcActivity.class);
+        Intent intent = new Intent(AProposPompierActivity.this, PdcPompierActivity.class);
         startActivity(intent);
     }
 
     public void onClickCredits(View view) {
-        Intent intent = new Intent(AProposPompierActivity.this, CreditsActivity.class);
+        Intent intent = new Intent(AProposPompierActivity.this, CreditsPompierActivity.class);
         startActivity(intent);
     }
 
     public void onClickVersion(View view) {
-        Intent intent = new Intent(AProposPompierActivity.this, VersionActivity.class);
+        Intent intent = new Intent(AProposPompierActivity.this, VersionPompierActivity.class);
         startActivity(intent);
     }
 }

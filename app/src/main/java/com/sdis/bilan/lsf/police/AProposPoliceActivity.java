@@ -9,10 +9,6 @@ import android.widget.Button;
 
 import com.sdis.bilan.lsf.R;
 import com.sdis.bilan.lsf.databinding.AProposBinding;
-import com.sdis.bilan.lsf.pompier.CguActivity;
-import com.sdis.bilan.lsf.pompier.CreditsActivity;
-import com.sdis.bilan.lsf.pompier.PdcActivity;
-import com.sdis.bilan.lsf.pompier.VersionActivity;
 
 public class AProposPoliceActivity extends BasePoliceActivity {
 
@@ -58,22 +54,22 @@ public class AProposPoliceActivity extends BasePoliceActivity {
     }
 
     public void onClickCgu(View view) {
-        Intent intent = new Intent(AProposPoliceActivity.this, CguActivity.class);
+        Intent intent = new Intent(AProposPoliceActivity.this, CguPoliceActivity.class);
         startActivity(intent);
     }
 
     public void onClickPdc(View view) {
-        Intent intent = new Intent(AProposPoliceActivity.this, PdcActivity.class);
+        Intent intent = new Intent(AProposPoliceActivity.this, PdcPoliceActivity.class);
         startActivity(intent);
     }
 
     public void onClickCredits(View view) {
-        Intent intent = new Intent(AProposPoliceActivity.this, CreditsActivity.class);
+        Intent intent = new Intent(AProposPoliceActivity.this, CreditsPoliceActivity.class);
         startActivity(intent);
     }
 
     public void onClickVersion(View view) {
-        Intent intent = new Intent(AProposPoliceActivity.this, VersionActivity.class);
+        Intent intent = new Intent(AProposPoliceActivity.this, VersionPoliceActivity.class);
         startActivity(intent);
     }
 }

@@ -219,33 +219,65 @@
             android:screenOrientation="landscape" />
 
         <activity
-            android:name=".pompier.CguActivity"
+            android:name=".pompier.CguPompierActivity"
             android:exported="false"
-            android:label="CguActivity"
+            android:label="CguPompierActivity"
             android:theme="@style/Theme.BilanLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
         <activity
-            android:name=".pompier.PdcActivity"
+            android:name=".police.CguPoliceActivity"
             android:exported="false"
-            android:label="PdcActivity"
+            android:label="CguPoliceActivity"
             android:theme="@style/Theme.BilanLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
         <activity
-            android:name=".pompier.CreditsActivity"
+            android:name=".pompier.PdcPompierActivity"
             android:exported="false"
-            android:label="CreditsActivity"
+            android:label="PdcPompierActivity"
             android:theme="@style/Theme.BilanLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
         <activity
-            android:name=".pompier.VersionActivity"
+            android:name=".police.PdcPoliceActivity"
             android:exported="false"
-            android:label="VersionActivity"
+            android:label="PdcPoliceActivity"
+            android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".pompier.CreditsPompierActivity"
+            android:exported="false"
+            android:label="CreditsPompierActivity"
+            android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".police.CreditsPoliceActivity"
+            android:exported="false"
+            android:label="CreditsPoliceActivity"
+            android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".pompier.VersionPompierActivity"
+            android:exported="false"
+            android:label="VersionPompierActivity"
+            android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".police.VersionPoliceActivity"
+            android:exported="false"
+            android:label="VersionPoliceActivity"
             android:theme="@style/Theme.BilanLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />

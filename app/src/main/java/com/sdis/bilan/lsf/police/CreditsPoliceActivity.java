@@ -1,4 +1,4 @@
-package com.sdis.bilan.lsf.pompier;
+package com.sdis.bilan.lsf.police;
 
 import android.os.Bundle;
 import android.text.Html;
@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Scanner;
 
-public class CreditsActivity extends BasePompierActivity {
+public class CreditsPoliceActivity extends BasePoliceActivity {
 
     CreditsBinding creditsBinding;
 
