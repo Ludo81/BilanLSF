@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".police.TelephonePoliceActivity">
+    tools:context=".police.PortefeuillePoliceActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -15,13 +15,13 @@
         <ImageView
             android:id="@+id/portefeuille"
             android:layout_width="wrap_content"
-            android:layout_height="200dp"
+            android:layout_height="100dp"
             android:src="@drawable/portefeuille" />
 
         <ImageView
             android:id="@+id/colorPicker"
             android:layout_width="wrap_content"
-            android:layout_height="200dp"
+            android:layout_height="100dp"
             android:src="@drawable/color_picker" />
 
     </LinearLayout>
@@ -35,6 +35,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="50dp"
+            android:layout_gravity="center"
             android:src="@drawable/logo_sac_argent" />
 
         <LinearLayout
@@ -79,27 +80,39 @@
         android:layout_gravity="center">
 
         <ImageButton
+            android:id="@+id/permis"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:scaleType="fitCenter"
+            android:background="@null"
+            android:onClick="onClickPermis"
             android:src="@drawable/permis" />
 
         <ImageButton
+            android:id="@+id/carte_bancaire"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:scaleType="fitCenter"
+            android:background="@null"
+            android:onClick="onClickCarteBancaire"
             android:src="@drawable/carte_bancaire" />
 
         <ImageButton
+            android:id="@+id/carte_identite_elec"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:scaleType="fitCenter"
+            android:background="@null"
+            android:onClick="onClickCarteIdentiteElec"
             android:src="@drawable/carte_identite_elec" />
 
         <ImageButton
+            android:id="@+id/carte_vitale"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:scaleType="fitCenter"
+            android:background="@null"
+            android:onClick="onClickCarteVitale"
             android:src="@drawable/carte_vitale" />
 
     </LinearLayout>

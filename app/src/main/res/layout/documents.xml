@@ -19,7 +19,7 @@
             android:layout_columnWeight="1"
             android:background="@null"
             android:contentDescription="@string/carte_identite_elec"
-            android:onClick="selectCarteIdentiteElec"
+            android:onClick="onClickCarteIdentiteElec"
             android:scaleType="fitCenter"
             android:src="@drawable/carte_identite_elec" />
 
@@ -30,7 +30,7 @@
             android:layout_columnWeight="1"
             android:background="@null"
             android:contentDescription="@string/carte_vitale"
-            android:onClick="selectCarteVitale"
+            android:onClick="onClickCarteVitale"
             android:scaleType="fitCenter"
             android:src="@drawable/carte_vitale" />
 
@@ -41,7 +41,7 @@
             android:layout_columnWeight="1"
             android:background="@null"
             android:contentDescription="@string/passeport"
-            android:onClick="selectPasseport"
+            android:onClick="onClickPasseport"
             android:scaleType="fitCenter"
             android:src="@drawable/passeport" />
 
@@ -52,7 +52,7 @@
             android:layout_columnWeight="1"
             android:background="@null"
             android:contentDescription="@string/permis"
-            android:onClick="selectPermis"
+            android:onClick="onClickPermis"
             android:scaleType="fitCenter"
             android:src="@drawable/permis" />
 
@@ -63,7 +63,7 @@
             android:layout_columnWeight="1"
             android:background="@null"
             android:contentDescription="@string/carte_bancaire"
-            android:onClick="selectCarteBancaire"
+            android:onClick="onClickCarteBancaire"
             android:scaleType="fitCenter"
             android:src="@drawable/carte_bancaire" />
 
