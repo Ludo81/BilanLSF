@@ -291,6 +291,30 @@
             android:theme="@style/Theme.BilanLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".police.ObjetsTrouvesPoliceActivity"
+            android:exported="false"
+            android:label="ObjetsTrouvesPoliceActivity"
+            android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".police.BijouxPoliceActivity"
+            android:exported="false"
+            android:label="BijouxPoliceActivity"
+            android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".police.DocumentsPoliceActivity"
+            android:exported="false"
+            android:label="DocumentsPoliceActivity"
+            android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".police.DocumentsPoliceActivity">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="2"
+        android:padding="16dp">
+
+        <ImageButton
+            android:id="@+id/carte_identite_elec"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:background="@null"
+            android:contentDescription="@string/carte_identite_elec"
+            android:onClick="selectCarteIdentiteElec"
+            android:scaleType="fitCenter"
+            android:src="@drawable/carte_identite_elec" />
+
+        <ImageButton
+            android:id="@+id/carte_vitale"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:background="@null"
+            android:contentDescription="@string/carte_vitale"
+            android:onClick="selectCarteVitale"
+            android:scaleType="fitCenter"
+            android:src="@drawable/carte_vitale" />
+
+        <ImageButton
+            android:id="@+id/passeport"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:background="@null"
+            android:contentDescription="@string/passeport"
+            android:onClick="selectPasseport"
+            android:scaleType="fitCenter"
+            android:src="@drawable/passeport" />
+
+        <ImageButton
+            android:id="@+id/permis"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:background="@null"
+            android:contentDescription="@string/permis"
+            android:onClick="selectPermis"
+            android:scaleType="fitCenter"
+            android:src="@drawable/permis" />
+
+        <ImageButton
+            android:id="@+id/carte_bancaire"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:background="@null"
+            android:contentDescription="@string/carte_bancaire"
+            android:onClick="selectCarteBancaire"
+            android:scaleType="fitCenter"
+            android:src="@drawable/carte_bancaire" />
+
+    </GridLayout>
+
+
+</LinearLayout>

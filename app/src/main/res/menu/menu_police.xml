@@ -17,6 +17,10 @@
         android:icon="@drawable/permis_icon"
         android:title="@string/points_permis" />
     <item
+        android:id="@+id/nav_objetsTrouves"
+        android:icon="@drawable/objets_trouves_icon"
+        android:title="@string/objets_trouves" />
+    <item
         android:id="@+id/nav_vitesse"
         android:icon="@drawable/vitesse_icon"
         android:title="@string/vitesse" />

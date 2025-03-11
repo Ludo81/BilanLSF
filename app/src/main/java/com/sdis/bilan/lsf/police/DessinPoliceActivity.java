@@ -6,10 +6,11 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import com.sdis.bilan.lsf.DessinView;
 import com.sdis.bilan.lsf.R;
 import com.sdis.bilan.lsf.databinding.DessinBinding;
 
-public class DessinPoliceActivity extends BasePoliceActivity implements DessinPoliceView.UndoRedoListener {
+public class DessinPoliceActivity extends BasePoliceActivity implements DessinView.UndoRedoListener {
 
     DessinBinding dessinBinding;
 
@@ -32,7 +33,7 @@ public class DessinPoliceActivity extends BasePoliceActivity implements DessinPo
         dessinBinding = DessinBinding.inflate(getLayoutInflater());
         setContentView(dessinBinding.getRoot());
 
-        DessinPoliceView dessinView = findViewById(R.id.dessinView);
+        DessinView dessinView = findViewById(R.id.dessinView);
 
         ImageButton effacerBouton = findViewById(R.id.effacer);
         effacerBouton.setOnClickListener(v -> dessinView.clearDrawing());

@@ -1,4 +1,4 @@
-package com.sdis.bilan.lsf.police;
+package com.sdis.bilan.lsf;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -12,7 +12,7 @@ import android.view.View;
 
 import java.util.Stack;
 
-public class DessinPoliceView extends View {
+public class DessinView extends View {
 
     public static class DrawAction {
         public Path path;
@@ -41,17 +41,17 @@ public class DessinPoliceView extends View {
 
     private UndoRedoListener listener;
 
-    public DessinPoliceView(Context context) {
+    public DessinView(Context context) {
         super(context);
         init();
     }
 
-    public DessinPoliceView(Context context, AttributeSet attrs) {
+    public DessinView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    public DessinPoliceView(Context context, AttributeSet attrs, int defStyle) {
+    public DessinView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         init();
     }

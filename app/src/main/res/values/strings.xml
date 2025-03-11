@@ -144,4 +144,21 @@
     <string name="abordage">Abordage</string>
     <string name="documents">Documents</string>
     <string name="securite_routiere">Sécurité routière</string>
+    <string name="bijoux">bijoux</string>
+    <string name="sac">sac</string>
+    <string name="telephone">téléphone</string>
+    <string name="portefeuille">portefeuille</string>
+    <string name="vetements">vetements</string>
+    <string name="carte_identite">carte d\'identité</string>
+    <string name="clefs">clefs</string>
+    <string name="velo">vélo</string>
+    <string name="objets_trouves">Objets trouvés</string>
+    <string name="collier">collier</string>
+    <string name="montre">montre</string>
+    <string name="bague">bague</string>
+    <string name="carte_identite_elec">carte d\'identité électronique</string>
+    <string name="carte_vitale">carte vitale</string>
+    <string name="passeport">passeport</string>
+    <string name="permis">permis de conduire</string>
+    <string name="carte_bancaire">carte bancaire</string>
 </resources>
