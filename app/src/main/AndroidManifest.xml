@@ -315,6 +315,30 @@
             android:theme="@style/Theme.BilanLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".police.VeloPoliceActivity"
+            android:exported="false"
+            android:label="VeloPoliceActivity"
+            android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".police.TelephonePoliceActivity"
+            android:exported="false"
+            android:label="TelephonePoliceActivity"
+            android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".police.PortefeuillePoliceActivity"
+            android:exported="false"
+            android:label="PortefeuillePoliceActivity"
+            android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>

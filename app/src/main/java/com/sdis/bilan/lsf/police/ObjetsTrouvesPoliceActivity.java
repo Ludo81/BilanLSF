@@ -26,4 +26,19 @@ public class ObjetsTrouvesPoliceActivity extends BasePoliceActivity {
         Intent intent = new Intent(ObjetsTrouvesPoliceActivity.this, DocumentsPoliceActivity.class);
         startActivity(intent);
     }
+
+    public void goToVelo(View view) {
+        Intent intent = new Intent(ObjetsTrouvesPoliceActivity.this, VeloPoliceActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToTelephone(View view) {
+        Intent intent = new Intent(ObjetsTrouvesPoliceActivity.this, TelephonePoliceActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToPortefeuille(View view) {
+        Intent intent = new Intent(ObjetsTrouvesPoliceActivity.this, PortefeuillePoliceActivity.class);
+        startActivity(intent);
+    }
 }

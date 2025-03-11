@@ -161,4 +161,7 @@
     <string name="passeport">passeport</string>
     <string name="permis">permis de conduire</string>
     <string name="carte_bancaire">carte bancaire</string>
+    <string name="choisir_une_couleur">Choisir une couleur</string>
+    <string name="precedent">précédent</string>
+    <string name="suivant">suivant</string>
 </resources>
