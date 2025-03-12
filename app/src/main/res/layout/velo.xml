@@ -5,16 +5,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".police.VeloPoliceActivity">
 
-    <ImageView
-        android:id="@+id/velo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/velo" />
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="2"
+        android:rowCount="1"
+        android:padding="16dp">
 
-    <ImageView
-        android:id="@+id/colorPicker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/color_picker" />
+        <ImageView
+            android:id="@+id/velo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:padding="30dp"
+            android:src="@drawable/velo" />
+
+        <ImageView
+            android:id="@+id/colorPicker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/color_picker" />
+
+    </GridLayout>
 
 </LinearLayout>

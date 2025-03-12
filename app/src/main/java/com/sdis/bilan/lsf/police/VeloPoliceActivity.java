@@ -1,8 +1,9 @@
 package com.sdis.bilan.lsf.police;
 
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.widget.ImageView;
@@ -17,7 +18,7 @@ public class VeloPoliceActivity extends BasePoliceActivity {
     private ImageView veloView;
 
     private ImageView colorPicker;
-    private Bitmap bitmap;
+    int currentColor = Color.BLACK;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,18 +30,34 @@ public class VeloPoliceActivity extends BasePoliceActivity {
 
         colorPicker = findViewById(R.id.colorPicker);
 
-        bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.color_picker);
         colorPicker.setOnTouchListener((v, event) -> {
-            if (event.getAction() == MotionEvent.ACTION_MOVE || event.getAction() == MotionEvent.ACTION_DOWN) {
-                int x = (int) event.getX();
-                int y = (int) event.getY();
 
-                if (x >= 0 && x < bitmap.getWidth() && y >= 0 && y < bitmap.getHeight()) {
-                    int color = bitmap.getPixel(x, y);
-                    veloView.setColorFilter(color, PorterDuff.Mode.SRC_IN);
+            if (event.getAction() == MotionEvent.ACTION_MOVE || event.getAction() == MotionEvent.ACTION_DOWN) {
+
+                int viewX = (int) event.getX();
+                int viewY = (int) event.getY();
+
+                int viewWidth = colorPicker.getWidth();
+                int viewHeight = colorPicker.getHeight();
+
+                Bitmap image = ((BitmapDrawable) colorPicker.getDrawable()).getBitmap();
+
+                int imageWidth = image.getWidth();
+                int imageHeight = image.getHeight();
+
+                int imageX = (int) ((float) viewX * ((float) imageWidth / (float) viewWidth));
+                int imageY = (int) ((float) viewY * ((float) imageHeight / (float) viewHeight));
+
+                try {
+                    currentColor = image.getPixel(imageX, imageY);
+                } catch (Exception e) {
+
                 }
+
+                veloView.setColorFilter(currentColor, PorterDuff.Mode.SRC_IN);
             }
             return true;
         });
+
     }
 }

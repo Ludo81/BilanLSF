@@ -6,115 +6,119 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".police.PortefeuillePoliceActivity">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
 
-        <ImageView
-            android:id="@+id/portefeuille"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:src="@drawable/portefeuille" />
+        <TableRow android:layout_weight="1">
 
-        <ImageView
-            android:id="@+id/colorPicker"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:src="@drawable/color_picker" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:src="@drawable/logo_sac_argent" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@null"
-                android:contentDescription="@string/monter"
-                android:onClick="monter"
-                android:scaleType="fitCenter"
-                android:src="@drawable/monter" />
-
-            <TextView
-                android:id="@+id/argent"
-                android:layout_width="wrap_content"
+            <ImageView
+                android:id="@+id/portefeuille"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:textSize="40sp"
-                android:text="10 €"
-                android:layout_gravity="center" />
+                android:layout_weight="1"
+                android:src="@drawable/portefeuille" />
+
+            <ImageView
+                android:id="@+id/colorPicker"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/color_picker" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:layout_marginStart="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/logo_sac_argent" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:contentDescription="@string/monter"
+                    android:onClick="monter"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/monter" />
+
+                <TextView
+                    android:id="@+id/argent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textSize="40sp"
+                    android:gravity="center"
+                    android:text="10 €" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:contentDescription="@string/descendre"
+                    android:onClick="descendre"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/descendre" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow android:layout_weight="2">
 
             <ImageButton
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@null"
-                android:contentDescription="@string/descendre"
-                android:onClick="descendre"
+                android:id="@+id/permis"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:scaleType="fitCenter"
-                android:src="@drawable/descendre" />
+                android:background="@null"
+                android:onClick="onClickPermis"
+                android:src="@drawable/permis" />
 
-        </LinearLayout>
+            <ImageButton
+                android:id="@+id/carte_bancaire"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:background="@null"
+                android:onClick="onClickCarteBancaire"
+                android:src="@drawable/carte_bancaire" />
 
-    </LinearLayout>
+            <ImageButton
+                android:id="@+id/carte_identite_elec"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:background="@null"
+                android:onClick="onClickCarteIdentiteElec"
+                android:src="@drawable/carte_identite_elec" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center">
+            <ImageButton
+                android:id="@+id/carte_vitale"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:background="@null"
+                android:onClick="onClickCarteVitale"
+                android:src="@drawable/carte_vitale" />
+        </TableRow>
 
-        <ImageButton
-            android:id="@+id/permis"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:scaleType="fitCenter"
-            android:background="@null"
-            android:onClick="onClickPermis"
-            android:src="@drawable/permis" />
-
-        <ImageButton
-            android:id="@+id/carte_bancaire"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:scaleType="fitCenter"
-            android:background="@null"
-            android:onClick="onClickCarteBancaire"
-            android:src="@drawable/carte_bancaire" />
-
-        <ImageButton
-            android:id="@+id/carte_identite_elec"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:scaleType="fitCenter"
-            android:background="@null"
-            android:onClick="onClickCarteIdentiteElec"
-            android:src="@drawable/carte_identite_elec" />
-
-        <ImageButton
-            android:id="@+id/carte_vitale"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:scaleType="fitCenter"
-            android:background="@null"
-            android:onClick="onClickCarteVitale"
-            android:src="@drawable/carte_vitale" />
-
-    </LinearLayout>
+    </TableLayout>
 
 </LinearLayout>
