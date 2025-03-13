@@ -22,6 +22,11 @@ public class ObjetsTrouvesPoliceActivity extends BasePoliceActivity {
         startActivity(intent);
     }
 
+    public void goToBagages(View view) {
+        Intent intent = new Intent(ObjetsTrouvesPoliceActivity.this, BagagesPoliceActivity.class);
+        startActivity(intent);
+    }
+
     public void goToDocuments(View view) {
         Intent intent = new Intent(ObjetsTrouvesPoliceActivity.this, DocumentsPoliceActivity.class);
         startActivity(intent);
@@ -39,6 +44,11 @@ public class ObjetsTrouvesPoliceActivity extends BasePoliceActivity {
 
     public void goToPortefeuille(View view) {
         Intent intent = new Intent(ObjetsTrouvesPoliceActivity.this, PortefeuillePoliceActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToVetements(View view) {
+        Intent intent = new Intent(ObjetsTrouvesPoliceActivity.this, VetementsPoliceActivity.class);
         startActivity(intent);
     }
 }

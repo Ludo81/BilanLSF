@@ -16,12 +16,14 @@ public class DocumentsPoliceActivity extends BasePoliceActivity {
     private ImageView passeportView;
     private ImageView permisView;
     private ImageView carteBancaireView;
+    private ImageView chequeView;
 
     private boolean isCarteIdentiteSelected = false;
     private boolean isCarteVitaleSelected = false;
     private boolean isPasseportSelected = false;
     private boolean isPermisSelected = false;
     private boolean isCarteBancaireSelected = false;
+    private boolean isChequeSelected = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,7 @@ public class DocumentsPoliceActivity extends BasePoliceActivity {
         passeportView = findViewById(R.id.passeport);
         permisView = findViewById(R.id.permis);
         carteBancaireView = findViewById(R.id.carte_bancaire);
+        chequeView = findViewById(R.id.cheque);
     }
 
     public void onClickCarteIdentiteElec(View view) {
@@ -83,6 +86,16 @@ public class DocumentsPoliceActivity extends BasePoliceActivity {
         } else {
             carteBancaireView.setImageResource(R.drawable.carte_bancaire_select);
             isCarteBancaireSelected = true;
+        }
+    }
+
+    public void onClickCheque(View view) {
+        if (isChequeSelected) {
+            chequeView.setImageResource(R.drawable.cheque);
+            isChequeSelected = false;
+        } else {
+            chequeView.setImageResource(R.drawable.cheque_select);
+            isChequeSelected = true;
         }
     }
 }

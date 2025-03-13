@@ -8,21 +8,31 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.sdis.bilan.lsf.R;
 import com.sdis.bilan.lsf.databinding.TelephoneBinding;
+
+import java.util.List;
 
 public class TelephonePoliceActivity extends BasePoliceActivity {
 
     private TelephoneBinding telephoneBinding;
 
-    private ImageView telephoneView;
+    private ImageView objetView;
 
     private ImageView colorPicker;
     int currentColor = Color.BLACK;
 
-    private TextView marqueView;
+    private ImageView marqueView;
+
+    private List<Integer> listeObjets = List.of(R.drawable.telephone, R.drawable.ordinateur);
+    int objetSelected = 0;
+
+    private List<Integer> listeMarquesTelephone = List.of(R.drawable.apple, R.drawable.asus, R.drawable.cat, R.drawable.crosscall, R.drawable.fairphone,
+            R.drawable.google_pixel, R.drawable.hammer, R.drawable.honor, R.drawable.huawei, R.drawable.motorola, R.drawable.nokia, R.drawable.oneplus, R.drawable.oppo
+            , R.drawable.realme, R.drawable.samsung, R.drawable.sony, R.drawable.vivo, R.drawable.wiko, R.drawable.xiaomi);
+    private List<Integer> listeMarquesOrdinateur = List.of(R.drawable.asus, R.drawable.hp, R.drawable.lenovo, R.drawable.acer, R.drawable.apple, R.drawable.dell, R.drawable.fujitsu, R.drawable.msi, R.drawable.razer);
+    int marqueSelected = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +40,7 @@ public class TelephonePoliceActivity extends BasePoliceActivity {
         telephoneBinding = TelephoneBinding.inflate(getLayoutInflater());
         setContentView(telephoneBinding.getRoot());
 
-        telephoneView = findViewById(R.id.telephone);
+        objetView = findViewById(R.id.objet);
 
         colorPicker = findViewById(R.id.colorPicker);
 
@@ -60,17 +70,55 @@ public class TelephonePoliceActivity extends BasePoliceActivity {
 
                 }
 
-                telephoneView.setColorFilter(currentColor, PorterDuff.Mode.SRC_IN);
+                objetView.setColorFilter(currentColor, PorterDuff.Mode.SRC_IN);
             }
             return true;
         });
     }
 
-    public void precedent(View v) {
-        marqueView.setText("précédent");
+    public void objetPrecedent(View v) {
+        if (objetSelected - 1 != -1) {
+            objetSelected -= 1;
+            objetView.setImageResource(listeObjets.get(objetSelected));
+
+            marqueSelected = 0;
+            marqueView.setImageResource(listeMarquesTelephone.get(marqueSelected));
+        }
     }
 
-    public void suivant(View v) {
-        marqueView.setText("suivant");
+    public void objetSuivant(View v) {
+        if (objetSelected + 1 != listeObjets.size()) {
+            objetSelected += 1;
+            objetView.setImageResource(listeObjets.get(objetSelected));
+
+            marqueSelected = 0;
+            marqueView.setImageResource(listeMarquesOrdinateur.get(marqueSelected));
+        }
+    }
+
+    public void marquePrecedente(View v) {
+        if (marqueSelected - 1 != -1) {
+            marqueSelected -= 1;
+            if (objetSelected == 0) {
+                marqueView.setImageResource(listeMarquesTelephone.get(marqueSelected));
+            } else {
+                marqueView.setImageResource(listeMarquesOrdinateur.get(marqueSelected));
+            }
+        }
+    }
+
+    public void marqueSuivante(View v) {
+        if (objetSelected == 0) {
+            if (marqueSelected + 1 != listeMarquesTelephone.size()) {
+                marqueSelected += 1;
+                marqueView.setImageResource(listeMarquesTelephone.get(marqueSelected));
+            }
+        } else {
+            if (marqueSelected + 1 != listeMarquesOrdinateur.size()) {
+                marqueSelected += 1;
+                marqueView.setImageResource(listeMarquesOrdinateur.get(marqueSelected));
+            }
+        }
+
     }
 }

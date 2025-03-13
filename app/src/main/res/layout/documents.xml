@@ -77,6 +77,19 @@
             android:scaleType="fitCenter"
             android:src="@drawable/carte_bancaire" />
 
+        <ImageButton
+            android:id="@+id/cheque"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:padding="30dp"
+            android:background="@null"
+            android:contentDescription="@string/cheque"
+            android:onClick="onClickCheque"
+            android:scaleType="fitCenter"
+            android:src="@drawable/cheque" />
+
     </GridLayout>
 
 

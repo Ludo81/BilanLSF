@@ -164,4 +164,9 @@
     <string name="choisir_une_couleur">Choisir une couleur</string>
     <string name="precedent">précédent</string>
     <string name="suivant">suivant</string>
+    <string name="cheque">chèque</string>
+    <string name="bagages">bagages</string>
+    <string name="fuite">Fuite</string>
+    <string name="moins">moins</string>
+    <string name="plus">plus</string>
 </resources>

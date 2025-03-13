@@ -25,7 +25,7 @@
             android:id="@+id/colorPicker"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
+            android:layout_columnWeight="1.5"
             android:layout_rowWeight="1"
             android:scaleType="fitXY"
             android:src="@drawable/color_picker" />

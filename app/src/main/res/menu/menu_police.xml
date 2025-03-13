@@ -21,6 +21,10 @@
         android:icon="@drawable/objets_trouves_icon"
         android:title="@string/objets_trouves" />
     <item
+        android:id="@+id/nav_fuite"
+        android:icon="@drawable/fuite_icon"
+        android:title="@string/fuite" />
+    <item
         android:id="@+id/nav_vitesse"
         android:icon="@drawable/vitesse_icon"
         android:title="@string/vitesse" />

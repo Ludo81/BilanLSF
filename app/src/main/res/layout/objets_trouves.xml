@@ -26,17 +26,17 @@
             android:src="@drawable/bijoux" />
 
         <ImageButton
-            android:id="@+id/sac"
+            android:id="@+id/bagages"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:padding="30dp"
             android:background="@null"
-            android:contentDescription="@string/sac"
-            android:onClick="goToSac"
+            android:contentDescription="@string/bagages"
+            android:onClick="goToBagages"
             android:scaleType="fitCenter"
-            android:src="@drawable/sac" />
+            android:src="@drawable/bagages" />
 
         <ImageButton
             android:id="@+id/telephone"
@@ -49,7 +49,7 @@
             android:contentDescription="@string/telephone"
             android:onClick="goToTelephone"
             android:scaleType="fitCenter"
-            android:src="@drawable/telephone" />
+            android:src="@drawable/ordinateur_telephone" />
 
         <ImageButton
             android:id="@+id/portefeuille"
