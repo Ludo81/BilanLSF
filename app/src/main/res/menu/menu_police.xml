@@ -32,6 +32,10 @@
         android:id="@+id/nav_voiture"
         android:icon="@drawable/voiture_icon"
         android:title="@string/voiture" />
+    <item
+        android:id="@+id/nav_carte"
+        android:icon="@drawable/voiture_icon"
+        android:title="@string/carte" />
 
     <group android:id="@+id/autre">
         <item
