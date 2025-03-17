@@ -7,6 +7,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.sdis.bilan.lsf.R;
@@ -24,6 +25,12 @@ public class TelephonePoliceActivity extends BasePoliceActivity {
     int currentColor = Color.BLACK;
 
     private ImageView marqueView;
+
+    private ImageButton objetPrecedentView;
+    private ImageButton objetSuivantView;
+
+    private ImageButton marquePrecedenteView;
+    private ImageButton marqueSuivanteView;
 
     private List<Integer> listeObjets = List.of(R.drawable.telephone, R.drawable.ordinateur);
     int objetSelected = 0;
@@ -45,6 +52,12 @@ public class TelephonePoliceActivity extends BasePoliceActivity {
         colorPicker = findViewById(R.id.colorPicker);
 
         marqueView = findViewById(R.id.marque);
+
+        objetPrecedentView = findViewById(R.id.objet_precedent);
+        objetSuivantView = findViewById(R.id.objet_suivant);
+
+        marquePrecedenteView = findViewById(R.id.marque_precedente);
+        marqueSuivanteView = findViewById(R.id.marque_suivante);
 
         colorPicker.setOnTouchListener((v, event) -> {
 
@@ -83,6 +96,14 @@ public class TelephonePoliceActivity extends BasePoliceActivity {
 
             marqueSelected = 0;
             marqueView.setImageResource(listeMarquesTelephone.get(marqueSelected));
+            marquePrecedenteView.setImageResource(0);
+            marqueSuivanteView.setImageResource(R.drawable.suivant);
+
+            objetSuivantView.setImageResource(R.drawable.suivant);
+
+            if (objetSelected == 0) {
+                objetPrecedentView.setImageResource(0);
+            }
         }
     }
 
@@ -93,6 +114,14 @@ public class TelephonePoliceActivity extends BasePoliceActivity {
 
             marqueSelected = 0;
             marqueView.setImageResource(listeMarquesOrdinateur.get(marqueSelected));
+            marquePrecedenteView.setImageResource(0);
+            marqueSuivanteView.setImageResource(R.drawable.suivant);
+
+            objetPrecedentView.setImageResource(R.drawable.precedent);
+
+            if (objetSelected == listeObjets.size() - 1) {
+                objetSuivantView.setImageResource(0);
+            }
         }
     }
 
@@ -104,6 +133,12 @@ public class TelephonePoliceActivity extends BasePoliceActivity {
             } else {
                 marqueView.setImageResource(listeMarquesOrdinateur.get(marqueSelected));
             }
+
+            marqueSuivanteView.setImageResource(R.drawable.suivant);
+
+            if (marqueSelected == 0) {
+                marquePrecedenteView.setImageResource(0);
+            }
         }
     }
 
@@ -112,11 +147,23 @@ public class TelephonePoliceActivity extends BasePoliceActivity {
             if (marqueSelected + 1 != listeMarquesTelephone.size()) {
                 marqueSelected += 1;
                 marqueView.setImageResource(listeMarquesTelephone.get(marqueSelected));
+
+                marquePrecedenteView.setImageResource(R.drawable.precedent);
+
+                if (marqueSelected == listeMarquesTelephone.size() - 1) {
+                    marqueSuivanteView.setImageResource(0);
+                }
             }
         } else {
             if (marqueSelected + 1 != listeMarquesOrdinateur.size()) {
                 marqueSelected += 1;
                 marqueView.setImageResource(listeMarquesOrdinateur.get(marqueSelected));
+
+                marquePrecedenteView.setImageResource(R.drawable.precedent);
+
+                if (marqueSelected == listeMarquesOrdinateur.size() - 1) {
+                    marqueSuivanteView.setImageResource(0);
+                }
             }
         }
 

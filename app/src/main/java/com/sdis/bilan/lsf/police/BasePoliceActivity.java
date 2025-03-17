@@ -161,6 +161,11 @@ public abstract class BasePoliceActivity extends AppCompatActivity implements Na
                     intent = new Intent(BasePoliceActivity.this, FuitePoliceActivity.class);
                 }
                 break;
+            case R.id.nav_description_physique:
+                if (!(this instanceof DescriptionPhysiquePoliceActivity)) {
+                    intent = new Intent(BasePoliceActivity.this, DescriptionPhysiquePoliceActivity.class);
+                }
+                break;
             case R.id.nav_vitesse:
                 if (!(this instanceof VitessePoliceActivity)) {
                     intent = new Intent(BasePoliceActivity.this, VitessePoliceActivity.class);

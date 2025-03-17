@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".police.DescriptionPhysiquePoliceActivity">
+
+    <LinearLayout
+        android:id="@+id/menu_haut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/menu_gauche">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="a. sexe"
+            android:onClick="goToSexe" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="b. couleur peau"
+            android:onClick="goToCouleurPeau" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_blue_light"
+            android:text="c. taille" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="d. corpulence"
+            android:onClick="goToCorpulence" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_gauche"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/menu_haut"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_blue_light"
+            android:text="description corps" />
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="description visage" />
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="détails visage" />
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="description vestimentaire" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/suivant"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/menu_haut"
+        android:background="@null"
+        android:src="@drawable/suivant"
+        android:scaleType="fitCenter"
+        android:onClick="goToCorpulence" />
+
+    <ImageButton
+        android:id="@+id/precedent"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/menu_gauche"
+        android:layout_below="@id/menu_haut"
+        android:background="@null"
+        android:src="@drawable/precedent"
+        android:scaleType="fitCenter"
+        android:onClick="goToCouleurPeau" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_toRightOf="@id/precedent"
+        android:layout_toLeftOf="@id/suivant"
+        android:layout_below="@id/menu_haut">
+
+        <ImageView
+            android:id="@+id/corps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/homme_normal"
+            android:scaleType="fitCenter" />
+
+        <FrameLayout
+            android:layout_width="32dp"
+            android:layout_height="300dp">
+
+            <SeekBar
+                android:id="@+id/taille"
+                android:layout_width="300dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:max="100"
+                android:progress="50"
+                android:progressTint="@android:color/transparent"
+                android:thumb="@drawable/point_regle_vert"
+                android:rotation="270" />
+
+        </FrameLayout>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:columnCount="1"
+            android:rowCount="3">
+
+            <TextView
+                android:text="250 cm"
+                android:layout_rowWeight="1"
+                android:gravity="top" />
+
+            <TextView
+                android:text="170 cm"
+                android:layout_rowWeight="1"
+                android:gravity="center" />
+
+            <TextView
+                android:text="60 cm"
+                android:layout_rowWeight="1"
+                android:gravity="bottom" />
+
+        </GridLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

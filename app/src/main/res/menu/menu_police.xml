@@ -25,6 +25,10 @@
         android:icon="@drawable/fuite_icon"
         android:title="@string/fuite" />
     <item
+        android:id="@+id/nav_description_physique"
+        android:icon="@drawable/description_physique_icon"
+        android:title="@string/description_physique" />
+    <item
         android:id="@+id/nav_vitesse"
         android:icon="@drawable/vitesse_icon"
         android:title="@string/vitesse" />
@@ -34,7 +38,7 @@
         android:title="@string/voiture" />
     <item
         android:id="@+id/nav_carte"
-        android:icon="@drawable/voiture_icon"
+        android:icon="@drawable/carte_icon"
         android:title="@string/carte" />
 
     <group android:id="@+id/autre">

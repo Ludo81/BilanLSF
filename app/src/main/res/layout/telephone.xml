@@ -14,14 +14,14 @@
         <TableRow android:layout_weight="1">
 
             <ImageButton
+                android:id="@+id/objet_precedent"
                 android:layout_height="wrap_content"
                 android:layout_width="0dp"
                 android:layout_weight="0.5"
                 android:background="@null"
                 android:contentDescription="@string/precedent"
                 android:onClick="objetPrecedent"
-                android:scaleType="fitCenter"
-                android:src="@drawable/precedent" />
+                android:scaleType="fitCenter" />
 
             <ImageView
                 android:id="@+id/objet"
@@ -32,6 +32,7 @@
                 android:src="@drawable/telephone" />
 
             <ImageButton
+                android:id="@+id/objet_suivant"
                 android:layout_height="wrap_content"
                 android:layout_width="0dp"
                 android:layout_weight="0.5"
@@ -54,14 +55,14 @@
         <TableRow android:layout_weight="5">
 
             <ImageButton
+                android:id="@+id/marque_precedente"
                 android:layout_height="wrap_content"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:background="@null"
                 android:contentDescription="@string/precedent"
                 android:onClick="marquePrecedente"
-                android:scaleType="fitCenter"
-                android:src="@drawable/precedent" />
+                android:scaleType="fitCenter" />
 
             <ImageView
                 android:id="@+id/marque"
@@ -72,6 +73,7 @@
                 android:src="@drawable/apple" />
 
             <ImageButton
+                android:id="@+id/marque_suivante"
                 android:layout_height="wrap_content"
                 android:layout_width="0dp"
                 android:layout_weight="1"

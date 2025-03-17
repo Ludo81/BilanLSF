@@ -7,6 +7,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.sdis.bilan.lsf.R;
@@ -19,6 +20,9 @@ public class BagagesPoliceActivity extends BasePoliceActivity {
     private BagagesBinding bagagesBinding;
 
     private ImageView bagageView;
+
+    private ImageButton precedentView;
+    private ImageButton suivantView;
 
     private ImageView colorPicker;
     int currentColor = Color.BLACK;
@@ -33,6 +37,9 @@ public class BagagesPoliceActivity extends BasePoliceActivity {
         setContentView(bagagesBinding.getRoot());
 
         bagageView = findViewById(R.id.bagage);
+
+        precedentView = findViewById(R.id.precedent);
+        suivantView = findViewById(R.id.suivant);
 
         colorPicker = findViewById(R.id.colorPicker);
 
@@ -70,6 +77,11 @@ public class BagagesPoliceActivity extends BasePoliceActivity {
         if (bagageSelected - 1 != -1) {
             bagageSelected -= 1;
             bagageView.setImageResource(listeBagages.get(bagageSelected));
+            suivantView.setImageResource(R.drawable.suivant);
+
+            if (bagageSelected == 0) {
+                precedentView.setImageResource(0);
+            }
         }
     }
 
@@ -77,6 +89,11 @@ public class BagagesPoliceActivity extends BasePoliceActivity {
         if (bagageSelected + 1 != listeBagages.size()) {
             bagageSelected += 1;
             bagageView.setImageResource(listeBagages.get(bagageSelected));
+            precedentView.setImageResource(R.drawable.precedent);
+
+            if (bagageSelected == listeBagages.size() - 1) {
+                suivantView.setImageResource(0);
+            }
         }
     }
 

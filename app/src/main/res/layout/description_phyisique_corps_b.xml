@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".police.DescriptionPhysiquePoliceActivity">
+
+    <LinearLayout
+        android:id="@+id/menu_haut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/menu_gauche">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="a. sexe"
+            android:onClick="goToSexe" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_blue_light"
+            android:text="b. couleur peau" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="c. taille"
+            android:onClick="goToTaille" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="d. corpulence"
+            android:onClick="goToCorpulence" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_gauche"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/menu_haut"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_blue_light"
+            android:text="description corps" />
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="description visage" />
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="détails visage" />
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="description vestimentaire" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/suivant"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/menu_haut"
+        android:background="@null"
+        android:src="@drawable/suivant"
+        android:scaleType="fitCenter"
+        android:onClick="goToTaille" />
+
+    <ImageButton
+        android:id="@+id/precedent"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/menu_gauche"
+        android:layout_below="@id/menu_haut"
+        android:background="@null"
+        android:src="@drawable/precedent"
+        android:scaleType="fitCenter"
+        android:onClick="goToSexe" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/precedent"
+        android:layout_toLeftOf="@id/suivant"
+        android:layout_below="@id/menu_haut">
+
+        <TableRow
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/corps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/homme_normal"
+                android:scaleType="fitCenter" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="20dp"
+                android:backgroundTint="#FFDFC4"
+                android:background="@drawable/bouton_noire"
+                android:onClick="changerCouleurPeau" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="20dp"
+                android:backgroundTint="#F0D5B1"
+                android:background="@drawable/bouton_noire"
+                android:onClick="changerCouleurPeau" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="20dp"
+                android:backgroundTint="#E1B899"
+                android:background="@drawable/bouton_noire"
+                android:onClick="changerCouleurPeau" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="20dp"
+                android:backgroundTint="#C68642"
+                android:background="@drawable/bouton_noire"
+                android:onClick="changerCouleurPeau" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="20dp"
+                android:backgroundTint="#8D5524"
+                android:background="@drawable/bouton_noire"
+                android:onClick="changerCouleurPeau" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="20dp"
+                android:backgroundTint="#7D4F35"
+                android:background="@drawable/bouton_noire"
+                android:onClick="changerCouleurPeau" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="20dp"
+                android:backgroundTint="#4B2E19"
+                android:background="@drawable/bouton_noire"
+                android:onClick="changerCouleurPeau" />
+
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>

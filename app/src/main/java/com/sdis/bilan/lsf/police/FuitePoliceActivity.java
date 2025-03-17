@@ -7,6 +7,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -25,6 +26,9 @@ public class FuitePoliceActivity extends BasePoliceActivity {
 
     private ImageView vehiculeView;
 
+    private ImageButton precedentView;
+    private ImageButton suivantView;
+
     private ImageView colorPicker;
     int currentColor = Color.BLACK;
 
@@ -38,6 +42,9 @@ public class FuitePoliceActivity extends BasePoliceActivity {
         setContentView(fuiteBinding.getRoot());
 
         vehiculeView = findViewById(R.id.vehicule);
+
+        precedentView = findViewById(R.id.precedent);
+        suivantView = findViewById(R.id.suivant);
 
         personneView = findViewById(R.id.personne);
         nombrePersonnesView = findViewById(R.id.nombrePersonnes);
@@ -94,6 +101,12 @@ public class FuitePoliceActivity extends BasePoliceActivity {
         if (vehiculeSelected - 1 != -1) {
             vehiculeSelected -= 1;
             vehiculeView.setImageResource(listeVehicules.get(vehiculeSelected));
+
+            suivantView.setImageResource(R.drawable.suivant);
+
+            if (vehiculeSelected == 0) {
+                precedentView.setImageResource(0);
+            }
         }
     }
 
@@ -101,6 +114,12 @@ public class FuitePoliceActivity extends BasePoliceActivity {
         if (vehiculeSelected + 1 != listeVehicules.size()) {
             vehiculeSelected += 1;
             vehiculeView.setImageResource(listeVehicules.get(vehiculeSelected));
+
+            precedentView.setImageResource(R.drawable.precedent);
+
+            if (vehiculeSelected == listeVehicules.size() - 1) {
+                suivantView.setImageResource(0);
+            }
         }
     }
 }

@@ -7,6 +7,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.sdis.bilan.lsf.R;
@@ -19,6 +20,9 @@ public class VetementsPoliceActivity extends BasePoliceActivity {
     private VetementsBinding vetementsBinding;
 
     private ImageView vetementView;
+
+    private ImageButton precedentView;
+    private ImageButton suivantView;
 
     private ImageView colorPicker;
     int currentColor = Color.BLACK;
@@ -34,6 +38,9 @@ public class VetementsPoliceActivity extends BasePoliceActivity {
         setContentView(vetementsBinding.getRoot());
 
         vetementView = findViewById(R.id.vetement);
+
+        precedentView = findViewById(R.id.precedent);
+        suivantView = findViewById(R.id.suivant);
 
         colorPicker = findViewById(R.id.colorPicker);
 
@@ -71,6 +78,12 @@ public class VetementsPoliceActivity extends BasePoliceActivity {
         if (vetementSelected - 1 != -1) {
             vetementSelected -= 1;
             vetementView.setImageResource(listeVetements.get(vetementSelected));
+
+            suivantView.setImageResource(R.drawable.suivant);
+
+            if (vetementSelected == 0) {
+                precedentView.setImageResource(0);
+            }
         }
     }
 
@@ -78,6 +91,12 @@ public class VetementsPoliceActivity extends BasePoliceActivity {
         if (vetementSelected + 1 != listeVetements.size()) {
             vetementSelected += 1;
             vetementView.setImageResource(listeVetements.get(vetementSelected));
+
+            precedentView.setImageResource(R.drawable.precedent);
+
+            if (vetementSelected == listeVetements.size() - 1) {
+                suivantView.setImageResource(0);
+            }
         }
     }
 }

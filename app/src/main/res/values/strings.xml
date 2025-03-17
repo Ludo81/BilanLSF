@@ -170,4 +170,5 @@
     <string name="moins">moins</string>
     <string name="plus">plus</string>
     <string name="carte">Carte</string>
+    <string name="description_physique">Description physique</string>
 </resources>

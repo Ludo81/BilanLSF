@@ -32,6 +32,11 @@ public class ObjetsTrouvesPoliceActivity extends BasePoliceActivity {
         startActivity(intent);
     }
 
+    public void goToClefs(View view) {
+        Intent intent = new Intent(ObjetsTrouvesPoliceActivity.this, ClefsPoliceActivity.class);
+        startActivity(intent);
+    }
+
     public void goToVelo(View view) {
         Intent intent = new Intent(ObjetsTrouvesPoliceActivity.this, VeloPoliceActivity.class);
         startActivity(intent);

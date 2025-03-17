@@ -11,12 +11,13 @@
         android:layout_height="match_parent"
         android:padding="16dp">
 
-        <TableRow android:layout_weight="0.01">
+        <TableRow android:layout_weight="100000">
 
             <ImageButton
                 android:id="@+id/bague"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_margin="20dp"
                 android:layout_weight="1"
                 android:background="@null"
                 android:contentDescription="@string/bague"
@@ -28,6 +29,7 @@
                 android:id="@+id/collier"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_margin="20dp"
                 android:layout_weight="1"
                 android:background="@null"
                 android:contentDescription="@string/collier"
@@ -39,6 +41,7 @@
                 android:id="@+id/montre"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_margin="20dp"
                 android:layout_weight="1"
                 android:background="@null"
                 android:contentDescription="@string/montre"
@@ -71,37 +74,34 @@
                 android:layout_weight="1"
                 android:textAlignment="center" />
 
-
         </TableRow>
 
-        <TableRow android:layout_weight="2">
+        <TableRow
+            android:layout_weight="1"
+            android:gravity="center">
 
             <Button
                 android:id="@+id/or"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp" />
 
             <Button
                 android:id="@+id/orRose"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp" />
 
             <Button
                 android:id="@+id/argent"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp" />
 
             <Button
                 android:id="@+id/noir"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp" />
 
         </TableRow>

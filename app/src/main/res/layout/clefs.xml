@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".police.ClefsPoliceActivity">
+
+    <TableRow
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/clefs" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/maison"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/voiture"
+            android:onClick="selectMaison" />
+
+        <ImageButton
+            android:id="@+id/voiture"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/voiture"
+            android:onClick="selectVoiture" />
+
+    </TableRow>
+
+    <TableRow android:layout_weight="1.5">
+
+        <ImageButton
+            android:id="@+id/marque_precedente"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:contentDescription="@string/precedent"
+            android:onClick="marquePrecedente"
+            android:scaleType="fitCenter" />
+
+        <ImageView
+            android:id="@+id/marque"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:layout_gravity="center"
+            android:src="@drawable/aixam" />
+
+        <ImageButton
+            android:id="@+id/marque_suivante"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:contentDescription="@string/suivant"
+            android:onClick="marqueSuivante"
+            android:scaleType="fitCenter"
+            android:src="@drawable/suivant" />
+    </TableRow>
+
+</TableLayout>

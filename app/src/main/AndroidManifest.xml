@@ -376,6 +376,22 @@
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
+        <activity
+            android:name=".police.DescriptionPhysiquePoliceActivity"
+            android:exported="false"
+            android:label="DescriptionPhysiquePoliceActivity"
+            android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".police.ClefsPoliceActivity"
+            android:exported="false"
+            android:label="ClefsPoliceActivity"
+            android:theme="@style/Theme.BilanLSF"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" />
+
     </application>
 
 </manifest>

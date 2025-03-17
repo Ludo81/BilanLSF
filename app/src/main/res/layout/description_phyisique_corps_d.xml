@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".police.DescriptionPhysiquePoliceActivity">
+
+    <LinearLayout
+        android:id="@+id/menu_haut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/menu_gauche">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="a. sexe"
+            android:onClick="goToSexe" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="b. couleur peau"
+            android:onClick="goToCouleurPeau" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="c. taille"
+            android:onClick="goToTaille" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_blue_light"
+            android:text="d. corpulence" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_gauche"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/menu_haut"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_blue_light"
+            android:text="description corps" />
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="description visage" />
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="détails visage" />
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="description vestimentaire" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/precedent"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/menu_gauche"
+        android:layout_below="@id/menu_haut"
+        android:background="@null"
+        android:src="@drawable/precedent"
+        android:scaleType="fitCenter"
+        android:onClick="goToTaille" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_toRightOf="@id/precedent"
+        android:layout_below="@id/menu_haut">
+
+        <ImageView
+            android:id="@+id/corps_mince"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/homme_mince"
+            android:scaleType="fitCenter"
+            android:onClick="selectMince" />
+
+        <ImageView
+            android:id="@+id/corps_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/homme_normal"
+            android:scaleType="fitCenter"
+            android:background="@drawable/rounded_light_gray_background"
+            android:onClick="selectNormal" />
+
+        <ImageView
+            android:id="@+id/corps_costaud"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/homme_costaud"
+            android:scaleType="fitCenter"
+            android:onClick="selectCostaud" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
