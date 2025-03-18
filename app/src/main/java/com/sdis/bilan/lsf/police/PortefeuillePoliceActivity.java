@@ -97,40 +97,40 @@ public class PortefeuillePoliceActivity extends BasePoliceActivity {
 
     public void onClickCarteIdentiteElec(View view) {
         if (isCarteIdentiteSelected) {
-            carteIdentiteView.setImageResource(R.drawable.carte_identite_elec);
+            carteIdentiteView.setBackgroundResource(0);
             isCarteIdentiteSelected = false;
         } else {
-            carteIdentiteView.setImageResource(R.drawable.carte_identite_elec_select);
+            carteIdentiteView.setBackgroundResource(R.drawable.rounded_light_gray_background);
             isCarteIdentiteSelected = true;
         }
     }
 
     public void onClickCarteVitale(View view) {
         if (isCarteVitaleSelected) {
-            carteVitaleView.setImageResource(R.drawable.carte_vitale);
+            carteVitaleView.setBackgroundResource(0);
             isCarteVitaleSelected = false;
         } else {
-            carteVitaleView.setImageResource(R.drawable.carte_vitale_select);
+            carteVitaleView.setBackgroundResource(R.drawable.rounded_light_gray_background);
             isCarteVitaleSelected = true;
         }
     }
 
     public void onClickPermis(View view) {
         if (isPermisSelected) {
-            permisView.setImageResource(R.drawable.permis);
+            permisView.setBackgroundResource(0);
             isPermisSelected = false;
         } else {
-            permisView.setImageResource(R.drawable.permis_select);
+            permisView.setBackgroundResource(R.drawable.rounded_light_gray_background);
             isPermisSelected = true;
         }
     }
 
     public void onClickCarteBancaire(View view) {
         if (isCarteBancaireSelected) {
-            carteBancaireView.setImageResource(R.drawable.carte_bancaire);
+            carteBancaireView.setBackgroundResource(0);
             isCarteBancaireSelected = false;
         } else {
-            carteBancaireView.setImageResource(R.drawable.carte_bancaire_select);
+            carteBancaireView.setBackgroundResource(R.drawable.rounded_light_gray_background);
             isCarteBancaireSelected = true;
         }
     }

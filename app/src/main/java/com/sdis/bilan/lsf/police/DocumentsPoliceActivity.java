@@ -41,60 +41,60 @@ public class DocumentsPoliceActivity extends BasePoliceActivity {
 
     public void onClickCarteIdentiteElec(View view) {
         if (isCarteIdentiteSelected) {
-            carteIdentiteView.setImageResource(R.drawable.carte_identite_elec);
+            carteIdentiteView.setBackgroundResource(0);
             isCarteIdentiteSelected = false;
         } else {
-            carteIdentiteView.setImageResource(R.drawable.carte_identite_elec_select);
+            carteIdentiteView.setBackgroundResource(R.drawable.rounded_light_gray_background);
             isCarteIdentiteSelected = true;
         }
     }
 
     public void onClickCarteVitale(View view) {
         if (isCarteVitaleSelected) {
-            carteVitaleView.setImageResource(R.drawable.carte_vitale);
+            carteVitaleView.setBackgroundResource(0);
             isCarteVitaleSelected = false;
         } else {
-            carteVitaleView.setImageResource(R.drawable.carte_vitale_select);
+            carteVitaleView.setBackgroundResource(R.drawable.rounded_light_gray_background);
             isCarteVitaleSelected = true;
         }
     }
 
     public void onClickPasseport(View view) {
         if (isPasseportSelected) {
-            passeportView.setImageResource(R.drawable.passeport);
+            passeportView.setBackgroundResource(0);
             isPasseportSelected = false;
         } else {
-            passeportView.setImageResource(R.drawable.passeport_select);
+            passeportView.setBackgroundResource(R.drawable.rounded_light_gray_background);
             isPasseportSelected = true;
         }
     }
 
     public void onClickPermis(View view) {
         if (isPermisSelected) {
-            permisView.setImageResource(R.drawable.permis);
+            permisView.setBackgroundResource(0);
             isPermisSelected = false;
         } else {
-            permisView.setImageResource(R.drawable.permis_select);
+            permisView.setBackgroundResource(R.drawable.rounded_light_gray_background);
             isPermisSelected = true;
         }
     }
 
     public void onClickCarteBancaire(View view) {
         if (isCarteBancaireSelected) {
-            carteBancaireView.setImageResource(R.drawable.carte_bancaire);
+            carteBancaireView.setBackgroundResource(0);
             isCarteBancaireSelected = false;
         } else {
-            carteBancaireView.setImageResource(R.drawable.carte_bancaire_select);
+            carteBancaireView.setBackgroundResource(R.drawable.rounded_light_gray_background);
             isCarteBancaireSelected = true;
         }
     }
 
     public void onClickCheque(View view) {
         if (isChequeSelected) {
-            chequeView.setImageResource(R.drawable.cheque);
+            chequeView.setBackgroundResource(0);
             isChequeSelected = false;
         } else {
-            chequeView.setImageResource(R.drawable.cheque_select);
+            chequeView.setBackgroundResource(R.drawable.rounded_light_gray_background);
             isChequeSelected = true;
         }
     }

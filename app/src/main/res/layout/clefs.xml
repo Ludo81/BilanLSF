@@ -3,18 +3,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".police.ClefsPoliceActivity">
+    tools:context=".police.ClefsPoliceActivity"
+    android:padding="16dp">
 
     <TableRow
-        android:layout_weight="1"
+        android:layout_weight="1.75"
         android:gravity="center">
 
         <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="1.5"
+            android:background="@null"
+            android:scaleType="fitEnd"
+            android:src="@drawable/forme" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
             android:background="@null"
             android:src="@drawable/clefs" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:background="@null"
+            android:scaleType="fitStart"
+            android:src="@drawable/forme_inverse" />
 
     </TableRow>
 
@@ -27,8 +44,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:padding="20dp"
             android:background="@null"
-            android:src="@drawable/voiture"
+            android:src="@drawable/maison"
             android:onClick="selectMaison" />
 
         <ImageButton
@@ -36,6 +55,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:padding="20dp"
             android:background="@null"
             android:src="@drawable/voiture"
             android:onClick="selectVoiture" />

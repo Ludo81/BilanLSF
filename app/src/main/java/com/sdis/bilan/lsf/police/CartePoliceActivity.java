@@ -15,6 +15,7 @@ import com.sdis.bilan.lsf.databinding.CarteBinding;
 import org.osmdroid.api.IMapController;
 import org.osmdroid.config.Configuration;
 import org.osmdroid.events.MapEventsReceiver;
+import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
 import org.osmdroid.util.GeoPoint;
 import org.osmdroid.views.MapView;
 import org.osmdroid.views.overlay.MapEventsOverlay;
@@ -25,6 +26,8 @@ import java.util.ArrayList;
 public class CartePoliceActivity extends BasePoliceActivity {
 
     private CarteBinding carteBinding;
+
+    private MapView mapView;
 
     private FusedLocationProviderClient fusedLocationClient;
 
@@ -39,8 +42,8 @@ public class CartePoliceActivity extends BasePoliceActivity {
         String userAgent = "Bilan LSF";
         Configuration.getInstance().setUserAgentValue(userAgent);
 
-        MapView mapView = findViewById(R.id.mapview);
-        mapView.setTileSource(org.osmdroid.tileprovider.tilesource.TileSourceFactory.MAPNIK); // Utilise le fond de carte OpenStreetMap
+        mapView = findViewById(R.id.mapview);
+        mapView.setTileSource(TileSourceFactory.DEFAULT_TILE_SOURCE); // Utilise le fond de carte OpenStreetMap
 
         mapView.setMultiTouchControls(true);
 
@@ -52,6 +55,7 @@ public class CartePoliceActivity extends BasePoliceActivity {
 
                 Marker marker = new Marker(mapView);
                 marker.setPosition(point);
+                marker.setIcon(ContextCompat.getDrawable(getApplicationContext(), R.drawable.point_rouge));
                 markersList.add(marker);
                 mapView.getOverlays().add(marker);
                 mapView.getController().animateTo(point);
@@ -60,15 +64,22 @@ public class CartePoliceActivity extends BasePoliceActivity {
 
             @Override
             public boolean longPressHelper(GeoPoint p) {
+                setLocalisation();
                 return false;
             }
         }));
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+        setLocalisation();
+    }
+
+    private void setLocalisation() {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             fusedLocationClient.getLastLocation()
                     .addOnSuccessListener(this, location -> {
                         if (location != null) {
+                            mapView.getOverlays().removeAll(markersList);
+                            markersList.clear();
                             IMapController mapController = mapView.getController();
                             GeoPoint point = new GeoPoint(location.getLatitude(), location.getLongitude());
                             mapController.setCenter(point);
