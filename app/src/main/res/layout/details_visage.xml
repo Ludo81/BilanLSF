@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".police.DescriptionPhysiquePoliceActivity">
+
+    <LinearLayout
+        android:id="@+id/menu_gauche"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="@string/description_corps"
+            android:onClick="goToSexe" />
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="@string/description_visage"
+            android:onClick="goToVisage" />
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_blue_light"
+            android:text="@string/details_visage" />
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="@string/description_vestimentaire" />
+
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@id/menu_gauche"
+        android:rowCount="2"
+        android:columnCount="4">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:background="@null"
+            android:onClick="test"
+            android:scaleType="fitCenter"
+            android:src="@drawable/detail_1" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:background="@null"
+            android:onClick="test"
+            android:scaleType="fitCenter"
+            android:src="@drawable/detail_2" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:background="@null"
+            android:onClick="test"
+            android:scaleType="fitCenter"
+            android:src="@drawable/detail_3" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:background="@null"
+            android:onClick="test"
+            android:scaleType="fitCenter"
+            android:src="@drawable/detail_4" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:background="@null"
+            android:onClick="test"
+            android:scaleType="fitCenter"
+            android:src="@drawable/detail_5" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:background="@null"
+            android:onClick="test"
+            android:scaleType="fitCenter"
+            android:src="@drawable/detail_6" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:background="@null"
+            android:onClick="test"
+            android:scaleType="fitCenter"
+            android:src="@drawable/detail_7" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:background="@null"
+            android:onClick="test"
+            android:scaleType="fitCenter"
+            android:src="@drawable/detail_8" />
+        
+    </GridLayout>
+
+</RelativeLayout>

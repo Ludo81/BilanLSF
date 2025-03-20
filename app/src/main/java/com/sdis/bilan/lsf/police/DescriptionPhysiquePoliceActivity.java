@@ -14,6 +14,10 @@ import com.sdis.bilan.lsf.databinding.DescriptionPhyisiqueCorpsABinding;
 import com.sdis.bilan.lsf.databinding.DescriptionPhyisiqueCorpsBBinding;
 import com.sdis.bilan.lsf.databinding.DescriptionPhyisiqueCorpsCBinding;
 import com.sdis.bilan.lsf.databinding.DescriptionPhyisiqueCorpsDBinding;
+import com.sdis.bilan.lsf.databinding.DescriptionPhysiqueVisageBinding;
+import com.sdis.bilan.lsf.databinding.DetailsVisageBinding;
+
+import java.util.List;
 
 public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
 
@@ -30,12 +34,59 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
     private ImageView corpsNormalView;
     private ImageView corpsCostaudView;
 
+    private ImageView cheveuxView;
+    private ImageView visageView;
+    private ImageView yeuxView;
+    private ImageView nezView;
+    private ImageView moustacheView;
+    private ImageView boucheView;
+    private ImageView barbeView;
+
+    private int cheveuxSelected = 0;
+    private int visageSelected = 0;
+    private int yeuxSelected = 0;
+    private int nezSelected = 0;
+    private int moustacheSelected = 0;
+    private int boucheSelected = 0;
+    private int barbeSelected = 0;
+
     private int couleurPeau = 0;
 
     private SeekBar tailleView;
     private int taille = 50;
 
     private Corpulence corpulence = Corpulence.NORMAL;
+
+    private List<Integer> listeCheveuxHomme = List.of(R.drawable.cheveux_homme_1, R.drawable.cheveux_homme_2, R.drawable.cheveux_homme_3, R.drawable.cheveux_homme_4,
+            R.drawable.cheveux_homme_5, R.drawable.cheveux_homme_6, R.drawable.cheveux_homme_7, R.drawable.cheveux_homme_8, R.drawable.cheveux_homme_9, R.drawable.cheveux_homme_10
+            , R.drawable.cheveux_homme_11, R.drawable.cheveux_homme_12, R.drawable.cheveux_homme_3, R.drawable.cheveux_homme_14, R.drawable.cheveux_homme_15, R.drawable.cheveux_homme_16);
+
+    private List<Integer> listeCheveuxFemme = List.of(R.drawable.cheveux_femme_1, R.drawable.cheveux_femme_2, R.drawable.cheveux_femme_3, R.drawable.cheveux_femme_4
+            , R.drawable.cheveux_femme_5, R.drawable.cheveux_femme_6, R.drawable.cheveux_femme_7, R.drawable.cheveux_femme_8, R.drawable.cheveux_femme_9, R.drawable.cheveux_femme_10
+            , R.drawable.cheveux_femme_11, R.drawable.cheveux_femme_12, R.drawable.cheveux_femme_13, R.drawable.cheveux_femme_14, R.drawable.cheveux_femme_15, R.drawable.cheveux_femme_16
+            , R.drawable.cheveux_femme_17);
+
+    private List<Integer> listeVisages = List.of(R.drawable.forme_1, R.drawable.forme_2, R.drawable.forme_3, R.drawable.forme_4);
+
+    private List<Integer> listeYeuxHomme = List.of(R.drawable.yeux_homme_1, R.drawable.yeux_homme_2, R.drawable.yeux_homme_3, R.drawable.yeux_homme_4,
+            R.drawable.yeux_homme_5, R.drawable.yeux_homme_6);
+
+    private List<Integer> listeYeuxFemme = List.of(R.drawable.yeux_femme_1, R.drawable.yeux_femme_2, R.drawable.yeux_femme_3, R.drawable.yeux_femme_4,
+            R.drawable.yeux_femme_5, R.drawable.yeux_femme_6);
+
+    private List<Integer> listeNez = List.of(R.drawable.nez_1, R.drawable.nez_2, R.drawable.nez_3, R.drawable.nez_4, R.drawable.nez_5, R.drawable.nez_6
+            , R.drawable.nez_7, R.drawable.nez_8, R.drawable.nez_9, R.drawable.nez_10, R.drawable.nez_11, R.drawable.nez_12, R.drawable.nez_13
+            , R.drawable.nez_14);
+
+    private List<Integer> listeMoustaches = List.of(0, R.drawable.moustache_1, R.drawable.moustache_2, R.drawable.moustache_3, R.drawable.moustache_4,
+            R.drawable.moustache_5);
+
+    private List<Integer> listeBouches = List.of(R.drawable.bouche_1, R.drawable.bouche_2, R.drawable.bouche_3, R.drawable.bouche_4, R.drawable.bouche_5
+            , R.drawable.bouche_6, R.drawable.bouche_7, R.drawable.bouche_8, R.drawable.bouche_9, R.drawable.bouche_10, R.drawable.bouche_11, R.drawable.bouche_12
+            , R.drawable.bouche_13, R.drawable.bouche_14, R.drawable.bouche_15, R.drawable.bouche_16, R.drawable.bouche_17, R.drawable.bouche_18, R.drawable.bouche_19);
+
+    private List<Integer> listeBarbes = List.of(0, R.drawable.barbe_1, R.drawable.barbe_2, R.drawable.barbe_3, R.drawable.barbe_4, R.drawable.barbe_5, R.drawable.barbe_6
+            , R.drawable.barbe_7, R.drawable.barbe_8, R.drawable.barbe_9);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -175,6 +226,37 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
         }
     }
 
+    public void goToVisage(View v) {
+        container.removeAllViews();
+        container.addView(DescriptionPhysiqueVisageBinding.inflate(getLayoutInflater()).getRoot());
+
+        cheveuxView = findViewById(R.id.cheveux);
+        visageView = findViewById(R.id.visage);
+        yeuxView = findViewById(R.id.yeux);
+        nezView = findViewById(R.id.nez);
+        moustacheView = findViewById(R.id.moustache);
+        boucheView = findViewById(R.id.bouche);
+        barbeView = findViewById(R.id.barbe);
+
+        cheveuxSelected = 0;
+        visageSelected = 0;
+        yeuxSelected = 0;
+        nezSelected = 0;
+        moustacheSelected = 0;
+        boucheSelected = 0;
+        barbeSelected = 0;
+
+        if (isFemme) {
+            cheveuxView.setImageResource(R.drawable.cheveux_femme_1);
+            yeuxView.setImageResource(R.drawable.yeux_femme_1);
+        }
+    }
+
+    public void goToDetailsVisage(View v) {
+        container.removeAllViews();
+        container.addView(DetailsVisageBinding.inflate(getLayoutInflater()).getRoot());
+    }
+
     public void selectHomme(View v) {
         isFemme = false;
         corpsHommeView.setBackgroundResource(R.drawable.rounded_light_gray_background);
@@ -215,6 +297,176 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
                 : Color.TRANSPARENT;
         couleurPeau = couleur;
         corpsView.setColorFilter(couleurPeau, PorterDuff.Mode.MULTIPLY);
+    }
+
+    public void cheveuxPrecedent(View view) {
+        if (isFemme) {
+            if (cheveuxSelected == 0) {
+                cheveuxSelected = listeCheveuxFemme.size() - 1;
+            } else {
+                cheveuxSelected -= 1;
+            }
+            cheveuxView.setImageResource(listeCheveuxFemme.get(cheveuxSelected));
+        } else {
+            if (cheveuxSelected == 0) {
+                cheveuxSelected = listeCheveuxHomme.size() - 1;
+            } else {
+                cheveuxSelected -= 1;
+            }
+            cheveuxView.setImageResource(listeCheveuxHomme.get(cheveuxSelected));
+        }
+    }
+
+    public void cheveuxSuivant(View view) {
+        if (isFemme) {
+            if (cheveuxSelected == listeCheveuxFemme.size() - 1) {
+                cheveuxSelected = 0;
+            } else {
+                cheveuxSelected += 1;
+            }
+            cheveuxView.setImageResource(listeCheveuxFemme.get(cheveuxSelected));
+        } else {
+            if (cheveuxSelected == listeCheveuxHomme.size() - 1) {
+                cheveuxSelected = 0;
+            } else {
+                cheveuxSelected += 1;
+            }
+            cheveuxView.setImageResource(listeCheveuxHomme.get(cheveuxSelected));
+        }
+    }
+
+    public void visagePrecedent(View view) {
+        if (visageSelected == 0) {
+            visageSelected = listeVisages.size() - 1;
+        } else {
+            visageSelected -= 1;
+        }
+        visageView.setImageResource(listeVisages.get(visageSelected));
+    }
+
+    public void visageSuivant(View view) {
+        if (visageSelected == listeVisages.size() - 1) {
+            visageSelected = 0;
+        } else {
+            visageSelected += 1;
+        }
+        visageView.setImageResource(listeVisages.get(visageSelected));
+    }
+
+    public void yeuxPrecedent(View view) {
+        if (isFemme) {
+            if (yeuxSelected == 0) {
+                yeuxSelected = listeYeuxFemme.size() - 1;
+            } else {
+                yeuxSelected -= 1;
+            }
+            yeuxView.setImageResource(listeYeuxFemme.get(yeuxSelected));
+        } else {
+            if (yeuxSelected == 0) {
+                yeuxSelected = listeYeuxHomme.size() - 1;
+            } else {
+                yeuxSelected -= 1;
+            }
+            yeuxView.setImageResource(listeYeuxHomme.get(yeuxSelected));
+        }
+    }
+
+    public void yeuxSuivant(View view) {
+        if (isFemme) {
+            if (yeuxSelected == listeYeuxFemme.size() - 1) {
+                yeuxSelected = 0;
+            } else {
+                yeuxSelected += 1;
+            }
+            yeuxView.setImageResource(listeYeuxFemme.get(yeuxSelected));
+        } else {
+            if (yeuxSelected == listeYeuxHomme.size() - 1) {
+                yeuxSelected = 0;
+            } else {
+                yeuxSelected += 1;
+            }
+            yeuxView.setImageResource(listeYeuxHomme.get(yeuxSelected));
+        }
+    }
+
+    public void nezPrecedent(View view) {
+        if (nezSelected == 0) {
+            nezSelected = listeNez.size() - 1;
+        } else {
+            nezSelected -= 1;
+        }
+        nezView.setImageResource(listeNez.get(nezSelected));
+    }
+
+    public void nezSuivant(View view) {
+        if (nezSelected == listeNez.size() - 1) {
+            nezSelected = 0;
+        } else {
+            nezSelected += 1;
+        }
+        nezView.setImageResource(listeNez.get(nezSelected));
+    }
+
+    public void moustachePrecedente(View view) {
+        if (!isFemme) {
+            if (moustacheSelected == 0) {
+                moustacheSelected = listeMoustaches.size() - 1;
+            } else {
+                moustacheSelected -= 1;
+            }
+            moustacheView.setImageResource(listeMoustaches.get(moustacheSelected));
+        }
+    }
+
+    public void moustacheSuivante(View view) {
+        if (!isFemme) {
+            if (moustacheSelected == listeMoustaches.size() - 1) {
+                moustacheSelected = 0;
+            } else {
+                moustacheSelected += 1;
+            }
+            moustacheView.setImageResource(listeMoustaches.get(moustacheSelected));
+        }
+    }
+
+    public void bouchePredecente(View view) {
+        if (boucheSelected == 0) {
+            boucheSelected = listeBouches.size() - 1;
+        } else {
+            boucheSelected -= 1;
+        }
+        boucheView.setImageResource(listeBouches.get(boucheSelected));
+    }
+
+    public void boucheSuivante(View view) {
+        if (boucheSelected == listeBouches.size() - 1) {
+            boucheSelected = 0;
+        } else {
+            boucheSelected += 1;
+        }
+        boucheView.setImageResource(listeBouches.get(boucheSelected));
+    }
+
+    public void barbePrecedente(View view) {
+        if (!isFemme) {
+            if (barbeSelected == 0) {
+                barbeSelected = listeBarbes.size() - 1;
+            } else {
+                barbeSelected -= 1;
+            }
+            barbeView.setImageResource(listeBarbes.get(barbeSelected));
+        }
+    }
+
+    public void barbeSuivante(View view) {
+        if (!isFemme) {
+            if (barbeSelected == listeBarbes.size() - 1) {
+                barbeSelected = 0;
+            } else {
+                barbeSelected += 1;
+            }
+            barbeView.setImageResource(listeBarbes.get(barbeSelected));
+        }
     }
 }
 

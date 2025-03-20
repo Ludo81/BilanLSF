@@ -171,4 +171,12 @@
     <string name="plus">plus</string>
     <string name="carte">Carte</string>
     <string name="description_physique">Description physique</string>
+    <string name="description_corps">description corps</string>
+    <string name="description_visage">description visage</string>
+    <string name="details_visage">détails visage</string>
+    <string name="description_vestimentaire">description vestimentaire</string>
+    <string name="a_sexe">a. sexe</string>
+    <string name="b_couleur_peau">b. couleur peau</string>
+    <string name="c_taille">c. taille</string>
+    <string name="d_corpulence">d. corpulence</string>
 </resources>

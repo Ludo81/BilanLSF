@@ -10,31 +10,32 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@id/menu_gauche">
+        android:gravity="center"
+        android:layout_toEndOf="@id/menu_gauche">
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="a. sexe"
+            android:text="@string/a_sexe"
             android:onClick="goToSexe" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="b. couleur peau"
+            android:text="@string/b_couleur_peau"
             android:onClick="goToCouleurPeau" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="c. taille"
+            android:text="@string/c_taille"
             android:onClick="goToTaille" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@android:color/holo_blue_light"
-            android:text="d. corpulence" />
+            android:text="@string/d_corpulence" />
 
     </LinearLayout>
 
@@ -43,28 +44,31 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_below="@id/menu_haut"
+        android:gravity="center"
         android:orientation="vertical">
 
         <Button
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@android:color/holo_blue_light"
-            android:text="description corps" />
+            android:text="@string/description_corps" />
 
         <Button
             android:layout_width="130dp"
             android:layout_height="wrap_content"
-            android:text="description visage" />
+            android:text="@string/description_visage"
+            android:onClick="goToVisage" />
 
         <Button
             android:layout_width="130dp"
             android:layout_height="wrap_content"
-            android:text="détails visage" />
+            android:text="@string/details_visage"
+            android:onClick="goToDetailsVisage" />
 
         <Button
             android:layout_width="130dp"
             android:layout_height="wrap_content"
-            android:text="description vestimentaire" />
+            android:text="@string/description_vestimentaire" />
 
     </LinearLayout>
 
@@ -72,7 +76,7 @@
         android:id="@+id/precedent"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/menu_gauche"
+        android:layout_toEndOf="@id/menu_gauche"
         android:layout_below="@id/menu_haut"
         android:background="@null"
         android:src="@drawable/precedent"
@@ -83,13 +87,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:layout_toRightOf="@id/precedent"
+        android:layout_toEndOf="@id/precedent"
         android:layout_below="@id/menu_haut">
 
         <ImageView
             android:id="@+id/corps_mince"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:layout_gravity="center"
             android:src="@drawable/homme_mince"
             android:scaleType="fitCenter"
@@ -97,8 +102,9 @@
 
         <ImageView
             android:id="@+id/corps_normal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:layout_gravity="center"
             android:src="@drawable/homme_normal"
             android:scaleType="fitCenter"
@@ -107,8 +113,9 @@
 
         <ImageView
             android:id="@+id/corps_costaud"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:layout_gravity="center"
             android:src="@drawable/homme_costaud"
             android:scaleType="fitCenter"
