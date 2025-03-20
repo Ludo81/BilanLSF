@@ -48,27 +48,28 @@
         android:orientation="vertical">
 
         <Button
-            android:layout_width="130dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@android:color/holo_blue_light"
             android:text="@string/description_corps" />
 
         <Button
-            android:layout_width="130dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/description_visage"
             android:onClick="goToVisage" />
 
         <Button
-            android:layout_width="130dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/details_visage"
             android:onClick="goToDetailsVisage" />
 
         <Button
-            android:layout_width="130dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/description_vestimentaire" />
+            android:text="@string/description_vestimentaire"
+            android:onClick="goToVetements" />
 
     </LinearLayout>
 

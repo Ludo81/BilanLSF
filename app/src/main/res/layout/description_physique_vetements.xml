@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".police.DescriptionPhysiquePoliceActivity">
+
+    <LinearLayout
+        android:id="@+id/menu_gauche"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/description_corps"
+            android:onClick="goToSexe" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/description_visage"
+            android:onClick="goToVisage" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/details_visage"
+            android:onClick="goToDetailsVisage" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_blue_light"
+            android:text="@string/description_vestimentaire" />
+
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@id/menu_gauche"
+        android:layout_marginEnd="16dp">
+
+        <TableRow
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/precedent"
+                android:scaleType="fitCenter"
+                android:onClick="hautPrecedent" />
+
+            <ImageView
+                android:id="@+id/haut"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:layout_gravity="center"
+                android:src="@drawable/haut_1" />
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/suivant"
+                android:scaleType="fitCenter"
+                android:onClick="hautSuivant" />
+
+            <ImageView
+                android:id="@+id/couleur_haut"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:scaleType="fitXY"
+                android:src="@drawable/color_picker" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/precedent"
+                android:scaleType="fitCenter"
+                android:onClick="basPrecedent" />
+
+            <ImageView
+                android:id="@+id/bas"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:layout_gravity="center"
+                android:src="@drawable/bas_1" />
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/suivant"
+                android:scaleType="fitCenter"
+                android:onClick="basSuivant" />
+
+            <ImageView
+                android:id="@+id/couleur_bas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:scaleType="fitXY"
+                android:src="@drawable/color_picker" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/precedent"
+                android:scaleType="fitCenter"
+                android:onClick="chaussuresPrecedentes" />
+
+            <ImageView
+                android:id="@+id/chaussures"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:layout_gravity="center"
+                android:src="@drawable/chaussures_1" />
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/suivant"
+                android:scaleType="fitCenter"
+                android:onClick="chaussuresSuivantes" />
+
+            <ImageView
+                android:id="@+id/couleur_chaussures"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:scaleType="fitXY"
+                android:src="@drawable/color_picker" />
+
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>

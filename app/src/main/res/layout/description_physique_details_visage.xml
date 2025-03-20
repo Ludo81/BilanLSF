@@ -13,27 +13,28 @@
         android:orientation="vertical">
 
         <Button
-            android:layout_width="130dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/description_corps"
             android:onClick="goToSexe" />
 
         <Button
-            android:layout_width="130dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/description_visage"
             android:onClick="goToVisage" />
 
         <Button
-            android:layout_width="130dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@android:color/holo_blue_light"
             android:text="@string/details_visage" />
 
         <Button
-            android:layout_width="130dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/description_vestimentaire" />
+            android:text="@string/description_vestimentaire"
+            android:onClick="goToVetements" />
 
     </LinearLayout>
 
@@ -42,9 +43,10 @@
         android:layout_height="match_parent"
         android:layout_toEndOf="@id/menu_gauche"
         android:rowCount="2"
-        android:columnCount="4">
+        android:columnCount="5">
 
         <ImageButton
+            android:id="@+id/detail1"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
@@ -52,11 +54,12 @@
             android:padding="10dp"
             android:layout_margin="10dp"
             android:background="@null"
-            android:onClick="test"
+            android:onClick="selectDetail1"
             android:scaleType="fitCenter"
             android:src="@drawable/detail_1" />
 
         <ImageButton
+            android:id="@+id/detail2"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
@@ -64,11 +67,12 @@
             android:padding="10dp"
             android:layout_margin="10dp"
             android:background="@null"
-            android:onClick="test"
+            android:onClick="selectDetail2"
             android:scaleType="fitCenter"
             android:src="@drawable/detail_2" />
 
         <ImageButton
+            android:id="@+id/detail3"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
@@ -76,11 +80,12 @@
             android:padding="10dp"
             android:layout_margin="10dp"
             android:background="@null"
-            android:onClick="test"
+            android:onClick="selectDetail3"
             android:scaleType="fitCenter"
             android:src="@drawable/detail_3" />
 
         <ImageButton
+            android:id="@+id/detail4"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
@@ -88,11 +93,12 @@
             android:padding="10dp"
             android:layout_margin="10dp"
             android:background="@null"
-            android:onClick="test"
+            android:onClick="selectDetail4"
             android:scaleType="fitCenter"
             android:src="@drawable/detail_4" />
 
         <ImageButton
+            android:id="@+id/detail5"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
@@ -100,11 +106,12 @@
             android:padding="10dp"
             android:layout_margin="10dp"
             android:background="@null"
-            android:onClick="test"
+            android:onClick="selectDetail5"
             android:scaleType="fitCenter"
             android:src="@drawable/detail_5" />
 
         <ImageButton
+            android:id="@+id/detail6"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
@@ -112,11 +119,12 @@
             android:padding="10dp"
             android:layout_margin="10dp"
             android:background="@null"
-            android:onClick="test"
+            android:onClick="selectDetail6"
             android:scaleType="fitCenter"
             android:src="@drawable/detail_6" />
 
         <ImageButton
+            android:id="@+id/detail7"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
@@ -124,11 +132,12 @@
             android:padding="10dp"
             android:layout_margin="10dp"
             android:background="@null"
-            android:onClick="test"
+            android:onClick="selectDetail7"
             android:scaleType="fitCenter"
             android:src="@drawable/detail_7" />
 
         <ImageButton
+            android:id="@+id/detail8"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
@@ -136,10 +145,23 @@
             android:padding="10dp"
             android:layout_margin="10dp"
             android:background="@null"
-            android:onClick="test"
+            android:onClick="selectDetail8"
             android:scaleType="fitCenter"
             android:src="@drawable/detail_8" />
-        
+
+        <ImageButton
+            android:id="@+id/lunettes"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:background="@null"
+            android:onClick="selectLunettes"
+            android:scaleType="fitCenter"
+            android:src="@drawable/lunettes" />
+
     </GridLayout>
 
 </RelativeLayout>

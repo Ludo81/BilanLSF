@@ -1,11 +1,15 @@
 package com.sdis.bilan.lsf.police;
 
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 
@@ -14,8 +18,9 @@ import com.sdis.bilan.lsf.databinding.DescriptionPhyisiqueCorpsABinding;
 import com.sdis.bilan.lsf.databinding.DescriptionPhyisiqueCorpsBBinding;
 import com.sdis.bilan.lsf.databinding.DescriptionPhyisiqueCorpsCBinding;
 import com.sdis.bilan.lsf.databinding.DescriptionPhyisiqueCorpsDBinding;
+import com.sdis.bilan.lsf.databinding.DescriptionPhysiqueDetailsVisageBinding;
+import com.sdis.bilan.lsf.databinding.DescriptionPhysiqueVetementsBinding;
 import com.sdis.bilan.lsf.databinding.DescriptionPhysiqueVisageBinding;
-import com.sdis.bilan.lsf.databinding.DetailsVisageBinding;
 
 import java.util.List;
 
@@ -42,6 +47,34 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
     private ImageView boucheView;
     private ImageView barbeView;
 
+    private ImageButton detail1View;
+    private ImageButton detail2View;
+    private ImageButton detail3View;
+    private ImageButton detail4View;
+    private ImageButton detail5View;
+    private ImageButton detail6View;
+    private ImageButton detail7View;
+    private ImageButton detail8View;
+    private ImageButton lunettesView;
+
+    private boolean isDetail1Selected = false;
+    private boolean isDetail2Selected = false;
+    private boolean isDetail3Selected = false;
+    private boolean isDetail4Selected = false;
+    private boolean isDetail5Selected = false;
+    private boolean isDetail6Selected = false;
+    private boolean isDetail7Selected = false;
+    private boolean isDetail8Selected = false;
+    private boolean isLunettesSelected = false;
+
+    private ImageView hautView;
+    private ImageView basView;
+    private ImageView chaussuresView;
+
+    private ImageView couleurHautView;
+    private ImageView couleurBasView;
+    private ImageView couleurChaussuresView;
+
     private int cheveuxSelected = 0;
     private int visageSelected = 0;
     private int yeuxSelected = 0;
@@ -57,36 +90,47 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
 
     private Corpulence corpulence = Corpulence.NORMAL;
 
-    private List<Integer> listeCheveuxHomme = List.of(R.drawable.cheveux_homme_1, R.drawable.cheveux_homme_2, R.drawable.cheveux_homme_3, R.drawable.cheveux_homme_4,
+    private final List<Integer> listeCheveuxHomme = List.of(R.drawable.cheveux_homme_1, R.drawable.cheveux_homme_2, R.drawable.cheveux_homme_3, R.drawable.cheveux_homme_4,
             R.drawable.cheveux_homme_5, R.drawable.cheveux_homme_6, R.drawable.cheveux_homme_7, R.drawable.cheveux_homme_8, R.drawable.cheveux_homme_9, R.drawable.cheveux_homme_10
             , R.drawable.cheveux_homme_11, R.drawable.cheveux_homme_12, R.drawable.cheveux_homme_3, R.drawable.cheveux_homme_14, R.drawable.cheveux_homme_15, R.drawable.cheveux_homme_16);
 
-    private List<Integer> listeCheveuxFemme = List.of(R.drawable.cheveux_femme_1, R.drawable.cheveux_femme_2, R.drawable.cheveux_femme_3, R.drawable.cheveux_femme_4
+    private final List<Integer> listeCheveuxFemme = List.of(R.drawable.cheveux_femme_1, R.drawable.cheveux_femme_2, R.drawable.cheveux_femme_3, R.drawable.cheveux_femme_4
             , R.drawable.cheveux_femme_5, R.drawable.cheveux_femme_6, R.drawable.cheveux_femme_7, R.drawable.cheveux_femme_8, R.drawable.cheveux_femme_9, R.drawable.cheveux_femme_10
             , R.drawable.cheveux_femme_11, R.drawable.cheveux_femme_12, R.drawable.cheveux_femme_13, R.drawable.cheveux_femme_14, R.drawable.cheveux_femme_15, R.drawable.cheveux_femme_16
             , R.drawable.cheveux_femme_17);
 
-    private List<Integer> listeVisages = List.of(R.drawable.forme_1, R.drawable.forme_2, R.drawable.forme_3, R.drawable.forme_4);
+    private final List<Integer> listeVisages = List.of(R.drawable.forme_1, R.drawable.forme_2, R.drawable.forme_3, R.drawable.forme_4);
 
-    private List<Integer> listeYeuxHomme = List.of(R.drawable.yeux_homme_1, R.drawable.yeux_homme_2, R.drawable.yeux_homme_3, R.drawable.yeux_homme_4,
+    private final List<Integer> listeYeuxHomme = List.of(R.drawable.yeux_homme_1, R.drawable.yeux_homme_2, R.drawable.yeux_homme_3, R.drawable.yeux_homme_4,
             R.drawable.yeux_homme_5, R.drawable.yeux_homme_6);
 
-    private List<Integer> listeYeuxFemme = List.of(R.drawable.yeux_femme_1, R.drawable.yeux_femme_2, R.drawable.yeux_femme_3, R.drawable.yeux_femme_4,
+    private final List<Integer> listeYeuxFemme = List.of(R.drawable.yeux_femme_1, R.drawable.yeux_femme_2, R.drawable.yeux_femme_3, R.drawable.yeux_femme_4,
             R.drawable.yeux_femme_5, R.drawable.yeux_femme_6);
 
-    private List<Integer> listeNez = List.of(R.drawable.nez_1, R.drawable.nez_2, R.drawable.nez_3, R.drawable.nez_4, R.drawable.nez_5, R.drawable.nez_6
+    private final List<Integer> listeNez = List.of(R.drawable.nez_1, R.drawable.nez_2, R.drawable.nez_3, R.drawable.nez_4, R.drawable.nez_5, R.drawable.nez_6
             , R.drawable.nez_7, R.drawable.nez_8, R.drawable.nez_9, R.drawable.nez_10, R.drawable.nez_11, R.drawable.nez_12, R.drawable.nez_13
             , R.drawable.nez_14);
 
-    private List<Integer> listeMoustaches = List.of(0, R.drawable.moustache_1, R.drawable.moustache_2, R.drawable.moustache_3, R.drawable.moustache_4,
+    private final List<Integer> listeMoustaches = List.of(0, R.drawable.moustache_1, R.drawable.moustache_2, R.drawable.moustache_3, R.drawable.moustache_4,
             R.drawable.moustache_5);
 
-    private List<Integer> listeBouches = List.of(R.drawable.bouche_1, R.drawable.bouche_2, R.drawable.bouche_3, R.drawable.bouche_4, R.drawable.bouche_5
+    private final List<Integer> listeBouches = List.of(R.drawable.bouche_1, R.drawable.bouche_2, R.drawable.bouche_3, R.drawable.bouche_4, R.drawable.bouche_5
             , R.drawable.bouche_6, R.drawable.bouche_7, R.drawable.bouche_8, R.drawable.bouche_9, R.drawable.bouche_10, R.drawable.bouche_11, R.drawable.bouche_12
             , R.drawable.bouche_13, R.drawable.bouche_14, R.drawable.bouche_15, R.drawable.bouche_16, R.drawable.bouche_17, R.drawable.bouche_18, R.drawable.bouche_19);
 
-    private List<Integer> listeBarbes = List.of(0, R.drawable.barbe_1, R.drawable.barbe_2, R.drawable.barbe_3, R.drawable.barbe_4, R.drawable.barbe_5, R.drawable.barbe_6
+    private final List<Integer> listeBarbes = List.of(0, R.drawable.barbe_1, R.drawable.barbe_2, R.drawable.barbe_3, R.drawable.barbe_4, R.drawable.barbe_5, R.drawable.barbe_6
             , R.drawable.barbe_7, R.drawable.barbe_8, R.drawable.barbe_9);
+
+    private int hautSelected = 0;
+    private int basSelected = 0;
+    private int chaussuresSelected = 0;
+
+    private final List<Integer> listeHaut = List.of(R.drawable.haut_1, R.drawable.haut_2, R.drawable.haut_3, R.drawable.haut_4, R.drawable.haut_5, R.drawable.haut_6,
+            R.drawable.haut_7, R.drawable.haut_8, R.drawable.haut_9);
+
+    private final List<Integer> listeBas = List.of(R.drawable.bas_1, R.drawable.bas_2, R.drawable.bas_3, R.drawable.bas_4, R.drawable.bas_5, R.drawable.bas_6);
+
+    private final List<Integer> listeChaussures = List.of(R.drawable.chaussures_1, R.drawable.chaussures_2, R.drawable.chaussures_3);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -254,7 +298,120 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
 
     public void goToDetailsVisage(View v) {
         container.removeAllViews();
-        container.addView(DetailsVisageBinding.inflate(getLayoutInflater()).getRoot());
+        container.addView(DescriptionPhysiqueDetailsVisageBinding.inflate(getLayoutInflater()).getRoot());
+
+        detail1View = findViewById(R.id.detail1);
+        detail2View = findViewById(R.id.detail2);
+        detail3View = findViewById(R.id.detail3);
+        detail4View = findViewById(R.id.detail4);
+        detail5View = findViewById(R.id.detail5);
+        detail6View = findViewById(R.id.detail6);
+        detail7View = findViewById(R.id.detail7);
+        detail8View = findViewById(R.id.detail8);
+        lunettesView = findViewById(R.id.lunettes);
+    }
+
+    public void goToVetements(View v) {
+        container.removeAllViews();
+        container.addView(DescriptionPhysiqueVetementsBinding.inflate(getLayoutInflater()).getRoot());
+
+        hautView = findViewById(R.id.haut);
+        basView = findViewById(R.id.bas);
+        chaussuresView = findViewById(R.id.chaussures);
+
+        couleurHautView = findViewById(R.id.couleur_haut);
+        couleurBasView = findViewById(R.id.couleur_bas);
+        couleurChaussuresView = findViewById(R.id.couleur_chaussures);
+
+        couleurHautView.setOnTouchListener((vHaut, event) -> {
+
+            if (event.getAction() == MotionEvent.ACTION_MOVE || event.getAction() == MotionEvent.ACTION_DOWN) {
+
+                int viewX = (int) event.getX();
+                int viewY = (int) event.getY();
+
+                int viewWidth = couleurHautView.getWidth();
+                int viewHeight = couleurHautView.getHeight();
+
+                Bitmap image = ((BitmapDrawable) couleurHautView.getDrawable()).getBitmap();
+
+                int imageWidth = image.getWidth();
+                int imageHeight = image.getHeight();
+
+                int imageX = (int) ((float) viewX * ((float) imageWidth / (float) viewWidth));
+                int imageY = (int) ((float) viewY * ((float) imageHeight / (float) viewHeight));
+
+                int color = Color.WHITE;
+                try {
+                    color = image.getPixel(imageX, imageY);
+                } catch (Exception e) {
+
+                }
+
+                hautView.setColorFilter(color, PorterDuff.Mode.MULTIPLY);
+            }
+            return true;
+        });
+
+        couleurBasView.setOnTouchListener((vBas, event) -> {
+
+            if (event.getAction() == MotionEvent.ACTION_MOVE || event.getAction() == MotionEvent.ACTION_DOWN) {
+
+                int viewX = (int) event.getX();
+                int viewY = (int) event.getY();
+
+                int viewWidth = couleurBasView.getWidth();
+                int viewHeight = couleurBasView.getHeight();
+
+                Bitmap image = ((BitmapDrawable) couleurBasView.getDrawable()).getBitmap();
+
+                int imageWidth = image.getWidth();
+                int imageHeight = image.getHeight();
+
+                int imageX = (int) ((float) viewX * ((float) imageWidth / (float) viewWidth));
+                int imageY = (int) ((float) viewY * ((float) imageHeight / (float) viewHeight));
+
+                int color = Color.WHITE;
+                try {
+                    color = image.getPixel(imageX, imageY);
+                } catch (Exception e) {
+
+                }
+
+                basView.setColorFilter(color, PorterDuff.Mode.MULTIPLY);
+            }
+            return true;
+        });
+
+        couleurChaussuresView.setOnTouchListener((vChaussures, event) -> {
+
+            if (event.getAction() == MotionEvent.ACTION_MOVE || event.getAction() == MotionEvent.ACTION_DOWN) {
+
+                int viewX = (int) event.getX();
+                int viewY = (int) event.getY();
+
+                int viewWidth = couleurChaussuresView.getWidth();
+                int viewHeight = couleurChaussuresView.getHeight();
+
+                Bitmap image = ((BitmapDrawable) couleurChaussuresView.getDrawable()).getBitmap();
+
+                int imageWidth = image.getWidth();
+                int imageHeight = image.getHeight();
+
+                int imageX = (int) ((float) viewX * ((float) imageWidth / (float) viewWidth));
+                int imageY = (int) ((float) viewY * ((float) imageHeight / (float) viewHeight));
+
+                int color = Color.WHITE;
+                try {
+                    color = image.getPixel(imageX, imageY);
+                } catch (Exception e) {
+
+                }
+
+                chaussuresView.setColorFilter(color, PorterDuff.Mode.MULTIPLY);
+            }
+            return true;
+        });
     }
 
     public void selectHomme(View v) {
@@ -467,6 +624,150 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
             }
             barbeView.setImageResource(listeBarbes.get(barbeSelected));
         }
+    }
+
+    public void selectDetail1(View v) {
+        if (isDetail1Selected) {
+            detail1View.setBackgroundResource(0);
+            isDetail1Selected = false;
+        } else {
+            detail1View.setBackgroundResource(R.drawable.rounded_light_gray_background);
+            isDetail1Selected = true;
+        }
+    }
+
+    public void selectDetail2(View v) {
+        if (isDetail2Selected) {
+            detail2View.setBackgroundResource(0);
+            isDetail2Selected = false;
+        } else {
+            detail2View.setBackgroundResource(R.drawable.rounded_light_gray_background);
+            isDetail2Selected = true;
+        }
+    }
+
+    public void selectDetail3(View v) {
+        if (isDetail3Selected) {
+            detail3View.setBackgroundResource(0);
+            isDetail3Selected = false;
+        } else {
+            detail3View.setBackgroundResource(R.drawable.rounded_light_gray_background);
+            isDetail3Selected = true;
+        }
+    }
+
+    public void selectDetail4(View v) {
+        if (isDetail4Selected) {
+            detail4View.setBackgroundResource(0);
+            isDetail4Selected = false;
+        } else {
+            detail4View.setBackgroundResource(R.drawable.rounded_light_gray_background);
+            isDetail4Selected = true;
+        }
+    }
+
+    public void selectDetail5(View v) {
+        if (isDetail5Selected) {
+            detail5View.setBackgroundResource(0);
+            isDetail5Selected = false;
+        } else {
+            detail5View.setBackgroundResource(R.drawable.rounded_light_gray_background);
+            isDetail5Selected = true;
+        }
+    }
+
+    public void selectDetail6(View v) {
+        if (isDetail6Selected) {
+            detail6View.setBackgroundResource(0);
+            isDetail6Selected = false;
+        } else {
+            detail6View.setBackgroundResource(R.drawable.rounded_light_gray_background);
+            isDetail6Selected = true;
+        }
+    }
+
+    public void selectDetail7(View v) {
+        if (isDetail7Selected) {
+            detail7View.setBackgroundResource(0);
+            isDetail7Selected = false;
+        } else {
+            detail7View.setBackgroundResource(R.drawable.rounded_light_gray_background);
+            isDetail7Selected = true;
+        }
+    }
+
+    public void selectDetail8(View v) {
+        if (isDetail8Selected) {
+            detail8View.setBackgroundResource(0);
+            isDetail8Selected = false;
+        } else {
+            detail8View.setBackgroundResource(R.drawable.rounded_light_gray_background);
+            isDetail8Selected = true;
+        }
+    }
+
+    public void selectLunettes(View v) {
+        if (isLunettesSelected) {
+            lunettesView.setBackgroundResource(0);
+            isLunettesSelected = false;
+        } else {
+            lunettesView.setBackgroundResource(R.drawable.rounded_light_gray_background);
+            isLunettesSelected = true;
+        }
+    }
+
+    public void hautPrecedent(View view) {
+        if (hautSelected == 0) {
+            hautSelected = listeHaut.size() - 1;
+        } else {
+            hautSelected -= 1;
+        }
+        hautView.setImageResource(listeHaut.get(hautSelected));
+    }
+
+    public void hautSuivant(View view) {
+        if (hautSelected == listeHaut.size() - 1) {
+            hautSelected = 0;
+        } else {
+            hautSelected += 1;
+        }
+        hautView.setImageResource(listeHaut.get(hautSelected));
+    }
+
+    public void basPrecedent(View view) {
+        if (basSelected == 0) {
+            basSelected = listeBas.size() - 1;
+        } else {
+            basSelected -= 1;
+        }
+        basView.setImageResource(listeBas.get(basSelected));
+    }
+
+    public void basSuivant(View view) {
+        if (basSelected == listeBas.size() - 1) {
+            basSelected = 0;
+        } else {
+            basSelected += 1;
+        }
+        basView.setImageResource(listeBas.get(basSelected));
+    }
+
+    public void chaussuresPrecedentes(View view) {
+        if (chaussuresSelected == 0) {
+            chaussuresSelected = listeChaussures.size() - 1;
+        } else {
+            chaussuresSelected -= 1;
+        }
+        chaussuresView.setImageResource(listeChaussures.get(chaussuresSelected));
+    }
+
+    public void chaussuresSuivantes(View view) {
+        if (chaussuresSelected == listeChaussures.size() - 1) {
+            chaussuresSelected = 0;
+        } else {
+            chaussuresSelected += 1;
+        }
+        chaussuresView.setImageResource(listeChaussures.get(chaussuresSelected));
     }
 }
 
