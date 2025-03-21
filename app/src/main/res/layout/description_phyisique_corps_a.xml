@@ -76,7 +76,7 @@
     <ImageButton
         android:id="@+id/suivant"
         android:layout_width="50dp"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_alignParentEnd="true"
         android:layout_below="@id/menu_haut"
         android:background="@null"
@@ -90,6 +90,7 @@
         android:layout_toEndOf="@id/menu_gauche"
         android:layout_toStartOf="@id/suivant"
         android:layout_below="@id/menu_haut"
+        android:layout_margin="10dp"
         android:columnCount="2"
         android:rowCount="2">
 

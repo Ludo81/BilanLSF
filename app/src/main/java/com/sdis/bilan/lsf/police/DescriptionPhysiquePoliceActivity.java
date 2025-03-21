@@ -282,18 +282,20 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
         boucheView = findViewById(R.id.bouche);
         barbeView = findViewById(R.id.barbe);
 
-        cheveuxSelected = 0;
-        visageSelected = 0;
-        yeuxSelected = 0;
-        nezSelected = 0;
-        moustacheSelected = 0;
-        boucheSelected = 0;
-        barbeSelected = 0;
-
         if (isFemme) {
-            cheveuxView.setImageResource(R.drawable.cheveux_femme_1);
-            yeuxView.setImageResource(R.drawable.yeux_femme_1);
+            cheveuxView.setImageResource(listeCheveuxFemme.get(cheveuxSelected));
+            yeuxView.setImageResource(listeYeuxFemme.get(yeuxSelected));
+            moustacheView.setImageResource(0);
+            barbeView.setImageResource(0);
+        } else {
+            cheveuxView.setImageResource(listeCheveuxHomme.get(cheveuxSelected));
+            yeuxView.setImageResource(listeYeuxHomme.get(yeuxSelected));
+            moustacheView.setImageResource(listeMoustaches.get(moustacheSelected));
+            barbeView.setImageResource(listeBarbes.get(barbeSelected));
         }
+        visageView.setImageResource(listeVisages.get(visageSelected));
+        nezView.setImageResource(listeNez.get(nezSelected));
+        boucheView.setImageResource(listeBouches.get(boucheSelected));
     }
 
     public void goToDetailsVisage(View v) {
@@ -309,6 +311,34 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
         detail7View = findViewById(R.id.detail7);
         detail8View = findViewById(R.id.detail8);
         lunettesView = findViewById(R.id.lunettes);
+
+        if (isDetail1Selected) {
+            detail1View.setBackgroundResource(R.drawable.rounded_light_gray_background);
+        }
+        if (isDetail2Selected) {
+            detail2View.setBackgroundResource(R.drawable.rounded_light_gray_background);
+        }
+        if (isDetail3Selected) {
+            detail3View.setBackgroundResource(R.drawable.rounded_light_gray_background);
+        }
+        if (isDetail4Selected) {
+            detail4View.setBackgroundResource(R.drawable.rounded_light_gray_background);
+        }
+        if (isDetail5Selected) {
+            detail5View.setBackgroundResource(R.drawable.rounded_light_gray_background);
+        }
+        if (isDetail6Selected) {
+            detail6View.setBackgroundResource(R.drawable.rounded_light_gray_background);
+        }
+        if (isDetail7Selected) {
+            detail7View.setBackgroundResource(R.drawable.rounded_light_gray_background);
+        }
+        if (isDetail8Selected) {
+            detail8View.setBackgroundResource(R.drawable.rounded_light_gray_background);
+        }
+        if (isLunettesSelected) {
+            lunettesView.setBackgroundResource(R.drawable.rounded_light_gray_background);
+        }
     }
 
     public void goToVetements(View v) {
@@ -418,12 +448,28 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
         isFemme = false;
         corpsHommeView.setBackgroundResource(R.drawable.rounded_light_gray_background);
         corpsFemmeView.setBackgroundResource(0);
+
+        cheveuxSelected = 0;
+        visageSelected = 0;
+        yeuxSelected = 0;
+        nezSelected = 0;
+        moustacheSelected = 0;
+        boucheSelected = 0;
+        barbeSelected = 0;
     }
 
     public void selectFemme(View v) {
         isFemme = true;
         corpsHommeView.setBackgroundResource(0);
         corpsFemmeView.setBackgroundResource(R.drawable.rounded_light_gray_background);
+
+        cheveuxSelected = 0;
+        visageSelected = 0;
+        yeuxSelected = 0;
+        nezSelected = 0;
+        moustacheSelected = 0;
+        boucheSelected = 0;
+        barbeSelected = 0;
     }
 
     public void selectMince(View v) {

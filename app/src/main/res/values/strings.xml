@@ -153,9 +153,9 @@
     <string name="clefs">clefs</string>
     <string name="velo">vélo</string>
     <string name="objets_trouves">Objets trouvés</string>
-    <string name="collier">collier</string>
-    <string name="montre">montre</string>
-    <string name="bague">bague</string>
+    <string name="collier">Collier</string>
+    <string name="montre">Montre</string>
+    <string name="bague">Bague</string>
     <string name="carte_identite_elec">carte d\'identité électronique</string>
     <string name="carte_vitale">carte vitale</string>
     <string name="passeport">passeport</string>
@@ -179,4 +179,5 @@
     <string name="b_couleur_peau">b. couleur peau</string>
     <string name="c_taille">c. taille</string>
     <string name="d_corpulence">d. corpulence</string>
+    <string name="bague_chevaliere">Bague / chevalière</string>
 </resources>

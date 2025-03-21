@@ -9,7 +9,7 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp">
+        android:padding="12dp">
 
         <TableRow android:layout_weight="1">
 
@@ -17,7 +17,7 @@
                 android:id="@+id/portefeuille"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="0.8"
                 android:src="@drawable/portefeuille" />
 
             <ImageView
@@ -30,7 +30,7 @@
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.3"
+                android:layout_weight="0.25"
                 android:layout_marginStart="20dp"
                 android:layout_gravity="center"
                 android:src="@drawable/logo_sac_argent" />
@@ -58,7 +58,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:textSize="40sp"
+                    android:textSize="35sp"
+                    android:textColor="@color/black"
                     android:gravity="center"
                     android:text="10 €" />
 

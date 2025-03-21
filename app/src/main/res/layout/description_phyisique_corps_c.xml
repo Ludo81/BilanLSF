@@ -76,7 +76,7 @@
     <ImageButton
         android:id="@+id/suivant"
         android:layout_width="50dp"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_alignParentEnd="true"
         android:layout_below="@id/menu_haut"
         android:background="@null"
@@ -87,7 +87,7 @@
     <ImageButton
         android:id="@+id/precedent"
         android:layout_width="50dp"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_toEndOf="@id/menu_gauche"
         android:layout_below="@id/menu_haut"
         android:background="@null"
@@ -101,7 +101,8 @@
         android:gravity="center"
         android:layout_toEndOf="@id/precedent"
         android:layout_toStartOf="@id/suivant"
-        android:layout_below="@id/menu_haut">
+        android:layout_below="@id/menu_haut"
+        android:layout_margin="10dp">
 
         <ImageView
             android:id="@+id/corps"
