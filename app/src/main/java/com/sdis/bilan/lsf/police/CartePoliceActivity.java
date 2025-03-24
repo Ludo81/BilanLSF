@@ -12,7 +12,6 @@ import com.google.android.gms.location.LocationServices;
 import com.sdis.bilan.lsf.R;
 import com.sdis.bilan.lsf.databinding.CarteBinding;
 
-import org.osmdroid.api.IMapController;
 import org.osmdroid.config.Configuration;
 import org.osmdroid.events.MapEventsReceiver;
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
@@ -46,6 +45,7 @@ public class CartePoliceActivity extends BasePoliceActivity {
         mapView.setTileSource(TileSourceFactory.DEFAULT_TILE_SOURCE); // Utilise le fond de carte OpenStreetMap
 
         mapView.setMultiTouchControls(true);
+        mapView.getController().setZoom(10.00);
 
         mapView.getOverlays().add(new MapEventsOverlay(new MapEventsReceiver() {
             @Override
@@ -80,13 +80,12 @@ public class CartePoliceActivity extends BasePoliceActivity {
                         if (location != null) {
                             mapView.getOverlays().removeAll(markersList);
                             markersList.clear();
-                            IMapController mapController = mapView.getController();
-                            GeoPoint point = new GeoPoint(location.getLatitude(), location.getLongitude());
-                            mapController.setCenter(point);
-                            mapController.setZoom(17.5);
-                            mapController.animateTo(point);
 
-                            // Ajouter un marqueur
+                            GeoPoint point = new GeoPoint(location.getLatitude(), location.getLongitude());
+                            mapView.getController().setCenter(point);
+                            mapView.getController().setZoom(17.5);
+                            mapView.getController().animateTo(point);
+
                             Marker marker = new Marker(mapView);
                             marker.setPosition(point);
                             mapView.getOverlays().add(marker);

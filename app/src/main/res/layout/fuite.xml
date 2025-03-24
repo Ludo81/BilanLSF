@@ -16,7 +16,7 @@
             <ImageButton
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
-                android:layout_weight="0.5"
+                android:layout_weight="0.4"
                 android:background="@null"
                 android:contentDescription="@string/moins"
                 android:onClick="diminuerNombrePersonnes"
@@ -51,7 +51,7 @@
             <ImageButton
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
-                android:layout_weight="0.5"
+                android:layout_weight="0.4"
                 android:background="@null"
                 android:contentDescription="@string/plus"
                 android:onClick="augmenterNombrePersonnes"

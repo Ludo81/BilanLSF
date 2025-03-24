@@ -5,13 +5,19 @@ import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.sdis.bilan.lsf.R;
 import com.sdis.bilan.lsf.databinding.PortefeuilleBinding;
+
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
 
 public class PortefeuillePoliceActivity extends BasePoliceActivity {
 
@@ -19,7 +25,8 @@ public class PortefeuillePoliceActivity extends BasePoliceActivity {
 
     private TextView argentView;
 
-    private double argent = 10;
+    DecimalFormat df = new DecimalFormat("#0.00");
+    private BigDecimal argent = new BigDecimal("10.00");
 
     private ImageView carteIdentiteView;
     private ImageView carteVitaleView;
@@ -35,6 +42,27 @@ public class PortefeuillePoliceActivity extends BasePoliceActivity {
     private ImageView colorPicker;
     int currentColor = Color.BLACK;
 
+    private ImageButton monterView;
+    private ImageButton descendreView;
+
+    private final Handler handler = new Handler(Looper.getMainLooper());
+
+    private final Runnable incrementRunnableUp = new Runnable() {
+        @Override
+        public void run() {
+            monter(monterView);
+            handler.postDelayed(this, 1);
+        }
+    };
+
+    private final Runnable incrementRunnableDown = new Runnable() {
+        @Override
+        public void run() {
+            descendre(descendreView);
+            handler.postDelayed(this, 1);
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +75,33 @@ public class PortefeuillePoliceActivity extends BasePoliceActivity {
         carteVitaleView = findViewById(R.id.carte_vitale);
         permisView = findViewById(R.id.permis);
         carteBancaireView = findViewById(R.id.carte_bancaire);
+
+        monterView = findViewById(R.id.monter);
+        descendreView = findViewById(R.id.descendre);
+
+        monterView.setOnLongClickListener(v -> {
+            handler.post(incrementRunnableUp);
+            return true;
+        });
+
+        monterView.setOnTouchListener((v, event) -> {
+            if (event.getAction() == MotionEvent.ACTION_UP || event.getAction() == MotionEvent.ACTION_CANCEL) {
+                handler.removeCallbacks(incrementRunnableUp);
+            }
+            return false;
+        });
+
+        descendreView.setOnLongClickListener(v -> {
+            handler.post(incrementRunnableDown);
+            return true;
+        });
+
+        descendreView.setOnTouchListener((v, event) -> {
+            if (event.getAction() == MotionEvent.ACTION_UP || event.getAction() == MotionEvent.ACTION_CANCEL) {
+                handler.removeCallbacks(incrementRunnableDown);
+            }
+            return false;
+        });
 
         portefeuilleView = findViewById(R.id.portefeuille);
 
@@ -83,16 +138,19 @@ public class PortefeuillePoliceActivity extends BasePoliceActivity {
     }
 
     public void monter(View v) {
-        argent += 0.01;
-        argentView.setText(String.format("%.2f€", argent));
+        descendreView.setImageResource(R.drawable.descendre);
+        argent = argent.abs().add(new BigDecimal("0.01"));
+        argentView.setText(df.format(argent.abs()) + " €");
     }
 
     public void descendre(View v) {
-        if (argent != 0) {
-            argent -= 0.01;
-            argentView.setText(String.format("%.2f€", argent));
+        if (!df.format(argent.abs()).equals("0,00")) {
+            argent = argent.abs().subtract(new BigDecimal("0.01"));
+            argentView.setText(df.format(argent.abs()) + " €");
+            if (df.format(argent.abs()).equals("0,00")) {
+                descendreView.setImageResource(0);
+            }
         }
-
     }
 
     public void onClickCarteIdentiteElec(View view) {
