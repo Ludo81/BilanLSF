@@ -83,8 +83,7 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
     implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.19")
     implementation("com.google.android.flexbox:flexbox:3.0.0")
-    implementation("org.osmdroid:osmdroid-android:6.1.14")
-    implementation("org.osmdroid:osmdroid-mapsforge:6.1.14")
-    implementation("org.maplibre.gl:android-sdk:10.2.0")
-    implementation("org.osmdroid:osmdroid-wms:6.1.14")
+    implementation("org.osmdroid:osmdroid-android:6.1.20")
+    implementation("org.osmdroid:osmdroid-mapsforge:6.1.20")
+    implementation("org.osmdroid:osmdroid-wms:6.1.20")
 }
