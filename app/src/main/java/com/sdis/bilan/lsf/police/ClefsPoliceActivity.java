@@ -27,14 +27,14 @@ public class ClefsPoliceActivity extends BasePoliceActivity {
 
     private List<Integer> listeMarques = List.of(R.drawable.aixam, R.drawable.alfa_romeo, R.drawable.alpine, R.drawable.aston_martin, R.drawable.audi,
             R.drawable.bentley, R.drawable.bmw, R.drawable.bugatti, R.drawable.buick, R.drawable.cadillac, R.drawable.chery, R.drawable.chevrolet
-            , R.drawable.chrysler, R.drawable.citroen, R.drawable.corvette, R.drawable.cupra, R.drawable.dacia, R.drawable.daewoo, R.drawable.daihatsu
+            , R.drawable.chrysler, R.drawable.citroen, R.drawable.corvette, R.drawable.cupra, R.drawable.dacia, R.drawable.daewoo, R.drawable.daf, R.drawable.daihatsu
             , R.drawable.datsun, R.drawable.dodge, R.drawable.ds, R.drawable.ferrari, R.drawable.fiat, R.drawable.ford, R.drawable.general_motors
-            , R.drawable.genesis, R.drawable.gmc, R.drawable.honda, R.drawable.hummer, R.drawable.hyundai, R.drawable.infiniti, R.drawable.isuzu
+            , R.drawable.genesis, R.drawable.gmc, R.drawable.honda, R.drawable.hummer, R.drawable.hyundai, R.drawable.infiniti, R.drawable.isuzu, R.drawable.iveco
             , R.drawable.jaguar, R.drawable.jeep, R.drawable.kia, R.drawable.lada, R.drawable.lamborghini, R.drawable.lancia, R.drawable.land_rover
-            , R.drawable.lexus, R.drawable.ligier, R.drawable.lotus, R.drawable.maserati, R.drawable.mazda, R.drawable.mc_laren, R.drawable.mercedes
+            , R.drawable.lexus, R.drawable.ligier, R.drawable.lotus, R.drawable.man, R.drawable.maserati, R.drawable.mazda, R.drawable.mc_laren, R.drawable.mercedes
             , R.drawable.mg, R.drawable.mini, R.drawable.mitsubishi, R.drawable.nissan, R.drawable.opel, R.drawable.peugeot, R.drawable.porsche
-            , R.drawable.renault, R.drawable.rolls_royce, R.drawable.rolls_royce, R.drawable.saab, R.drawable.seat, R.drawable.skoda, R.drawable.smart
-            , R.drawable.subaru, R.drawable.suzuki, R.drawable.tesla, R.drawable.toyota, R.drawable.volkswagen, R.drawable.volvo);
+            , R.drawable.renault, R.drawable.rolls_royce, R.drawable.rolls_royce, R.drawable.saab, R.drawable.scania, R.drawable.seat, R.drawable.skoda, R.drawable.smart
+            , R.drawable.ssangyong, R.drawable.subaru, R.drawable.suzuki, R.drawable.tesla, R.drawable.toyota, R.drawable.volkswagen, R.drawable.volvo);
     int marqueSelected = 0;
 
     @Override

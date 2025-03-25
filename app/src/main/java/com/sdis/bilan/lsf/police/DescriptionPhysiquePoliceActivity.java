@@ -128,9 +128,9 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
     private int chaussuresSelected = 0;
 
     private final List<Integer> listeHaut = List.of(R.drawable.haut_1, R.drawable.haut_2, R.drawable.haut_3, R.drawable.haut_4, R.drawable.haut_5, R.drawable.haut_6,
-            R.drawable.haut_7, R.drawable.haut_8, R.drawable.haut_9);
+            R.drawable.haut_7, R.drawable.haut_8, R.drawable.haut_9, R.drawable.haut_10);
 
-    private final List<Integer> listeBas = List.of(R.drawable.bas_1, R.drawable.bas_2, R.drawable.bas_3, R.drawable.bas_4, R.drawable.bas_5, R.drawable.bas_6);
+    private final List<Integer> listeBas = List.of(R.drawable.bas_1, R.drawable.bas_2, R.drawable.bas_3, R.drawable.bas_4);
 
     private final List<Integer> listeChaussures = List.of(R.drawable.chaussures_1, R.drawable.chaussures_2, R.drawable.chaussures_3);
 
