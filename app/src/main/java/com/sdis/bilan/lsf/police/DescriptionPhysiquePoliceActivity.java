@@ -94,7 +94,7 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
 
     private final List<Integer> listeCheveuxHomme = List.of(R.drawable.cheveux_homme_1, R.drawable.cheveux_homme_2, R.drawable.cheveux_homme_3, R.drawable.cheveux_homme_4,
             R.drawable.cheveux_homme_5, R.drawable.cheveux_homme_6, R.drawable.cheveux_homme_7, R.drawable.cheveux_homme_8, R.drawable.cheveux_homme_9, R.drawable.cheveux_homme_10
-            , R.drawable.cheveux_homme_11, R.drawable.cheveux_homme_12, R.drawable.cheveux_homme_3, R.drawable.cheveux_homme_14, R.drawable.cheveux_homme_15, R.drawable.cheveux_homme_16);
+            , R.drawable.cheveux_homme_11, R.drawable.cheveux_homme_12, R.drawable.cheveux_homme_13, R.drawable.cheveux_homme_14, R.drawable.cheveux_homme_15, R.drawable.cheveux_homme_16);
 
     private final List<Integer> listeCheveuxFemme = List.of(R.drawable.cheveux_femme_1, R.drawable.cheveux_femme_2, R.drawable.cheveux_femme_3, R.drawable.cheveux_femme_4
             , R.drawable.cheveux_femme_5, R.drawable.cheveux_femme_6, R.drawable.cheveux_femme_7, R.drawable.cheveux_femme_8, R.drawable.cheveux_femme_9, R.drawable.cheveux_femme_10
