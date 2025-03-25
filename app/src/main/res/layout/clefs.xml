@@ -25,9 +25,23 @@
         <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@null"
+            android:src="@drawable/moins" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="0.4"
             android:background="@null"
             android:src="@drawable/clefs" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@null"
+            android:src="@drawable/moins" />
 
         <ImageButton
             android:id="@+id/voiture"

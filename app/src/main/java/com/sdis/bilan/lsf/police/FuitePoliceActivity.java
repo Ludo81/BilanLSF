@@ -32,7 +32,7 @@ public class FuitePoliceActivity extends BasePoliceActivity {
     private ImageView colorPicker;
     int currentColor = Color.BLACK;
 
-    private List<Integer> listeVehicules = List.of(R.drawable.voiture, R.drawable.scooter, R.drawable.trotinette, R.drawable.velo);
+    private List<Integer> listeVehicules = List.of(R.drawable.voiture, R.drawable.scooter, R.drawable.trotinette, R.drawable.velo, R.drawable.personne_seule);
     int vehiculeSelected = 0;
 
     @Override

@@ -27,6 +27,8 @@ public class PortefeuillePoliceActivity extends BasePoliceActivity {
 
     DecimalFormat df = new DecimalFormat("#0.00");
     private BigDecimal argent = new BigDecimal("10.00");
+    private BigDecimal increment = new BigDecimal("0.01");
+    private int compteur = 0;
 
     private ImageView carteIdentiteView;
     private ImageView carteVitaleView;
@@ -51,6 +53,14 @@ public class PortefeuillePoliceActivity extends BasePoliceActivity {
         @Override
         public void run() {
             monter(monterView);
+            compteur += 1;
+            if (compteur == 100) {
+                increment = new BigDecimal("0.10");
+            } else if (compteur == 200) {
+                increment = new BigDecimal("1.00");
+            } else if (compteur == 300) {
+                increment = new BigDecimal("5.00");
+            }
             handler.postDelayed(this, 1);
         }
     };
@@ -59,6 +69,14 @@ public class PortefeuillePoliceActivity extends BasePoliceActivity {
         @Override
         public void run() {
             descendre(descendreView);
+            compteur += 1;
+            if (compteur == 100) {
+                increment = new BigDecimal("0.10");
+            } else if (compteur == 200) {
+                increment = new BigDecimal("1.00");
+            } else if (compteur == 300) {
+                increment = new BigDecimal("5.00");
+            }
             handler.postDelayed(this, 1);
         }
     };
@@ -87,6 +105,8 @@ public class PortefeuillePoliceActivity extends BasePoliceActivity {
         monterView.setOnTouchListener((v, event) -> {
             if (event.getAction() == MotionEvent.ACTION_UP || event.getAction() == MotionEvent.ACTION_CANCEL) {
                 handler.removeCallbacks(incrementRunnableUp);
+                increment = new BigDecimal("0.01");
+                compteur = 0;
             }
             return false;
         });
@@ -99,6 +119,8 @@ public class PortefeuillePoliceActivity extends BasePoliceActivity {
         descendreView.setOnTouchListener((v, event) -> {
             if (event.getAction() == MotionEvent.ACTION_UP || event.getAction() == MotionEvent.ACTION_CANCEL) {
                 handler.removeCallbacks(incrementRunnableDown);
+                increment = new BigDecimal("0.01");
+                compteur = 0;
             }
             return false;
         });
@@ -139,17 +161,21 @@ public class PortefeuillePoliceActivity extends BasePoliceActivity {
 
     public void monter(View v) {
         descendreView.setImageResource(R.drawable.descendre);
-        argent = argent.abs().add(new BigDecimal("0.01"));
+        argent = argent.abs().add(increment);
         argentView.setText(df.format(argent.abs()) + " €");
     }
 
     public void descendre(View v) {
-        if (!df.format(argent.abs()).equals("0,00")) {
-            argent = argent.abs().subtract(new BigDecimal("0.01"));
+        if (!df.format(argent.abs()).equals("0,00") && argent.abs().subtract(increment).signum() != -1) {
+            argent = argent.abs().subtract(increment);
             argentView.setText(df.format(argent.abs()) + " €");
             if (df.format(argent.abs()).equals("0,00")) {
                 descendreView.setImageResource(0);
             }
+        } else {
+            argentView.setText("0,00 €");
+            argent = new BigDecimal("0.00");
+            descendreView.setImageResource(0);
         }
     }
 

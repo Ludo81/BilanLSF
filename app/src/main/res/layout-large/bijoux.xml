@@ -18,8 +18,8 @@
             <ImageButton
                 android:id="@+id/bague"
                 android:layout_width="0dp"
-                android:layout_height="150dp"
-                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
                 android:layout_weight="1"
                 android:background="@null"
                 android:contentDescription="@string/bague"
@@ -30,8 +30,8 @@
             <ImageButton
                 android:id="@+id/collier"
                 android:layout_width="0dp"
-                android:layout_height="150dp"
-                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
                 android:layout_weight="1"
                 android:background="@null"
                 android:contentDescription="@string/collier"
@@ -42,8 +42,8 @@
             <ImageButton
                 android:id="@+id/montre"
                 android:layout_width="0dp"
-                android:layout_height="150dp"
-                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
                 android:layout_weight="1"
                 android:background="@null"
                 android:contentDescription="@string/montre"

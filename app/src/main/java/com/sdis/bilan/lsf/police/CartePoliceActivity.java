@@ -45,7 +45,7 @@ public class CartePoliceActivity extends BasePoliceActivity {
         mapView.setTileSource(TileSourceFactory.DEFAULT_TILE_SOURCE); // Utilise le fond de carte OpenStreetMap
 
         mapView.setMultiTouchControls(true);
-        mapView.getController().setZoom(10.00);
+        mapView.getController().setZoom(3.00);
 
         mapView.getOverlays().add(new MapEventsOverlay(new MapEventsReceiver() {
             @Override

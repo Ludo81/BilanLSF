@@ -106,6 +106,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:scaleType="fitXY"
+                android:background="@drawable/border2"
                 android:src="@drawable/color_picker" />
 
         </TableRow>

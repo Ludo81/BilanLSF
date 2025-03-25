@@ -28,6 +28,7 @@
             android:layout_columnWeight="1.5"
             android:layout_rowWeight="1"
             android:scaleType="fitXY"
+            android:background="@drawable/border2"
             android:src="@drawable/color_picker" />
 
     </GridLayout>

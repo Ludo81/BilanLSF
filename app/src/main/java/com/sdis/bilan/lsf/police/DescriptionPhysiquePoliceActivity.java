@@ -12,6 +12,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.SeekBar;
+import android.widget.TextView;
 
 import com.sdis.bilan.lsf.R;
 import com.sdis.bilan.lsf.databinding.DescriptionPhyisiqueCorpsABinding;
@@ -86,6 +87,7 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
     private int couleurPeau = 0;
 
     private SeekBar tailleView;
+    private TextView tailleText;
     private int taille = 50;
 
     private Corpulence corpulence = Corpulence.NORMAL;
@@ -219,12 +221,15 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
             corpsView.setColorFilter(couleurPeau, PorterDuff.Mode.MULTIPLY);
         }
 
+        tailleText = findViewById(R.id.tailleText);
+
         tailleView = findViewById(R.id.taille);
         tailleView.setProgress(taille);
         tailleView.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 taille = progress;
+                tailleText.setText(taille + 60 + " cm");
             }
 
             @Override
