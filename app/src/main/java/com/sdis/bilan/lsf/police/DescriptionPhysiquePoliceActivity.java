@@ -88,11 +88,10 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
     private int boucheSelected = 0;
     private int barbeSelected = 0;
 
-    private int couleurCheveux = 0;
-    private int couleurYeux = 0;
-    private int couleurMoustache = 0;
-    private int couleurBouche = 0;
-    private int couleurBarbe = 0;
+    private int couleurCheveux = Color.WHITE;
+    private int couleurYeux = Color.WHITE;
+    private int couleurMoustache = Color.WHITE;
+    private int couleurBarbe = Color.WHITE;
 
     private int couleurPeau = 0;
 
@@ -696,6 +695,9 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
         LayoutInflater inflater = getLayoutInflater();
         View dialogView = inflater.inflate(R.layout.color_picker_layout, null);
 
+        ImageView couleurSelectionneeView = dialogView.findViewById(R.id.couleurSelectionnee);
+        couleurSelectionneeView.setBackgroundColor(couleurCheveux);
+
         ImageView colorPicker = dialogView.findViewById(R.id.colorPicker);
         colorPicker.setOnTouchListener((v, event) -> {
 
@@ -721,6 +723,7 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
 
                 }
 
+                couleurSelectionneeView.setBackgroundColor(couleurCheveux);
                 cheveuxView.setColorFilter(couleurCheveux, PorterDuff.Mode.MULTIPLY);
             }
             return true;
@@ -737,6 +740,9 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         LayoutInflater inflater = getLayoutInflater();
         View dialogView = inflater.inflate(R.layout.color_picker_layout, null);
+
+        ImageView couleurSelectionneeView = dialogView.findViewById(R.id.couleurSelectionnee);
+        couleurSelectionneeView.setBackgroundColor(couleurYeux);
 
         ImageView colorPicker = dialogView.findViewById(R.id.colorPicker);
         colorPicker.setOnTouchListener((v, event) -> {
@@ -763,6 +769,7 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
 
                 }
 
+                couleurSelectionneeView.setBackgroundColor(couleurYeux);
                 yeuxView.setColorFilter(couleurYeux, PorterDuff.Mode.MULTIPLY);
             }
             return true;
@@ -779,6 +786,9 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         LayoutInflater inflater = getLayoutInflater();
         View dialogView = inflater.inflate(R.layout.color_picker_layout, null);
+
+        ImageView couleurSelectionneeView = dialogView.findViewById(R.id.couleurSelectionnee);
+        couleurSelectionneeView.setBackgroundColor(couleurMoustache);
 
         ImageView colorPicker = dialogView.findViewById(R.id.colorPicker);
         colorPicker.setOnTouchListener((v, event) -> {
@@ -805,49 +815,8 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
 
                 }
 
+                couleurSelectionneeView.setBackgroundColor(couleurMoustache);
                 moustacheView.setColorFilter(couleurMoustache, PorterDuff.Mode.MULTIPLY);
-            }
-            return true;
-        });
-
-        builder.setView(dialogView)
-                .setPositiveButton("Fermer", (dialog, id) -> dialog.dismiss());
-
-        AlertDialog dialog = builder.create();
-        dialog.show();
-    }
-
-    public void openColorBouche(View view) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        LayoutInflater inflater = getLayoutInflater();
-        View dialogView = inflater.inflate(R.layout.color_picker_layout, null);
-
-        ImageView colorPicker = dialogView.findViewById(R.id.colorPicker);
-        colorPicker.setOnTouchListener((v, event) -> {
-
-            if (event.getAction() == MotionEvent.ACTION_MOVE || event.getAction() == MotionEvent.ACTION_DOWN) {
-
-                int viewX = (int) event.getX();
-                int viewY = (int) event.getY();
-
-                int viewWidth = colorPicker.getWidth();
-                int viewHeight = colorPicker.getHeight();
-
-                Bitmap image = ((BitmapDrawable) colorPicker.getDrawable()).getBitmap();
-
-                int imageWidth = image.getWidth();
-                int imageHeight = image.getHeight();
-
-                int imageX = (int) ((float) viewX * ((float) imageWidth / (float) viewWidth));
-                int imageY = (int) ((float) viewY * ((float) imageHeight / (float) viewHeight));
-
-                try {
-                    couleurBouche = image.getPixel(imageX, imageY);
-                } catch (Exception e) {
-
-                }
-
-                boucheView.setColorFilter(couleurBouche, PorterDuff.Mode.MULTIPLY);
             }
             return true;
         });
@@ -863,6 +832,9 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         LayoutInflater inflater = getLayoutInflater();
         View dialogView = inflater.inflate(R.layout.color_picker_layout, null);
+
+        ImageView couleurSelectionneeView = dialogView.findViewById(R.id.couleurSelectionnee);
+        couleurSelectionneeView.setBackgroundColor(couleurBarbe);
 
         ImageView colorPicker = dialogView.findViewById(R.id.colorPicker);
         colorPicker.setOnTouchListener((v, event) -> {
@@ -889,6 +861,7 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
 
                 }
 
+                couleurSelectionneeView.setBackgroundColor(couleurBarbe);
                 barbeView.setColorFilter(couleurBarbe, PorterDuff.Mode.MULTIPLY);
             }
             return true;

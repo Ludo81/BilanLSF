@@ -135,6 +135,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
                     android:background="@null"
                     android:src="@drawable/cheveux" />
 
@@ -170,6 +171,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
                     android:background="@null"
                     android:src="@drawable/visage" />
 
@@ -208,6 +210,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
                     android:background="@null"
                     android:src="@drawable/oeil" />
 
@@ -243,6 +246,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
                     android:background="@null"
                     android:src="@drawable/nez" />
 
@@ -281,6 +285,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
                     android:background="@null"
                     android:src="@drawable/moustache" />
 
@@ -301,10 +306,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@null"
-                    android:src="@drawable/color_picker"
-                    android:scaleType="fitCenter"
-                    android:onClick="openColorBouche" />
+                    android:background="@null" />
 
                 <ImageButton
                     android:layout_width="0dp"
@@ -319,6 +321,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
                     android:background="@null"
                     android:src="@drawable/bouche" />
 
@@ -357,6 +360,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
                     android:background="@null"
                     android:src="@drawable/barbe" />
 
