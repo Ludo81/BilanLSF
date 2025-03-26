@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.sdis.bilan.lsf.R;
 import com.sdis.bilan.lsf.databinding.ClefsBinding;
@@ -21,11 +22,12 @@ public class ClefsPoliceActivity extends BasePoliceActivity {
     private boolean isVoitureSelected = false;
 
     private ImageView marqueView;
+    private TextView marqueTexteView;
 
     private ImageButton precedentView;
     private ImageButton suivantView;
 
-    private List<Integer> listeMarques = List.of(R.drawable.aixam, R.drawable.alfa_romeo, R.drawable.alpine, R.drawable.aston_martin, R.drawable.audi,
+    private final List<Integer> listeMarques = List.of(R.drawable.aixam, R.drawable.alfa_romeo, R.drawable.alpine, R.drawable.aston_martin, R.drawable.audi,
             R.drawable.bentley, R.drawable.bmw, R.drawable.bugatti, R.drawable.buick, R.drawable.cadillac, R.drawable.chery, R.drawable.chevrolet
             , R.drawable.chrysler, R.drawable.citroen, R.drawable.corvette, R.drawable.cupra, R.drawable.dacia, R.drawable.daewoo, R.drawable.daf, R.drawable.daihatsu
             , R.drawable.datsun, R.drawable.dodge, R.drawable.ds, R.drawable.ferrari, R.drawable.fiat, R.drawable.ford, R.drawable.general_motors
@@ -47,6 +49,7 @@ public class ClefsPoliceActivity extends BasePoliceActivity {
         voitureView = findViewById(R.id.voiture);
 
         marqueView = findViewById(R.id.marque);
+        marqueTexteView = findViewById(R.id.marqueTexte);
 
         precedentView = findViewById(R.id.marque_precedente);
         suivantView = findViewById(R.id.marque_suivante);
@@ -76,6 +79,7 @@ public class ClefsPoliceActivity extends BasePoliceActivity {
         if (marqueSelected - 1 != -1) {
             marqueSelected -= 1;
             marqueView.setImageResource(listeMarques.get(marqueSelected));
+            marqueTexteView.setText(getMarqueTexte(listeMarques.get(marqueSelected)));
 
             suivantView.setImageResource(R.drawable.suivant);
 
@@ -89,6 +93,7 @@ public class ClefsPoliceActivity extends BasePoliceActivity {
         if (marqueSelected + 1 != listeMarques.size()) {
             marqueSelected += 1;
             marqueView.setImageResource(listeMarques.get(marqueSelected));
+            marqueTexteView.setText(getMarqueTexte(listeMarques.get(marqueSelected)));
 
             precedentView.setImageResource(R.drawable.precedent);
 
@@ -96,5 +101,13 @@ public class ClefsPoliceActivity extends BasePoliceActivity {
                 suivantView.setImageResource(0);
             }
         }
+    }
+
+    private String getMarqueTexte(int marque) {
+        String resourceName = getResources().getResourceEntryName(marque);
+        String s1 = resourceName.substring(0, 1).toUpperCase();
+        String nameCapitalized = s1 + resourceName.substring(1);
+        nameCapitalized = nameCapitalized.replace("_", " ");
+        return nameCapitalized;
     }
 }

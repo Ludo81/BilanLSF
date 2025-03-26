@@ -7,7 +7,7 @@
     android:padding="16dp">
 
     <TableRow
-        android:layout_weight="1"
+        android:layout_weight="1.4"
         android:gravity="center">
 
         <ImageButton
@@ -54,6 +54,22 @@
             android:scaleType="fitCenter"
             android:src="@drawable/voiture"
             android:onClick="selectVoiture" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_weight="0"
+        android:paddingVertical="10dp">
+
+        <TextView
+            android:id="@+id/marqueTexte"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            android:text="@string/aixam" />
 
     </TableRow>
 

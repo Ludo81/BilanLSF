@@ -57,6 +57,7 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
     private ImageButton detail7View;
     private ImageButton detail8View;
     private ImageButton lunettesView;
+    private ImageButton cagouleView;
 
     private boolean isDetail1Selected = false;
     private boolean isDetail2Selected = false;
@@ -67,6 +68,7 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
     private boolean isDetail7Selected = false;
     private boolean isDetail8Selected = false;
     private boolean isLunettesSelected = false;
+    private boolean isCagouleSelected = false;
 
     private ImageView hautView;
     private ImageView basView;
@@ -316,6 +318,7 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
         detail7View = findViewById(R.id.detail7);
         detail8View = findViewById(R.id.detail8);
         lunettesView = findViewById(R.id.lunettes);
+        cagouleView = findViewById(R.id.cagoule);
 
         if (isDetail1Selected) {
             detail1View.setBackgroundResource(R.drawable.rounded_light_gray_background);
@@ -343,6 +346,9 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
         }
         if (isLunettesSelected) {
             lunettesView.setBackgroundResource(R.drawable.rounded_light_gray_background);
+        }
+        if (isCagouleSelected) {
+            cagouleView.setBackgroundResource(R.drawable.rounded_light_gray_background);
         }
     }
 
@@ -764,6 +770,16 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
         } else {
             lunettesView.setBackgroundResource(R.drawable.rounded_light_gray_background);
             isLunettesSelected = true;
+        }
+    }
+
+    public void selectCagoule(View v) {
+        if (isCagouleSelected) {
+            cagouleView.setBackgroundResource(0);
+            isCagouleSelected = false;
+        } else {
+            cagouleView.setBackgroundResource(R.drawable.rounded_light_gray_background);
+            isCagouleSelected = true;
         }
     }
 

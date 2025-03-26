@@ -9,6 +9,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.sdis.bilan.lsf.R;
 import com.sdis.bilan.lsf.databinding.TelephoneBinding;
@@ -25,6 +26,7 @@ public class TelephonePoliceActivity extends BasePoliceActivity {
     int currentColor = Color.BLACK;
 
     private ImageView marqueView;
+    private TextView marqueTexteView;
 
     private ImageButton objetPrecedentView;
     private ImageButton objetSuivantView;
@@ -52,6 +54,7 @@ public class TelephonePoliceActivity extends BasePoliceActivity {
         colorPicker = findViewById(R.id.colorPicker);
 
         marqueView = findViewById(R.id.marque);
+        marqueTexteView = findViewById(R.id.marqueTexte);
 
         objetPrecedentView = findViewById(R.id.objet_precedent);
         objetSuivantView = findViewById(R.id.objet_suivant);
@@ -96,6 +99,7 @@ public class TelephonePoliceActivity extends BasePoliceActivity {
 
             marqueSelected = 0;
             marqueView.setImageResource(listeMarquesTelephone.get(marqueSelected));
+            marqueTexteView.setText(getMarqueTexte(listeMarquesTelephone.get(marqueSelected)));
             marquePrecedenteView.setImageResource(0);
             marqueSuivanteView.setImageResource(R.drawable.suivant);
 
@@ -114,6 +118,7 @@ public class TelephonePoliceActivity extends BasePoliceActivity {
 
             marqueSelected = 0;
             marqueView.setImageResource(listeMarquesOrdinateur.get(marqueSelected));
+            marqueTexteView.setText(getMarqueTexte(listeMarquesOrdinateur.get(marqueSelected)));
             marquePrecedenteView.setImageResource(0);
             marqueSuivanteView.setImageResource(R.drawable.suivant);
 
@@ -130,8 +135,10 @@ public class TelephonePoliceActivity extends BasePoliceActivity {
             marqueSelected -= 1;
             if (objetSelected == 0) {
                 marqueView.setImageResource(listeMarquesTelephone.get(marqueSelected));
+                marqueTexteView.setText(getMarqueTexte(listeMarquesTelephone.get(marqueSelected)));
             } else {
                 marqueView.setImageResource(listeMarquesOrdinateur.get(marqueSelected));
+                marqueTexteView.setText(getMarqueTexte(listeMarquesOrdinateur.get(marqueSelected)));
             }
 
             marqueSuivanteView.setImageResource(R.drawable.suivant);
@@ -147,7 +154,7 @@ public class TelephonePoliceActivity extends BasePoliceActivity {
             if (marqueSelected + 1 != listeMarquesTelephone.size()) {
                 marqueSelected += 1;
                 marqueView.setImageResource(listeMarquesTelephone.get(marqueSelected));
-
+                marqueTexteView.setText(getMarqueTexte(listeMarquesTelephone.get(marqueSelected)));
                 marquePrecedenteView.setImageResource(R.drawable.precedent);
 
                 if (marqueSelected == listeMarquesTelephone.size() - 1) {
@@ -158,6 +165,7 @@ public class TelephonePoliceActivity extends BasePoliceActivity {
             if (marqueSelected + 1 != listeMarquesOrdinateur.size()) {
                 marqueSelected += 1;
                 marqueView.setImageResource(listeMarquesOrdinateur.get(marqueSelected));
+                marqueTexteView.setText(getMarqueTexte(listeMarquesOrdinateur.get(marqueSelected)));
 
                 marquePrecedenteView.setImageResource(R.drawable.precedent);
 
@@ -167,5 +175,13 @@ public class TelephonePoliceActivity extends BasePoliceActivity {
             }
         }
 
+    }
+
+    private String getMarqueTexte(int marque) {
+        String resourceName = getResources().getResourceEntryName(marque);
+        String s1 = resourceName.substring(0, 1).toUpperCase();
+        String nameCapitalized = s1 + resourceName.substring(1);
+        nameCapitalized = nameCapitalized.replace("_", " ");
+        return nameCapitalized;
     }
 }

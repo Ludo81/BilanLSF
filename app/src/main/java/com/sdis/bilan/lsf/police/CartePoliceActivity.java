@@ -3,6 +3,7 @@ package com.sdis.bilan.lsf.police;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -64,16 +65,15 @@ public class CartePoliceActivity extends BasePoliceActivity {
 
             @Override
             public boolean longPressHelper(GeoPoint p) {
-                setLocalisation();
                 return false;
             }
         }));
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
-        setLocalisation();
+        setLocalisation(null);
     }
 
-    private void setLocalisation() {
+    public void setLocalisation(View v) {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             fusedLocationClient.getLastLocation()
                     .addOnSuccessListener(this, location -> {

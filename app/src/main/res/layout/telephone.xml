@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:padding="16dp">
 
-        <TableRow android:layout_weight="1">
+        <TableRow android:layout_weight="2.5">
 
             <ImageButton
                 android:id="@+id/objet_precedent"
@@ -53,7 +53,23 @@
 
         </TableRow>
 
-        <TableRow android:layout_weight="5">
+        <TableRow
+            android:layout_weight="0"
+            android:paddingVertical="10dp">
+
+            <TextView
+                android:id="@+id/marqueTexte"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="35sp"
+                android:text="@string/apple" />
+
+        </TableRow>
+
+        <TableRow android:layout_weight="5.7">
 
             <ImageButton
                 android:id="@+id/marque_precedente"
