@@ -9,13 +9,16 @@
         android:layout_height="match_parent" />
 
     <ImageButton
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="10dp"
         android:layout_marginStart="10dp"
+        android:contentDescription="@string/center_icon"
         android:scaleType="fitCenter"
         android:src="@drawable/center_map_icon"
+        android:background="@color/white"
+        android:padding="5dp"
         android:onClick="setLocalisation" />
 
 </RelativeLayout>
