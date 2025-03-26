@@ -1,6 +1,9 @@
 package com.sdis.bilan.lsf.police;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -26,6 +29,24 @@ public class ClefsPoliceActivity extends BasePoliceActivity {
 
     private ImageButton precedentView;
     private ImageButton suivantView;
+
+    private final Handler handler = new Handler(Looper.getMainLooper());
+
+    private final Runnable incrementRunnableUp = new Runnable() {
+        @Override
+        public void run() {
+            marqueSuivante(suivantView);
+            handler.postDelayed(this, 50);
+        }
+    };
+
+    private final Runnable incrementRunnableDown = new Runnable() {
+        @Override
+        public void run() {
+            marquePrecedente(precedentView);
+            handler.postDelayed(this, 50);
+        }
+    };
 
     private final List<Integer> listeMarques = List.of(R.drawable.aixam, R.drawable.alfa_romeo, R.drawable.alpine, R.drawable.aston_martin, R.drawable.audi,
             R.drawable.bentley, R.drawable.bmw, R.drawable.bugatti, R.drawable.buick, R.drawable.cadillac, R.drawable.chery, R.drawable.chevrolet
@@ -53,6 +74,30 @@ public class ClefsPoliceActivity extends BasePoliceActivity {
 
         precedentView = findViewById(R.id.marque_precedente);
         suivantView = findViewById(R.id.marque_suivante);
+
+        suivantView.setOnLongClickListener(v -> {
+            handler.post(incrementRunnableUp);
+            return true;
+        });
+
+        suivantView.setOnTouchListener((v, event) -> {
+            if (event.getAction() == MotionEvent.ACTION_UP || event.getAction() == MotionEvent.ACTION_CANCEL) {
+                handler.removeCallbacks(incrementRunnableUp);
+            }
+            return false;
+        });
+
+        precedentView.setOnLongClickListener(v -> {
+            handler.post(incrementRunnableDown);
+            return true;
+        });
+
+        precedentView.setOnTouchListener((v, event) -> {
+            if (event.getAction() == MotionEvent.ACTION_UP || event.getAction() == MotionEvent.ACTION_CANCEL) {
+                handler.removeCallbacks(incrementRunnableDown);
+            }
+            return false;
+        });
     }
 
     public void selectMaison(View v) {

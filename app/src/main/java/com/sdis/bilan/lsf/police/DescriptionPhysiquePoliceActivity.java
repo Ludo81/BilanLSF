@@ -1,10 +1,12 @@
 package com.sdis.bilan.lsf.police;
 
+import android.app.AlertDialog;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -85,6 +87,12 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
     private int moustacheSelected = 0;
     private int boucheSelected = 0;
     private int barbeSelected = 0;
+
+    private int couleurCheveux = 0;
+    private int couleurYeux = 0;
+    private int couleurMoustache = 0;
+    private int couleurBouche = 0;
+    private int couleurBarbe = 0;
 
     private int couleurPeau = 0;
 
@@ -681,6 +689,216 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
             }
             barbeView.setImageResource(listeBarbes.get(barbeSelected));
         }
+    }
+
+    public void openColorCheveux(View view) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.color_picker_layout, null);
+
+        ImageView colorPicker = dialogView.findViewById(R.id.colorPicker);
+        colorPicker.setOnTouchListener((v, event) -> {
+
+            if (event.getAction() == MotionEvent.ACTION_MOVE || event.getAction() == MotionEvent.ACTION_DOWN) {
+
+                int viewX = (int) event.getX();
+                int viewY = (int) event.getY();
+
+                int viewWidth = colorPicker.getWidth();
+                int viewHeight = colorPicker.getHeight();
+
+                Bitmap image = ((BitmapDrawable) colorPicker.getDrawable()).getBitmap();
+
+                int imageWidth = image.getWidth();
+                int imageHeight = image.getHeight();
+
+                int imageX = (int) ((float) viewX * ((float) imageWidth / (float) viewWidth));
+                int imageY = (int) ((float) viewY * ((float) imageHeight / (float) viewHeight));
+
+                try {
+                    couleurCheveux = image.getPixel(imageX, imageY);
+                } catch (Exception e) {
+
+                }
+
+                cheveuxView.setColorFilter(couleurCheveux, PorterDuff.Mode.MULTIPLY);
+            }
+            return true;
+        });
+
+        builder.setView(dialogView)
+                .setPositiveButton("Fermer", (dialog, id) -> dialog.dismiss());
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
+    public void openColorYeux(View view) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.color_picker_layout, null);
+
+        ImageView colorPicker = dialogView.findViewById(R.id.colorPicker);
+        colorPicker.setOnTouchListener((v, event) -> {
+
+            if (event.getAction() == MotionEvent.ACTION_MOVE || event.getAction() == MotionEvent.ACTION_DOWN) {
+
+                int viewX = (int) event.getX();
+                int viewY = (int) event.getY();
+
+                int viewWidth = colorPicker.getWidth();
+                int viewHeight = colorPicker.getHeight();
+
+                Bitmap image = ((BitmapDrawable) colorPicker.getDrawable()).getBitmap();
+
+                int imageWidth = image.getWidth();
+                int imageHeight = image.getHeight();
+
+                int imageX = (int) ((float) viewX * ((float) imageWidth / (float) viewWidth));
+                int imageY = (int) ((float) viewY * ((float) imageHeight / (float) viewHeight));
+
+                try {
+                    couleurYeux = image.getPixel(imageX, imageY);
+                } catch (Exception e) {
+
+                }
+
+                yeuxView.setColorFilter(couleurYeux, PorterDuff.Mode.MULTIPLY);
+            }
+            return true;
+        });
+
+        builder.setView(dialogView)
+                .setPositiveButton("Fermer", (dialog, id) -> dialog.dismiss());
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
+    public void openColorMoustache(View view) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.color_picker_layout, null);
+
+        ImageView colorPicker = dialogView.findViewById(R.id.colorPicker);
+        colorPicker.setOnTouchListener((v, event) -> {
+
+            if (event.getAction() == MotionEvent.ACTION_MOVE || event.getAction() == MotionEvent.ACTION_DOWN) {
+
+                int viewX = (int) event.getX();
+                int viewY = (int) event.getY();
+
+                int viewWidth = colorPicker.getWidth();
+                int viewHeight = colorPicker.getHeight();
+
+                Bitmap image = ((BitmapDrawable) colorPicker.getDrawable()).getBitmap();
+
+                int imageWidth = image.getWidth();
+                int imageHeight = image.getHeight();
+
+                int imageX = (int) ((float) viewX * ((float) imageWidth / (float) viewWidth));
+                int imageY = (int) ((float) viewY * ((float) imageHeight / (float) viewHeight));
+
+                try {
+                    couleurMoustache = image.getPixel(imageX, imageY);
+                } catch (Exception e) {
+
+                }
+
+                moustacheView.setColorFilter(couleurMoustache, PorterDuff.Mode.MULTIPLY);
+            }
+            return true;
+        });
+
+        builder.setView(dialogView)
+                .setPositiveButton("Fermer", (dialog, id) -> dialog.dismiss());
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
+    public void openColorBouche(View view) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.color_picker_layout, null);
+
+        ImageView colorPicker = dialogView.findViewById(R.id.colorPicker);
+        colorPicker.setOnTouchListener((v, event) -> {
+
+            if (event.getAction() == MotionEvent.ACTION_MOVE || event.getAction() == MotionEvent.ACTION_DOWN) {
+
+                int viewX = (int) event.getX();
+                int viewY = (int) event.getY();
+
+                int viewWidth = colorPicker.getWidth();
+                int viewHeight = colorPicker.getHeight();
+
+                Bitmap image = ((BitmapDrawable) colorPicker.getDrawable()).getBitmap();
+
+                int imageWidth = image.getWidth();
+                int imageHeight = image.getHeight();
+
+                int imageX = (int) ((float) viewX * ((float) imageWidth / (float) viewWidth));
+                int imageY = (int) ((float) viewY * ((float) imageHeight / (float) viewHeight));
+
+                try {
+                    couleurBouche = image.getPixel(imageX, imageY);
+                } catch (Exception e) {
+
+                }
+
+                boucheView.setColorFilter(couleurBouche, PorterDuff.Mode.MULTIPLY);
+            }
+            return true;
+        });
+
+        builder.setView(dialogView)
+                .setPositiveButton("Fermer", (dialog, id) -> dialog.dismiss());
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
+    public void openColorBarbe(View view) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.color_picker_layout, null);
+
+        ImageView colorPicker = dialogView.findViewById(R.id.colorPicker);
+        colorPicker.setOnTouchListener((v, event) -> {
+
+            if (event.getAction() == MotionEvent.ACTION_MOVE || event.getAction() == MotionEvent.ACTION_DOWN) {
+
+                int viewX = (int) event.getX();
+                int viewY = (int) event.getY();
+
+                int viewWidth = colorPicker.getWidth();
+                int viewHeight = colorPicker.getHeight();
+
+                Bitmap image = ((BitmapDrawable) colorPicker.getDrawable()).getBitmap();
+
+                int imageWidth = image.getWidth();
+                int imageHeight = image.getHeight();
+
+                int imageX = (int) ((float) viewX * ((float) imageWidth / (float) viewWidth));
+                int imageY = (int) ((float) viewY * ((float) imageHeight / (float) viewHeight));
+
+                try {
+                    couleurBarbe = image.getPixel(imageX, imageY);
+                } catch (Exception e) {
+
+                }
+
+                barbeView.setColorFilter(couleurBarbe, PorterDuff.Mode.MULTIPLY);
+            }
+            return true;
+        });
+
+        builder.setView(dialogView)
+                .setPositiveButton("Fermer", (dialog, id) -> dialog.dismiss());
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 
     public void selectDetail1(View v) {

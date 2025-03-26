@@ -118,6 +118,15 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@null"
+                    android:src="@drawable/color_picker"
+                    android:scaleType="fitCenter"
+                    android:onClick="openColorCheveux" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
                     android:src="@drawable/precedent"
                     android:scaleType="fitCenter"
                     android:onClick="cheveuxPrecedent" />
@@ -141,6 +150,12 @@
             </TableRow>
 
             <TableRow android:layout_weight="1">
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null" />
 
                 <ImageButton
                     android:layout_width="0dp"
@@ -176,6 +191,15 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@null"
+                    android:src="@drawable/color_picker"
+                    android:scaleType="fitCenter"
+                    android:onClick="openColorYeux" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
                     android:src="@drawable/precedent"
                     android:scaleType="fitCenter"
                     android:onClick="yeuxPrecedent" />
@@ -199,6 +223,12 @@
             </TableRow>
 
             <TableRow android:layout_weight="1">
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null" />
 
                 <ImageButton
                     android:layout_width="0dp"
@@ -234,6 +264,15 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@null"
+                    android:src="@drawable/color_picker"
+                    android:scaleType="fitCenter"
+                    android:onClick="openColorMoustache" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
                     android:src="@drawable/precedent"
                     android:scaleType="fitCenter"
                     android:onClick="moustachePrecedente" />
@@ -263,6 +302,15 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@null"
+                    android:src="@drawable/color_picker"
+                    android:scaleType="fitCenter"
+                    android:onClick="openColorBouche" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
                     android:src="@drawable/precedent"
                     android:scaleType="fitCenter"
                     android:onClick="bouchePredecente" />
@@ -286,6 +334,15 @@
             </TableRow>
 
             <TableRow android:layout_weight="1">
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:src="@drawable/color_picker"
+                    android:scaleType="fitCenter"
+                    android:onClick="openColorBarbe" />
 
                 <ImageButton
                     android:layout_width="0dp"
