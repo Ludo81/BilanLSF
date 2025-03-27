@@ -53,7 +53,7 @@ public class FuitePoliceActivity extends BasePoliceActivity {
 
         colorPicker.setOnTouchListener((v, event) -> {
 
-            if (event.getAction() == MotionEvent.ACTION_MOVE || event.getAction() == MotionEvent.ACTION_DOWN) {
+            if (vehiculeSelected != listeVehicules.size() - 1 && (event.getAction() == MotionEvent.ACTION_MOVE || event.getAction() == MotionEvent.ACTION_DOWN)) {
 
                 int viewX = (int) event.getX();
                 int viewY = (int) event.getY();
@@ -101,6 +101,7 @@ public class FuitePoliceActivity extends BasePoliceActivity {
         if (vehiculeSelected - 1 != -1) {
             vehiculeSelected -= 1;
             vehiculeView.setImageResource(listeVehicules.get(vehiculeSelected));
+            vehiculeView.setColorFilter(currentColor, PorterDuff.Mode.SRC_IN);
 
             suivantView.setImageResource(R.drawable.suivant);
 
@@ -119,6 +120,7 @@ public class FuitePoliceActivity extends BasePoliceActivity {
 
             if (vehiculeSelected == listeVehicules.size() - 1) {
                 suivantView.setImageResource(0);
+                vehiculeView.setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_IN);
             }
         }
     }

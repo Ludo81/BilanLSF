@@ -5,6 +5,8 @@ import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
@@ -43,6 +45,24 @@ public class TelephonePoliceActivity extends BasePoliceActivity {
     private List<Integer> listeMarquesOrdinateur = List.of(R.drawable.asus, R.drawable.hp, R.drawable.lenovo, R.drawable.acer, R.drawable.apple, R.drawable.dell, R.drawable.fujitsu, R.drawable.msi, R.drawable.razer);
     int marqueSelected = 0;
 
+    private final Handler handler = new Handler(Looper.getMainLooper());
+
+    private final Runnable incrementRunnableUp = new Runnable() {
+        @Override
+        public void run() {
+            marqueSuivante(marqueSuivanteView);
+            handler.postDelayed(this, 50);
+        }
+    };
+
+    private final Runnable incrementRunnableDown = new Runnable() {
+        @Override
+        public void run() {
+            marquePrecedente(marquePrecedenteView);
+            handler.postDelayed(this, 50);
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +81,30 @@ public class TelephonePoliceActivity extends BasePoliceActivity {
 
         marquePrecedenteView = findViewById(R.id.marque_precedente);
         marqueSuivanteView = findViewById(R.id.marque_suivante);
+
+        marqueSuivanteView.setOnLongClickListener(v -> {
+            handler.post(incrementRunnableUp);
+            return true;
+        });
+
+        marqueSuivanteView.setOnTouchListener((v, event) -> {
+            if (event.getAction() == MotionEvent.ACTION_UP || event.getAction() == MotionEvent.ACTION_CANCEL) {
+                handler.removeCallbacks(incrementRunnableUp);
+            }
+            return false;
+        });
+
+        marquePrecedenteView.setOnLongClickListener(v -> {
+            handler.post(incrementRunnableDown);
+            return true;
+        });
+
+        marquePrecedenteView.setOnTouchListener((v, event) -> {
+            if (event.getAction() == MotionEvent.ACTION_UP || event.getAction() == MotionEvent.ACTION_CANCEL) {
+                handler.removeCallbacks(incrementRunnableDown);
+            }
+            return false;
+        });
 
         colorPicker.setOnTouchListener((v, event) -> {
 
