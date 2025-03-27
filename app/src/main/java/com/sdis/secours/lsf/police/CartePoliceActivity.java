@@ -39,7 +39,7 @@ public class CartePoliceActivity extends BasePoliceActivity {
         carteBinding = CarteBinding.inflate(getLayoutInflater());
         setContentView(carteBinding.getRoot());
 
-        String userAgent = "Bilan LSF";
+        String userAgent = "Secours LSF";
         Configuration.getInstance().setUserAgentValue(userAgent);
 
         mapView = findViewById(R.id.mapview);
