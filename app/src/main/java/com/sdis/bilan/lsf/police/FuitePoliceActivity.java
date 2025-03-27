@@ -97,11 +97,14 @@ public class FuitePoliceActivity extends BasePoliceActivity {
         }
     }
 
-    public void vehiculePrecedent(View v) {
+    public void vehiculePrecedent(View view) {
         if (vehiculeSelected - 1 != -1) {
             vehiculeSelected -= 1;
             vehiculeView.setImageResource(listeVehicules.get(vehiculeSelected));
             vehiculeView.setColorFilter(currentColor, PorterDuff.Mode.SRC_IN);
+
+            colorPicker.setBackgroundResource(R.drawable.border2);
+            colorPicker.setImageResource(R.drawable.color_picker);
 
             suivantView.setImageResource(R.drawable.suivant);
 
@@ -121,6 +124,8 @@ public class FuitePoliceActivity extends BasePoliceActivity {
             if (vehiculeSelected == listeVehicules.size() - 1) {
                 suivantView.setImageResource(0);
                 vehiculeView.setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_IN);
+                colorPicker.setBackgroundResource(0);
+                colorPicker.setImageResource(0);
             }
         }
     }
