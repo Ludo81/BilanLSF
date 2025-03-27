@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.sdis.bilan.lsf"
+    namespace = "com.sdis.secours.lsf"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.sdis.bilan.lsf"
+        applicationId = "com.sdis.secours.lsf"
         minSdk = 24
         targetSdk = 34
         versionCode = 118

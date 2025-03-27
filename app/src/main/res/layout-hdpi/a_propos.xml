@@ -51,12 +51,12 @@
                     android:src="@drawable/bs" />
 
                 <ImageButton
-                    android:id="@+id/logobilanlsf"
+                    android:id="@+id/logoapp"
                     android:layout_height="70dp"
                     android:layout_weight="0.5"
                     android:background="@null"
-                    android:contentDescription="@string/logobilanlsf"
-                    android:onClick="onClickBilanLsf"
+                    android:contentDescription="@string/logoapp"
+                    android:onClick="onClickAppLogo"
                     android:scaleType="fitCenter"
                     android:src="@drawable/app_logo" />
 

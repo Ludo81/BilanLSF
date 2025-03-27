@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "BilanLSF"
+rootProject.name = "SecoursLSF"
 include(":app")

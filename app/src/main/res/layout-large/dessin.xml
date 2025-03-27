@@ -73,7 +73,7 @@
     </GridLayout>
 
 
-    <com.sdis.bilan.lsf.DessinView
+    <com.sdis.secours.lsf.DessinView
         android:id="@+id/dessinView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -19,31 +19,31 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/logo4_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.BilanLSF"
+        android:theme="@style/Theme.SecoursLSF"
         tools:targetApi="31">
 
         <activity
             android:name=".pompier.BasePompierActivity"
             android:exported="false"
             android:label="base"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:screenOrientation="landscape" />
         <activity
             android:name=".pompier.AccueilPompierActivity"
             android:exported="true"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
         <activity
             android:name=".police.AccueilPoliceActivity"
             android:exported="true"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
         <activity
             android:name=".HomeActivity"
             android:exported="true"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape">
             <intent-filter>
@@ -56,35 +56,35 @@
             android:name=".pompier.GroupePompierActivity"
             android:exported="false"
             android:label="@string/title_activity_groupe_pompier"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
         <activity
             android:name=".police.GroupePoliceActivity"
             android:exported="false"
             android:label="@string/title_activity_groupe_police"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
         <activity
             android:name=".pompier.VideoPompierActivity"
             android:exported="false"
             android:label="@string/title_activity_video_pompier"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
         <activity
             android:name=".police.VideoPoliceActivity"
             android:exported="false"
             android:label="@string/title_activity_video_police"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
         <activity
             android:name=".pompier.ClavierPompierActivity"
             android:exported="false"
             android:label="@string/title_activity_clavier_pompier"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:hardwareAccelerated="false"
             android:screenOrientation="landscape" />
@@ -93,14 +93,14 @@
             android:name=".pompier.ClavierInversePompierActivity"
             android:exported="false"
             android:label="@string/title_activity_clavier_inverse_pompier"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:screenOrientation="landscape" />
 
         <activity
             android:name=".police.ClavierPoliceActivity"
             android:exported="false"
             android:label="@string/title_activity_clavier_police"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:hardwareAccelerated="false"
             android:screenOrientation="landscape" />
@@ -109,14 +109,14 @@
             android:name=".police.ClavierInversePoliceActivity"
             android:exported="false"
             android:label="@string/title_activity_clavier_inverse_police"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:screenOrientation="landscape" />
 
         <activity
             android:name=".pompier.CorpsActivity"
             android:exported="false"
             android:label="@string/title_activity_corps"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -124,7 +124,7 @@
             android:name=".pompier.HorlogeActivity"
             android:exported="false"
             android:label="HorlogeActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -132,7 +132,7 @@
             android:name=".pompier.MinuteurActivity"
             android:exported="false"
             android:label="MinuteurActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -140,7 +140,7 @@
             android:name=".pompier.CalendrierActivity"
             android:exported="false"
             android:label="CalendrierActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -148,7 +148,7 @@
             android:name=".pompier.VitessePompierActivity"
             android:exported="false"
             android:label="VitessePompierActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -156,7 +156,7 @@
             android:name=".police.VitessePoliceActivity"
             android:exported="false"
             android:label="VitessePoliceActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -164,7 +164,7 @@
             android:name=".pompier.DessinPompierActivity"
             android:exported="false"
             android:label="DessinPompierActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -172,7 +172,7 @@
             android:name=".police.DessinPoliceActivity"
             android:exported="false"
             android:label="DessinPoliceActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -180,7 +180,7 @@
             android:name=".pompier.VoiturePompierActivity"
             android:exported="false"
             android:label="VoiturePompierActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -188,7 +188,7 @@
             android:name=".police.VoiturePoliceActivity"
             android:exported="false"
             android:label="VoiturePoliceActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -196,7 +196,7 @@
             android:name=".pompier.AProposPompierActivity"
             android:exported="false"
             android:label="AProposPompierActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -204,7 +204,7 @@
             android:name=".police.AProposPoliceActivity"
             android:exported="false"
             android:label="AProposPoliceActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -212,7 +212,7 @@
             android:name=".pompier.ParametresPompierActivity"
             android:exported="false"
             android:label="ParametresPompierActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -220,7 +220,7 @@
             android:name=".police.ParametresPoliceActivity"
             android:exported="false"
             android:label="ParametresPoliceActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -228,7 +228,7 @@
             android:name=".pompier.CguPompierActivity"
             android:exported="false"
             android:label="CguPompierActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -236,7 +236,7 @@
             android:name=".police.CguPoliceActivity"
             android:exported="false"
             android:label="CguPoliceActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -244,7 +244,7 @@
             android:name=".pompier.PdcPompierActivity"
             android:exported="false"
             android:label="PdcPompierActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -252,7 +252,7 @@
             android:name=".police.PdcPoliceActivity"
             android:exported="false"
             android:label="PdcPoliceActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -260,7 +260,7 @@
             android:name=".pompier.CreditsPompierActivity"
             android:exported="false"
             android:label="CreditsPompierActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -268,7 +268,7 @@
             android:name=".police.CreditsPoliceActivity"
             android:exported="false"
             android:label="CreditsPoliceActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -276,7 +276,7 @@
             android:name=".pompier.VersionPompierActivity"
             android:exported="false"
             android:label="VersionPompierActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -284,7 +284,7 @@
             android:name=".police.VersionPoliceActivity"
             android:exported="false"
             android:label="VersionPoliceActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -292,7 +292,7 @@
             android:name=".police.PointsPermisPoliceActivity"
             android:exported="false"
             android:label="PointsPermisPoliceActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -300,7 +300,7 @@
             android:name=".police.ObjetsTrouvesPoliceActivity"
             android:exported="false"
             android:label="ObjetsTrouvesPoliceActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -308,7 +308,7 @@
             android:name=".police.BijouxPoliceActivity"
             android:exported="false"
             android:label="BijouxPoliceActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -316,7 +316,7 @@
             android:name=".police.DocumentsPoliceActivity"
             android:exported="false"
             android:label="DocumentsPoliceActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -324,7 +324,7 @@
             android:name=".police.VeloPoliceActivity"
             android:exported="false"
             android:label="VeloPoliceActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -332,7 +332,7 @@
             android:name=".police.TelephonePoliceActivity"
             android:exported="false"
             android:label="TelephonePoliceActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -340,7 +340,7 @@
             android:name=".police.PortefeuillePoliceActivity"
             android:exported="false"
             android:label="PortefeuillePoliceActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -348,7 +348,7 @@
             android:name=".police.BagagesPoliceActivity"
             android:exported="false"
             android:label="BagagesPoliceActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -356,7 +356,7 @@
             android:name=".police.VetementsPoliceActivity"
             android:exported="false"
             android:label="VetementsPoliceActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -364,7 +364,7 @@
             android:name=".police.FuitePoliceActivity"
             android:exported="false"
             android:label="FuitePoliceActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -372,7 +372,7 @@
             android:name=".police.CartePoliceActivity"
             android:exported="false"
             android:label="CartePoliceActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -380,7 +380,7 @@
             android:name=".police.DescriptionPhysiquePoliceActivity"
             android:exported="false"
             android:label="DescriptionPhysiquePoliceActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 
@@ -388,7 +388,7 @@
             android:name=".police.ClefsPoliceActivity"
             android:exported="false"
             android:label="ClefsPoliceActivity"
-            android:theme="@style/Theme.BilanLSF"
+            android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
 

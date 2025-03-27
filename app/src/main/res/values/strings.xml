@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Bilan LSF</string>
+    <string name="app_name">Secours LSF</string>
     <string name="title_activity_video_pompier">VideoPompierActivity</string>
     <string name="title_activity_video_police">VideoPoliceActivity</string>
     <string name="abecedaire">Abécédaire</string>
@@ -105,7 +105,7 @@
     <string name="places5">5 PLACES</string>
     <string name="undo">undo</string>
     <string name="redo">redo</string>
-    <string name="logobilanlsf">logobilanlsf</string>
+    <string name="logoapp">logoapp</string>
     <string name="inverser">inverser</string>
     <string name="_10">10</string>
     <string name="_9">9</string>
