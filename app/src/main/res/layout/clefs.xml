@@ -44,7 +44,17 @@
             android:src="@drawable/moins" />
 
         <ImageButton
-            android:id="@+id/voiture"
+            android:id="@+id/vehicule_precedent"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:background="@null"
+            android:contentDescription="@string/precedent"
+            android:onClick="vehiculePrecedent"
+            android:scaleType="fitCenter" />
+
+        <ImageButton
+            android:id="@+id/vehicule"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -53,7 +63,18 @@
             android:background="@null"
             android:scaleType="fitCenter"
             android:src="@drawable/voiture"
-            android:onClick="selectVoiture" />
+            android:onClick="selectVehicule" />
+
+        <ImageButton
+            android:id="@+id/vehicule_suivant"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:background="@null"
+            android:contentDescription="@string/suivant"
+            android:onClick="vehiculeSuivant"
+            android:scaleType="fitCenter"
+            android:src="@drawable/suivant" />
 
     </TableRow>
 
