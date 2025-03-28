@@ -122,7 +122,7 @@
                 android:layout_height="32dp"
                 android:layout_gravity="center"
                 android:max="190"
-                android:progress="95"
+                android:progress="110"
                 android:progressTint="@android:color/transparent"
                 android:thumb="@drawable/point_regle_vert"
                 android:rotation="270" />
@@ -152,8 +152,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:textSize="40sp"
-            android:text="170 cm" />
+            android:textSize="40sp" />
 
     </LinearLayout>
 

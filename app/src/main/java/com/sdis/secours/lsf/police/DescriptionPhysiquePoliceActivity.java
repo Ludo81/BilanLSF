@@ -97,7 +97,7 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
 
     private SeekBar tailleView;
     private TextView tailleText;
-    private int taille = 50;
+    private int taille = 110;
 
     private Corpulence corpulence = Corpulence.NORMAL;
 
@@ -234,6 +234,7 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
 
         tailleView = findViewById(R.id.taille);
         tailleView.setProgress(taille);
+        tailleText.setText(taille + 60 + " cm");
         tailleView.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
