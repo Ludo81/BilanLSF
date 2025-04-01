@@ -17,9 +17,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Service par défaut" />
+        android:text="@string/service_par_defaut" />
 
     <RadioGroup
+        android:id="@+id/emergency_service_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
@@ -27,13 +28,13 @@
             android:id="@+id/pompier_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pompier" />
+            android:text="@string/pompier" />
 
         <RadioButton
             android:id="@+id/police_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Police" />
+            android:text="@string/police" />
     </RadioGroup>
 
 

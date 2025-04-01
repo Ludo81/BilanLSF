@@ -186,6 +186,6 @@
     <string name="center_icon">center_icon</string>
     <string name="colorpicker">colorPicker</string>
     <string name="couleurselectionnee">couleurSelectionnee</string>
-    <string name="is_pompier_default">IsPompierDefault</string>
-    <string name="is_pompier_default_description">The application starts on the default fire department</string>
+    <string name="default_emergency_service">Default Emergency Service</string>
+    <string name="service_par_defaut">Service par défaut</string>
 </resources>

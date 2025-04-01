@@ -2,9 +2,10 @@
 <restrictions xmlns:android="http://schemas.android.com/apk/res/android">
 
     <restriction
-        android:key="isPompierDefault"
-        android:title="@string/is_pompier_default"
-        android:restrictionType="bool"
-        android:description="@string/is_pompier_default_description" />
+        android:key="defaultEmergencyService"
+        android:title="@string/default_emergency_service"
+        android:restrictionType="choice"
+        android:entries="@array/defaultEmergencyServiceList"
+        android:entryValues="@array/defaultEmergencyServiceList" />
 
 </restrictions>

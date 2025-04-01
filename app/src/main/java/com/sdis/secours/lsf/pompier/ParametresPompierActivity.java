@@ -1,8 +1,10 @@
 package com.sdis.secours.lsf.pompier;
 
+import android.content.RestrictionsManager;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Switch;
 
 import com.sdis.secours.lsf.R;
@@ -14,12 +16,7 @@ public class ParametresPompierActivity extends BasePompierActivity {
 
     SharedPreferences sharedPreferences;
 
-    private Switch clavierSwitch;
     private boolean isClavierAzerty = false;
-
-    private RadioButton pompierButton;
-    private RadioButton policeButton;
-    private boolean isPompierDefault = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +24,7 @@ public class ParametresPompierActivity extends BasePompierActivity {
         parametresBinding = ParametresBinding.inflate(getLayoutInflater());
         setContentView(parametresBinding.getRoot());
 
-        clavierSwitch = findViewById(R.id.clavierSwitch);
+        Switch clavierSwitch = findViewById(R.id.clavierSwitch);
 
         sharedPreferences = getSharedPreferences("Parametrage", MODE_PRIVATE);
 
@@ -43,20 +40,42 @@ public class ParametresPompierActivity extends BasePompierActivity {
             isClavierAzerty = isChecked;
         });
 
-        isPompierDefault = sharedPreferences.getBoolean("isPompierDefault", true);
+        RadioGroup emergencyServiceGroup = findViewById(R.id.emergency_service_group);
+        RadioButton pompierButton = findViewById(R.id.pompier_button);
+        RadioButton policeButton = findViewById(R.id.police_button);
 
-        pompierButton = findViewById(R.id.pompier_button);
-        pompierButton.setChecked(isPompierDefault);
+        RestrictionsManager restrictionsManager = (RestrictionsManager) getSystemService(RESTRICTIONS_SERVICE);
+        Bundle restrictions = restrictionsManager.getApplicationRestrictions();
+        String mdmChoice = restrictions.getString("defaultEmergencyService", "Disabled");
+        if ("Pompier".equals(mdmChoice)) { // Si pompier selectionné depuis le MDM
+            pompierButton.setChecked(true);
+            policeButton.setChecked(false);
+            pompierButton.setClickable(false);
+            policeButton.setClickable(false);
+        } else if ("Police".equals(mdmChoice)) { // Si police selectionné depuis le MDM
+            pompierButton.setChecked(false);
+            policeButton.setChecked(true);
+            pompierButton.setClickable(false);
+            policeButton.setClickable(false);
+        } else { // Sinon on applique les paramètres de l'appareil
+            String defaultEmergencyService = sharedPreferences.getString("defaultEmergencyService", "Pompier");
+            if ("Pompier".equals(defaultEmergencyService)) {
+                pompierButton.setChecked(true);
+                policeButton.setChecked(false);
+            } else if ("Police".equals(defaultEmergencyService)) {
+                pompierButton.setChecked(false);
+                policeButton.setChecked(true);
+            }
 
-        policeButton = findViewById(R.id.police_button);
-        policeButton.setChecked(!isPompierDefault);
-
-        pompierButton.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            sharedPreferences = getSharedPreferences("Parametrage", MODE_PRIVATE);
-            SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putBoolean("isPompierDefault", isChecked);
-            editor.apply();
-            isPompierDefault = isChecked;
-        });
+            emergencyServiceGroup.setOnCheckedChangeListener((group, checkedId) -> {
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                if (checkedId == R.id.pompier_button) {
+                    editor.putString("defaultEmergencyService", "Pompier");
+                } else if (checkedId == R.id.police_button) {
+                    editor.putString("defaultEmergencyService", "Police");
+                }
+                editor.apply();
+            });
+        }
     }
 }

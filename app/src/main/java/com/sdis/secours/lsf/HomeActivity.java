@@ -22,15 +22,20 @@ public class HomeActivity extends ComponentActivity {
 
         RestrictionsManager restrictionsManager = (RestrictionsManager) getSystemService(RESTRICTIONS_SERVICE);
 
-        boolean isPompierDefault = false;
         if (restrictionsManager != null) {
             Bundle restrictions = restrictionsManager.getApplicationRestrictions();
-            isPompierDefault = restrictions.getBoolean("isPompierDefault", false);
+            String mdmChoice = restrictions.getString("defaultEmergencyService", "Disabled");
+            if ("Pompier".equals(mdmChoice)) {
+                pompier();
+            } else if ("Police".equals(mdmChoice)) {
+                police();
+            }
         }
 
-        if (isPompierDefault || sharedPreferences.getBoolean("isPompierDefault", true)) {
+        String defaultEmergencyService = sharedPreferences.getString("defaultEmergencyService", "Pompier");
+        if ("Pompier".equals(defaultEmergencyService)) {
             pompier();
-        } else {
+        } else if ("Police".equals(defaultEmergencyService)) {
             police();
         }
     }
