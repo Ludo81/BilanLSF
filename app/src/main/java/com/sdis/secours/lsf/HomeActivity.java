@@ -21,22 +21,21 @@ public class HomeActivity extends ComponentActivity {
         setContentView(R.layout.home);
 
         RestrictionsManager restrictionsManager = (RestrictionsManager) getSystemService(RESTRICTIONS_SERVICE);
-
-        if (restrictionsManager != null) {
-            Bundle restrictions = restrictionsManager.getApplicationRestrictions();
-            String mdmChoice = restrictions.getString("defaultEmergencyService", "Disabled");
-            if ("Pompier".equals(mdmChoice)) {
-                pompier();
-            } else if ("Police".equals(mdmChoice)) {
-                police();
-            }
-        }
-
-        String defaultEmergencyService = sharedPreferences.getString("defaultEmergencyService", "Pompier");
-        if ("Pompier".equals(defaultEmergencyService)) {
+        Bundle restrictions = restrictionsManager.getApplicationRestrictions();
+        String mdmChoice = restrictions.getString("defaultEmergencyService", "Disabled");
+        if ("Pompier".equals(mdmChoice)) { // Si le choix mdm est pompier
             pompier();
-        } else if ("Police".equals(defaultEmergencyService)) {
+        } else if ("Police".equals(mdmChoice)) { // Si le choix mdm est police
             police();
+        } else { // Sinon on prend le choix paramétré de l'appareil
+            String defaultEmergencyService = sharedPreferences.getString("defaultEmergencyService", "Pompier");
+            if ("Pompier".equals(defaultEmergencyService)) {
+                pompier();
+            } else if ("Police".equals(defaultEmergencyService)) {
+                police();
+            } else {
+                pompier();
+            }
         }
     }
 
