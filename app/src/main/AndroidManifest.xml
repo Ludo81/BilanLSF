@@ -22,6 +22,10 @@
         android:theme="@style/Theme.SecoursLSF"
         tools:targetApi="31">
 
+        <meta-data
+            android:name="android.content.APP_RESTRICTIONS"
+            android:resource="@xml/configurations" />
+
         <activity
             android:name=".pompier.BasePompierActivity"
             android:exported="false"

@@ -1,6 +1,7 @@
 package com.sdis.secours.lsf;
 
 import android.content.Intent;
+import android.content.RestrictionsManager;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -19,7 +20,15 @@ public class HomeActivity extends ComponentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
 
-        if (sharedPreferences.getBoolean("isPompierDefault", true)) {
+        RestrictionsManager restrictionsManager = (RestrictionsManager) getSystemService(RESTRICTIONS_SERVICE);
+
+        boolean isPompierDefault = false;
+        if (restrictionsManager != null) {
+            Bundle restrictions = restrictionsManager.getApplicationRestrictions();
+            isPompierDefault = restrictions.getBoolean("isPompierDefault", false);
+        }
+
+        if (isPompierDefault || sharedPreferences.getBoolean("isPompierDefault", true)) {
             pompier();
         } else {
             police();
