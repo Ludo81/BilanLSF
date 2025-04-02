@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.VideoView;
 
+import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.R;
 import com.sdis.secours.lsf.databinding.VideoBinding;
 
@@ -27,7 +28,7 @@ public class VideoPompierActivity extends BasePompierActivity {
         videoBinding = VideoBinding.inflate(getLayoutInflater());
         setContentView(videoBinding.getRoot());
 
-        this.lireVideo();
+        Logger.write(this, "Chargement Video");
     }
 
     @Override
@@ -136,6 +137,8 @@ public class VideoPompierActivity extends BasePompierActivity {
             fis.close();
             fos.close();
             afd.close();
+
+            Logger.write(this, "Lecture vidéo " + name);
 
             // Lire la vidéo depuis le fichier temporaire
             videoView.setVideoPath(tempFile.getAbsolutePath());

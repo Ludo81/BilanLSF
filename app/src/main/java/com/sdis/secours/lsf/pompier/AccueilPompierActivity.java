@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.databinding.AccueilPompierBinding;
 import com.sdis.secours.lsf.police.AccueilPoliceActivity;
 
@@ -19,6 +20,8 @@ public class AccueilPompierActivity extends BasePompierActivity {
         super.onCreate(savedInstanceState);
         accueilPompierBinding = AccueilPompierBinding.inflate(getLayoutInflater());
         setContentView(accueilPompierBinding.getRoot());
+
+        Logger.write(this, "Chargement Accueil Pompier");
     }
 
     public void goToPompier(View v) {

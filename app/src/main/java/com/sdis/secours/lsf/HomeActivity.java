@@ -11,6 +11,11 @@ import androidx.activity.ComponentActivity;
 import com.sdis.secours.lsf.police.AccueilPoliceActivity;
 import com.sdis.secours.lsf.pompier.AccueilPompierActivity;
 
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 public class HomeActivity extends ComponentActivity {
 
     @Override
@@ -20,9 +25,27 @@ public class HomeActivity extends ComponentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
 
+        Logger.write(this, "Démarrage de SecoursLSF");
+
+        SimpleDateFormat formatDateSimple = new SimpleDateFormat("dd_MM_yyyy", Locale.getDefault());
+        File dossier = this.getExternalFilesDir(null);
+        File logFile = new File(dossier, "logs" + "_" + formatDateSimple.format(new Date()) + ".txt");
+        if (dossier != null && dossier.exists() && dossier.isDirectory()) {
+            File[] fichiers = dossier.listFiles();
+
+            if (fichiers != null) {
+                for (File fichier : fichiers) {
+                    if (!fichier.getName().equals(logFile)) {
+                        fichier.delete();
+                    }
+                }
+            }
+        }
+
         RestrictionsManager restrictionsManager = (RestrictionsManager) getSystemService(RESTRICTIONS_SERVICE);
         Bundle restrictions = restrictionsManager.getApplicationRestrictions();
         String mdmChoice = restrictions.getString("defaultEmergencyService", "Disabled");
+        Logger.write(this, "Récupération de la configuration MDM " + mdmChoice);
         if ("Pompier".equals(mdmChoice)) { // Si le choix mdm est pompier
             pompier();
         } else if ("Police".equals(mdmChoice)) { // Si le choix mdm est police

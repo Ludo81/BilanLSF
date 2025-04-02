@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.databinding.AccueilPoliceBinding;
 import com.sdis.secours.lsf.pompier.AccueilPompierActivity;
 import com.sdis.secours.lsf.pompier.ClavierPompierActivity;
@@ -20,6 +21,8 @@ public class AccueilPoliceActivity extends BasePoliceActivity {
         super.onCreate(savedInstanceState);
         accueilPoliceBinding = AccueilPoliceBinding.inflate(getLayoutInflater());
         setContentView(accueilPoliceBinding.getRoot());
+
+        Logger.write(this, "Chargement Accueil Police");
     }
 
     public void goToPompier(View v) {
