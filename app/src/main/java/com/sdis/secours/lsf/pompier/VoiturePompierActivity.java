@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
 
+import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.R;
 import com.sdis.secours.lsf.databinding.Voiture10Binding;
 import com.sdis.secours.lsf.databinding.Voiture5Binding;
@@ -24,9 +25,10 @@ public class VoiturePompierActivity extends BasePompierActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(Voiture5Binding.inflate(getLayoutInflater()).getRoot());
         container = findViewById(R.id.content);
+
+        Logger.write(this, "Chargement Voiture");
     }
 
     public void reduirePlaces(View view) {

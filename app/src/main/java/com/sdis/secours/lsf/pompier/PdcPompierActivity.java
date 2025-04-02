@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import androidx.core.text.HtmlCompat;
 
+import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.R;
 import com.sdis.secours.lsf.databinding.PdcBinding;
 
@@ -23,6 +24,8 @@ public class PdcPompierActivity extends BasePompierActivity {
         super.onCreate(savedInstanceState);
         pdcBinding = PdcBinding.inflate(getLayoutInflater());
         setContentView(pdcBinding.getRoot());
+
+        Logger.write(this, "Chargement PDC");
 
         try {
             InputStream is = getResources().getAssets().open("pdc.html");

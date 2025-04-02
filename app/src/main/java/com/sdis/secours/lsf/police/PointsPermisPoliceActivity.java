@@ -6,6 +6,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.R;
 import com.sdis.secours.lsf.databinding.PointsPermisBinding;
 
@@ -28,6 +29,8 @@ public class PointsPermisPoliceActivity extends BasePoliceActivity {
         super.onCreate(savedInstanceState);
         pointsPermisBinding = PointsPermisBinding.inflate(getLayoutInflater());
         setContentView(pointsPermisBinding.getRoot());
+
+        Logger.write(this, "Chargement Points Permis");
 
         pointsView = findViewById(R.id.points);
         permisView = findViewById(R.id.permis_conduire);

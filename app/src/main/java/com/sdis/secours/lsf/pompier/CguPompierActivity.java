@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import androidx.core.text.HtmlCompat;
 
+import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.R;
 import com.sdis.secours.lsf.databinding.CguBinding;
 
@@ -23,6 +24,8 @@ public class CguPompierActivity extends BasePompierActivity {
         super.onCreate(savedInstanceState);
         cguBinding = CguBinding.inflate(getLayoutInflater());
         setContentView(cguBinding.getRoot());
+
+        Logger.write(this, "Chargement CGU");
 
         try {
             InputStream is = getResources().getAssets().open("cgu.html");

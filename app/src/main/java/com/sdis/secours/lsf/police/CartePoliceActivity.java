@@ -10,6 +10,7 @@ import androidx.core.content.ContextCompat;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
+import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.R;
 import com.sdis.secours.lsf.databinding.CarteBinding;
 
@@ -38,6 +39,8 @@ public class CartePoliceActivity extends BasePoliceActivity {
         super.onCreate(savedInstanceState);
         carteBinding = CarteBinding.inflate(getLayoutInflater());
         setContentView(carteBinding.getRoot());
+
+        Logger.write(this, "Chargement Carte");
 
         String userAgent = "Secours LSF";
         Configuration.getInstance().setUserAgentValue(userAgent);

@@ -10,6 +10,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
+import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.R;
 import com.sdis.secours.lsf.databinding.ClavierAbcdefBinding;
 import com.sdis.secours.lsf.databinding.ClavierAzertyBinding;
@@ -27,6 +28,8 @@ public class ClavierPompierActivity extends BasePompierActivity {
         } else {
             setContentView(ClavierAbcdefBinding.inflate(getLayoutInflater()).getRoot());
         }
+
+        Logger.write(this, "Chargement Clavier");
     }
 
     public void inverser(View view) {

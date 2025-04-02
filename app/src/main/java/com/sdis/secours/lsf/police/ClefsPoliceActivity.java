@@ -9,6 +9,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.R;
 import com.sdis.secours.lsf.databinding.ClefsBinding;
 
@@ -74,6 +75,8 @@ public class ClefsPoliceActivity extends BasePoliceActivity {
         super.onCreate(savedInstanceState);
         clefsBinding = ClefsBinding.inflate(getLayoutInflater());
         setContentView(clefsBinding.getRoot());
+
+        Logger.write(this, "Chargement Clefs");
 
         maisonView = findViewById(R.id.maison);
         vehiculeView = findViewById(R.id.vehicule);

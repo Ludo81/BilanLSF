@@ -13,6 +13,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.R;
 import com.sdis.secours.lsf.databinding.PortefeuilleBinding;
 
@@ -86,6 +87,8 @@ public class PortefeuillePoliceActivity extends BasePoliceActivity {
         super.onCreate(savedInstanceState);
         portefeuilleBinding = PortefeuilleBinding.inflate(getLayoutInflater());
         setContentView(portefeuilleBinding.getRoot());
+
+        Logger.write(this, "Chargement Portefeuille");
 
         argentView = findViewById(R.id.argent);
 

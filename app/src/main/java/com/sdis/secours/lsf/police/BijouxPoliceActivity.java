@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.R;
 import com.sdis.secours.lsf.databinding.BijouxBinding;
 
@@ -30,6 +31,8 @@ public class BijouxPoliceActivity extends BasePoliceActivity {
         super.onCreate(savedInstanceState);
         bijouxBinding = BijouxBinding.inflate(getLayoutInflater());
         setContentView(bijouxBinding.getRoot());
+
+        Logger.write(this, "Chargement Bijoux");
 
         bagueView = findViewById(R.id.bague);
         collierView = findViewById(R.id.collier);

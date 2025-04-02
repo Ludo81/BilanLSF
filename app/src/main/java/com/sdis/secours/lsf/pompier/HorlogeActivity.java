@@ -5,6 +5,7 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.R;
 import com.sdis.secours.lsf.databinding.HorlogeBinding;
 
@@ -17,6 +18,8 @@ public class HorlogeActivity extends BasePompierActivity {
         super.onCreate(savedInstanceState);
         horlogeBinding = HorlogeBinding.inflate(getLayoutInflater());
         setContentView(horlogeBinding.getRoot());
+
+        Logger.write(this, "Chargement Horloge");
 
         SeekBar regle = findViewById(R.id.regle_horloge);
         ImageView aiguille_minutes = findViewById(R.id.aiguille_minutes);

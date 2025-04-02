@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.R;
 import com.sdis.secours.lsf.databinding.DocumentsBinding;
 
@@ -30,6 +31,8 @@ public class DocumentsPoliceActivity extends BasePoliceActivity {
         super.onCreate(savedInstanceState);
         documentsBinding = DocumentsBinding.inflate(getLayoutInflater());
         setContentView(documentsBinding.getRoot());
+
+        Logger.write(this, "Chargement Documents");
 
         carteIdentiteView = findViewById(R.id.carte_identite_elec);
         carteVitaleView = findViewById(R.id.carte_vitale);

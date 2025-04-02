@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 import androidx.core.text.HtmlCompat;
 
+import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.R;
 import com.sdis.secours.lsf.databinding.VersionBinding;
 
@@ -22,6 +23,8 @@ public class VersionPompierActivity extends BasePompierActivity {
         super.onCreate(savedInstanceState);
         versionBinding = VersionBinding.inflate(getLayoutInflater());
         setContentView(versionBinding.getRoot());
+
+        Logger.write(this, "Chargement Version");
 
         try {
             InputStream is = getResources().getAssets().open("releasenote.html");

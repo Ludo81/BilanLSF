@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.R;
 import com.sdis.secours.lsf.databinding.VitesseBinding;
 
@@ -19,6 +20,8 @@ public class VitessePompierActivity extends BasePompierActivity {
         super.onCreate(savedInstanceState);
         vitesseBinding = VitesseBinding.inflate(getLayoutInflater());
         setContentView(vitesseBinding.getRoot());
+
+        Logger.write(this, "Chargement Vitesse");
 
         SeekBar regle = findViewById(R.id.regle);
         ImageView aiguille = findViewById(R.id.aiguille);

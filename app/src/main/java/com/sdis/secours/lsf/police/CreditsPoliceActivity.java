@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import androidx.core.text.HtmlCompat;
 
+import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.R;
 import com.sdis.secours.lsf.databinding.CreditsBinding;
 
@@ -23,6 +24,8 @@ public class CreditsPoliceActivity extends BasePoliceActivity {
         super.onCreate(savedInstanceState);
         creditsBinding = CreditsBinding.inflate(getLayoutInflater());
         setContentView(creditsBinding.getRoot());
+
+        Logger.write(this, "Chargement Crédits");
 
         try {
             InputStream is = getResources().getAssets().open("credits.html");

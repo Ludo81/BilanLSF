@@ -7,6 +7,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Switch;
 
+import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.R;
 import com.sdis.secours.lsf.databinding.ParametresBinding;
 
@@ -23,6 +24,8 @@ public class ParametresPoliceActivity extends BasePoliceActivity {
         super.onCreate(savedInstanceState);
         parametresBinding = ParametresBinding.inflate(getLayoutInflater());
         setContentView(parametresBinding.getRoot());
+
+        Logger.write(this, "Chargement Paramètres");
 
         Switch clavierSwitch = findViewById(R.id.clavierSwitch);
 

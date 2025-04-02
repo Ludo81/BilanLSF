@@ -6,6 +6,7 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.R;
 import com.sdis.secours.lsf.databinding.MinuteurBinding;
 
@@ -25,6 +26,8 @@ public class MinuteurActivity extends BasePompierActivity {
         super.onCreate(savedInstanceState);
         minuteurBinding = MinuteurBinding.inflate(getLayoutInflater());
         setContentView(minuteurBinding.getRoot());
+
+        Logger.write(this, "Chargement Minuteur");
 
         SeekBar regleMinutes = findViewById(R.id.regle_minutes);
         SeekBar regleSecondes = findViewById(R.id.regle_secondes);

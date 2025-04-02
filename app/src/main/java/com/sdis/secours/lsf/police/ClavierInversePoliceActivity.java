@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.google.android.flexbox.FlexboxLayout;
+import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.R;
 import com.sdis.secours.lsf.databinding.ClavierInverseBinding;
 
@@ -21,6 +22,8 @@ public class ClavierInversePoliceActivity extends BasePoliceActivity {
         super.onCreate(savedInstanceState);
         clavierInverseBinding = ClavierInverseBinding.inflate(getLayoutInflater());
         setContentView(clavierInverseBinding.getRoot());
+
+        Logger.write(this, "Chargement Clavier inverse");
 
         EditText editTextInput = findViewById(R.id.editTextInput);
         FlexboxLayout imageContainer = findViewById(R.id.imageContainer);

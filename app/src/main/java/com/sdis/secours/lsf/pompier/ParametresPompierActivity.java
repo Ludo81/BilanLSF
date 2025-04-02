@@ -7,6 +7,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Switch;
 
+import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.R;
 import com.sdis.secours.lsf.databinding.ParametresBinding;
 
@@ -23,6 +24,8 @@ public class ParametresPompierActivity extends BasePompierActivity {
         super.onCreate(savedInstanceState);
         parametresBinding = ParametresBinding.inflate(getLayoutInflater());
         setContentView(parametresBinding.getRoot());
+
+        Logger.write(this, "Chargement Paramètres");
 
         Switch clavierSwitch = findViewById(R.id.clavierSwitch);
 
@@ -47,6 +50,7 @@ public class ParametresPompierActivity extends BasePompierActivity {
         RestrictionsManager restrictionsManager = (RestrictionsManager) getSystemService(RESTRICTIONS_SERVICE);
         Bundle restrictions = restrictionsManager.getApplicationRestrictions();
         String mdmChoice = restrictions.getString("defaultEmergencyService", "Disabled");
+        Logger.write(this, "Récupération de la configuration MDM " + mdmChoice);
         if ("Pompier".equals(mdmChoice)) { // Si pompier selectionné depuis le MDM
             pompierButton.setChecked(true);
             policeButton.setChecked(false);

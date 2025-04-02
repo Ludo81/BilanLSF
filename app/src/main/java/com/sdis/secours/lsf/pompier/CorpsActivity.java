@@ -11,6 +11,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 
+import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.R;
 import com.sdis.secours.lsf.databinding.CorpsBinding;
 
@@ -40,6 +41,8 @@ public class CorpsActivity extends BasePompierActivity {
         super.onCreate(savedInstanceState);
         corpsBinding = CorpsBinding.inflate(getLayoutInflater());
         setContentView(corpsBinding.getRoot());
+
+        Logger.write(this, "Chargement Corps");
 
         undoButton = findViewById(R.id.undo);
         redoButton = findViewById(R.id.redo);

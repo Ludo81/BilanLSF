@@ -7,6 +7,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.sdis.secours.lsf.DessinView;
+import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.R;
 import com.sdis.secours.lsf.databinding.DessinBinding;
 
@@ -32,6 +33,8 @@ public class DessinPompierActivity extends BasePompierActivity implements Dessin
         super.onCreate(savedInstanceState);
         dessinBinding = DessinBinding.inflate(getLayoutInflater());
         setContentView(dessinBinding.getRoot());
+
+        Logger.write(this, "Chargement Dessin");
 
         DessinView dessinView = findViewById(R.id.dessinView);
 

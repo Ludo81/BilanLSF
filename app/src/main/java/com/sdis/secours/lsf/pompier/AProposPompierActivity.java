@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.R;
 import com.sdis.secours.lsf.databinding.AProposBinding;
 
@@ -19,6 +20,8 @@ public class AProposPompierActivity extends BasePompierActivity {
         super.onCreate(savedInstanceState);
         aProposBinding = AProposBinding.inflate(getLayoutInflater());
         setContentView(aProposBinding.getRoot());
+
+        Logger.write(this, "Chargement A Propos");
 
         Button versionTextView = findViewById(R.id.version);
         try {

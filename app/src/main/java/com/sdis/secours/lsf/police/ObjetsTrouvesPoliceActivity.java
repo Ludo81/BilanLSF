@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.databinding.ObjetsTrouvesBinding;
 
 public class ObjetsTrouvesPoliceActivity extends BasePoliceActivity {
@@ -15,6 +16,8 @@ public class ObjetsTrouvesPoliceActivity extends BasePoliceActivity {
         super.onCreate(savedInstanceState);
         objetsTrouvesBinding = ObjetsTrouvesBinding.inflate(getLayoutInflater());
         setContentView(objetsTrouvesBinding.getRoot());
+
+        Logger.write(this, "Chargement Objets trouves");
     }
 
     public void goToBijoux(View view) {

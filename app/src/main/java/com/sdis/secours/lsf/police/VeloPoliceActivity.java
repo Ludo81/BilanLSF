@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.widget.ImageView;
 
+import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.R;
 import com.sdis.secours.lsf.databinding.VeloBinding;
 
@@ -25,6 +26,8 @@ public class VeloPoliceActivity extends BasePoliceActivity {
         super.onCreate(savedInstanceState);
         veloBinding = VeloBinding.inflate(getLayoutInflater());
         setContentView(veloBinding.getRoot());
+
+        Logger.write(this, "Chargement Velo");
 
         veloView = findViewById(R.id.velo);
 

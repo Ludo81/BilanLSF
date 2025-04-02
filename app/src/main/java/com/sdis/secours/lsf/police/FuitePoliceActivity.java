@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.R;
 import com.sdis.secours.lsf.databinding.FuiteBinding;
 
@@ -40,6 +41,8 @@ public class FuitePoliceActivity extends BasePoliceActivity {
         super.onCreate(savedInstanceState);
         fuiteBinding = FuiteBinding.inflate(getLayoutInflater());
         setContentView(fuiteBinding.getRoot());
+
+        Logger.write(this, "Chargement Fuite");
 
         vehiculeView = findViewById(R.id.vehicule);
 

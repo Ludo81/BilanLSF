@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.R;
 import com.sdis.secours.lsf.databinding.VetementsBinding;
 
@@ -36,6 +37,8 @@ public class VetementsPoliceActivity extends BasePoliceActivity {
         super.onCreate(savedInstanceState);
         vetementsBinding = VetementsBinding.inflate(getLayoutInflater());
         setContentView(vetementsBinding.getRoot());
+
+        Logger.write(this, "Chargement Vetements");
 
         vetementView = findViewById(R.id.vetement);
 

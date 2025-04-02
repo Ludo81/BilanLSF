@@ -13,6 +13,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.R;
 import com.sdis.secours.lsf.databinding.TelephoneBinding;
 
@@ -68,6 +69,8 @@ public class TelephonePoliceActivity extends BasePoliceActivity {
         super.onCreate(savedInstanceState);
         telephoneBinding = TelephoneBinding.inflate(getLayoutInflater());
         setContentView(telephoneBinding.getRoot());
+
+        Logger.write(this, "Chargement Telephone");
 
         objetView = findViewById(R.id.objet);
 

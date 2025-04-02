@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.R;
 import com.sdis.secours.lsf.databinding.DescriptionPhyisiqueCorpsABinding;
 import com.sdis.secours.lsf.databinding.DescriptionPhyisiqueCorpsBBinding;
@@ -146,9 +147,10 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(DescriptionPhyisiqueCorpsABinding.inflate(getLayoutInflater()).getRoot());
         container = findViewById(R.id.content);
+
+        Logger.write(this, "Chargement Description Physique");
 
         corpsHommeView = findViewById(R.id.corps_homme);
         corpsFemmeView = findViewById(R.id.corps_femme);

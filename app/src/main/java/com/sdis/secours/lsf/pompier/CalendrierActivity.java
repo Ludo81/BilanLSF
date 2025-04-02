@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.TableLayout;
 import android.widget.TextView;
 
+import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.R;
 import com.sdis.secours.lsf.databinding.CalendrierBinding;
 
@@ -30,6 +31,8 @@ public class CalendrierActivity extends BasePompierActivity {
         super.onCreate(savedInstanceState);
         calendrierBinding = CalendrierBinding.inflate(getLayoutInflater());
         setContentView(calendrierBinding.getRoot());
+
+        Logger.write(this, "Chargement Calendrier");
 
         calendrier = Calendar.getInstance();
         calendrier.setTime(new Date());

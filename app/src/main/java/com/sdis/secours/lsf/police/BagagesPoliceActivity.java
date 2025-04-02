@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.R;
 import com.sdis.secours.lsf.databinding.BagagesBinding;
 
@@ -35,6 +36,8 @@ public class BagagesPoliceActivity extends BasePoliceActivity {
         super.onCreate(savedInstanceState);
         bagagesBinding = BagagesBinding.inflate(getLayoutInflater());
         setContentView(bagagesBinding.getRoot());
+
+        Logger.write(this, "Chargement Bagages");
 
         bagageView = findViewById(R.id.bagage);
 
