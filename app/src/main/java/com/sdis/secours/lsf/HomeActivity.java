@@ -35,7 +35,7 @@ public class HomeActivity extends ComponentActivity {
 
             if (fichiers != null) {
                 for (File fichier : fichiers) {
-                    if (!fichier.getName().equals(logFile)) {
+                    if (!fichier.getName().equals(logFile.getName())) {
                         fichier.delete();
                     }
                 }
