@@ -9,7 +9,7 @@ import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.R;
 import com.sdis.secours.lsf.databinding.HorlogeBinding;
 
-public class HorlogeActivity extends BasePompierActivity {
+public class HorlogePompierActivity extends BasePompierActivity {
 
     HorlogeBinding horlogeBinding;
 

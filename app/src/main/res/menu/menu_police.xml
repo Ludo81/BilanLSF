@@ -29,6 +29,10 @@
         android:icon="@drawable/description_physique_icon"
         android:title="@string/description_physique" />
     <item
+        android:id="@+id/nav_horloge"
+        android:icon="@drawable/horloge_icon"
+        android:title="@string/horloge" />
+    <item
         android:id="@+id/nav_vitesse"
         android:icon="@drawable/vitesse_icon"
         android:title="@string/vitesse" />

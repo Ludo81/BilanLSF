@@ -162,8 +162,8 @@ public abstract class BasePompierActivity extends AppCompatActivity implements N
                 }
                 break;
             case R.id.nav_horloge:
-                if (!(this instanceof HorlogeActivity)) {
-                    intent = new Intent(BasePompierActivity.this, HorlogeActivity.class);
+                if (!(this instanceof HorlogePompierActivity)) {
+                    intent = new Intent(BasePompierActivity.this, HorlogePompierActivity.class);
                 }
                 break;
             case R.id.nav_vitesse:

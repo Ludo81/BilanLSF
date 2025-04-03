@@ -36,6 +36,12 @@
             android:text="@string/description_vestimentaire"
             android:onClick="goToVetements" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/synthese"
+            android:onClick="goToSynthese" />
+
     </LinearLayout>
 
     <LinearLayout

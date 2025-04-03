@@ -23,9 +23,11 @@ import com.sdis.secours.lsf.databinding.DescriptionPhyisiqueCorpsBBinding;
 import com.sdis.secours.lsf.databinding.DescriptionPhyisiqueCorpsCBinding;
 import com.sdis.secours.lsf.databinding.DescriptionPhyisiqueCorpsDBinding;
 import com.sdis.secours.lsf.databinding.DescriptionPhysiqueDetailsVisageBinding;
+import com.sdis.secours.lsf.databinding.DescriptionPhysiqueSyntheseBinding;
 import com.sdis.secours.lsf.databinding.DescriptionPhysiqueVetementsBinding;
 import com.sdis.secours.lsf.databinding.DescriptionPhysiqueVisageBinding;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
@@ -143,6 +145,10 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
     private final List<Integer> listeBas = List.of(R.drawable.bas_1, R.drawable.bas_2, R.drawable.bas_3, R.drawable.bas_4);
 
     private final List<Integer> listeChaussures = List.of(R.drawable.chaussures_1, R.drawable.chaussures_2, R.drawable.chaussures_3);
+
+    private int couleurHaut = Color.WHITE;
+    private int couleurBas = Color.WHITE;
+    private int couleurChaussures = Color.WHITE;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -299,6 +305,11 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
         boucheView = findViewById(R.id.bouche);
         barbeView = findViewById(R.id.barbe);
 
+        cheveuxView.setColorFilter(couleurCheveux, PorterDuff.Mode.MULTIPLY);
+        yeuxView.setColorFilter(couleurYeux, PorterDuff.Mode.MULTIPLY);
+        moustacheView.setColorFilter(couleurMoustache, PorterDuff.Mode.MULTIPLY);
+        barbeView.setColorFilter(couleurBarbe, PorterDuff.Mode.MULTIPLY);
+
         if (isFemme) {
             cheveuxView.setImageResource(listeCheveuxFemme.get(cheveuxSelected));
             yeuxView.setImageResource(listeYeuxFemme.get(yeuxSelected));
@@ -370,6 +381,10 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
         basView = findViewById(R.id.bas);
         chaussuresView = findViewById(R.id.chaussures);
 
+        hautView.setColorFilter(couleurHaut, PorterDuff.Mode.MULTIPLY);
+        basView.setColorFilter(couleurBas, PorterDuff.Mode.MULTIPLY);
+        chaussuresView.setColorFilter(couleurChaussures, PorterDuff.Mode.MULTIPLY);
+
         couleurHautView = findViewById(R.id.couleur_haut);
         couleurBasView = findViewById(R.id.couleur_bas);
         couleurChaussuresView = findViewById(R.id.couleur_chaussures);
@@ -392,14 +407,13 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
                 int imageX = (int) ((float) viewX * ((float) imageWidth / (float) viewWidth));
                 int imageY = (int) ((float) viewY * ((float) imageHeight / (float) viewHeight));
 
-                int color = Color.WHITE;
                 try {
-                    color = image.getPixel(imageX, imageY);
+                    couleurHaut = image.getPixel(imageX, imageY);
                 } catch (Exception e) {
 
                 }
 
-                hautView.setColorFilter(color, PorterDuff.Mode.MULTIPLY);
+                hautView.setColorFilter(couleurHaut, PorterDuff.Mode.MULTIPLY);
             }
             return true;
         });
@@ -422,14 +436,13 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
                 int imageX = (int) ((float) viewX * ((float) imageWidth / (float) viewWidth));
                 int imageY = (int) ((float) viewY * ((float) imageHeight / (float) viewHeight));
 
-                int color = Color.WHITE;
                 try {
-                    color = image.getPixel(imageX, imageY);
+                    couleurBas = image.getPixel(imageX, imageY);
                 } catch (Exception e) {
 
                 }
 
-                basView.setColorFilter(color, PorterDuff.Mode.MULTIPLY);
+                basView.setColorFilter(couleurBas, PorterDuff.Mode.MULTIPLY);
             }
             return true;
         });
@@ -452,17 +465,128 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
                 int imageX = (int) ((float) viewX * ((float) imageWidth / (float) viewWidth));
                 int imageY = (int) ((float) viewY * ((float) imageHeight / (float) viewHeight));
 
-                int color = Color.WHITE;
                 try {
-                    color = image.getPixel(imageX, imageY);
+                    couleurChaussures = image.getPixel(imageX, imageY);
                 } catch (Exception e) {
 
                 }
 
-                chaussuresView.setColorFilter(color, PorterDuff.Mode.MULTIPLY);
+                chaussuresView.setColorFilter(couleurChaussures, PorterDuff.Mode.MULTIPLY);
             }
             return true;
         });
+    }
+
+    public void goToSynthese(View v) {
+        container.removeAllViews();
+        container.addView(DescriptionPhysiqueSyntheseBinding.inflate(getLayoutInflater()).getRoot());
+
+        TextView sexeTexteView = findViewById(R.id.sexeTexte);
+        if (isFemme) {
+            sexeTexteView.setText("FEMININ");
+        } else {
+            sexeTexteView.setText("MASCULIN");
+        }
+
+        Button couleurView = findViewById(R.id.couleurSynthese);
+        couleurView.setBackgroundColor(couleurPeau);
+
+        TextView tailleTexteView = findViewById(R.id.tailleTexte);
+        tailleTexteView.setText(taille + 60 + " cm");
+
+        TextView corpulenceTexteView = findViewById(R.id.corpulenceTexte);
+        corpulenceTexteView.setText(corpulence.name());
+
+        ImageView visageViewSynthese = findViewById(R.id.visageSynthese);
+        ImageView cheveuxSyntheseView = findViewById(R.id.cheveuxSynthese);
+        ImageView yeuxSyntheseView = findViewById(R.id.yeuxSynthese);
+        ImageView nezSyntheseView = findViewById(R.id.nezSynthese);
+        ImageView moustacheSyntheseView = findViewById(R.id.moustacheSynthese);
+        ImageView boucheSyntheseView = findViewById(R.id.boucheSynthese);
+        ImageView barbeSyntheseView = findViewById(R.id.barbeSynthese);
+
+        cheveuxSyntheseView.setColorFilter(couleurCheveux, PorterDuff.Mode.MULTIPLY);
+        yeuxSyntheseView.setColorFilter(couleurYeux, PorterDuff.Mode.MULTIPLY);
+        moustacheSyntheseView.setColorFilter(couleurMoustache, PorterDuff.Mode.MULTIPLY);
+        barbeSyntheseView.setColorFilter(couleurBarbe, PorterDuff.Mode.MULTIPLY);
+
+        if (isFemme) {
+            cheveuxSyntheseView.setImageResource(listeCheveuxFemme.get(cheveuxSelected));
+            yeuxSyntheseView.setImageResource(listeYeuxFemme.get(yeuxSelected));
+            moustacheSyntheseView.setImageResource(0);
+            barbeSyntheseView.setImageResource(0);
+        } else {
+            cheveuxSyntheseView.setImageResource(listeCheveuxHomme.get(cheveuxSelected));
+            yeuxSyntheseView.setImageResource(listeYeuxHomme.get(yeuxSelected));
+            moustacheSyntheseView.setImageResource(listeMoustaches.get(moustacheSelected));
+            barbeSyntheseView.setImageResource(listeBarbes.get(barbeSelected));
+        }
+        visageViewSynthese.setImageResource(listeVisages.get(visageSelected));
+        nezSyntheseView.setImageResource(listeNez.get(nezSelected));
+        boucheSyntheseView.setImageResource(listeBouches.get(boucheSelected));
+
+        TextView detailsVisageTexteView = findViewById(R.id.detailsVisageTexte);
+        StringBuilder detailsVisageTexte = new StringBuilder("La personne ");
+        List<String> accessoires = new ArrayList<>();
+
+        if (isDetail1Selected) {
+            accessoires.add("un écarteur");
+        }
+        if (isDetail2Selected) {
+            accessoires.add("des boucles d'oreilles");
+        }
+        if (isDetail3Selected) {
+            accessoires.add("un tatouage");
+        }
+        if (isDetail4Selected) {
+            accessoires.add("un piercing sur la lèvre");
+        }
+        if (isDetail5Selected) {
+            accessoires.add("un piercing bridge sur le nez");
+        }
+        if (isDetail6Selected) {
+            accessoires.add("un piercing sur le nez");
+        }
+        if (isDetail7Selected) {
+            accessoires.add("une boucle sur le nez");
+        }
+        if (isDetail8Selected) {
+            accessoires.add("un piercing septum");
+        }
+        if (isLunettesSelected) {
+            accessoires.add("des lunettes");
+        }
+        if (isCagouleSelected) {
+            accessoires.add("une cagoule");
+        }
+
+        if (accessoires.isEmpty()) {
+            detailsVisageTexte.append("ne porte aucun accessoire.");
+        } else {
+            detailsVisageTexte.append("porte ");
+            detailsVisageTexte.append(String.join(", ", accessoires));
+
+            int lastCommaIndex = detailsVisageTexte.lastIndexOf(",");
+            if (lastCommaIndex != -1 && accessoires.size() > 1) {
+                detailsVisageTexte.replace(lastCommaIndex, lastCommaIndex + 1, " et");
+            }
+
+            detailsVisageTexte.append(".");
+        }
+
+        detailsVisageTexteView.setText(detailsVisageTexte.toString());
+
+        ImageView hautSyntheseView = findViewById(R.id.hautSynthese);
+        hautSyntheseView.setImageResource(listeHaut.get(hautSelected));
+        hautSyntheseView.setColorFilter(couleurHaut, PorterDuff.Mode.MULTIPLY);
+
+        ImageView basSyntheseView = findViewById(R.id.basSynthese);
+        basSyntheseView.setImageResource(listeBas.get(basSelected));
+        basSyntheseView.setColorFilter(couleurBas, PorterDuff.Mode.MULTIPLY);
+
+        ImageView chaussuresSyntheseView = findViewById(R.id.chaussuresSynthese);
+        chaussuresSyntheseView.setImageResource(listeChaussures.get(chaussuresSelected));
+        chaussuresSyntheseView.setColorFilter(couleurChaussures, PorterDuff.Mode.MULTIPLY);
     }
 
     public void selectHomme(View v) {

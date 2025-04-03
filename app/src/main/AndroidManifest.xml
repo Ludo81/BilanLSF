@@ -125,9 +125,17 @@
             android:screenOrientation="landscape" />
 
         <activity
-            android:name=".pompier.HorlogeActivity"
+            android:name=".pompier.HorlogePompierActivity"
             android:exported="false"
-            android:label="HorlogeActivity"
+            android:label="HorlogePompierActivity"
+            android:theme="@style/Theme.SecoursLSF"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".police.HorlogePoliceActivity"
+            android:exported="false"
+            android:label="HorlogePoliceActivity"
             android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />

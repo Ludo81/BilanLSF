@@ -63,7 +63,7 @@ public class VideoPompierActivity extends BasePompierActivity {
             params.gravity = Gravity.TOP | Gravity.CENTER_HORIZONTAL;
 
             boutonHorloge.setOnClickListener(v -> {
-                Intent intent = new Intent(VideoPompierActivity.this, HorlogeActivity.class);
+                Intent intent = new Intent(VideoPompierActivity.this, HorlogePompierActivity.class);
                 startActivity(intent);
             });
 

@@ -188,4 +188,5 @@
     <string name="couleurselectionnee">couleurSelectionnee</string>
     <string name="default_emergency_service">Default Emergency Service</string>
     <string name="service_par_defaut">Service par défaut</string>
+    <string name="synthese">synthèse</string>
 </resources>
