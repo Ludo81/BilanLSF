@@ -60,6 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@null"
+                android:contentDescription="@string/precedent"
                 android:src="@drawable/precedent"
                 android:scaleType="fitCenter"
                 android:onClick="hautPrecedent" />
@@ -78,6 +79,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@null"
+                android:contentDescription="@string/suivant"
                 android:src="@drawable/suivant"
                 android:scaleType="fitCenter"
                 android:onClick="hautSuivant" />
@@ -87,6 +89,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
+                android:contentDescription="@string/colorpicker"
                 android:scaleType="fitXY"
                 android:background="@drawable/border2"
                 android:src="@drawable/color_picker" />
@@ -103,6 +106,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@null"
+                android:contentDescription="@string/precedent"
                 android:src="@drawable/precedent"
                 android:scaleType="fitCenter"
                 android:onClick="basPrecedent" />
@@ -121,6 +125,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@null"
+                android:contentDescription="@string/suivant"
                 android:src="@drawable/suivant"
                 android:scaleType="fitCenter"
                 android:onClick="basSuivant" />
@@ -130,6 +135,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
+                android:contentDescription="@string/colorpicker"
                 android:scaleType="fitXY"
                 android:background="@drawable/border2"
                 android:src="@drawable/color_picker" />
@@ -146,6 +152,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@null"
+                android:contentDescription="@string/precedent"
                 android:src="@drawable/precedent"
                 android:scaleType="fitCenter"
                 android:onClick="chaussuresPrecedentes" />
@@ -164,6 +171,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@null"
+                android:contentDescription="@string/suivant"
                 android:src="@drawable/suivant"
                 android:scaleType="fitCenter"
                 android:onClick="chaussuresSuivantes" />
@@ -173,6 +181,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
+                android:contentDescription="@string/colorpicker"
                 android:scaleType="fitXY"
                 android:background="@drawable/border2"
                 android:src="@drawable/color_picker" />

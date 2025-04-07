@@ -189,4 +189,13 @@
     <string name="default_emergency_service">Default Emergency Service</string>
     <string name="service_par_defaut">Service par défaut</string>
     <string name="synthese">synthèse</string>
+    <string name="corps_homme">corps homme</string>
+    <string name="corps_femme">corps femme</string>
+    <string name="visage">visage</string>
+    <string name="cheveux">cheveux</string>
+    <string name="yeux">yeux</string>
+    <string name="nez">nez</string>
+    <string name="moustache">moustache</string>
+    <string name="bouche">bouche</string>
+    <string name="barbe">barbe</string>
 </resources>

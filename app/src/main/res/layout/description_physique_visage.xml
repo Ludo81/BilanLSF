@@ -62,6 +62,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:background="@null"
+                android:contentDescription="@string/visage"
                 android:src="@drawable/forme_1" />
 
             <ImageView
@@ -70,6 +71,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:background="@null"
+                android:contentDescription="@string/cheveux"
                 android:src="@drawable/cheveux_homme_1" />
 
             <ImageView
@@ -78,6 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:background="@null"
+                android:contentDescription="@string/yeux"
                 android:src="@drawable/yeux_homme_1" />
 
             <ImageView
@@ -86,6 +89,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:background="@null"
+                android:contentDescription="@string/nez"
                 android:src="@drawable/nez_1" />
 
             <ImageView
@@ -93,7 +97,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:background="@null" />
+                android:background="@null"
+                android:contentDescription="@string/moustache" />
 
             <ImageView
                 android:id="@+id/bouche"
@@ -101,6 +106,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:background="@null"
+                android:contentDescription="@string/bouche"
                 android:src="@drawable/bouche_1" />
 
             <ImageView
@@ -108,7 +114,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:background="@null" />
+                android:background="@null"
+                android:contentDescription="@string/barbe" />
 
         </RelativeLayout>
 
@@ -124,6 +131,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@null"
+                    android:contentDescription="@string/colorpicker"
                     android:src="@drawable/color_picker"
                     android:scaleType="fitCenter"
                     android:onClick="openColorCheveux" />
@@ -133,6 +141,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@null"
+                    android:contentDescription="@string/precedent"
                     android:src="@drawable/precedent"
                     android:scaleType="fitCenter"
                     android:onClick="cheveuxPrecedent" />
@@ -143,6 +152,7 @@
                     android:layout_weight="1"
                     android:layout_gravity="center"
                     android:background="@null"
+                    android:contentDescription="@string/cheveux"
                     android:src="@drawable/cheveux" />
 
                 <ImageButton
@@ -150,6 +160,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@null"
+                    android:contentDescription="@string/suivant"
                     android:src="@drawable/suivant"
                     android:scaleType="fitCenter"
                     android:onClick="cheveuxSuivant" />
@@ -162,13 +173,15 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@null" />
+                    android:background="@null"
+                    android:contentDescription="@string/vide" />
 
                 <ImageButton
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@null"
+                    android:contentDescription="@string/precedent"
                     android:src="@drawable/precedent"
                     android:scaleType="fitCenter"
                     android:onClick="visagePrecedent" />
@@ -179,6 +192,7 @@
                     android:layout_weight="1"
                     android:layout_gravity="center"
                     android:background="@null"
+                    android:contentDescription="@string/visage"
                     android:src="@drawable/visage" />
 
                 <ImageButton
@@ -186,6 +200,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@null"
+                    android:contentDescription="@string/suivant"
                     android:src="@drawable/suivant"
                     android:scaleType="fitCenter"
                     android:onClick="visageSuivant" />
@@ -199,6 +214,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@null"
+                    android:contentDescription="@string/colorpicker"
                     android:src="@drawable/color_picker"
                     android:scaleType="fitCenter"
                     android:onClick="openColorYeux" />
@@ -208,6 +224,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@null"
+                    android:contentDescription="@string/precedent"
                     android:src="@drawable/precedent"
                     android:scaleType="fitCenter"
                     android:onClick="yeuxPrecedent" />
@@ -218,6 +235,7 @@
                     android:layout_weight="1"
                     android:layout_gravity="center"
                     android:background="@null"
+                    android:contentDescription="@string/yeux"
                     android:src="@drawable/oeil" />
 
                 <ImageButton
@@ -225,6 +243,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@null"
+                    android:contentDescription="@string/suivant"
                     android:src="@drawable/suivant"
                     android:scaleType="fitCenter"
                     android:onClick="yeuxSuivant" />
@@ -237,13 +256,15 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@null" />
+                    android:background="@null"
+                    android:contentDescription="@string/vide" />
 
                 <ImageButton
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@null"
+                    android:contentDescription="@string/precedent"
                     android:src="@drawable/precedent"
                     android:scaleType="fitCenter"
                     android:onClick="nezPrecedent" />
@@ -254,6 +275,7 @@
                     android:layout_weight="1"
                     android:layout_gravity="center"
                     android:background="@null"
+                    android:contentDescription="@string/nez"
                     android:src="@drawable/nez" />
 
                 <ImageButton
@@ -261,6 +283,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@null"
+                    android:contentDescription="@string/suivant"
                     android:src="@drawable/suivant"
                     android:scaleType="fitCenter"
                     android:onClick="nezSuivant" />
@@ -274,6 +297,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@null"
+                    android:contentDescription="@string/colorpicker"
                     android:src="@drawable/color_picker"
                     android:scaleType="fitCenter"
                     android:onClick="openColorMoustache" />
@@ -283,6 +307,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@null"
+                    android:contentDescription="@string/precedent"
                     android:src="@drawable/precedent"
                     android:scaleType="fitCenter"
                     android:onClick="moustachePrecedente" />
@@ -293,6 +318,7 @@
                     android:layout_weight="1"
                     android:layout_gravity="center"
                     android:background="@null"
+                    android:contentDescription="@string/moustache"
                     android:src="@drawable/moustache" />
 
                 <ImageButton
@@ -300,6 +326,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@null"
+                    android:contentDescription="@string/suivant"
                     android:src="@drawable/suivant"
                     android:scaleType="fitCenter"
                     android:onClick="moustacheSuivante" />
@@ -312,13 +339,15 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@null" />
+                    android:background="@null"
+                    android:contentDescription="@string/vide" />
 
                 <ImageButton
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@null"
+                    android:contentDescription="@string/precedent"
                     android:src="@drawable/precedent"
                     android:scaleType="fitCenter"
                     android:onClick="bouchePredecente" />
@@ -329,6 +358,7 @@
                     android:layout_weight="1"
                     android:layout_gravity="center"
                     android:background="@null"
+                    android:contentDescription="@string/bouche"
                     android:src="@drawable/bouche" />
 
                 <ImageButton
@@ -336,6 +366,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@null"
+                    android:contentDescription="@string/suivant"
                     android:src="@drawable/suivant"
                     android:scaleType="fitCenter"
                     android:onClick="boucheSuivante" />
@@ -349,6 +380,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@null"
+                    android:contentDescription="@string/colorpicker"
                     android:src="@drawable/color_picker"
                     android:scaleType="fitCenter"
                     android:onClick="openColorBarbe" />
@@ -358,6 +390,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@null"
+                    android:contentDescription="@string/precedent"
                     android:src="@drawable/precedent"
                     android:scaleType="fitCenter"
                     android:onClick="barbePrecedente" />
@@ -368,6 +401,7 @@
                     android:layout_weight="1"
                     android:layout_gravity="center"
                     android:background="@null"
+                    android:contentDescription="@string/barbe"
                     android:src="@drawable/barbe" />
 
                 <ImageButton
@@ -375,6 +409,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@null"
+                    android:contentDescription="@string/suivant"
                     android:src="@drawable/suivant"
                     android:scaleType="fitCenter"
                     android:onClick="barbeSuivante" />

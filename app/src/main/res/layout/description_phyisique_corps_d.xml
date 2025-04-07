@@ -86,6 +86,7 @@
         android:layout_toEndOf="@id/menu_gauche"
         android:layout_below="@id/menu_haut"
         android:background="@null"
+        android:contentDescription="@string/precedent"
         android:src="@drawable/precedent"
         android:scaleType="fitCenter"
         android:onClick="goToTaille" />

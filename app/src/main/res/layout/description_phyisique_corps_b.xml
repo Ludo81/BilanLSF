@@ -86,6 +86,7 @@
         android:layout_alignParentEnd="true"
         android:layout_below="@id/menu_haut"
         android:background="@null"
+        android:contentDescription="@string/suivant"
         android:src="@drawable/suivant"
         android:scaleType="fitCenter"
         android:onClick="goToTaille" />
@@ -97,6 +98,7 @@
         android:layout_toEndOf="@id/menu_gauche"
         android:layout_below="@id/menu_haut"
         android:background="@null"
+        android:contentDescription="@string/precedent"
         android:src="@drawable/precedent"
         android:scaleType="fitCenter"
         android:onClick="goToSexe" />
@@ -118,6 +120,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:contentDescription="@string/corps"
                 android:src="@drawable/homme_normal"
                 android:scaleType="fitCenter" />
 
