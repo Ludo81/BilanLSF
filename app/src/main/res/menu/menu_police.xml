@@ -9,6 +9,10 @@
         android:icon="@drawable/clavier_icon"
         android:title="@string/clavier" />
     <item
+        android:id="@+id/nav_calendrier"
+        android:icon="@drawable/calendrier_icon"
+        android:title="@string/calendrier" />
+    <item
         android:id="@+id/nav_dessin"
         android:icon="@drawable/dessin_icon"
         android:title="@string/dessin" />

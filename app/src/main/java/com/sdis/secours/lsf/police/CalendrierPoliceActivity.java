@@ -1,4 +1,4 @@
-package com.sdis.secours.lsf.pompier;
+package com.sdis.secours.lsf.police;
 
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -17,7 +17,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
-public class CalendrierActivity extends BasePompierActivity {
+public class CalendrierPoliceActivity extends BasePoliceActivity {
 
     CalendrierBinding calendrierBinding;
 

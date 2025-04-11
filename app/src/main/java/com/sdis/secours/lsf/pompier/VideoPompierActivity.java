@@ -94,7 +94,7 @@ public class VideoPompierActivity extends BasePompierActivity {
             params.gravity = Gravity.TOP | Gravity.CENTER_HORIZONTAL;
 
             boutonCalendrier.setOnClickListener(v -> {
-                Intent intent = new Intent(VideoPompierActivity.this, CalendrierActivity.class);
+                Intent intent = new Intent(VideoPompierActivity.this, CalendrierPompierActivity.class);
                 startActivity(intent);
             });
 

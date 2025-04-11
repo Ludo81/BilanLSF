@@ -147,8 +147,8 @@ public abstract class BasePompierActivity extends AppCompatActivity implements N
                 }
                 break;
             case R.id.nav_calendrier:
-                if (!(this instanceof CalendrierActivity)) {
-                    intent = new Intent(BasePompierActivity.this, CalendrierActivity.class);
+                if (!(this instanceof CalendrierPompierActivity)) {
+                    intent = new Intent(BasePompierActivity.this, CalendrierPompierActivity.class);
                 }
                 break;
             case R.id.nav_dessin:

@@ -149,9 +149,17 @@
             android:screenOrientation="landscape" />
 
         <activity
-            android:name=".pompier.CalendrierActivity"
+            android:name=".pompier.CalendrierPompierActivity"
             android:exported="false"
-            android:label="CalendrierActivity"
+            android:label="CalendrierPompierActivity"
+            android:theme="@style/Theme.SecoursLSF"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".police.CalendrierPoliceActivity"
+            android:exported="false"
+            android:label="CalendrierPoliceActivity"
             android:theme="@style/Theme.SecoursLSF"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape" />
