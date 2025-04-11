@@ -138,6 +138,45 @@
 
             </LinearLayout>
 
+            <TextView
+                android:id="@+id/detailsVisageTexte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/hautSynthese"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:id="@+id/basSynthese"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:id="@+id/chaussuresSynthese"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
@@ -199,44 +238,6 @@
                     android:background="@null" />
 
             </RelativeLayout>
-
-            <TextView
-                android:id="@+id/detailsVisageTexte"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="30sp"
-                android:textAlignment="center"
-                android:textColor="@color/black" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:id="@+id/hautSynthese"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@null"
-                    android:layout_gravity="center" />
-
-                <ImageView
-                    android:id="@+id/basSynthese"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@null"
-                    android:layout_gravity="center" />
-
-                <ImageView
-                    android:id="@+id/chaussuresSynthese"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@null"
-                    android:layout_gravity="center" />
-
-            </LinearLayout>
 
         </LinearLayout>
 
