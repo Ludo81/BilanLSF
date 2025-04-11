@@ -45,7 +45,7 @@ public class HomeActivity extends ComponentActivity {
         RestrictionsManager restrictionsManager = (RestrictionsManager) getSystemService(RESTRICTIONS_SERVICE);
         Bundle restrictions = restrictionsManager.getApplicationRestrictions();
         String mdmChoice = restrictions.getString("defaultEmergencyService", "Disabled");
-        Logger.write(this, "Récupération de la configuration MDM " + mdmChoice);
+        Logger.write(this, "Récupération de la configuration MDM <defaultEmergencyService> " + mdmChoice);
         if ("Pompier".equals(mdmChoice)) { // Si le choix mdm est pompier
             pompier();
         } else if ("Police".equals(mdmChoice)) { // Si le choix mdm est police

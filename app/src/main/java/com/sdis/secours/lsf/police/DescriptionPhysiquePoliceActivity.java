@@ -1,10 +1,14 @@
 package com.sdis.secours.lsf.police;
 
 import android.app.AlertDialog;
+import android.content.RestrictionsManager;
 import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.graphics.pdf.PdfDocument;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -13,6 +17,7 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -27,6 +32,9 @@ import com.sdis.secours.lsf.databinding.DescriptionPhysiqueSyntheseBinding;
 import com.sdis.secours.lsf.databinding.DescriptionPhysiqueVetementsBinding;
 import com.sdis.secours.lsf.databinding.DescriptionPhysiqueVisageBinding;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -140,7 +148,7 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
     private int chaussuresSelected = 0;
 
     private final List<Integer> listeHaut = List.of(R.drawable.haut_1, R.drawable.haut_2, R.drawable.haut_3, R.drawable.haut_4, R.drawable.haut_5, R.drawable.haut_6,
-            R.drawable.haut_7, R.drawable.haut_8, R.drawable.haut_9, R.drawable.haut_10);
+            R.drawable.haut_7, R.drawable.haut_8, R.drawable.haut_9, R.drawable.haut_10, R.drawable.haut_11);
 
     private final List<Integer> listeBas = List.of(R.drawable.bas_1, R.drawable.bas_2, R.drawable.bas_3, R.drawable.bas_4, R.drawable.bas_5, R.drawable.bas_6);
 
@@ -157,6 +165,11 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
         container = findViewById(R.id.content);
 
         Logger.write(this, "Chargement Description Physique");
+
+        RestrictionsManager restrictionsManager = (RestrictionsManager) getSystemService(RESTRICTIONS_SERVICE);
+        Bundle restrictions = restrictionsManager.getApplicationRestrictions();
+        boolean mdmChoice = restrictions.getBoolean("allowExportSummaryPdf", false);
+        Logger.write(this, "Récupération de la configuration MDM <allowExportSummaryPdf> " + mdmChoice);
 
         corpsHommeView = findViewById(R.id.corps_homme);
         corpsFemmeView = findViewById(R.id.corps_femme);
@@ -1153,6 +1166,38 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
             chaussuresSelected += 1;
         }
         chaussuresView.setImageResource(listeChaussures.get(chaussuresSelected));
+    }
+
+    public void exportSyntheseToPdf(View v) {
+        LinearLayout syntheseView = findViewById(R.id.synthese);
+        Bitmap returnedBitmap = Bitmap.createBitmap(syntheseView.getWidth(), syntheseView.getHeight(), Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(returnedBitmap);
+        Drawable bgDrawable = syntheseView.getBackground();
+        if (bgDrawable != null)
+            bgDrawable.draw(canvas);
+        else
+            canvas.drawColor(Color.WHITE);
+        syntheseView.draw(canvas);
+
+        PdfDocument document = new PdfDocument();
+
+        PdfDocument.PageInfo pageInfo = new PdfDocument.PageInfo.Builder(returnedBitmap.getWidth(), returnedBitmap.getHeight(), 1).create();
+        PdfDocument.Page page = document.startPage(pageInfo);
+
+        canvas = page.getCanvas();
+        canvas.drawBitmap(returnedBitmap, 0, 0, null);
+        document.finishPage(page);
+
+        File dossier = this.getExternalFilesDir(null);
+        File exportFile = new File(dossier, "synthese.pdf");
+
+        try {
+            FileOutputStream fos = new FileOutputStream(exportFile);
+            document.writeTo(fos);
+        } catch (IOException e) {
+        }
+
+        document.close();
     }
 }
 

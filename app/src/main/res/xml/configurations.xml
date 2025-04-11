@@ -8,4 +8,10 @@
         android:entries="@array/defaultEmergencyServiceList"
         android:entryValues="@array/defaultEmergencyServiceList" />
 
+    <restriction
+        android:key="allowExportSummaryPdf"
+        android:title="@string/allow_export_summary_pdf"
+        android:restrictionType="bool"
+        android:defaultValue="false" />
+
 </restrictions>

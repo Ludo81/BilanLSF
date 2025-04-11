@@ -198,4 +198,6 @@
     <string name="moustache">moustache</string>
     <string name="bouche">bouche</string>
     <string name="barbe">barbe</string>
+    <string name="allow_export_summary_pdf">Allow export of the summary in .pdf</string>
+    <string name="exporter_en_pdf">exporter en pdf</string>
 </resources>

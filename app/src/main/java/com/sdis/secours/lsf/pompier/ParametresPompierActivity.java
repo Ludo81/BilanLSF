@@ -50,7 +50,7 @@ public class ParametresPompierActivity extends BasePompierActivity {
         RestrictionsManager restrictionsManager = (RestrictionsManager) getSystemService(RESTRICTIONS_SERVICE);
         Bundle restrictions = restrictionsManager.getApplicationRestrictions();
         String mdmChoice = restrictions.getString("defaultEmergencyService", "Disabled");
-        Logger.write(this, "Récupération de la configuration MDM " + mdmChoice);
+        Logger.write(this, "Récupération de la configuration MDM <defaultEmergencyService> " + mdmChoice);
         if ("Pompier".equals(mdmChoice)) { // Si pompier selectionné depuis le MDM
             pompierButton.setChecked(true);
             policeButton.setChecked(false);
