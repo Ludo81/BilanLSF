@@ -1,6 +1,7 @@
 package com.sdis.secours.lsf.police;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.content.RestrictionsManager;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -9,6 +10,7 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.pdf.PdfDocument;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -20,6 +22,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
+import androidx.core.content.FileProvider;
 
 import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.R;
@@ -165,11 +169,6 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
         container = findViewById(R.id.content);
 
         Logger.write(this, "Chargement Description Physique");
-
-        RestrictionsManager restrictionsManager = (RestrictionsManager) getSystemService(RESTRICTIONS_SERVICE);
-        Bundle restrictions = restrictionsManager.getApplicationRestrictions();
-        boolean mdmChoice = restrictions.getBoolean("allowExportSummaryPdf", false);
-        Logger.write(this, "Récupération de la configuration MDM <allowExportSummaryPdf> " + mdmChoice);
 
         corpsHommeView = findViewById(R.id.corps_homme);
         corpsFemmeView = findViewById(R.id.corps_femme);
@@ -493,6 +492,15 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
     public void goToSynthese(View v) {
         container.removeAllViews();
         container.addView(DescriptionPhysiqueSyntheseBinding.inflate(getLayoutInflater()).getRoot());
+
+        Button exportButtonView = findViewById(R.id.exportButton);
+        RestrictionsManager restrictionsManager = (RestrictionsManager) getSystemService(RESTRICTIONS_SERVICE);
+        Bundle restrictions = restrictionsManager.getApplicationRestrictions();
+        boolean mdmChoice = restrictions.getBoolean("allowExportSummaryPdf", false);
+        Logger.write(this, "Récupération de la configuration MDM <allowExportSummaryPdf> " + mdmChoice);
+        if (mdmChoice) {
+            exportButtonView.setVisibility(View.VISIBLE);
+        }
 
         TextView sexeTexteView = findViewById(R.id.sexeTexte);
         if (isFemme) {
@@ -1194,7 +1202,16 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
         try {
             FileOutputStream fos = new FileOutputStream(exportFile);
             document.writeTo(fos);
+
+            Uri uri = FileProvider.getUriForFile(this, getPackageName() + ".provider", exportFile);
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setDataAndType(uri, "application/pdf");
+            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
+            startActivity(intent);
+
         } catch (IOException e) {
+            Logger.write(this, e.getMessage());
         }
 
         document.close();
