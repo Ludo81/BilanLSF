@@ -496,10 +496,10 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
         Button exportButtonView = findViewById(R.id.exportButton);
         RestrictionsManager restrictionsManager = (RestrictionsManager) getSystemService(RESTRICTIONS_SERVICE);
         Bundle restrictions = restrictionsManager.getApplicationRestrictions();
-        boolean mdmChoice = restrictions.getBoolean("allowExportSummaryPdf", false);
+        boolean mdmChoice = restrictions.getBoolean("allowExportSummaryPdf", true);
         Logger.write(this, "Récupération de la configuration MDM <allowExportSummaryPdf> " + mdmChoice);
-        if (mdmChoice) {
-            exportButtonView.setVisibility(View.VISIBLE);
+        if (!mdmChoice) {
+            exportButtonView.setVisibility(View.GONE);
         }
 
         TextView sexeTexteView = findViewById(R.id.sexeTexte);

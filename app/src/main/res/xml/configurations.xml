@@ -12,6 +12,6 @@
         android:key="allowExportSummaryPdf"
         android:title="@string/allow_export_summary_pdf"
         android:restrictionType="bool"
-        android:defaultValue="false" />
+        android:defaultValue="true" />
 
 </restrictions>
