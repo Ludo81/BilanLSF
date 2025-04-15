@@ -132,7 +132,8 @@
             <ImageView
                 android:id="@+id/echelle_bas_plus"
                 android:contentDescription="@string/echelle_bas_plus"
-                android:src="@drawable/echelle_bas_plus_selection"
+                android:src="@drawable/echelle_bas_plus"
+                android:background="@drawable/rounded_light_gray_background"
                 android:layout_width="80dp"
                 android:layout_height="0dp"
                 android:layout_weight="1" />

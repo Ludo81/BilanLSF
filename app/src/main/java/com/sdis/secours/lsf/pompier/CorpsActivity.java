@@ -27,12 +27,12 @@ public class CorpsActivity extends BasePompierActivity {
     ImageView undoButton;
     ImageView redoButton;
 
-    ImageView echelle_haut_plus;
-    ImageView echelle_haut;
-    ImageView echelle_moyen_haut;
-    ImageView echelle_moyen_bas;
-    ImageView echelle_bas;
-    ImageView echelle_bas_plus;
+    ImageView echelleHautPlusView;
+    ImageView echelleHautView;
+    ImageView echelleMoyenHautView;
+    ImageView echelleMoyenBasView;
+    ImageView echelleBasView;
+    ImageView echelleBasPlusView;
 
     String couleur = "#0dc27f";
 
@@ -56,12 +56,12 @@ public class CorpsActivity extends BasePompierActivity {
             return true;
         });
 
-        echelle_haut_plus = findViewById(R.id.echelle_haut_plus);
-        echelle_haut = findViewById(R.id.echelle_haut);
-        echelle_moyen_haut = findViewById(R.id.echelle_moyen_haut);
-        echelle_moyen_bas = findViewById(R.id.echelle_moyen_bas);
-        echelle_bas = findViewById(R.id.echelle_bas);
-        echelle_bas_plus = findViewById(R.id.echelle_bas_plus);
+        echelleHautPlusView = findViewById(R.id.echelle_haut_plus);
+        echelleHautView = findViewById(R.id.echelle_haut);
+        echelleMoyenHautView = findViewById(R.id.echelle_moyen_haut);
+        echelleMoyenBasView = findViewById(R.id.echelle_moyen_bas);
+        echelleBasView = findViewById(R.id.echelle_bas);
+        echelleBasPlusView = findViewById(R.id.echelle_bas_plus);
 
         SeekBar regle = findViewById(R.id.regle_douleur);
         regle.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -71,32 +71,32 @@ public class CorpsActivity extends BasePompierActivity {
                     resetEchelle();
                     couleur = "#0dc27f";
                     changeColorPoint(couleur);
-                    echelle_bas_plus.setImageResource(R.drawable.echelle_bas_plus_selection);
+                    echelleBasPlusView.setBackgroundResource(R.drawable.rounded_light_gray_background);
                 } else if (17 <= progress && progress <= 33) {
                     resetEchelle();
                     couleur = "#8ddd64";
                     changeColorPoint(couleur);
-                    echelle_bas.setImageResource(R.drawable.echelle_bas_selection);
+                    echelleBasView.setBackgroundResource(R.drawable.rounded_light_gray_background);
                 } else if (34 <= progress && progress <= 50) {
                     resetEchelle();
                     couleur = "#ffdd56";
                     changeColorPoint(couleur);
-                    echelle_moyen_bas.setImageResource(R.drawable.echelle_moyen_bas_selection);
+                    echelleMoyenBasView.setBackgroundResource(R.drawable.rounded_light_gray_background);
                 } else if (51 <= progress && progress <= 67) {
                     resetEchelle();
                     couleur = "#ffb758";
                     changeColorPoint(couleur);
-                    echelle_moyen_haut.setImageResource(R.drawable.echelle_moyen_haut_selection);
+                    echelleMoyenHautView.setBackgroundResource(R.drawable.rounded_light_gray_background);
                 } else if (68 <= progress && progress <= 84) {
                     resetEchelle();
                     couleur = "#ff8e4b";
                     changeColorPoint(couleur);
-                    echelle_haut.setImageResource(R.drawable.echelle_haut_selection);
+                    echelleHautView.setBackgroundResource(R.drawable.rounded_light_gray_background);
                 } else {
                     resetEchelle();
                     couleur = "#e05858";
                     changeColorPoint(couleur);
-                    echelle_haut_plus.setImageResource(R.drawable.echelle_haut_plus_selection);
+                    echelleHautPlusView.setBackgroundResource(R.drawable.rounded_light_gray_background);
                 }
             }
 
@@ -113,12 +113,12 @@ public class CorpsActivity extends BasePompierActivity {
     }
 
     private void resetEchelle() {
-        echelle_haut_plus.setImageResource(R.drawable.echelle_haut_plus);
-        echelle_haut.setImageResource(R.drawable.echelle_haut);
-        echelle_moyen_haut.setImageResource(R.drawable.echelle_moyen_haut);
-        echelle_moyen_bas.setImageResource(R.drawable.echelle_moyen_bas);
-        echelle_bas.setImageResource(R.drawable.echelle_bas);
-        echelle_bas_plus.setImageResource(R.drawable.echelle_bas_plus);
+        echelleHautPlusView.setBackgroundResource(0);
+        echelleHautView.setBackgroundResource(0);
+        echelleMoyenHautView.setBackgroundResource(0);
+        echelleMoyenBasView.setBackgroundResource(0);
+        echelleBasView.setBackgroundResource(0);
+        echelleBasPlusView.setBackgroundResource(0);
     }
 
     private void changeColorPoint(String color) {
