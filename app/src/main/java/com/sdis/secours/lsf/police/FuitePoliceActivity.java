@@ -141,7 +141,7 @@ public class FuitePoliceActivity extends BasePoliceActivity {
 
             precedentView.setImageResource(R.drawable.precedent);
 
-            if (vehiculeSelected == listeVehicules.size() - 1) {
+            if (listeVehicules.get(vehiculeSelected) == R.drawable.personne_seule) {
                 suivantView.setImageResource(0);
                 vehiculeView.setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_IN);
                 colorPicker.setBackgroundResource(0);
