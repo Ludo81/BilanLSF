@@ -12,36 +12,35 @@ import android.widget.ImageView;
 
 import com.sdis.secours.lsf.Logger;
 import com.sdis.secours.lsf.R;
-import com.sdis.secours.lsf.databinding.BagagesBinding;
+import com.sdis.secours.lsf.databinding.RiderBinding;
 
 import java.util.List;
 
-public class BagagesPoliceActivity extends BasePoliceActivity {
+public class RiderPoliceActivity extends BasePoliceActivity {
 
-    private BagagesBinding bagagesBinding;
+    private RiderBinding riderBinding;
 
-    private ImageView bagageView;
+    private ImageView riderView;
 
     private ImageButton precedentView;
     private ImageButton suivantView;
 
     private ImageView colorPicker;
-    int currentColor = Color.LTGRAY;
+    int currentColor = Color.GRAY;
 
-    private final List<Integer> listeBagages = List.of(R.drawable.valise, R.drawable.sac, R.drawable.sac_a_dos,
-            R.drawable.sac_sport);
-    int bagageSelected = 0;
+    private final List<Integer> listeRiders = List.of(R.drawable.velo, R.drawable.trotinette, R.drawable.skate);
+    int riderSelected = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bagagesBinding = BagagesBinding.inflate(getLayoutInflater());
-        setContentView(bagagesBinding.getRoot());
+        riderBinding = RiderBinding.inflate(getLayoutInflater());
+        setContentView(riderBinding.getRoot());
 
-        Logger.write(this, "Chargement Bagages");
+        Logger.write(this, "Chargement Rider");
 
-        bagageView = findViewById(R.id.bagage);
-        bagageView.setColorFilter(currentColor, PorterDuff.Mode.MULTIPLY);
+        riderView = findViewById(R.id.rider);
+        riderView.setColorFilter(currentColor, PorterDuff.Mode.SRC_IN);
 
         precedentView = findViewById(R.id.precedent);
         suivantView = findViewById(R.id.suivant);
@@ -72,34 +71,49 @@ public class BagagesPoliceActivity extends BasePoliceActivity {
 
                 }
 
-                bagageView.setColorFilter(currentColor, PorterDuff.Mode.MULTIPLY);
+                if (listeRiders.get(riderSelected) == R.drawable.velo) {
+                    riderView.setColorFilter(currentColor, PorterDuff.Mode.SRC_IN);
+                } else {
+                    riderView.setColorFilter(currentColor, PorterDuff.Mode.MULTIPLY);
+                }
             }
             return true;
         });
     }
 
-    public void bagagePrecedent(View v) {
-        if (bagageSelected - 1 != -1) {
-            bagageSelected -= 1;
-            bagageView.setImageResource(listeBagages.get(bagageSelected));
+    public void riderPrecedent(View v) {
+        if (riderSelected - 1 != -1) {
+            riderSelected -= 1;
+            riderView.setImageResource(listeRiders.get(riderSelected));
             suivantView.setImageResource(R.drawable.suivant);
 
-            if (bagageSelected == 0) {
+            if (listeRiders.get(riderSelected) == R.drawable.velo) {
+                riderView.setColorFilter(currentColor, PorterDuff.Mode.SRC_IN);
+            } else {
+                riderView.setColorFilter(currentColor, PorterDuff.Mode.MULTIPLY);
+            }
+
+            if (riderSelected == 0) {
                 precedentView.setImageResource(0);
             }
         }
     }
 
-    public void bagageSuivant(View v) {
-        if (bagageSelected + 1 != listeBagages.size()) {
-            bagageSelected += 1;
-            bagageView.setImageResource(listeBagages.get(bagageSelected));
+    public void riderSuivant(View v) {
+        if (riderSelected + 1 != listeRiders.size()) {
+            riderSelected += 1;
+            riderView.setImageResource(listeRiders.get(riderSelected));
             precedentView.setImageResource(R.drawable.precedent);
 
-            if (bagageSelected == listeBagages.size() - 1) {
+            if (listeRiders.get(riderSelected) == R.drawable.velo) {
+                riderView.setColorFilter(currentColor, PorterDuff.Mode.SRC_IN);
+            } else {
+                riderView.setColorFilter(currentColor, PorterDuff.Mode.MULTIPLY);
+            }
+
+            if (riderSelected == listeRiders.size() - 1) {
                 suivantView.setImageResource(0);
             }
         }
     }
-
 }

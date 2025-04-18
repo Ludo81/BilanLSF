@@ -351,7 +351,7 @@
             android:screenOrientation="landscape" />
 
         <activity
-            android:name=".police.VeloPoliceActivity"
+            android:name=".police.RiderPoliceActivity"
             android:exported="false"
             android:label="VeloPoliceActivity"
             android:theme="@style/Theme.SecoursLSF"

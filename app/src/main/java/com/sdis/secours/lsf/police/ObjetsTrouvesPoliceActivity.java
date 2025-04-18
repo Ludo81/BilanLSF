@@ -41,7 +41,7 @@ public class ObjetsTrouvesPoliceActivity extends BasePoliceActivity {
     }
 
     public void goToVelo(View view) {
-        Intent intent = new Intent(ObjetsTrouvesPoliceActivity.this, VeloPoliceActivity.class);
+        Intent intent = new Intent(ObjetsTrouvesPoliceActivity.this, RiderPoliceActivity.class);
         startActivity(intent);
     }
 

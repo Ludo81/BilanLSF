@@ -26,10 +26,11 @@ public class VetementsPoliceActivity extends BasePoliceActivity {
     private ImageButton suivantView;
 
     private ImageView colorPicker;
-    int currentColor = Color.BLACK;
+    int currentColor = Color.LTGRAY;
 
-    private List<Integer> listeVetements = List.of(R.drawable.pull, R.drawable.bonnet, R.drawable.veste, R.drawable.casquette, R.drawable.echarpe,
-            R.drawable.canne, R.drawable.lunettes, R.drawable.parapluie, R.drawable.gants, R.drawable.chapeau);
+    private final List<Integer> listeVetements = List.of(R.drawable.pull, R.drawable.bonnet, R.drawable.veste, R.drawable.casquette, R.drawable.echarpe,
+            R.drawable.canne, R.drawable.parapluie, R.drawable.gants, R.drawable.chapeau, R.drawable.chaussures_homme, R.drawable.chaussures_femme,
+            R.drawable.serviette, R.drawable.lunettes);
     int vetementSelected = 0;
 
     @Override
@@ -41,6 +42,7 @@ public class VetementsPoliceActivity extends BasePoliceActivity {
         Logger.write(this, "Chargement Vetements");
 
         vetementView = findViewById(R.id.vetement);
+        vetementView.setColorFilter(currentColor, PorterDuff.Mode.MULTIPLY);
 
         precedentView = findViewById(R.id.precedent);
         suivantView = findViewById(R.id.suivant);
@@ -70,8 +72,11 @@ public class VetementsPoliceActivity extends BasePoliceActivity {
                 } catch (Exception e) {
 
                 }
-
-                vetementView.setColorFilter(currentColor, PorterDuff.Mode.SRC_IN);
+                if (listeVetements.get(vetementSelected) == R.drawable.lunettes) {
+                    vetementView.setColorFilter(currentColor, PorterDuff.Mode.SRC_IN);
+                } else {
+                    vetementView.setColorFilter(currentColor, PorterDuff.Mode.MULTIPLY);
+                }
             }
             return true;
         });
@@ -81,7 +86,11 @@ public class VetementsPoliceActivity extends BasePoliceActivity {
         if (vetementSelected - 1 != -1) {
             vetementSelected -= 1;
             vetementView.setImageResource(listeVetements.get(vetementSelected));
-
+            if (listeVetements.get(vetementSelected) == R.drawable.lunettes) {
+                vetementView.setColorFilter(currentColor, PorterDuff.Mode.SRC_IN);
+            } else {
+                vetementView.setColorFilter(currentColor, PorterDuff.Mode.MULTIPLY);
+            }
             suivantView.setImageResource(R.drawable.suivant);
 
             if (vetementSelected == 0) {
@@ -94,7 +103,11 @@ public class VetementsPoliceActivity extends BasePoliceActivity {
         if (vetementSelected + 1 != listeVetements.size()) {
             vetementSelected += 1;
             vetementView.setImageResource(listeVetements.get(vetementSelected));
-
+            if (listeVetements.get(vetementSelected) == R.drawable.lunettes) {
+                vetementView.setColorFilter(currentColor, PorterDuff.Mode.SRC_IN);
+            } else {
+                vetementView.setColorFilter(currentColor, PorterDuff.Mode.MULTIPLY);
+            }
             precedentView.setImageResource(R.drawable.precedent);
 
             if (vetementSelected == listeVetements.size() - 1) {

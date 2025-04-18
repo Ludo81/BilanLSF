@@ -31,9 +31,10 @@ public class FuitePoliceActivity extends BasePoliceActivity {
     private ImageButton suivantView;
 
     private ImageView colorPicker;
-    int currentColor = Color.BLACK;
+    int currentColor = Color.LTGRAY;
 
-    private List<Integer> listeVehicules = List.of(R.drawable.voiture, R.drawable.scooter, R.drawable.trotinette, R.drawable.velo, R.drawable.personne_seule);
+    private final List<Integer> listeVehicules = List.of(R.drawable.voiture, R.drawable.scooter, R.drawable.trotinette,
+            R.drawable.skate, R.drawable.velo, R.drawable.personne_seule);
     int vehiculeSelected = 0;
 
     @Override
@@ -45,6 +46,7 @@ public class FuitePoliceActivity extends BasePoliceActivity {
         Logger.write(this, "Chargement Fuite");
 
         vehiculeView = findViewById(R.id.vehicule);
+        vehiculeView.setColorFilter(currentColor, PorterDuff.Mode.MULTIPLY);
 
         precedentView = findViewById(R.id.precedent);
         suivantView = findViewById(R.id.suivant);
@@ -78,7 +80,11 @@ public class FuitePoliceActivity extends BasePoliceActivity {
 
                 }
 
-                vehiculeView.setColorFilter(currentColor, PorterDuff.Mode.SRC_IN);
+                if (listeVehicules.get(vehiculeSelected) == R.drawable.velo) {
+                    vehiculeView.setColorFilter(currentColor, PorterDuff.Mode.SRC_IN);
+                } else {
+                    vehiculeView.setColorFilter(currentColor, PorterDuff.Mode.MULTIPLY);
+                }
             }
             return true;
         });
@@ -104,7 +110,12 @@ public class FuitePoliceActivity extends BasePoliceActivity {
         if (vehiculeSelected - 1 != -1) {
             vehiculeSelected -= 1;
             vehiculeView.setImageResource(listeVehicules.get(vehiculeSelected));
-            vehiculeView.setColorFilter(currentColor, PorterDuff.Mode.SRC_IN);
+
+            if (listeVehicules.get(vehiculeSelected) == R.drawable.velo) {
+                vehiculeView.setColorFilter(currentColor, PorterDuff.Mode.SRC_IN);
+            } else {
+                vehiculeView.setColorFilter(currentColor, PorterDuff.Mode.MULTIPLY);
+            }
 
             colorPicker.setBackgroundResource(R.drawable.border2);
             colorPicker.setImageResource(R.drawable.color_picker);
@@ -121,6 +132,12 @@ public class FuitePoliceActivity extends BasePoliceActivity {
         if (vehiculeSelected + 1 != listeVehicules.size()) {
             vehiculeSelected += 1;
             vehiculeView.setImageResource(listeVehicules.get(vehiculeSelected));
+
+            if (listeVehicules.get(vehiculeSelected) == R.drawable.velo) {
+                vehiculeView.setColorFilter(currentColor, PorterDuff.Mode.SRC_IN);
+            } else {
+                vehiculeView.setColorFilter(currentColor, PorterDuff.Mode.MULTIPLY);
+            }
 
             precedentView.setImageResource(R.drawable.precedent);
 
