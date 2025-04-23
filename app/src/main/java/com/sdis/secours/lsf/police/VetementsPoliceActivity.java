@@ -26,7 +26,9 @@ public class VetementsPoliceActivity extends BasePoliceActivity {
     private ImageButton suivantView;
 
     private ImageView colorPicker;
-    int currentColor = Color.LTGRAY;
+    int currentColor = Color.WHITE;
+
+    boolean asChangedColor = false;
 
     private final List<Integer> listeVetements = List.of(R.drawable.pull, R.drawable.bonnet, R.drawable.veste, R.drawable.casquette, R.drawable.echarpe,
             R.drawable.canne, R.drawable.parapluie, R.drawable.gants, R.drawable.chapeau, R.drawable.chaussures_homme, R.drawable.chaussures_femme,
@@ -77,6 +79,7 @@ public class VetementsPoliceActivity extends BasePoliceActivity {
                 } else {
                     vetementView.setColorFilter(currentColor, PorterDuff.Mode.MULTIPLY);
                 }
+                asChangedColor = true;
             }
             return true;
         });
@@ -87,7 +90,11 @@ public class VetementsPoliceActivity extends BasePoliceActivity {
             vetementSelected -= 1;
             vetementView.setImageResource(listeVetements.get(vetementSelected));
             if (listeVetements.get(vetementSelected) == R.drawable.lunettes) {
-                vetementView.setColorFilter(currentColor, PorterDuff.Mode.SRC_IN);
+                if (!asChangedColor) {
+                    vetementView.setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_IN);
+                } else {
+                    vetementView.setColorFilter(currentColor, PorterDuff.Mode.SRC_IN);
+                }
             } else {
                 vetementView.setColorFilter(currentColor, PorterDuff.Mode.MULTIPLY);
             }
@@ -104,7 +111,11 @@ public class VetementsPoliceActivity extends BasePoliceActivity {
             vetementSelected += 1;
             vetementView.setImageResource(listeVetements.get(vetementSelected));
             if (listeVetements.get(vetementSelected) == R.drawable.lunettes) {
-                vetementView.setColorFilter(currentColor, PorterDuff.Mode.SRC_IN);
+                if (!asChangedColor) {
+                    vetementView.setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_IN);
+                } else {
+                    vetementView.setColorFilter(currentColor, PorterDuff.Mode.SRC_IN);
+                }
             } else {
                 vetementView.setColorFilter(currentColor, PorterDuff.Mode.MULTIPLY);
             }

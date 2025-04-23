@@ -31,7 +31,9 @@ public class FuitePoliceActivity extends BasePoliceActivity {
     private ImageButton suivantView;
 
     private ImageView colorPicker;
-    int currentColor = Color.LTGRAY;
+    int currentColor = Color.WHITE;
+
+    boolean asChangedColor = false;
 
     private final List<Integer> listeVehicules = List.of(R.drawable.voiture, R.drawable.scooter, R.drawable.trotinette,
             R.drawable.skate, R.drawable.velo, R.drawable.personne_seule);
@@ -85,6 +87,7 @@ public class FuitePoliceActivity extends BasePoliceActivity {
                 } else {
                     vehiculeView.setColorFilter(currentColor, PorterDuff.Mode.MULTIPLY);
                 }
+                asChangedColor = true;
             }
             return true;
         });
@@ -112,7 +115,11 @@ public class FuitePoliceActivity extends BasePoliceActivity {
             vehiculeView.setImageResource(listeVehicules.get(vehiculeSelected));
 
             if (listeVehicules.get(vehiculeSelected) == R.drawable.velo) {
-                vehiculeView.setColorFilter(currentColor, PorterDuff.Mode.SRC_IN);
+                if (!asChangedColor) {
+                    vehiculeView.setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_IN);
+                } else {
+                    vehiculeView.setColorFilter(currentColor, PorterDuff.Mode.SRC_IN);
+                }
             } else {
                 vehiculeView.setColorFilter(currentColor, PorterDuff.Mode.MULTIPLY);
             }
@@ -134,7 +141,11 @@ public class FuitePoliceActivity extends BasePoliceActivity {
             vehiculeView.setImageResource(listeVehicules.get(vehiculeSelected));
 
             if (listeVehicules.get(vehiculeSelected) == R.drawable.velo) {
-                vehiculeView.setColorFilter(currentColor, PorterDuff.Mode.SRC_IN);
+                if (!asChangedColor) {
+                    vehiculeView.setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_IN);
+                } else {
+                    vehiculeView.setColorFilter(currentColor, PorterDuff.Mode.SRC_IN);
+                }
             } else {
                 vehiculeView.setColorFilter(currentColor, PorterDuff.Mode.MULTIPLY);
             }

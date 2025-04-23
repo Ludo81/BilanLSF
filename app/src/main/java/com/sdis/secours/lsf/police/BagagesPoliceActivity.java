@@ -26,7 +26,7 @@ public class BagagesPoliceActivity extends BasePoliceActivity {
     private ImageButton suivantView;
 
     private ImageView colorPicker;
-    int currentColor = Color.LTGRAY;
+    int currentColor = Color.WHITE;
 
     private final List<Integer> listeBagages = List.of(R.drawable.valise, R.drawable.sac, R.drawable.sac_a_dos,
             R.drawable.sac_sport);

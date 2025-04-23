@@ -26,7 +26,9 @@ public class RiderPoliceActivity extends BasePoliceActivity {
     private ImageButton suivantView;
 
     private ImageView colorPicker;
-    int currentColor = Color.GRAY;
+    int currentColor = Color.WHITE;
+
+    boolean asChangedColor = false;
 
     private final List<Integer> listeRiders = List.of(R.drawable.velo, R.drawable.trotinette, R.drawable.skate);
     int riderSelected = 0;
@@ -40,7 +42,6 @@ public class RiderPoliceActivity extends BasePoliceActivity {
         Logger.write(this, "Chargement Rider");
 
         riderView = findViewById(R.id.rider);
-        riderView.setColorFilter(currentColor, PorterDuff.Mode.SRC_IN);
 
         precedentView = findViewById(R.id.precedent);
         suivantView = findViewById(R.id.suivant);
@@ -76,6 +77,7 @@ public class RiderPoliceActivity extends BasePoliceActivity {
                 } else {
                     riderView.setColorFilter(currentColor, PorterDuff.Mode.MULTIPLY);
                 }
+                asChangedColor = true;
             }
             return true;
         });
@@ -88,7 +90,11 @@ public class RiderPoliceActivity extends BasePoliceActivity {
             suivantView.setImageResource(R.drawable.suivant);
 
             if (listeRiders.get(riderSelected) == R.drawable.velo) {
-                riderView.setColorFilter(currentColor, PorterDuff.Mode.SRC_IN);
+                if (!asChangedColor) {
+                    riderView.setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_IN);
+                } else {
+                    riderView.setColorFilter(currentColor, PorterDuff.Mode.SRC_IN);
+                }
             } else {
                 riderView.setColorFilter(currentColor, PorterDuff.Mode.MULTIPLY);
             }
@@ -106,7 +112,11 @@ public class RiderPoliceActivity extends BasePoliceActivity {
             precedentView.setImageResource(R.drawable.precedent);
 
             if (listeRiders.get(riderSelected) == R.drawable.velo) {
-                riderView.setColorFilter(currentColor, PorterDuff.Mode.SRC_IN);
+                if (!asChangedColor) {
+                    riderView.setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_IN);
+                } else {
+                    riderView.setColorFilter(currentColor, PorterDuff.Mode.SRC_IN);
+                }
             } else {
                 riderView.setColorFilter(currentColor, PorterDuff.Mode.MULTIPLY);
             }
