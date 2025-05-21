@@ -3,10 +3,8 @@ package com.sdis.secours.lsf.pompier;
 import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.VideoView;
@@ -49,8 +47,12 @@ public class VideoPompierActivity extends BasePompierActivity {
         if ("bilan_primaire_montrez_moi_ou_vous_avez_mal".equals(name)) {
             Button boutonCorps = new Button(this);
             boutonCorps.setText(R.string.corps);
-            FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
-            params.gravity = Gravity.TOP | Gravity.CENTER_HORIZONTAL;
+            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+                    RelativeLayout.LayoutParams.WRAP_CONTENT,
+                    RelativeLayout.LayoutParams.WRAP_CONTENT
+            );
+            params.addRule(RelativeLayout.ALIGN_PARENT_TOP);
+            params.addRule(RelativeLayout.CENTER_HORIZONTAL);
 
             boutonCorps.setOnClickListener(v -> {
                 Intent intent = new Intent(VideoPompierActivity.this, CorpsActivity.class);
@@ -65,8 +67,12 @@ public class VideoPompierActivity extends BasePompierActivity {
                 "accouchement_est_ce_que_vous_avez_perdu_les_eaux_si_oui_a_quelle_heure_63".equals(name)) {
             Button boutonHorloge = new Button(this);
             boutonHorloge.setText(R.string.horloge);
-            FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
-            params.gravity = Gravity.TOP | Gravity.CENTER_HORIZONTAL;
+            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+                    RelativeLayout.LayoutParams.WRAP_CONTENT,
+                    RelativeLayout.LayoutParams.WRAP_CONTENT
+            );
+            params.addRule(RelativeLayout.ALIGN_PARENT_TOP);
+            params.addRule(RelativeLayout.CENTER_HORIZONTAL);
 
             boutonHorloge.setOnClickListener(v -> {
                 Intent intent = new Intent(VideoPompierActivity.this, HorlogePompierActivity.class);
@@ -81,8 +87,12 @@ public class VideoPompierActivity extends BasePompierActivity {
                 || "bilan_secondaire_respirez_normalement_sur_1_minute_2".equals(name) || "bilan_secondaire_je_controle_votre_pouls_sur_1_minute".equals(name)) {
             Button boutonMinuteur = new Button(this);
             boutonMinuteur.setText(R.string.minuteur);
-            FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
-            params.gravity = Gravity.TOP | Gravity.CENTER_HORIZONTAL;
+            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+                    RelativeLayout.LayoutParams.WRAP_CONTENT,
+                    RelativeLayout.LayoutParams.WRAP_CONTENT
+            );
+            params.addRule(RelativeLayout.ALIGN_PARENT_TOP);
+            params.addRule(RelativeLayout.CENTER_HORIZONTAL);
 
             boutonMinuteur.setOnClickListener(v -> {
                 Intent intent = new Intent(VideoPompierActivity.this, MinuteurActivity.class);
@@ -96,8 +106,12 @@ public class VideoPompierActivity extends BasePompierActivity {
         if ("accouchement_quelle_est_la_date_des_dernieres_regles_63".equals(name) || "accouchement_quelle_est_la_date_prevue_du_terme_63".equals(name)) {
             Button boutonCalendrier = new Button(this);
             boutonCalendrier.setText(R.string.calendrier);
-            FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
-            params.gravity = Gravity.TOP | Gravity.CENTER_HORIZONTAL;
+            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+                    RelativeLayout.LayoutParams.WRAP_CONTENT,
+                    RelativeLayout.LayoutParams.WRAP_CONTENT
+            );
+            params.addRule(RelativeLayout.ALIGN_PARENT_TOP);
+            params.addRule(RelativeLayout.CENTER_HORIZONTAL);
 
             boutonCalendrier.setOnClickListener(v -> {
                 Intent intent = new Intent(VideoPompierActivity.this, CalendrierPompierActivity.class);
@@ -111,8 +125,12 @@ public class VideoPompierActivity extends BasePompierActivity {
         if ("secours_routier_montrez_moi_la_vitesse".equals(name)) {
             Button boutonVitesse = new Button(this);
             boutonVitesse.setText(R.string.vitesse);
-            FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
-            params.gravity = Gravity.TOP | Gravity.CENTER_HORIZONTAL;
+            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+                    RelativeLayout.LayoutParams.WRAP_CONTENT,
+                    RelativeLayout.LayoutParams.WRAP_CONTENT
+            );
+            params.addRule(RelativeLayout.ALIGN_PARENT_TOP);
+            params.addRule(RelativeLayout.CENTER_HORIZONTAL);
 
             boutonVitesse.setOnClickListener(v -> {
                 Intent intent = new Intent(VideoPompierActivity.this, VitessePompierActivity.class);

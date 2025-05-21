@@ -3,7 +3,9 @@ package com.sdis.secours.lsf;
 import android.content.Intent;
 import android.content.RestrictionsManager;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.View;
 
 import androidx.activity.ComponentActivity;
@@ -26,6 +28,13 @@ public class HomeActivity extends ComponentActivity {
         setContentView(R.layout.home);
 
         Logger.write(this, "Démarrage de SecoursLSF");
+
+        DisplayMetrics metrics = new DisplayMetrics();
+        this.getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        
+        Logger.write(this, "Marque de l'appareil : " + Build.MANUFACTURER);
+        Logger.write(this, "Modèle de l'appareil : " + Build.MODEL);
+        Logger.write(this, "Taille de l'écran : " + metrics.widthPixels + " x " + metrics.heightPixels + " px");
 
         SimpleDateFormat formatDateSimple = new SimpleDateFormat("dd_MM_yyyy", Locale.getDefault());
         File dossier = this.getExternalFilesDir(null);

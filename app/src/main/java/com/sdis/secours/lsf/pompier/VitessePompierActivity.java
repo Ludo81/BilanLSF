@@ -54,6 +54,7 @@ public class VitessePompierActivity extends BasePompierActivity {
     public void onClickVideo(View view) {
         Intent intent = new Intent(VitessePompierActivity.this, VideoPompierActivity.class);
         intent.putExtra("VIDEO_NAME", "secours_routier_montrez_moi_la_vitesse");
+        intent.putExtra("SHOW_STOP", true);
         startActivity(intent);
     }
 }

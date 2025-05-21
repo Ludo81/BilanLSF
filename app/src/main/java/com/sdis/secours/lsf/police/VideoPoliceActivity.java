@@ -3,10 +3,8 @@ package com.sdis.secours.lsf.police;
 import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.VideoView;
@@ -49,8 +47,12 @@ public class VideoPoliceActivity extends BasePoliceActivity {
         if ("securite_routiere_montrez_moi_la_vitesse".equals(name)) {
             Button boutonVitesse = new Button(this);
             boutonVitesse.setText(R.string.vitesse);
-            FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
-            params.gravity = Gravity.TOP | Gravity.CENTER_HORIZONTAL;
+            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+                    RelativeLayout.LayoutParams.WRAP_CONTENT,
+                    RelativeLayout.LayoutParams.WRAP_CONTENT
+            );
+            params.addRule(RelativeLayout.ALIGN_PARENT_TOP);
+            params.addRule(RelativeLayout.CENTER_HORIZONTAL);
 
             boutonVitesse.setOnClickListener(v -> {
                 Intent intent = new Intent(VideoPoliceActivity.this, VitessePoliceActivity.class);

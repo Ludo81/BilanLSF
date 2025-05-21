@@ -177,6 +177,7 @@ public class CorpsActivity extends BasePompierActivity {
     public void onClickVideo(View view) {
         Intent intent = new Intent(CorpsActivity.this, VideoPompierActivity.class);
         intent.putExtra("VIDEO_NAME", "bilan_primaire_montrez_moi_ou_vous_avez_mal");
+        intent.putExtra("SHOW_STOP", true);
         startActivity(intent);
     }
 

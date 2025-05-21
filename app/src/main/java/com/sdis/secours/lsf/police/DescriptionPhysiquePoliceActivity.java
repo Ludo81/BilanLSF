@@ -12,6 +12,7 @@ import android.graphics.drawable.Drawable;
 import android.graphics.pdf.PdfDocument;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -1205,7 +1206,7 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
         canvas.drawBitmap(returnedBitmap, 0, 0, null);
         document.finishPage(page);
 
-        File dossier = this.getExternalFilesDir(null);
+        File dossier = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
         File exportFile = new File(dossier, "synthese.pdf");
 
         try {
