@@ -47,6 +47,8 @@ public class VitessePompierActivity extends BasePompierActivity {
 
             }
         });
+
+        onClickVideo(null);
     }
 
     public void onClickVideo(View view) {

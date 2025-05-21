@@ -105,6 +105,7 @@ public class CartePoliceActivity extends BasePoliceActivity {
     public void startVideo(View v) {
         Intent intent = new Intent(CartePoliceActivity.this, VideoPoliceActivity.class);
         intent.putExtra("VIDEO_NAME", "intervention_par_ou_sont_ils_partis_63");
+        intent.putExtra("SHOW_STOP", true);
         startActivity(intent);
     }
 }

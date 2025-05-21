@@ -179,6 +179,7 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
     public void startVideo(View v) {
         Intent intent = new Intent(DescriptionPhysiquePoliceActivity.this, VideoPoliceActivity.class);
         intent.putExtra("VIDEO_NAME", "intervention_pouvez_vous_me_le_decrire_63");
+        intent.putExtra("SHOW_STOP", true);
         startActivity(intent);
     }
 

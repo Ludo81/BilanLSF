@@ -47,6 +47,8 @@ public class VitessePoliceActivity extends BasePoliceActivity {
 
             }
         });
+
+        onClickVideo(null);
     }
 
     public void onClickVideo(View view) {

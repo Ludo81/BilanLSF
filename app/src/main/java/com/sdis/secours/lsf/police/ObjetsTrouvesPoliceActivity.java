@@ -25,6 +25,7 @@ public class ObjetsTrouvesPoliceActivity extends BasePoliceActivity {
     public void startVideo(View v) {
         Intent intent = new Intent(ObjetsTrouvesPoliceActivity.this, VideoPoliceActivity.class);
         intent.putExtra("VIDEO_NAME", "intervention_quel_objet_avez_vous_perdu_63");
+        intent.putExtra("SHOW_STOP", true);
         startActivity(intent);
     }
 

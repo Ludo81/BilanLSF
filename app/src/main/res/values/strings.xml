@@ -134,8 +134,8 @@
     <string name="espace">espace</string>
     <string name="accueil">Accueil</string>
     <string name="parametres">Paramètres</string>
-    <string name="pompier">pompier</string>
-    <string name="police">police</string>
+    <string name="pompier">Pompier</string>
+    <string name="police">Police</string>
     <string name="logopolice">logopolice</string>
     <string name="monter">monter</string>
     <string name="points_permis">Points permis</string>

@@ -110,6 +110,8 @@ public class CorpsActivity extends BasePompierActivity {
 
             }
         });
+
+        onClickVideo(null);
     }
 
     private void resetEchelle() {

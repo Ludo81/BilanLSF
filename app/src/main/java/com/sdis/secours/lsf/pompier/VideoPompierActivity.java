@@ -7,6 +7,8 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 import android.widget.VideoView;
 
 import com.sdis.secours.lsf.Logger;
@@ -27,6 +29,10 @@ public class VideoPompierActivity extends BasePompierActivity {
         super.onCreate(savedInstanceState);
         videoBinding = VideoBinding.inflate(getLayoutInflater());
         setContentView(videoBinding.getRoot());
+
+        boolean showStop = getIntent().getBooleanExtra("SHOW_STOP", false);
+        ImageButton stopButton = findViewById(R.id.stop);
+        stopButton.setVisibility(showStop ? View.VISIBLE : View.GONE);
 
         Logger.write(this, "Chargement Video");
     }
@@ -51,7 +57,7 @@ public class VideoPompierActivity extends BasePompierActivity {
                 startActivity(intent);
             });
 
-            FrameLayout frame = findViewById(R.id.frame);
+            RelativeLayout frame = findViewById(R.id.frame);
             frame.addView(boutonCorps, params);
         }
 
@@ -67,7 +73,7 @@ public class VideoPompierActivity extends BasePompierActivity {
                 startActivity(intent);
             });
 
-            FrameLayout frame = findViewById(R.id.frame);
+            RelativeLayout frame = findViewById(R.id.frame);
             frame.addView(boutonHorloge, params);
         }
 
@@ -83,7 +89,7 @@ public class VideoPompierActivity extends BasePompierActivity {
                 startActivity(intent);
             });
 
-            FrameLayout frame = findViewById(R.id.frame);
+            RelativeLayout frame = findViewById(R.id.frame);
             frame.addView(boutonMinuteur, params);
         }
 
@@ -98,7 +104,7 @@ public class VideoPompierActivity extends BasePompierActivity {
                 startActivity(intent);
             });
 
-            FrameLayout frame = findViewById(R.id.frame);
+            RelativeLayout frame = findViewById(R.id.frame);
             frame.addView(boutonCalendrier, params);
         }
 
@@ -113,7 +119,7 @@ public class VideoPompierActivity extends BasePompierActivity {
                 startActivity(intent);
             });
 
-            FrameLayout frame = findViewById(R.id.frame);
+            RelativeLayout frame = findViewById(R.id.frame);
             frame.addView(boutonVitesse, params);
         }
 
@@ -153,5 +159,9 @@ public class VideoPompierActivity extends BasePompierActivity {
     public void onClickClavier(View view) {
         Intent intent = new Intent(VideoPompierActivity.this, ClavierPompierActivity.class);
         startActivity(intent);
+    }
+
+    public void stopVideo(View v) {
+        finish();
     }
 }

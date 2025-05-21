@@ -7,6 +7,8 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 import android.widget.VideoView;
 
 import com.sdis.secours.lsf.Logger;
@@ -27,6 +29,10 @@ public class VideoPoliceActivity extends BasePoliceActivity {
         super.onCreate(savedInstanceState);
         videoBinding = VideoBinding.inflate(getLayoutInflater());
         setContentView(videoBinding.getRoot());
+
+        boolean showStop = getIntent().getBooleanExtra("SHOW_STOP", false);
+        ImageButton stopButton = findViewById(R.id.stop);
+        stopButton.setVisibility(showStop ? View.VISIBLE : View.GONE);
 
         Logger.write(this, "Chargement Video");
     }
@@ -51,7 +57,7 @@ public class VideoPoliceActivity extends BasePoliceActivity {
                 startActivity(intent);
             });
 
-            FrameLayout frame = findViewById(R.id.frame);
+            RelativeLayout frame = findViewById(R.id.frame);
             frame.addView(boutonVitesse, params);
         }
 
@@ -91,5 +97,9 @@ public class VideoPoliceActivity extends BasePoliceActivity {
     public void onClickClavier(View view) {
         Intent intent = new Intent(VideoPoliceActivity.this, ClavierPoliceActivity.class);
         startActivity(intent);
+    }
+
+    public void stopVideo(View v) {
+        finish();
     }
 }
