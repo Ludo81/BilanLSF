@@ -1,6 +1,7 @@
 package com.sdis.secours.lsf.police;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
@@ -74,6 +75,8 @@ public class CartePoliceActivity extends BasePoliceActivity {
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         setLocalisation(null);
+
+        startVideo(null);
     }
 
     public void setLocalisation(View v) {
@@ -97,5 +100,11 @@ public class CartePoliceActivity extends BasePoliceActivity {
         } else {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
         }
+    }
+
+    public void startVideo(View v) {
+        Intent intent = new Intent(CartePoliceActivity.this, VideoPoliceActivity.class);
+        intent.putExtra("VIDEO_NAME", "intervention_par_ou_sont_ils_partis_63");
+        startActivity(intent);
     }
 }

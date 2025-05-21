@@ -117,23 +117,23 @@
 
                 </TableRow>
 
-                <!--  <TableRow>
+                <TableRow>
 
-                      <Button
-                          android:id="@+id/interventions"
-                          android:layout_width="0dp"
-                          android:layout_height="wrap_content"
-                          android:layout_margin="5dp"
-                          android:layout_weight="1"
-                          android:background="#da1a29"
-                          android:drawableTop="@drawable/logo_secours_routier"
-                          android:drawablePadding="10dp"
-                          android:onClick="onClickSecoursRoutier"
-                          android:padding="10dp"
-                          android:text="@string/secours_routier"
-                          android:textColor="@color/white" />
+                    <Button
+                        android:id="@+id/intervention"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="#153849"
+                        android:drawableTop="@drawable/logo_intervention"
+                        android:drawablePadding="10dp"
+                        android:onClick="onClickIntervention"
+                        android:padding="10dp"
+                        android:text="@string/intervention"
+                        android:textColor="@color/white" />
 
-                  </TableRow> -->
+                </TableRow>
 
                 <Button
                     android:id="@+id/clavier"

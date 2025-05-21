@@ -1,5 +1,6 @@
 package com.sdis.secours.lsf.police;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
@@ -159,5 +160,17 @@ public class FuitePoliceActivity extends BasePoliceActivity {
                 colorPicker.setImageResource(0);
             }
         }
+    }
+
+    public void startVideoCombienPersonnes(View v) {
+        Intent intent = new Intent(FuitePoliceActivity.this, VideoPoliceActivity.class);
+        intent.putExtra("VIDEO_NAME", "intervention_combien__de_personnes_63");
+        startActivity(intent);
+    }
+
+    public void startVideoCommentPartis(View v) {
+        Intent intent = new Intent(FuitePoliceActivity.this, VideoPoliceActivity.class);
+        intent.putExtra("VIDEO_NAME", "intervention_comment_sont_ils_partis_63");
+        startActivity(intent);
     }
 }

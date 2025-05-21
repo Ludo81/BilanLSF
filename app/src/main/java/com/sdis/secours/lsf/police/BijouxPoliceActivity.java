@@ -1,5 +1,6 @@
 package com.sdis.secours.lsf.police;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -102,5 +103,11 @@ public class BijouxPoliceActivity extends BasePoliceActivity {
             montreView.setBackgroundResource(R.drawable.rounded_light_gray_background);
             isMontreSelected = true;
         }
+    }
+
+    public void startVideo(View v) {
+        Intent intent = new Intent(BijouxPoliceActivity.this, VideoPoliceActivity.class);
+        intent.putExtra("VIDEO_NAME", "intervention_quel_objet_avez_vous_perdu_63");
+        startActivity(intent);
     }
 }

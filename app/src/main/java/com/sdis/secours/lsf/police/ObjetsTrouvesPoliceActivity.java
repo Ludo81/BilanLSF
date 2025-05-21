@@ -18,6 +18,14 @@ public class ObjetsTrouvesPoliceActivity extends BasePoliceActivity {
         setContentView(objetsTrouvesBinding.getRoot());
 
         Logger.write(this, "Chargement Objets trouves");
+
+        startVideo(null);
+    }
+
+    public void startVideo(View v) {
+        Intent intent = new Intent(ObjetsTrouvesPoliceActivity.this, VideoPoliceActivity.class);
+        intent.putExtra("VIDEO_NAME", "intervention_quel_objet_avez_vous_perdu_63");
+        startActivity(intent);
     }
 
     public void goToBijoux(View view) {

@@ -1,5 +1,6 @@
 package com.sdis.secours.lsf.police;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
@@ -220,5 +221,11 @@ public class PortefeuillePoliceActivity extends BasePoliceActivity {
             carteBancaireView.setBackgroundResource(R.drawable.rounded_light_gray_background);
             isCarteBancaireSelected = true;
         }
+    }
+
+    public void startVideo(View v) {
+        Intent intent = new Intent(PortefeuillePoliceActivity.this, VideoPoliceActivity.class);
+        intent.putExtra("VIDEO_NAME", "intervention_quel_objet_avez_vous_perdu_63");
+        startActivity(intent);
     }
 }

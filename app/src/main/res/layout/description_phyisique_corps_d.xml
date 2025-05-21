@@ -50,6 +50,13 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_orange_light"
+            android:text="@string/video"
+            android:onClick="startVideo" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:backgroundTint="@android:color/holo_blue_light"
             android:text="@string/description_corps" />
 

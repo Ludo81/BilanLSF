@@ -58,6 +58,12 @@ public class AccueilPoliceActivity extends BasePoliceActivity {
         this.goToGroupe("securite_routiere", ((ColorDrawable) buttonBackground).getColor());
     }
 
+    public void onClickIntervention(View view) {
+        Button button = (Button) findViewById(view.getId());
+        Drawable buttonBackground = button.getBackground();
+        this.goToGroupe("intervention", ((ColorDrawable) buttonBackground).getColor());
+    }
+
     public void onClickClavier(View view) {
         Intent intent = new Intent(AccueilPoliceActivity.this, ClavierPompierActivity.class);
         startActivity(intent);

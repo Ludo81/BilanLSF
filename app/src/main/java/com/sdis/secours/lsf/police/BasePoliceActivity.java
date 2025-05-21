@@ -273,6 +273,8 @@ public abstract class BasePoliceActivity extends AppCompatActivity implements Na
                 return Color.parseColor("#8153FF");
             } else if (video.startsWith("SECURITE ROUTIERE")) {
                 return Color.parseColor("#da1a29");
+            } else if (video.startsWith("INTERVENTION")) {
+                return Color.parseColor("#153849");
             } else {
                 return Color.BLACK;
             }

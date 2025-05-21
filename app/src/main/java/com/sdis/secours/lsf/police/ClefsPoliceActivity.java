@@ -1,5 +1,6 @@
 package com.sdis.secours.lsf.police;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -218,6 +219,12 @@ public class ClefsPoliceActivity extends BasePoliceActivity {
             }
         }
 
+    }
+
+    public void startVideo(View v) {
+        Intent intent = new Intent(ClefsPoliceActivity.this, VideoPoliceActivity.class);
+        intent.putExtra("VIDEO_NAME", "intervention_quel_objet_avez_vous_perdu_63");
+        startActivity(intent);
     }
 
     private String getMarqueTexte(int marque) {

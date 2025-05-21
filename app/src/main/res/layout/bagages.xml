@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".police.BagagesPoliceActivity">
 
+    <Button
+        android:id="@+id/video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:onClick="startVideo"
+        android:text="@string/video" />
+
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/video"
         android:padding="16dp">
 
         <TableRow android:layout_weight="1">
@@ -56,4 +65,4 @@
 
     </TableLayout>
 
-</LinearLayout>
+</RelativeLayout>

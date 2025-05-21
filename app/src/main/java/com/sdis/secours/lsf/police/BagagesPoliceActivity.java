@@ -1,5 +1,6 @@
 package com.sdis.secours.lsf.police;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
@@ -102,4 +103,9 @@ public class BagagesPoliceActivity extends BasePoliceActivity {
         }
     }
 
+    public void startVideo(View v) {
+        Intent intent = new Intent(BagagesPoliceActivity.this, VideoPoliceActivity.class);
+        intent.putExtra("VIDEO_NAME", "intervention_quel_objet_avez_vous_perdu_63");
+        startActivity(intent);
+    }
 }

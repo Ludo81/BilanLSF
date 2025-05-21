@@ -1,129 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".police.ClefsPoliceActivity"
     android:padding="16dp">
 
-    <TableRow
-        android:layout_weight="1.4"
-        android:gravity="center">
+    <Button
+        android:id="@+id/video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:onClick="startVideo"
+        android:text="@string/video" />
 
-        <ImageButton
-            android:id="@+id/maison"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_margin="10dp"
-            android:padding="20dp"
-            android:background="@null"
-            android:scaleType="fitCenter"
-            android:src="@drawable/maison"
-            android:onClick="selectMaison" />
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/video"
+        android:padding="16dp">
 
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:background="@null"
-            android:src="@drawable/moins" />
+        <TableRow
+            android:layout_weight="1.4"
+            android:gravity="center">
 
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.4"
-            android:background="@null"
-            android:src="@drawable/clefs" />
+            <ImageButton
+                android:id="@+id/maison"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:padding="20dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/maison"
+                android:onClick="selectMaison" />
 
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:background="@null"
-            android:src="@drawable/moins" />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@null"
+                android:src="@drawable/moins" />
 
-        <ImageButton
-            android:id="@+id/vehicule_precedent"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="0.5"
-            android:background="@null"
-            android:contentDescription="@string/precedent"
-            android:onClick="vehiculePrecedent"
-            android:scaleType="fitCenter" />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:background="@null"
+                android:src="@drawable/clefs" />
 
-        <ImageButton
-            android:id="@+id/vehicule"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_margin="10dp"
-            android:padding="20dp"
-            android:background="@null"
-            android:scaleType="fitCenter"
-            android:src="@drawable/voiture"
-            android:onClick="selectVehicule" />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@null"
+                android:src="@drawable/moins" />
 
-        <ImageButton
-            android:id="@+id/vehicule_suivant"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="0.5"
-            android:background="@null"
-            android:contentDescription="@string/suivant"
-            android:onClick="vehiculeSuivant"
-            android:scaleType="fitCenter"
-            android:src="@drawable/suivant" />
+            <ImageButton
+                android:id="@+id/vehicule_precedent"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:background="@null"
+                android:contentDescription="@string/precedent"
+                android:onClick="vehiculePrecedent"
+                android:scaleType="fitCenter" />
 
-    </TableRow>
+            <ImageButton
+                android:id="@+id/vehicule"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:padding="20dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/voiture"
+                android:onClick="selectVehicule" />
 
-    <TableRow
-        android:layout_weight="0"
-        android:paddingVertical="10dp">
+            <ImageButton
+                android:id="@+id/vehicule_suivant"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:background="@null"
+                android:contentDescription="@string/suivant"
+                android:onClick="vehiculeSuivant"
+                android:scaleType="fitCenter"
+                android:src="@drawable/suivant" />
 
-        <TextView
-            android:id="@+id/marqueTexte"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textColor="@color/black"
-            android:textSize="35sp"
-            android:text="@string/aixam" />
+        </TableRow>
 
-    </TableRow>
+        <TableRow
+            android:layout_weight="0"
+            android:paddingVertical="10dp">
 
-    <TableRow android:layout_weight="2">
+            <TextView
+                android:id="@+id/marqueTexte"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="35sp"
+                android:text="@string/aixam" />
 
-        <ImageButton
-            android:id="@+id/marque_precedente"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="0.5"
-            android:background="@null"
-            android:contentDescription="@string/precedent"
-            android:onClick="marquePrecedente"
-            android:scaleType="fitCenter" />
+        </TableRow>
 
-        <ImageView
-            android:id="@+id/marque"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            android:src="@drawable/aixam" />
+        <TableRow android:layout_weight="2">
 
-        <ImageButton
-            android:id="@+id/marque_suivante"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="0.5"
-            android:background="@null"
-            android:contentDescription="@string/suivant"
-            android:onClick="marqueSuivante"
-            android:scaleType="fitCenter"
-            android:src="@drawable/suivant" />
-    </TableRow>
+            <ImageButton
+                android:id="@+id/marque_precedente"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:background="@null"
+                android:contentDescription="@string/precedent"
+                android:onClick="marquePrecedente"
+                android:scaleType="fitCenter" />
 
-</TableLayout>
+            <ImageView
+                android:id="@+id/marque"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:src="@drawable/aixam" />
+
+            <ImageButton
+                android:id="@+id/marque_suivante"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:background="@null"
+                android:contentDescription="@string/suivant"
+                android:onClick="marqueSuivante"
+                android:scaleType="fitCenter"
+                android:src="@drawable/suivant" />
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>

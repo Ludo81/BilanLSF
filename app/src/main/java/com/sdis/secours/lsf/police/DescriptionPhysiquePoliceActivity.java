@@ -172,6 +172,14 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
 
         corpsHommeView = findViewById(R.id.corps_homme);
         corpsFemmeView = findViewById(R.id.corps_femme);
+
+        startVideo(null);
+    }
+
+    public void startVideo(View v) {
+        Intent intent = new Intent(DescriptionPhysiquePoliceActivity.this, VideoPoliceActivity.class);
+        intent.putExtra("VIDEO_NAME", "intervention_pouvez_vous_me_le_decrire_63");
+        startActivity(intent);
     }
 
     public void goToSexe(View v) {
