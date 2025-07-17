@@ -10,7 +10,7 @@ android {
     defaultConfig {
         applicationId = "com.sdis.secours.lsf"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 118
         versionName = "1.18"
 
