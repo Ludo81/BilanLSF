@@ -11,7 +11,7 @@ android {
         applicationId = "com.sdis.bilan.lsf"
         minSdk = 24
         targetSdk = 35
-        versionCode = 116
+        versionCode = 1161
         versionName = "1.16"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
