@@ -10,9 +10,9 @@ android {
     defaultConfig {
         applicationId = "com.sdis.bilan.lsf"
         minSdk = 24
-        targetSdk = 34
-        versionCode = 117
-        versionName = "1.17"
+        targetSdk = 35
+        versionCode = 116
+        versionName = "1.16"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
