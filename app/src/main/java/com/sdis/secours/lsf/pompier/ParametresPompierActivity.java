@@ -86,4 +86,7 @@ public class ParametresPompierActivity extends BasePompierActivity {
 
     public void enregistrer(View view) {
     }
+
+    public void supprimer(View view) {
+    }
 }

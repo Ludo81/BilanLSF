@@ -207,4 +207,5 @@
     <string name="licence_police">Licence (police)</string>
     <string name="xxxx_xxxx_xxxx_xxxx">XXXX-XXXX-XXXX-XXXX</string>
     <string name="enregistrer">Enregistrer</string>
+    <string name="supprimer_licence">Supprimer licence</string>
 </resources>

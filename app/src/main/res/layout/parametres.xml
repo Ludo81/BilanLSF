@@ -3,65 +3,93 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".pompier.ParametresPompierActivity"
-    android:orientation="vertical"
-    android:gravity="center_horizontal">
+    tools:context=".pompier.ParametresPompierActivity">
 
-    <Switch
-        android:layout_margin="50dp"
-        android:id="@+id/clavierSwitch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Clavier AZERTY" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="10dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:text="@string/service_par_defaut" />
-
-    <RadioGroup
-        android:id="@+id/emergency_service_group"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <RadioButton
-            android:id="@+id/pompier_button"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/pompier" />
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
 
-        <RadioButton
-            android:id="@+id/police_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/police" />
-    </RadioGroup>
+            <Switch
+                android:layout_margin="40dp"
+                android:id="@+id/clavierSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clavier AZERTY" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:textColor="@color/black"
-        android:text="@string/licence_police" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/service_par_defaut" />
 
-    <EditText
-        android:id="@+id/licenceInput"
-        android:textColor="@color/black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/xxxx_xxxx_xxxx_xxxx"
-        android:inputType="textNoSuggestions|textVisiblePassword"
-        android:maxLength="19"
-        android:textAllCaps="true"
-        android:gravity="center"
-        android:ems="16" />
+            <RadioGroup
+                android:id="@+id/emergency_service_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/saveButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="enregistrer"
-        android:text="@string/enregistrer" />
+                <RadioButton
+                    android:id="@+id/pompier_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pompier" />
+
+                <RadioButton
+                    android:id="@+id/police_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/police" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/licenceInputTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:textColor="@color/black"
+                android:text="@string/licence_police" />
+
+            <EditText
+                android:id="@+id/licenceInput"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/xxxx_xxxx_xxxx_xxxx"
+                android:inputType="textNoSuggestions|textVisiblePassword"
+                android:maxLength="19"
+                android:textAllCaps="true"
+                android:gravity="center"
+                android:ems="16" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/saveButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="enregistrer"
+                    android:text="@string/enregistrer" />
+
+                <Button
+                    android:id="@+id/deleteButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="supprimer"
+                    android:backgroundTint="@android:color/holo_red_light"
+                    android:text="@string/supprimer_licence" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

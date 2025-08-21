@@ -1,5 +1,6 @@
 package com.sdis.secours.lsf.police;
 
+import android.app.AlertDialog;
 import android.content.RestrictionsManager;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.sdis.secours.lsf.Logger;
@@ -24,6 +26,7 @@ public class ParametresPoliceActivity extends BasePoliceActivity {
 
     private boolean isClavierAzerty = false;
 
+    TextView licenceInputTitle;
     EditText licenceInput;
 
     @Override
@@ -89,6 +92,13 @@ public class ParametresPoliceActivity extends BasePoliceActivity {
             });
         }
 
+        licenceInputTitle = findViewById(R.id.licenceInputTitle);
+        if (sharedPreferences.getBoolean("isLicenceValide", false)) {
+            licenceInputTitle.setText("Licence (police) active");
+        } else {
+            licenceInputTitle.setText("Licence (police) inactive");
+        }
+
         licenceInput = findViewById(R.id.licenceInput);
         licenceInput.addTextChangedListener(new TextWatcher() {
             private boolean isFormatting;
@@ -137,11 +147,30 @@ public class ParametresPoliceActivity extends BasePoliceActivity {
             Toast.makeText(this, "Licence valide !", Toast.LENGTH_LONG).show();
 
             editor.putBoolean("isLicenceValide", true);
+            licenceInputTitle.setText("Licence (police) active");
         } else {
             Toast.makeText(this, "Licence invalide !", Toast.LENGTH_LONG).show();
-
-            editor.putBoolean("isLicenceValide", false);
         }
         editor.apply();
+    }
+
+    public void supprimer(View v) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Confirmation");
+        builder.setMessage("Êtes vous sur de vouloir supprimer la licence ? Vous perdrez accès aux objets perdus de marques !");
+
+        builder.setPositiveButton("Oui", (dialog, which) -> {
+            sharedPreferences = getSharedPreferences("Parametrage", MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putBoolean("isLicenceValide", false);
+            editor.apply();
+            Toast.makeText(v.getContext(), "Licence supprimée !", Toast.LENGTH_LONG).show();
+            licenceInputTitle.setText("Licence (police) inactive");
+        });
+
+        builder.setNegativeButton("Non", (dialog, which) -> dialog.dismiss());
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 }
