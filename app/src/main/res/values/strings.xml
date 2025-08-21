@@ -204,4 +204,7 @@
     <string name="video_couleur">Vidéo couleur</string>
     <string name="licence_to_unlock_copyright_modules">Licence to unlock copyright modules</string>
     <string name="licenceUnlockModulesDescription">Saisir la licence en MAJUSCULES avec des tirets (format: XXXX-XXXX-XXXX-XXXX)</string>
+    <string name="licence_police">Licence (police)</string>
+    <string name="xxxx_xxxx_xxxx_xxxx">XXXX-XXXX-XXXX-XXXX</string>
+    <string name="enregistrer">Enregistrer</string>
 </resources>

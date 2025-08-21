@@ -3,6 +3,7 @@ package com.sdis.secours.lsf.pompier;
 import android.content.RestrictionsManager;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Switch;
@@ -81,5 +82,8 @@ public class ParametresPompierActivity extends BasePompierActivity {
                 editor.apply();
             });
         }
+    }
+
+    public void enregistrer(View view) {
     }
 }

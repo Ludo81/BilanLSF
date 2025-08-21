@@ -17,6 +17,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:text="@string/service_par_defaut" />
 
     <RadioGroup
@@ -37,5 +38,30 @@
             android:text="@string/police" />
     </RadioGroup>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/black"
+        android:text="@string/licence_police" />
+
+    <EditText
+        android:id="@+id/licenceInput"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/xxxx_xxxx_xxxx_xxxx"
+        android:inputType="textNoSuggestions|textVisiblePassword"
+        android:maxLength="19"
+        android:textAllCaps="true"
+        android:gravity="center"
+        android:ems="16" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="enregistrer"
+        android:text="@string/enregistrer" />
 
 </LinearLayout>

@@ -2,6 +2,7 @@ package com.sdis.secours.lsf.police;
 
 import android.content.Intent;
 import android.content.RestrictionsManager;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.GridLayout;
@@ -28,13 +29,15 @@ public class ObjetsTrouvesPoliceActivity extends BasePoliceActivity {
         String mdmLicence = restrictions.getString("licenceUnlockModules");
         Logger.write(this, "Récupération de la configuration MDM <licenceUnlockModules> " + mdmLicence);
 
+        SharedPreferences sharedPreferences = getSharedPreferences("Parametrage", MODE_PRIVATE);
+
         ImageButton clefsButton = findViewById(R.id.clefs);
         GridLayout gridLayoutClefs = (GridLayout) clefsButton.getParent();
 
         ImageButton telephoneButton = findViewById(R.id.telephone);
         GridLayout gridLayoutTelephone = (GridLayout) telephoneButton.getParent();
 
-        if (!"AB7F-92KD-ZX4L-MQ8P".equals(mdmLicence)) {
+        if (!"AB7F-92KD-ZX4L-MQ8P".equals(mdmLicence) && !sharedPreferences.getBoolean("isLicenceValide", false)) {
             gridLayoutClefs.removeView(clefsButton);
             gridLayoutTelephone.removeView(telephoneButton);
         }
