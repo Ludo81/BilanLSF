@@ -173,4 +173,11 @@ public class FuitePoliceActivity extends BasePoliceActivity {
         intent.putExtra("VIDEO_NAME", "intervention_comment_sont_ils_partis_63");
         startActivity(intent);
     }
+
+    public void startVideoCouleur(View v) {
+        Intent intent = new Intent(FuitePoliceActivity.this, VideoPoliceActivity.class);
+        intent.putExtra("VIDEO_NAME", "de_quelle_couleur");
+        intent.putExtra("SHOW_STOP", true);
+        startActivity(intent);
+    }
 }

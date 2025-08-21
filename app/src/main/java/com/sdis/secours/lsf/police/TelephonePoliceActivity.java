@@ -231,6 +231,13 @@ public class TelephonePoliceActivity extends BasePoliceActivity {
         startActivity(intent);
     }
 
+    public void startVideoCouleur(View v) {
+        Intent intent = new Intent(TelephonePoliceActivity.this, VideoPoliceActivity.class);
+        intent.putExtra("VIDEO_NAME", "de_quelle_couleur");
+        intent.putExtra("SHOW_STOP", true);
+        startActivity(intent);
+    }
+
     private String getMarqueTexte(int marque) {
         String resourceName = getResources().getResourceEntryName(marque);
         String s1 = resourceName.substring(0, 1).toUpperCase();

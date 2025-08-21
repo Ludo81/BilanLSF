@@ -108,4 +108,11 @@ public class BagagesPoliceActivity extends BasePoliceActivity {
         intent.putExtra("VIDEO_NAME", "intervention_quel_objet_avez_vous_perdu_63");
         startActivity(intent);
     }
+
+    public void startVideoCouleur(View v) {
+        Intent intent = new Intent(BagagesPoliceActivity.this, VideoPoliceActivity.class);
+        intent.putExtra("VIDEO_NAME", "de_quelle_couleur");
+        intent.putExtra("SHOW_STOP", true);
+        startActivity(intent);
+    }
 }

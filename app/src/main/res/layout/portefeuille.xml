@@ -7,6 +7,15 @@
     tools:context=".police.PortefeuillePoliceActivity">
 
     <Button
+        android:id="@+id/video_couleur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/video"
+        android:onClick="startVideoCouleur"
+        android:backgroundTint="#208be5"
+        android:text="@string/video_couleur" />
+
+    <Button
         android:id="@+id/video"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

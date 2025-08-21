@@ -14,4 +14,11 @@
         android:restrictionType="bool"
         android:defaultValue="true" />
 
+    <restriction
+        android:key="licenceUnlockModules"
+        android:title="@string/licence_to_unlock_copyright_modules"
+        android:description="@string/licenceUnlockModulesDescription"
+        android:restrictionType="string"
+        android:defaultValue="" />
+
 </restrictions>

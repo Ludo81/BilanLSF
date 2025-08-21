@@ -1,10 +1,14 @@
 package com.sdis.secours.lsf.police;
 
 import android.content.Intent;
+import android.content.RestrictionsManager;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.GridLayout;
+import android.widget.ImageButton;
 
 import com.sdis.secours.lsf.Logger;
+import com.sdis.secours.lsf.R;
 import com.sdis.secours.lsf.databinding.ObjetsTrouvesBinding;
 
 public class ObjetsTrouvesPoliceActivity extends BasePoliceActivity {
@@ -18,6 +22,22 @@ public class ObjetsTrouvesPoliceActivity extends BasePoliceActivity {
         setContentView(objetsTrouvesBinding.getRoot());
 
         Logger.write(this, "Chargement Objets trouves");
+
+        RestrictionsManager restrictionsManager = (RestrictionsManager) getSystemService(RESTRICTIONS_SERVICE);
+        Bundle restrictions = restrictionsManager.getApplicationRestrictions();
+        String mdmLicence = restrictions.getString("licenceUnlockModules");
+        Logger.write(this, "Récupération de la configuration MDM <licenceUnlockModules> " + mdmLicence);
+
+        ImageButton clefsButton = findViewById(R.id.clefs);
+        GridLayout gridLayoutClefs = (GridLayout) clefsButton.getParent();
+
+        ImageButton telephoneButton = findViewById(R.id.telephone);
+        GridLayout gridLayoutTelephone = (GridLayout) telephoneButton.getParent();
+
+        if (!"AB7F-92KD-ZX4L-MQ8P".equals(mdmLicence)) {
+            gridLayoutClefs.removeView(clefsButton);
+            gridLayoutTelephone.removeView(telephoneButton);
+        }
 
         startVideo(null);
     }

@@ -184,6 +184,13 @@ public class DescriptionPhysiquePoliceActivity extends BasePoliceActivity {
         startActivity(intent);
     }
 
+    public void startVideoCouleur(View v) {
+        Intent intent = new Intent(DescriptionPhysiquePoliceActivity.this, VideoPoliceActivity.class);
+        intent.putExtra("VIDEO_NAME", "de_quelle_couleur");
+        intent.putExtra("SHOW_STOP", true);
+        startActivity(intent);
+    }
+
     public void goToSexe(View v) {
         container.removeAllViews();
         container.addView(DescriptionPhyisiqueCorpsABinding.inflate(getLayoutInflater()).getRoot());

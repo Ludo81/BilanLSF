@@ -10,9 +10,9 @@ android {
     defaultConfig {
         applicationId = "com.sdis.secours.lsf"
         minSdk = 24
-        targetSdk = 35
-        versionCode = 118
-        versionName = "1.18"
+        targetSdk = 36
+        versionCode = 119
+        versionName = "1.19"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {

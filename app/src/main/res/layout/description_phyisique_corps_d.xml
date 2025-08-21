@@ -57,6 +57,13 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="#208be5"
+            android:text="@string/video_couleur"
+            android:onClick="startVideoCouleur" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:backgroundTint="@android:color/holo_blue_light"
             android:text="@string/description_corps" />
 

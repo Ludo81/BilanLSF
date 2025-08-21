@@ -201,4 +201,7 @@
     <string name="allow_export_summary_pdf">Allow export of the summary in .pdf</string>
     <string name="exporter_en_pdf">exporter en pdf</string>
     <string name="intervention">intervention</string>
+    <string name="video_couleur">Vidéo couleur</string>
+    <string name="licence_to_unlock_copyright_modules">Licence to unlock copyright modules</string>
+    <string name="licenceUnlockModulesDescription">Saisir la licence en MAJUSCULES avec des tirets (format: XXXX-XXXX-XXXX-XXXX)</string>
 </resources>
