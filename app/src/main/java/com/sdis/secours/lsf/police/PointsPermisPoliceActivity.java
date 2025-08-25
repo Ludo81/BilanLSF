@@ -1,5 +1,6 @@
 package com.sdis.secours.lsf.police;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -67,10 +68,21 @@ public class PointsPermisPoliceActivity extends BasePoliceActivity {
         if (!retraitPermis) {
             retraitPermis = true;
             permisView.setImageResource(R.drawable.permis_conduire_retrait);
+            Intent intent = new Intent(PointsPermisPoliceActivity.this, VideoPoliceActivity.class);
+            intent.putExtra("VIDEO_NAME", "securite_routiere_perte_de_permis_de_conduire");
+            intent.putExtra("SHOW_STOP", true);
+            startActivity(intent);
         } else {
             retraitPermis = false;
             permisView.setImageResource(R.drawable.permis_conduire);
         }
 
+    }
+
+    public void startVideoPertePoints(View view) {
+        Intent intent = new Intent(PointsPermisPoliceActivity.this, VideoPoliceActivity.class);
+        intent.putExtra("VIDEO_NAME", "securite_routiere_perte_points_permis_de_conduire");
+        intent.putExtra("SHOW_STOP", true);
+        startActivity(intent);
     }
 }

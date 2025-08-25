@@ -5,6 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".police.PointsPermisPoliceActivity">
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:text="@string/perte_points"
+        android:onClick="startVideoPertePoints" />
+
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
