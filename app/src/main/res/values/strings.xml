@@ -211,4 +211,5 @@
     <string name="perte_points">Perte points</string>
     <string name="video_nombre">Vidéo nombre</string>
     <string name="video_places">Vidéo places</string>
+    <string name="disable_emergency_service">Disable Emergency Service</string>
 </resources>

@@ -9,6 +9,13 @@
         android:entryValues="@array/defaultEmergencyServiceList" />
 
     <restriction
+        android:key="disableEmergencyService"
+        android:title="@string/disable_emergency_service"
+        android:restrictionType="choice"
+        android:entries="@array/disableEmergencyServiceList"
+        android:entryValues="@array/disableEmergencyServiceList" />
+
+    <restriction
         android:key="allowExportSummaryPdf"
         android:title="@string/allow_export_summary_pdf"
         android:restrictionType="bool"

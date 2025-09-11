@@ -7,4 +7,10 @@
         <item>Police</item>
     </string-array>
 
+    <string-array name="disableEmergencyServiceList">
+        <item>Disabled</item>
+        <item>Pompier</item>
+        <item>Police</item>
+    </string-array>
+
 </resources>

@@ -1,13 +1,16 @@
 package com.sdis.secours.lsf.pompier;
 
 import android.content.Intent;
+import android.content.RestrictionsManager;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.sdis.secours.lsf.Logger;
+import com.sdis.secours.lsf.R;
 import com.sdis.secours.lsf.databinding.AccueilPompierBinding;
 import com.sdis.secours.lsf.police.AccueilPoliceActivity;
 
@@ -15,13 +18,29 @@ public class AccueilPompierActivity extends BasePompierActivity {
 
     AccueilPompierBinding accueilPompierBinding;
 
+    ImageButton pompierButton;
+    ImageButton policeButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         accueilPompierBinding = AccueilPompierBinding.inflate(getLayoutInflater());
         setContentView(accueilPompierBinding.getRoot());
 
+        pompierButton = findViewById(R.id.pompier);
+        policeButton = findViewById(R.id.police);
+
         Logger.write(this, "Chargement Accueil Pompier");
+
+        RestrictionsManager restrictionsManager = (RestrictionsManager) getSystemService(RESTRICTIONS_SERVICE);
+        Bundle restrictions = restrictionsManager.getApplicationRestrictions();
+        String mdmChoice = restrictions.getString("disableEmergencyService", "Disabled");
+        Logger.write(this, "Récupération de la configuration MDM <disableEmergencyService> " + mdmChoice);
+        if ("Pompier".equals(mdmChoice)) {
+            pompierButton.setVisibility(View.GONE);
+        } else if ("Police".equals(mdmChoice)) {
+            policeButton.setVisibility(View.GONE);
+        }
     }
 
     public void goToPompier(View v) {
