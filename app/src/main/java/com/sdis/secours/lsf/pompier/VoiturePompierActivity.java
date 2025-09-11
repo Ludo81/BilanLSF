@@ -1,5 +1,6 @@
 package com.sdis.secours.lsf.pompier;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -87,5 +88,19 @@ public class VoiturePompierActivity extends BasePompierActivity {
             selectionView.setVisibility(View.VISIBLE);
             selectionView.setText(nombreSelection + " PERSONNES SELECTIONNEES");
         }
+    }
+
+    public void startVideoPlaces(View view) {
+        Intent intent = new Intent(VoiturePompierActivity.this, VideoPompierActivity.class);
+        intent.putExtra("VIDEO_NAME", "secours_routier_quelle_place_occupiez_vous_dans_le_véhicule_63");
+        intent.putExtra("SHOW_STOP", true);
+        startActivity(intent);
+    }
+
+    public void startVideoNombre(View view) {
+        Intent intent = new Intent(VoiturePompierActivity.this, VideoPompierActivity.class);
+        intent.putExtra("VIDEO_NAME", "secours_routier_combien_etiez_vous_dans_le_véhicule_63");
+        intent.putExtra("SHOW_STOP", true);
+        startActivity(intent);
     }
 }

@@ -209,4 +209,6 @@
     <string name="enregistrer">Enregistrer</string>
     <string name="supprimer_licence">Supprimer licence</string>
     <string name="perte_points">Perte points</string>
+    <string name="video_nombre">Vidéo nombre</string>
+    <string name="video_places">Vidéo places</string>
 </resources>
