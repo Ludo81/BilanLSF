@@ -31,14 +31,10 @@ public class ObjetsTrouvesPoliceActivity extends BasePoliceActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("Parametrage", MODE_PRIVATE);
 
-        ImageButton clefsButton = findViewById(R.id.clefs);
-        GridLayout gridLayoutClefs = (GridLayout) clefsButton.getParent();
-
         ImageButton telephoneButton = findViewById(R.id.telephone);
         GridLayout gridLayoutTelephone = (GridLayout) telephoneButton.getParent();
 
         if (!"AB7F-92KD-ZX4L-MQ8P".equals(mdmLicence) && !sharedPreferences.getBoolean("isLicenceValide", false)) {
-            gridLayoutClefs.removeView(clefsButton);
             gridLayoutTelephone.removeView(telephoneButton);
         }
 

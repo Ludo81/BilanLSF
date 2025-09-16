@@ -1,6 +1,8 @@
 package com.sdis.secours.lsf.police;
 
 import android.content.Intent;
+import android.content.RestrictionsManager;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -56,7 +58,7 @@ public class ClefsPoliceActivity extends BasePoliceActivity {
     private final List<Integer> listeVehicules = List.of(R.drawable.voiture, R.drawable.moto);
     int vehiculeSelected = 0;
 
-    private final List<Integer> listeMarquesVoiture = List.of(R.drawable.aixam, R.drawable.alfa_romeo, R.drawable.alpine, R.drawable.aston_martin, R.drawable.audi,
+    private List<Integer> listeMarquesVoiture = List.of(R.drawable.aixam, R.drawable.alfa_romeo, R.drawable.alpine, R.drawable.aston_martin, R.drawable.audi,
             R.drawable.bellier, R.drawable.bentley, R.drawable.bmw, R.drawable.bugatti, R.drawable.buick, R.drawable.cadillac, R.drawable.casalini, R.drawable.chatenet
             , R.drawable.chery, R.drawable.chevrolet, R.drawable.chrysler, R.drawable.citroen, R.drawable.corvette, R.drawable.cupra, R.drawable.dacia, R.drawable.daewoo,
             R.drawable.daf, R.drawable.daihatsu, R.drawable.datsun, R.drawable.dodge, R.drawable.ds, R.drawable.ferrari, R.drawable.fiat, R.drawable.ford, R.drawable.general_motors
@@ -66,6 +68,7 @@ public class ClefsPoliceActivity extends BasePoliceActivity {
             , R.drawable.mg, R.drawable.microcar, R.drawable.mini, R.drawable.mitsubishi, R.drawable.nissan, R.drawable.opel, R.drawable.peugeot, R.drawable.porsche
             , R.drawable.renault, R.drawable.rolls_royce, R.drawable.rolls_royce, R.drawable.saab, R.drawable.scania, R.drawable.seat, R.drawable.skoda, R.drawable.smart
             , R.drawable.ssangyong, R.drawable.subaru, R.drawable.suzuki, R.drawable.tesla, R.drawable.toyota, R.drawable.volkswagen, R.drawable.volvo);
+    private final List<Integer> listeMarquesVoitureWithoutLicence = List.of(R.drawable.alpine, R.drawable.dacia, R.drawable.renault);
     private final List<Integer> listeMarquesMoto = List.of(R.drawable.aprilia, R.drawable.bmw, R.drawable.ducati, R.drawable.harley_davidson, R.drawable.honda
             , R.drawable.kawasaki, R.drawable.ktm, R.drawable.mash, R.drawable.mbk, R.drawable.moto_guzzi, R.drawable.peugeot, R.drawable.piaggio, R.drawable.suzuki
             , R.drawable.triumph, R.drawable.vespa, R.drawable.yamaha);
@@ -114,6 +117,21 @@ public class ClefsPoliceActivity extends BasePoliceActivity {
             }
             return false;
         });
+
+        RestrictionsManager restrictionsManager = (RestrictionsManager) getSystemService(RESTRICTIONS_SERVICE);
+        Bundle restrictions = restrictionsManager.getApplicationRestrictions();
+        String mdmLicence = restrictions.getString("licenceUnlockModules");
+        Logger.write(this, "Récupération de la configuration MDM <licenceUnlockModules> " + mdmLicence);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("Parametrage", MODE_PRIVATE);
+
+        if (!"AB7F-92KD-ZX4L-MQ8P".equals(mdmLicence) && !sharedPreferences.getBoolean("isLicenceValide", false)) {
+            vehiculePrecedentView.setVisibility(View.GONE);
+            vehiculeSuivantView.setVisibility(View.GONE);
+            listeMarquesVoiture = listeMarquesVoitureWithoutLicence;
+        }
+        marqueView.setImageResource(listeMarquesVoiture.get(0));
+        marqueTexteView.setText(getMarqueTexte(listeMarquesVoiture.get(0)));
     }
 
     public void selectMaison(View v) {
