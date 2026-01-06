@@ -1,6 +1,6 @@
 ## SECOURS LSF
 ------------
-![Logo](Images/nouveau_logo.png)
+![Logo](Images/new_logo.png)
 
 L'application Android SECOURS LSF a pour principal objectif de faciliter la communication entre les
 services de secours, tels que les pompiers, SAMU et la police, et les personnes sourdes et mal entendantes
