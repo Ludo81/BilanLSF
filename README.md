@@ -29,7 +29,7 @@ L'application permet plusieurs actions :
 
 * Une zone de dessin libre pour pouvoir expliquer une situation par un dessin.
 
-  ![Dessin](Images/Dessin.png)
+  ![Dessin](Images/new_dessin.png)
 
 * Un calendrier afin de répondre a des questions demandant une date.
 
