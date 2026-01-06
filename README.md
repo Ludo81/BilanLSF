@@ -25,7 +25,7 @@ L'application permet plusieurs actions :
 * Le placement de repères sur une silhouette pour indiquer précisément la zone du corps humain où
   une douleur ou une plaie est présente.
 
-  ![Corps](Images/Corps.png)
+  ![Corps](Images/corps_humain.png)
 
 * Une zone de dessin libre pour pouvoir expliquer une situation par un dessin.
 
