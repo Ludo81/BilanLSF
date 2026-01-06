@@ -13,8 +13,9 @@ les professionnels de secours.
 L'application permet plusieurs actions :
 
 * La lecture de vidéos spécifiques en fonction de la nature de l'intervention.
-
+* Pompier
   ![Menu Pompier](Images/menu.png)
+* Police
   ![Menu Police](Images/menu_police.png)
 
 * La saisie de texte à l'aide d'un clavier adapté au langage des signes.
