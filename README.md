@@ -45,6 +45,10 @@ L'application permet plusieurs actions :
 
   ![Vitesse](Images/Compteur_vitesse.png)
 
+* Un véhicule afin de pouvoir expliquer le positionnement dans la voiture et le nombre de personnes à l’intérieur.
+
+  ![Voiture](Images/vehicule.png)
+
 ## Prérequis
 ------------
 
