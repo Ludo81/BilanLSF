@@ -18,12 +18,12 @@ L'application permet plusieurs actions :
 * Police
   ![Menu Police](Images/menu_police.png)
 
-* La saisie de texte à l'aide d'un clavier adapté au langage des signes.
+* La saisie de texte à l'aide d'un clavier adapté au langage des signes et la possibilité d'épeler un mot en langue des signes.
 
   ![Clavier](Images/nouveau_clavier.png)
 
 * Le placement de repères sur une silhouette pour indiquer précisément la zone du corps humain où
-  une douleur ou une plaie est présente.
+  une douleur ou une plaie est présente ainsi que son intensité.
 
   ![Corps](Images/corps_humain.png)
 
