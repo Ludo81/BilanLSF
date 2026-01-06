@@ -1,9 +1,9 @@
-## BILAN LSF
+## SECOURS LSF
 ------------
 ![Logo](Images/logo.png)
 
-L'application Android Bilan LSF a pour principal objectif de faciliter la communication entre les
-services de secours, tels que les pompiers et le SAMU, et les personnes sourdes et mal entendantes
+L'application Android SECOURS LSF a pour principal objectif de faciliter la communication entre les
+services de secours, tels que les pompiers, SAMU et la police, et les personnes sourdes et mal entendantes
 lors de leurs interventions en utilisant des vidéos et des images. Elle vise principalement à servir
 les professionnels de secours.
 
@@ -46,9 +46,9 @@ L'application permet plusieurs actions :
 ## Prérequis
 ------------
 
-- Version SDK recommandée : 34
+- Version SDK recommandée : 36
 
-* ![Android14]
+* ![Android16]
 
 - Version SDK minimum : 24
 
@@ -105,4 +105,4 @@ projet [LICENSE](LICENSE.md)
 
 [Android7]: https://img.shields.io/badge/Android7-4FC3F7?link=https%3A%2F%2Fdeveloper.android.com%2Fabout%2Fversions%2Fnougat%2Fandroid-7.0
 
-[Android14]: https://img.shields.io/badge/Android13-3DDC84?link=https%3A%2F%2Fdeveloper.android.com%2Fabout%2Fversions%2F13
+[Android16]: https://img.shields.io/badge/Android16-016c36?link=https%3A%2F%2Fdeveloper.android.com%2Fabout%2Fversions%2F16%2Fget%3Fhl%3Dfr
