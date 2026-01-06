@@ -49,6 +49,14 @@ L'application permet plusieurs actions :
 
   ![Voiture](Images/vehicule.png)
 
+* Une description physique permettant de décrire la silhouette et le sexe d’une personne.
+
+  ![Voiture](Images/description_physique.png)
+
+* Une description du visage permettant de réaliser un pseudo-portrait-robot, incluant également la présence de piercings et de tatouages, afin d’identifier plus facilement une personne.
+
+  ![Voiture](Images/description_visage.png)
+
 ## Prérequis
 ------------
 
