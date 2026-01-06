@@ -20,7 +20,7 @@ L'application permet plusieurs actions :
 
 * La saisie de texte à l'aide d'un clavier adapté au langage des signes.
 
-  ![Clavier](Images/clavier.png)
+  ![Clavier](Images/nouveau_clavier.png)
 
 * Le placement de repères sur une silhouette pour indiquer précisément la zone du corps humain où
   une douleur ou une plaie est présente.
