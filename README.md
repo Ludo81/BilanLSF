@@ -14,7 +14,8 @@ L'application permet plusieurs actions :
 
 * La lecture de vidéos spécifiques en fonction de la nature de l'intervention.
 
-  |![Menu Pompier](Images/menu.png)|![Menu Police](Images/menu_police.png)|
+  ![Menu Pompier](Images/menu.png)
+  ![Menu Police](Images/menu_police.png)
 
 * La saisie de texte à l'aide d'un clavier adapté au langage des signes.
 
